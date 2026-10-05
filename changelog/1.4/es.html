@@ -1,0 +1,258 @@
+<header class="top">
+  <div class="eyebrow"><span class="version">1.4</span><span>1.4.0 – 1.4.5</span><span>29 jun – 13 jul 2026</span></div>
+  <h1>IA en los festivales, invitaciones para salir y pequeños favores</h1>
+  <p class="lead">La línea 1.4 empezó con la versión preliminar de La Gran Fiesta, que trajo frases de IA en los festivales, la acción Salir juntos y pedidos de objetos que se convierten en misiones. Las versiones siguientes cambiaron valores por defecto, empezaron a respetar la lista de exclusión de IA de los autores de mods y conectaron AliveNpcs con el Editor de Personalidad y el álbum de Beach Episode.</p>
+</header>
+
+<nav class="summary" aria-label="Versiones de la línea 1.4">
+  <a class="tile" href="#v1-4-5"><strong>1.4.5 · Álbum de Beach Episode</strong><span>Las acciones de Beach Episode que salen bien cuentan en su álbum de logros.</span></a>
+  <a class="tile" href="#v1-4-4"><strong>1.4.4 · Editor de Personalidad</strong><span>El editor muestra a quién puedes editar y restaura bien la personalidad original.</span></a>
+  <a class="tile" href="#v1-4-1"><strong>1.4.1 · Nuevos valores por defecto</strong><span>Opciones útiles ya activadas, barra de desplazamiento en Arcos Narrativos y la lista de exclusión de IA.</span></a>
+  <a class="tile" href="#v1-4-0"><strong>1.4.0 · La Gran Fiesta</strong><span>Versión preliminar con IA en los festivales, Acciones extra, Salir juntos y pedidos de objetos.</span></a>
+</nav>
+
+<!-- 1.4.5 -->
+<section class="patch" id="v1-4-5">
+  <header class="patch-head"><span class="version">1.4.5</span><h2>Integración con el álbum de Beach Episode</h2><span class="patch-date">13 jul 2026</span></header>
+  <p class="lead">Si también juegas con el mod Beach Episode, AliveNpcs ahora abre su álbum de logros y registra ahí las acciones que salen bien.</p>
+  <ul class="points">
+    <li>El Centro AliveNpcs muestra el botón <b>Beach Episode Album</b> solo cuando SMAPI tiene cargado Beach Episode.</li>
+    <li>Los botones del álbum y del Editor de Personalidad pueden aparecer juntos, y cada uno abre la pantalla correcta.</li>
+    <li>Cuando una acción de Beach Episode se aplica bien en el juego, AliveNpcs registra el logro en el álbum.</li>
+    <li>Solo cuentan tres acciones: observar a los loros, preparar un picnic y tomar una foto.</li>
+    <li>Las acciones que fallaron, que se quedaron sin respuesta o que vienen de otros paquetes no desbloquean logros.</li>
+    <li>Los dos mods siguen funcionando por separado. AliveNpcs no pasa a requerir Beach Episode.</li>
+    <li>Si tu versión de Beach Episode es antigua o incompatible, el Centro sigue abierto y el problema aparece como aviso en el registro de SMAPI.</li>
+    <li>Si falla el registro del logro, la acción que AliveNpcs ya aplicó sigue valiendo.</li>
+  </ul>
+</section>
+
+<!-- 1.4.4 -->
+<section class="patch" id="v1-4-4">
+  <header class="patch-head"><span class="version">1.4.4</span><h2>Integración con el Editor de Personalidad</h2><span class="patch-date">10 jul 2026</span></header>
+  <p class="lead">AliveNpcs ahora tiene integración oficial con el Editor de Personalidad (Personality Editor), el mod complementario que te deja cambiar la personalidad de los vecinos. El editor sigue las mismas reglas de compatibilidad y protección que el propio AliveNpcs.</p>
+  <ul class="points">
+    <li>El editor muestra los NPC que pueden recibir una personalidad tuya en la partida actual: los vecinos del juego base y los NPC de mods que tienes permitidos.</li>
+    <li>Los NPC bloqueados por tu configuración de compatibilidad o por la lista comunitaria de exclusión de IA no aparecen para editar.</li>
+    <li>El editor sigue funcionando aunque cambies el nombre de su carpeta.</li>
+    <li>El archivo de datos del editor tiene que llamarse <code>custom_personalities.json</code>. La ubicación por defecto sigue siendo <code>Mods/AliveNpcsPersonalityEditor/custom_personalities.json</code>.</li>
+    <li>Restaurar el valor por defecto en el editor ahora devuelve la personalidad original correcta del vecino, sin la versión que guardaste.</li>
+  </ul>
+
+  <section class="feature" id="v1-4-4-api">
+    <div class="feature-head">
+      <span class="tag creators">Para creadores de mods</span>
+      <h3>Tres funciones nuevas en la API pública</h3>
+      <p class="lead">La integración con el editor usa tres funciones nuevas de la API pública de AliveNpcs.</p>
+    </div>
+    <ul class="points">
+      <li><code>GetEditableNpcNames</code> devuelve los NPC que pueden recibir una personalidad personalizada en la partida actual, respetando la compatibilidad y la lista de exclusión de IA.</li>
+      <li><code>RegisterCustomPersonalityFile</code> registra el archivo de datos del editor, aunque su carpeta tenga otro nombre. La ruta solo se acepta si el archivo se llama <code>custom_personalities.json</code>.</li>
+      <li><code>GetDefaultPersonality</code> devuelve la personalidad original, sin aplicar la que guardó el editor.</li>
+    </ul>
+  </section>
+</section>
+
+<!-- 1.4.1 -->
+<section class="patch" id="v1-4-1">
+  <header class="patch-head"><span class="version">1.4.1</span><h2>Nuevos valores por defecto y ajustes en el Centro</h2><span class="patch-date">2 jul 2026</span></header>
+  <p class="lead">Una revisión de la 1.4.0 con valores por defecto más útiles para configuraciones nuevas, un límite claro para la espera de los LLM personalizados, una barra de desplazamiento en Arcos Narrativos y el regreso de los NPC de mods, ahora respetando la lista de exclusión de IA.</p>
+
+  <section class="feature" id="v1-4-1-defaults">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Opciones que ya vienen activadas</h3>
+      <p class="lead">Varias opciones tienen valores por defecto más útiles para quien empieza una configuración nueva.</p>
+    </div>
+    <ul class="points">
+      <li>Las conversaciones de varios turnos ahora vienen activadas, con 3 turnos de contexto.</li>
+      <li>El modelo de Gemini por defecto ahora es <code>gemini-3.1-flash-lite</code>.</li>
+      <li>El descubrimiento de orientación y los romances entre NPC ahora vienen activados.</li>
+      <li>El LLM personalizado espera hasta 300 segundos por defecto. El máximo es 500, y el menú muestra el rango correcto, de 5 a 500 segundos.</li>
+      <li>Los LLM personalizados y compatibles con OpenAI respetan el tope de 500 segundos, aunque la configuración guardada tenga un valor mayor.</li>
+      <li>Si ya habías elegido estos valores, se mantienen. Los nuevos valores por defecto se aplican a configuraciones nuevas y a los campos que el mod corrige por su cuenta.</li>
+      <li>Los textos de ayuda de las opciones se actualizaron en inglés, portugués, alemán, español, francés e italiano. Las guías de configuración en portugués e inglés también.</li>
+    </ul>
+    <div class="option"><span class="label">En GMCM</span><b>Modelo Gemini</b><span>gemini-3.1-flash-lite por defecto</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Turnos por Conversación</b><span>3 por defecto</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Descubrimiento de Orientación</b><span>activado por defecto</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Romances NPC-NPC</b><span>activado por defecto</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Timeout LLM Personalizada</b><span>300 segundos por defecto, de 5 a 500</span></div>
+  </section>
+
+  <section class="feature" id="v1-4-1-opt-out">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Vuelven los NPC de mods, con la lista de exclusión de IA</h3>
+      <p class="lead">SVE y los NPC de otros mods vuelven a venir activados por defecto. Solo se quedan fuera los mods que están en la lista comunitaria de exclusión de IA. Esta parte llegó en una actualización de cumplimiento el 10 jul 2026.</p>
+    </div>
+    <ul class="points">
+      <li>AliveNpcs consulta la lista (<code>AI_Mod_Exclusion.json</code>) directamente en la Stardew Modding Wiki cada vez que abres el juego.</li>
+      <li>No puedes desactivar la lista. Sus mods quedan bloqueados en el diálogo y en los sistemas de IA que funcionan en segundo plano.</li>
+      <li>El bloqueo cubre diálogo, festivales, relaciones, cartas, memoria emocional, chismes que la IA reutiliza, el periódico semanal, la red de relaciones entre NPC y la detección y el final de los Arcos Narrativos.</li>
+      <li>Mientras la consulta no termina, o si falla la conexión o la lista llega dañada, los NPC de mods quedan bloqueados por seguridad. Los vecinos del juego base siguen funcionando.</li>
+      <li>La lista puede nombrar un mod entero, varios mods con comodines o NPC concretos. Para paquetes antiguos que no asocian sus NPC al mod, AliveNpcs también revisa los NPC que cada mod instalado de la lista define en el juego.</li>
+      <li>El Centro muestra si la lista se cargó, cuántas reglas llegaron, qué NPC instalados encontró y el motivo de cada bloqueo.</li>
+      <li>Si quitas un mod, el historial de sus NPC sigue guardado, pero queda inactivo y no vuelve a alimentar a la IA.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-4-1-arcs-tab">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Barra de desplazamiento en la pestaña Arcos Narrativos</h3>
+      <p class="lead">La pestaña <b>Arcos Narrativos</b> del Centro tiene una barra de desplazamiento visible, con el mismo estilo que las pestañas <b>Diario</b> y <b>Chismes</b>.</p>
+    </div>
+    <ul class="points">
+      <li>La barra aparece cuando la lista no cabe en el área visible, y puedes arrastrarla.</li>
+      <li>La rueda del ratón sigue funcionando.</li>
+      <li>Los clics fuera del área visible ya no activan tarjetas ocultas.</li>
+    </ul>
+  </section>
+</section>
+
+<!-- 1.4.0 -->
+<section class="patch" id="v1-4-0">
+  <header class="patch-head"><span class="version">1.4.0</span><h2>La Gran Fiesta (Preview): fiestas, salidas y favores</h2><span class="patch-date">29 jun 2026</span></header>
+  <p class="lead">La versión preliminar que abrió la línea 1.4. Los vecinos tienen frases de IA en los festivales, puedes invitar a alguien a salir y a veces te piden un favor que se convierte en misión en tu diario.</p>
+
+  <section class="feature" id="v1-4-0-festivals">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Diálogos de IA en los festivales</h3>
+      <p class="lead">Un sistema nuevo de diálogos de IA para los festivales, empezando por el Festival del Huevo.</p>
+    </div>
+    <ul class="points">
+      <li>En los festivales compatibles, hacer clic en un vecino puede cambiar la frase simple del juego por una frase de IA fiel al personaje y con el contexto del evento. Esto pasa cuando el paquete de ese festival está activo.</li>
+      <li>La frase original del juego se captura y sirve de ancla para el contexto.</li>
+      <li>Las conversaciones del festival tienen un contexto separado del diálogo del día a día.</li>
+      <li>Cuando termina el festival, las conversaciones se convierten en un recuerdo resumido y una entrada en el diario.</li>
+      <li>El mod reconoce el festival por los nombres traducidos del evento y por mapas temporales como <code>Temp</code>. Así el Festival del Huevo no pasa desapercibido.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-4-0-bonus-actions">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Menú de Acciones extra</h3>
+      <p class="lead">El menú de respuesta tiene ahora <b>Acciones extra</b>, que reúne las propuestas de relación, las acciones de los paquetes EC (Experimental Content) y las acciones propias de AliveNpcs.</p>
+    </div>
+    <ul class="points">
+      <li>Las acciones cambian según el contexto. Si el vecino o el momento de la conversación no permiten una acción, no aparece.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-4-0-hang-out">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Salir juntos</h3>
+      <p class="lead">Una acción nueva para invitar a un vecino a pasar un rato contigo. Aparece a partir de <span class="hearts"><svg><use href="#heart"/></svg> 3</span> con ese vecino.</p>
+    </div>
+    <ul class="points">
+      <li>La invitación es social por defecto. El tono romántico ligero solo aparece cuando el contexto adulto y romántico lo permite.</li>
+      <li>Si el vecino acepta, una escena corta se reproduce o queda lista en el lugar acordado, con hasta 6 frases escritas por la IA.</li>
+      <li>Las plantillas de escena ahora tienen 4 frases o más del vecino, con versiones más largas para escenas de ambiente romántico ligero.</li>
+      <li>La propia invitación ya puede traer opciones de respuesta para la escena, sin una pregunta aparte al final.</li>
+      <li>Si pides un lugar que no tiene escena, el vecino puede sugerir otro destino. Una ventana te pregunta si aceptas o rechazas, y la escena sugerida queda programada si aceptas.</li>
+      <li>Si el vecino rechaza, explica su motivo o su límite sin salir del personaje, y no hay escena.</li>
+      <li>La invitación entra en la memoria del vecino y puede convertirse en chisme, salvo que marques <b>Guardar secreto</b>.</li>
+      <li>Los niños y los NPC con aspecto infantil no reciben la acción ni plantillas de escena inadecuadas.</li>
+      <li>El Centro AliveNpcs tiene una pestaña nueva, <b>Salidas</b>, con las invitaciones pendientes y una lista sencilla de los destinos compatibles.</li>
+      <li>Las invitaciones se guardan en un archivo propio, <code>invite_out_state.json</code>.</li>
+    </ul>
+    <div class="option"><span class="label">En GMCM</span><b>Acción Salir Juntos</b><span>activado por defecto</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Corazones mínimos para salir</b><span>3 por defecto</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Cooldown de invitación aceptada</b><span>cuánto esperar para invitar otra vez al mismo vecino después de un sí</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Cooldown de invitación rechazada</b><span>cuánto esperar para invitar otra vez al mismo vecino después de un no</span></div>
+  </section>
+
+  <section class="feature" id="v1-4-0-item-requests">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Pedidos de objetos</h3>
+      <p class="lead">De vez en cuando, un vecino te pide un objeto pequeño en la primera frase de la conversación. El pedido se convierte en una misión normal en el diario de misiones de Stardew Valley.</p>
+    </div>
+    <ul class="points">
+      <li>El pedido solo puede surgir en la primera frase elegible y no compite con las frases normales.</li>
+      <li>Cuando entregas el objeto, el favor termina y puede haber una escena corta de agradecimiento.</li>
+      <li>Estos pedidos son favores pequeños, separados de los Arcos Narrativos. No se convierten en una cadena larga de misiones y no cambian por sí solos la historia oficial del juego.</li>
+      <li>Un vecino con un favor pendiente no pide otro objeto.</li>
+      <li>Las misiones de favor activas vuelven al diario de misiones cuando cargas la partida.</li>
+      <li>Si el juego ya dio el favor por completado, el mod corrige su estado a partir de los eventos de la misión.</li>
+      <li>Los pedidos se guardan en un archivo propio, <code>item_request_favors.json</code>.</li>
+    </ul>
+    <div class="option"><span class="label">En GMCM</span><b>Probabilidad de Pedido de Objeto</b><span>5% por defecto. Va de 0% a 100% para hacer pruebas.</span></div>
+  </section>
+
+  <section class="feature" id="v1-4-0-story-arcs">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Finales de Arcos Narrativos en el mapa real</h3>
+      <p class="lead">El final de un Arco Narrativo ahora puede ocurrir en un mapa real del juego, como un evento normal de Stardew, con los sprites y bocadillos de siempre. La pantalla negra queda solo para el título y el cierre.</p>
+    </div>
+    <ul class="points">
+      <li>Cada etapa del final tiene sus propias posiciones, definidas en JSON. Así el granjero y los vecinos no quedan uno encima del otro, dentro de paredes ni en puntos equivocados.</li>
+      <li>Si el final te lleva a otro mapa, vuelves al lugar donde estabas cuando termina el evento.</li>
+      <li>El menú de Arcos Narrativos ahora te deja eliminar arcos guardados. Una ventana te pide confirmación antes, y un aviso en pantalla lo confirma después.</li>
+      <li>Los textos para eliminar arcos están en inglés, portugués, alemán, español, francés e italiano.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-4-0-more">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Modo alcalde y la computadora de la granja</h3>
+      <p class="lead">El Modo alcalde oficial tiene chismes propios, y la computadora inicial de la granja es más fácil de usar.</p>
+    </div>
+    <ul class="points">
+      <li>El Modo alcalde tiene instrucciones propias para el chisme del final del día.</li>
+      <li>La escena del Modo alcalde tiene traducción al alemán, español, francés e italiano.</li>
+      <li>La computadora inicial de la granja es más compacta. El clic solo funciona sobre el cuerpo del objeto, y la casilla vacía de al lado ya no abre la computadora.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-4-0-gemini">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Gemini más seguro y con claves nuevas</h3>
+      <p class="lead">La clave de Gemini ya no va en la dirección de la petición, y las claves nuevas con formato <code>AQ.</code> ahora funcionan.</p>
+    </div>
+    <ul class="points">
+      <li>Las claves normales van en la cabecera <code>x-goog-api-key</code>, así que la clave no aparece en la URL.</li>
+      <li>Las claves que empiezan por <code>AQ.</code> usan la API <code>interactions</code> de Gemini, con conteo de tokens y el nivel mínimo de razonamiento cuando se puede.</li>
+      <li>Cuando Gemini rechaza la autenticación, el error ahora dice claramente que la clave no es válida.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-4-0-fixes">
+    <div class="feature-head">
+      <span class="tag fix">Correcciones</span>
+      <h3>Correcciones y estabilidad</h3>
+      <p class="lead">El conteo de días vuelve a ser correcto, y las respuestas vacías de la IA ya no rompen nada.</p>
+    </div>
+    <ul class="points">
+      <li>Se corrigió el conteo de días en los cooldowns, las cartas, los chismes, el Centro y las escenas.</li>
+      <li>Las partidas antiguas corrigen al cargar los días guardados de las cartas y de la red de relaciones entre NPC.</li>
+      <li>Las respuestas de la IA con campos vacíos o nulos se limpian antes de llegar al juego y ya no rompen el flujo.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-4-0-creators">
+    <div class="feature-head">
+      <span class="tag creators">Para creadores de packs</span>
+      <h3>Más herramientas para los paquetes EC</h3>
+      <p class="lead">Los paquetes EC tienen formas nuevas de influir en los chismes, los prompts, los NPC y los Arcos Narrativos. Todo esto solo se aplica con el modo del paquete activo.</p>
+    </div>
+    <ul class="points">
+      <li>Un EC puede añadir reglas al prompt de chismes del final del día (destino <code>gossip</code>).</li>
+      <li>Un EC puede añadir notas fijas o dinámicas a la lista de interacciones que se usa para generar chismes (destino <code>gossip_interaction</code>).</li>
+      <li><code>RecordGossipInteraction</code> permite que una DLL registre lo que pasó en el día mientras el modo está activo.</li>
+      <li><code>RegisterDynamicPromptBlock</code> permite que una DLL añada texto dinámico al prompt en el momento de la conversación, sin registrar el modo otra vez.</li>
+      <li>Un EC también puede aportar personalidad y datos de NPC, plantillas y objetos de Arco Narrativo, propuestas de arco, hooks, snapshots, disponibilidad dinámica de botones y lore experimental.</li>
+      <li>El flujo de chismes separa los bloques experimentales de diálogo, chismes, análisis e interacciones.</li>
+      <li>Las escenas de EC tienen ahora una ruta documentada para traducciones por paquete.</li>
+      <li>Los paquetes EC externos recargan los textos correctos cuando cambias el idioma del juego.</li>
+      <li><code>RegisterSceneEventJson</code> sigue reservado para una versión futura de la API. Para escenas de EC en esta versión preliminar, usa <code>sceneEventDirectories</code>.</li>
+    </ul>
+  </section>
+</section>

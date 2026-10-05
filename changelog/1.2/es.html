@@ -1,0 +1,205 @@
+<header class="top">
+  <div class="eyebrow"><span class="version">1.2</span><span>1.2.0</span><span>publicada · 27 mar 2026</span></div>
+  <h1>Los arcos narrativos tienen objetivos y un final en escena</h1>
+  <p class="lead">Todo lo que cambió en AliveNpcs en la línea 1.2, explicado sin tecnicismos. Los arcos ahora tienen objetivos y una escena de conclusión, los vecinos comentan los eventos de corazón, las cartas traen regalos y el mod cambia solo de clave de Gemini cuando se acaba la cuota.</p>
+</header>
+
+<nav class="summary" aria-label="Resumen">
+  <a class="tile" href="#v1-2-0-arcs"><strong>Arcos con objetivos</strong><span>Cada arco tiene de 3 a 5 objetivos, y el progreso avanza solo.</span></a>
+  <a class="tile" href="#v1-2-0-arc-ending"><strong>Final de arco en escena</strong><span>Una escena cierra cada arco, y todos los vecinos recuerdan el desenlace para siempre.</span></a>
+  <a class="tile" href="#v1-2-0-heart-events"><strong>Después del evento de corazón</strong><span>En la primera charla después del evento, el vecino reacciona a lo que vivieron juntos.</span></a>
+  <a class="tile" href="#v1-2-0-api-keys"><strong>Varias claves de Gemini</strong><span>Hasta 20 claves. Cuando una agota la cuota, el mod pasa a la siguiente.</span></a>
+  <a class="tile" href="#v1-2-0-letters"><strong>Cartas con regalo</strong><span>Los vecinos envían junto un objeto que les encanta o les gusta.</span></a>
+  <a class="tile" href="#v1-2-0-hub"><strong>Centro y menú del juego</strong><span>Pestaña de Ficha de Personaje, un botón para activar y desactivar la IA y acceso desde el menú del juego.</span></a>
+  <a class="tile" href="#v1-2-0-conversations"><strong>Conversaciones más largas</strong><span>Hasta 15 turnos por conversación, y tu apariencia entra en la ficha.</span></a>
+  <a class="tile" href="#v1-2-0-kent"><strong>Kent en el Año 1</strong><span>Kent está fuera el primer año, y su familia lo extraña.</span></a>
+  <a class="tile" href="#v1-2-0-stability"><strong>Más estabilidad</strong><span>Avisos claros cuando se acaba la cuota y las frases del juego como respaldo.</span></a>
+  <a class="tile" href="#v1-2-0-api"><strong>API para otros mods</strong><span>Los mods complementarios, como Personality Editor, pueden trabajar con las personalidades.</span></a>
+</nav>
+
+<section class="patch" id="v1-2-0">
+  <header class="patch-head"><span class="version">1.2.0</span><h2>Arcos con final, cartas con regalo</h2><span class="patch-date">27 mar 2026</span></header>
+  <p class="lead">Los arcos narrativos se rehicieron, las cartas traen regalos y el mod acepta varias claves de Gemini.</p>
+
+  <!-- Story arcs -->
+  <section class="feature" id="v1-2-0-arcs">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Arcos narrativos con objetivos</h3>
+      <p class="lead">Cada arco narrativo ahora tiene de 3 a 5 objetivos seguidos, como hablar con alguien o llevar un objeto. El mod sigue el progreso solo a partir de las respuestas de los vecinos.</p>
+    </div>
+    <ul class="points">
+      <li>El menú de arcos muestra cuántos objetivos ya cumpliste, por ejemplo 2/3.</li>
+      <li>Cada arco recibe una etiqueta de color: [¡LISTO!], [CONCLUIDO] o [EXPIRADO].</li>
+      <li>Cuando cumples todos los objetivos, aparece el botón <b>¡Concluir arco!</b> en el menú.</li>
+    </ul>
+    <div class="sub">
+      <h3>Conviene saber</h3>
+      <ul class="points">
+        <li>Solo se detecta un arco nuevo por semana, para que el pueblo no se llene de historias al mismo tiempo.</li>
+        <li>Un arco que pasa 2 estaciones o más sin progreso caduca solo.</li>
+      </ul>
+    </div>
+    <div class="option"><span class="label">En GMCM</span><b>Caducidad de Arcos (estaciones)</b><span>por defecto 2</span></div>
+  </section>
+
+  <!-- Arc ending -->
+  <section class="feature" id="v1-2-0-arc-ending">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>El final del arco se vuelve escena</h3>
+      <p class="lead">Cuando concluyes un arco, una escena al estilo de los eventos de corazón muestra el desenlace. La IA escribe los diálogos entre los vecinos involucrados.</p>
+    </div>
+    <ul class="points">
+      <li>El texto aparece letra por letra, como en una máquina de escribir.</li>
+      <li>Los retratos de los vecinos cambian de emoción: neutral, feliz, triste, enojado y enamorado.</li>
+      <li>La escena cambia de quién habla, entra y sale con fundido, y tiene música dramática y un escenario que va con la historia.</li>
+      <li>Después del final, los vecinos involucrados y los demás comentan el desenlace durante 3 días.</li>
+      <li>El desenlace pasa a ser parte de la historia oficial de tu partida. Todos los vecinos lo recuerdan en las conversaciones futuras, así que todos cuentan la misma historia.</li>
+      <li>El desenlace también entra en los chismes del pueblo.</li>
+    </ul>
+    <div class="option"><span class="label">En GMCM</span><b>Escena de Conclusión</b><span>activado por defecto</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Diálogo Posarco (días)</b><span>por defecto 3</span></div>
+  </section>
+
+  <!-- Heart event follow-up -->
+  <section class="feature" id="v1-2-0-heart-events">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>La charla después del evento de corazón</h3>
+      <p class="lead">La primera conversación después de un evento de corazón ahora tiene una frase especial. El vecino reacciona a lo que vivieron juntos sin volver a contar la escena.</p>
+    </div>
+    <ul class="points">
+      <li>Funciona con los 12 vecinos con los que puedes salir. Se corrigieron los ID de sus eventos de corazón.</li>
+      <li>El mod guarda qué eventos de corazón ya viste, de una conversación a otra.</li>
+      <li>Los recuerdos de esos eventos en las conversaciones siguen tu nivel de amistad y solo aparecen a partir de <span class="hearts"><svg><use href="#heart"/></svg> 4</span>.</li>
+    </ul>
+  </section>
+
+  <!-- Gemini keys -->
+  <section class="feature" id="v1-2-0-api-keys">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Varias claves de Gemini</h3>
+      <p class="lead">Ahora puedes agregar hasta 20 claves de API de Gemini. Cuando una clave llega a su límite diario de cuota, el mod pasa solo a la siguiente, sin interrumpir el juego.</p>
+    </div>
+    <ul class="points">
+      <li>Durante la sesión, el mod anota qué claves llegaron al límite y cuáles parecen inválidas.</li>
+      <li>Un aviso en el juego te dice cuándo el mod cambia de clave y cómo va la cuota.</li>
+    </ul>
+    <div class="option"><span class="label">En GMCM</span><b>➕ Cantidad de claves</b><span>por defecto 3, de 1 a 20. Define cuántos campos de clave aparecen.</span></div>
+  </section>
+
+  <!-- Letters -->
+  <section class="feature" id="v1-2-0-letters">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Cartas con regalo</h3>
+      <p class="lead">Los vecinos ahora envían un regalo junto con la carta. El mod elige solo un objeto que al vecino le encanta o le gusta.</p>
+    </div>
+    <ul class="points">
+      <li>El regalo tiene un límite de precio de venta: hasta 500g para un objeto que al vecino le gusta y hasta 750g para uno que le encanta.</li>
+      <li>Los objetos raros o de progreso, como el Fragmento prismático, están en una lista de bloqueo y nunca van en las cartas.</li>
+      <li>Cada vecino espera un tiempo antes de enviar otra carta. Por defecto son 7 días.</li>
+      <li>Puedes recibir más de una carta al día si subes el límite.</li>
+      <li>Las cartas ahora tienen en cuenta lo que siente el vecino y los chismes del pueblo.</li>
+      <li>Los vecinos de otros mods también pueden enviar regalos.</li>
+    </ul>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Opción en config.json</th><th>Por defecto</th><th>Qué hace</th></tr></thead>
+        <tbody>
+          <tr><td><code>LetterCooldownDays</code></td><td>7</td><td>Días mínimos entre dos cartas del mismo vecino.</td></tr>
+          <tr><td><code>MaxLettersPerDay</code></td><td>1</td><td>Máximo de cartas en cola por día.</td></tr>
+          <tr><td><code>MaxLetterGiftSellPrice</code></td><td>500</td><td>Precio máximo de un regalo que al vecino le gusta.</td></tr>
+          <tr><td><code>MaxLetterGiftSellPriceForLoved</code></td><td>750</td><td>Precio máximo de un regalo que al vecino le encanta.</td></tr>
+          <tr><td><code>EnableLetterGiftsForModNpcs</code></td><td>activado</td><td>Deja que los vecinos de otros mods envíen regalos en las cartas.</td></tr>
+          <tr><td><code>LetterGiftBlacklistItemIds</code></td><td>objetos raros</td><td>ID de los objetos que nunca van en las cartas. Ya trae el Fragmento prismático, entre otros.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Hub and game menu -->
+  <section class="feature" id="v1-2-0-hub">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Centro AliveNpcs y menú del juego</h3>
+      <p class="lead">El Centro AliveNpcs (F9) tiene pestañas nuevas y un botón para activar y desactivar la IA. Ahora también puedes abrir el Centro desde el menú del propio juego.</p>
+    </div>
+    <ul class="points">
+      <li>Pestaña nueva: <b>Ficha de Personaje</b>.</li>
+      <li>La pestaña <b>Personalidades</b> aparece cuando hay un mod complementario instalado, como Personality Editor.</li>
+      <li>El botón de IA activa y desactiva los recursos de IA. Con la IA desactivada, los vecinos usan las frases normales del juego.</li>
+      <li>El Centro puede mostrar tu uso de tokens.</li>
+      <li>El menú del juego tiene un botón nuevo, <b>AliveNpcs Hub</b>, junto a la pestaña del inventario. Tiene el aspecto de las pestañas marrones de Stardew Valley y abre el Centro.</li>
+      <li>El menú de arcos muestra el progreso de los objetivos, las etiquetas de color y el botón de concluir. Mira <a href="#v1-2-0-arcs">Arcos narrativos con objetivos</a>.</li>
+    </ul>
+    <div class="option"><span class="label">En el Centro</span><b>Activar recursos de i.a</b><span>activado por defecto</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Mostrar uso de tokens</b><span>desactivado por defecto. Muestra el uso de tokens al pie del Centro.</span></div>
+  </section>
+
+  <!-- Conversations -->
+  <section class="feature" id="v1-2-0-conversations">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Conversaciones más largas</h3>
+      <p class="lead">Una conversación con un vecino ahora puede tener hasta 15 turnos. Antes el máximo era 3.</p>
+    </div>
+    <ul class="points">
+      <li>La Ficha de Personaje tiene un cuarto campo: la apariencia de tu personaje, como pronombres, color de pelo y estilo de ropa.</li>
+      <li>Cuando un vecino no tiene personalidad propia en AliveNpcs, la IA usa una de sus frases originales como guía de estilo.</li>
+      <li>Una opción nueva limita cuántos puntos de amistad puede dar una conversación.</li>
+    </ul>
+    <div class="option"><span class="label">En GMCM</span><b>Turnos por Conversación</b><span>por defecto 1, hasta 15</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Máx. Puntos por Interacción</b><span>por defecto 100</span></div>
+  </section>
+
+  <!-- Kent -->
+  <section class="feature" id="v1-2-0-kent">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Kent está fuera en el Año 1</h3>
+      <p class="lead">Durante el primer año, Kent está lejos del pueblo. Su familia puede hablar de él con nostalgia, y él queda fuera de los arcos y de los chismes.</p>
+    </div>
+    <ul class="points">
+      <li>Jodi, Sam y Vincent pueden mencionar a Kent con nostalgia.</li>
+      <li>Jodi y Sam tienen personalidades distintas en el Año 1 y del Año 2 en adelante.</li>
+      <li>Los chismes dejan fuera las interacciones con vecinos ausentes, antes y después del análisis del día.</li>
+    </ul>
+  </section>
+
+  <!-- Stability -->
+  <section class="feature" id="v1-2-0-stability">
+    <div class="feature-head">
+      <span class="tag fix">Correcciones</span>
+      <h3>Más estabilidad</h3>
+      <p class="lead">El mod maneja mejor los fallos de Gemini y las respuestas generadas en segundo plano.</p>
+    </div>
+    <ul class="points">
+      <li>Si todas las claves agotan la cuota, los vecinos vuelven a las frases normales del juego y un aviso te explica el motivo.</li>
+      <li>El mod separa los errores de Gemini por tipo: falta de clave, clave inválida, límite de uso, error del servidor, tiempo agotado y fallo de red.</li>
+      <li>Las frases generadas en segundo plano ahora llegan al juego por una cola segura.</li>
+      <li>Los avisos de llamadas hechas en segundo plano ahora aparecen en el juego.</li>
+      <li>El chisme que aparece en el chat por la mañana usa el resumen del chisme cuando el mensaje llega vacío.</li>
+    </ul>
+  </section>
+
+  <!-- Inter-mod API -->
+  <section class="feature" id="v1-2-0-api">
+    <div class="feature-head">
+      <span class="tag creators">Para creadores de mods</span>
+      <h3>API para otros mods</h3>
+      <p class="lead">AliveNpcs ahora tiene una API pública para mods complementarios, como Personality Editor.</p>
+    </div>
+    <ul class="points">
+      <li>Las personalidades personalizadas se pueden cargar desde archivos JSON externos.</li>
+      <li>Con el mod complementario instalado, el Centro tiene la pestaña <b>Personalidades</b>.</li>
+    </ul>
+    <div class="cmds">
+      <div><code>GetDefaultPersonality()</code><span>Devuelve la personalidad por defecto de un vecino.</span></div>
+      <div><code>HasCustomPersonality()</code><span>Indica si un vecino tiene una personalidad personalizada.</span></div>
+      <div><code>ReloadCustomPersonalities()</code><span>Vuelve a cargar las personalidades personalizadas.</span></div>
+    </div>
+  </section>
+</section>

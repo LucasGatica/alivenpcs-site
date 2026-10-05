@@ -1,0 +1,244 @@
+<header class="top">
+  <div class="eyebrow"><span class="version">1.5</span><span>1.5.0 – 1.5.1</span><span>released · Jul 24–25, 2026</span></div>
+  <h1>Friendship gets an opposite, and the village opens up to other mods and languages</h1>
+  <p class="lead">1.5.0 brought enmity, expulsion arcs, the multiplayer foundation, Vietnamese and better support for NPCs from other mods. 1.5.1 let other mods send gossip to the village and fixed the Personality Manager integration.</p>
+</header>
+
+<nav class="summary" aria-label="1.5 versions">
+  <a class="tile" href="#v1-5-1"><strong>1.5.1</strong><span>Gossip from other mods, greetings that fit the relationship and Personality Manager fixes.</span></a>
+  <a class="tile" href="#v1-5-0"><strong>1.5.0 · Us and Them</strong><span>Enmity, expulsion arcs, the multiplayer foundation, Vietnamese and better support for other mods.</span></a>
+</nav>
+
+<!-- 1.5.1 -->
+<section class="patch" id="v1-5-1">
+  <header class="patch-head"><span class="version">1.5.1</span><h2>Gossip from other mods, plus fixes</h2><span class="patch-date">Jul 25, 2026</span></header>
+  <p class="lead">Other mods can feed the village gossip, and customized characters come through correctly in AI dialogue.</p>
+
+  <section class="feature" id="v1-5-1-gossip">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Gossip from other mods</h3>
+      <p class="lead">Other compatible mods can now send rumors and events into the village gossip system.</p>
+    </div>
+    <ul class="points">
+      <li>You decide whether to accept this outside gossip and how much of it comes in each day.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>Accept third-party gossips</b><span>turns gossip from other mods on or off</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Third-party gossips per day</b><span>how much gossip from other mods the village accepts each day</span></div>
+  </section>
+
+  <section class="feature" id="v1-5-1-greetings">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Greetings that remember you</h3>
+      <p class="lead">A villager's greeting now better matches the relationship you actually have.</p>
+    </div>
+    <ul class="points">
+      <li>Someone who already knows you no longer greets you as if it were your first meeting.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-5-1-fixes">
+    <div class="feature-head">
+      <span class="tag fix">Fixes</span>
+      <h3>Personality Manager and multiplayer</h3>
+      <p class="lead">Customized characters show up the way they should, and multiplayer syncs the stories of villagers who left the valley more reliably.</p>
+    </div>
+    <ul class="points">
+      <li>Compatibility with the AliveNpcs Personality Manager is better.</li>
+      <li>Custom NPC names, identities and pronouns come through more accurately in AI dialogue.</li>
+      <li>With the Personality Manager installed, pressing <code>F7</code> could open two character sheet screens at once. This is fixed.</li>
+      <li>There are fewer conflicts with other mods that change NPC information.</li>
+      <li>In multiplayer, story events involving NPCs who left or were expelled from the valley sync better.</li>
+    </ul>
+  </section>
+</section>
+
+<!-- 1.5.0 -->
+<section class="patch" id="v1-5-0">
+  <header class="patch-head"><span class="version">1.5.0</span><h2>Us and Them</h2><span class="patch-date">Jul 24, 2026</span></header>
+  <p class="lead">1.5.0 is about friendship, resentment, belonging and consequences that reach the whole village.</p>
+
+  <section class="feature" id="v1-5-0-enmity">
+    <div class="feature-head">
+      <span class="tag">Experimental</span>
+      <h3>Enmity System</h3>
+      <p class="lead">Each relationship can now have an enmity track, separate from friendship. The system is experimental and off by default.</p>
+    </div>
+    <ul class="points">
+      <li>Negative interactions can make enmity grow.</li>
+      <li>Enmity hearts show up in black on the Social and Profile screens.</li>
+      <li>Positive interactions help repair the relationship. They grant friendship and remove part of the enmity you built up.</li>
+      <li>The AI gets the enmity context when it evaluates your replies, so reactions and consequences fit a difficult relationship better.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>Enable Enmity System</b><span>off by default</span></div>
+  </section>
+
+  <section class="feature" id="v1-5-0-expulsion">
+    <div class="feature-head">
+      <span class="tag">Experimental</span>
+      <h3>Expulsion and return arcs</h3>
+      <p class="lead">Rare story arcs in which an NPC the village rejects gets arrested, exiled or decides to leave. Later, a return arc can bring them back.</p>
+    </div>
+    <ul class="points">
+      <li>Children and your current spouse are always protected.</li>
+      <li>Expulsion can be undone. What happened becomes part of the story memory and shows up in later dialogue.</li>
+      <li>Each save keeps track of its own expulsions.</li>
+      <li>Shops run by expelled NPCs stay accessible, so a story consequence doesn't lock you out of game content.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>Enable expulsion arcs</b><span>off by default</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Expulsion hostility threshold</b><span>the minimum hostility before an NPC can be expelled</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Expulsion arc chance</b><span>the chance that an expulsion arc shows up</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Return arc chance</b><span>the chance that a return arc shows up</span></div>
+  </section>
+
+  <section class="feature" id="v1-5-0-multiplayer">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>The multiplayer foundation</h3>
+      <p class="lead">AliveNpcs now has the groundwork to run in a coordinated way in multiplayer games. Turning it on takes a companion mod, which 1.5.0 announced for release soon.</p>
+    </div>
+    <ul class="points">
+      <li>With the companion installed, the host coordinates everything that affects the whole village: gossip, story arcs, social moments, letters, weekly news and mood changes. That way the same content isn't processed several times.</li>
+      <li>Arc progress, completed objectives, relationship changes and notifications can sync between players.</li>
+      <li>Each player keeps their own point of view and gets a personal diary from the interactions they lived through. Shared events stay shared across the farm.</li>
+      <li>Requests to conclude or delete arcs go to the host, so the story stays the same for everyone.</li>
+      <li>The main mod alone doesn't turn multiplayer on. You'll need the compatible companion once it's out.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-5-0-shops">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Shops that stay open without their owner</h3>
+      <p class="lead">A shop can stay open even when its owner isn't behind the counter.</p>
+    </div>
+    <ul class="points">
+      <li>This keeps a shop from closing when its owner marries you, changes their routine or leaves for a while during an expulsion arc.</li>
+      <li>This setting is now saved per save file, and older data migrates on its own.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-5-0-computer">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>A refreshed AliveNpcs Computer</h3>
+      <p class="lead">The AliveNpcs Computer arrives on its own at the start of a new game, ready to open the Hub.</p>
+    </div>
+    <ul class="points">
+      <li>It comes in three designs you can preview and pick on the village social network screen. Pixel art by @ChaseBlet.</li>
+      <li>The furniture looks better, its interaction area is improved and it ties in better with the mod's menus.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-5-0-festivals">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Festivals and Beach Episode</h3>
+      <p class="lead">AI invitations now work in custom festivals, starting with Beach Episode's Beach Volleyball Championship.</p>
+    </div>
+    <ul class="points">
+      <li>NPCs accept or turn down your invitation to team up based on context. Their answer comes in a structured format, which keeps the action reliable.</li>
+      <li>The Parrot Night festival is now recognized and has AI dialogue.</li>
+      <li>The Beach Episode integration is optional. AliveNpcs works normally without it.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-5-0-compat">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>NPCs from other mods</h3>
+      <p class="lead">AliveNpcs recognizes eligible NPCs from other mods more reliably, with expanded support for Stardew Valley Expanded.</p>
+    </div>
+    <ul class="points">
+      <li>Compatible NPCs take part in dialogue, gossip, letters, story arcs and the other AliveNpcs social systems.</li>
+      <li>To leave an NPC out of the mod, add their name to a comma-separated list.</li>
+      <li>The list of available NPCs respects your settings and the community list of characters whose authors don't allow AI use.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>Disabled NPCs</b><span>comma-separated NPC names</span></div>
+  </section>
+
+  <section class="feature" id="v1-5-0-personality">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Personality Manager</h3>
+      <p class="lead">The Personality Manager integration grew. Each NPC can now have its own customization file, and you can reload them while you play.</p>
+    </div>
+    <ul class="points">
+      <li>Customizations can change the displayed name and other character data. The new name shows up correctly in portraits and dialogue screens.</li>
+      <li>The old personality file format still works.</li>
+      <li>When other mods change the same data, AliveNpcs notices, which cuts down on conflicts.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-5-0-ec">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Experimental Content selector</h3>
+      <p class="lead">Experimental Content (EC) modes now have a visual selector in the mod settings, with a description and a preview image for each mode.</p>
+    </div>
+    <ul class="points">
+      <li>The old mode names still work.</li>
+      <li>EC packs can add AI instructions, dialogue actions, scene events, arcs, story memory and NPC data in a more organized way.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-5-0-typing">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Writing and reading dialogue</h3>
+      <p class="lead">The fields where you type replies and actions now take multiple lines, and dialogue got longer.</p>
+    </div>
+    <ul class="points">
+      <li>You can click to place the cursor and use the navigation keys to move through the text. Editing long replies is more comfortable.</li>
+      <li><code>Enter</code> starts a new line. <code>Ctrl + Enter</code> sends the reply.</li>
+      <li>The default dialogue length went from 300 to 800 characters, and the limit you can set went from 1,000 to 2,000.</li>
+      <li>The limit you pick now applies every time, in regular dialogue and festival dialogue.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>Max Dialogue Length</b><span>default 800, up to 2,000</span></div>
+  </section>
+
+  <section class="feature" id="v1-5-0-languages">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Vietnamese and a language choice</h3>
+      <p class="lead">AliveNpcs now fully supports Vietnamese, with fonts and Unicode rendering so accented characters show up correctly across the game.</p>
+    </div>
+    <ul class="points">
+      <li>Our Vietnamese friends can now flirt with Robin in their own language.</li>
+      <li>A new language setting has three choices: follow Stardew Valley's language, use Vietnamese or type in the language you want for AI replies.</li>
+      <li>The translations for the mod and the official EC pack are better.</li>
+      <li>Long text gets shortened more carefully. Unicode characters are kept, and words aren't cut in half whenever that can be avoided.</li>
+      <li>If you have any trouble playing AliveNpcs in your language, reach out to me. I'll look for a fix so everyone can enjoy the mod in their own language.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>AliveNpcs Language</b><span>follow the game, Vietnamese or a language you choose</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Custom AI Language</b><span>the language for AI replies when you type your own</span></div>
+  </section>
+
+  <section class="feature" id="v1-5-0-creators">
+    <div class="feature-head">
+      <span class="tag creators">For mod creators</span>
+      <h3>Integrations and the public API</h3>
+      <p class="lead">The public API grew, and other mods can now generate content with the AI provider the player already set up.</p>
+    </div>
+    <ul class="points">
+      <li>The API can turn NPCs on or off across every AliveNpcs system.</li>
+      <li>Partner mods can look up the available NPCs and the content generators AliveNpcs provides.</li>
+      <li>Other mods can generate dialogue, letters, interactions, social moments, gossip analysis and free-form content with the player's AI provider.</li>
+      <li>The API also controls independent shops, character customizations, player character sheets and Experimental Content packs.</li>
+      <li>Companion mods can read and update the player's character sheet, check the NPCs' original values and restore customizations more safely.</li>
+      <li>1.5.0 announced detailed documentation for release soon.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-5-0-notes">
+    <div class="feature-head">
+      <h3>Before you update</h3>
+    </div>
+    <ul class="points">
+      <li>Enmity and expulsion arcs are experimental and off by default.</li>
+      <li>You don't need any optional integration to use AliveNpcs. Beach Episode, the Personality Manager and the multiplayer companion are all optional.</li>
+      <li>Your previous settings keep working wherever possible, including the old EC mode names and the old personality file.</li>
+    </ul>
+  </section>
+</section>

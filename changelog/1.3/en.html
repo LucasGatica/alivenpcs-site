@@ -1,0 +1,487 @@
+<header class="top">
+  <div class="eyebrow"><span class="version">1.3</span><span>Big Drama</span><span>1.3.0 – 1.3.4</span><span>Jun 3–18, 2026</span></div>
+  <h1>Villagers start to remember, bond with each other and stir up drama</h1>
+  <p class="lead">1.3.0 was the biggest AliveNpcs update up to that point, with social drama, personalities that change with your save, dating and marriage proposals through conversation and a village that lives without you starting every interaction. The versions after it pushed the drama further, fixed gifts, made room for Experimental Content packs and, in the 1.3.4 preview, brought item requests, hang-out invites and AI at the Egg Festival.</p>
+</header>
+
+<nav class="summary" aria-label="Versions in the 1.3 line">
+  <a class="tile" href="#v1-3-4"><strong>1.3.4 · Preview</strong><span>Item requests, the Hang out action, arc endings on the real map and AI at the Egg Festival.</span></a>
+  <a class="tile" href="#v1-3-3"><strong>1.3.3 · Gemini high-demand notice</strong><span>A clear notice when Gemini is overloaded, and villagers who stop circling one topic.</span></a>
+  <a class="tile" href="#v1-3-2-1"><strong>1.3.2.1 · Experimental Content platform</strong><span>Experimental modes can ship as packs. Mayor Mode became an official pack.</span></a>
+  <a class="tile" href="#v1-3-2"><strong>1.3.2 · Gift hotfix</strong><span>Giving gifts works again with AliveNpcs installed.</span></a>
+  <a class="tile" href="#v1-3-1"><strong>1.3.1 · Big drama update</strong><span>Stronger social drama and closer ties between memory, relationships and scenes.</span></a>
+  <a class="tile" href="#v1-3-0"><strong>1.3.0 · The big update</strong><span>Social drama, dynamic personalities, proposals through dialogue, villagers who bond and over 100 scenes.</span></a>
+</nav>
+
+<!-- 1.3.4 -->
+<section class="patch" id="v1-3-4">
+  <header class="patch-head"><span class="version">1.3.4</span><h2>Preview: Dialogue item requests and EC gossip hooks</h2><span class="patch-date">Jun 18, 2026</span></header>
+  <p class="lead">A preview with item requests through dialogue, the Hang out action, arc endings on the real map, AI at the Egg Festival and gossip hooks for pack creators. This preview later became the base of 1.4.0.</p>
+
+  <section class="feature" id="v1-3-4-item-requests">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Item requests: small favors</h3>
+      <p class="lead">Every now and then, in the first line of a conversation, a villager can ask you for a small item. The request becomes a normal quest in Stardew Valley's quest log.</p>
+    </div>
+    <ul class="points">
+      <li>Only the first eligible line of a conversation can carry a request. A villager with an open favor won't ask for another.</li>
+      <li>Hand over the item as a gift or through the game's quest. The favor completes and can play a short thank-you scene.</li>
+      <li>These scenes come from ten templates: cozy, date, friendship, funny and slice of life. If you are already in the right place, the scene starts right away. If not, it waits for its place and time window.</li>
+      <li>A favor can pay a gold reward between 50g and 500g.</li>
+      <li>The villager remembers the open request and the favors you delivered recently, so they don't repeat or contradict themselves.</li>
+      <li>These are micro-favors, separate from Story Arcs. They don't turn into long questlines and don't change the game's lore on their own.</li>
+      <li>Children and child-coded characters never get unsuitable templates. Date scenes are only for adult romantic partners.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>Item Request Chance</b><span>5% by default, from 0% to 100%. At 0% requests stop.</span></div>
+    <div class="sub">
+      <h3>Good to know</h3>
+      <ul class="points">
+        <li>Broken item names in the save or the quest log are repaired when the favor loads.</li>
+        <li>If a save loads without the favor quest in the log, it comes back on its own. Favors the game already completed are recognized too.</li>
+        <li>Quest, HUD, GMCM and scene text in English, Portuguese, German, Spanish, French and Italian.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="feature" id="v1-3-4-hang-out">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Bonus actions and Hang out</h3>
+      <p class="lead">The reply menu gained <b>Bonus actions</b>, which group the dating and marriage proposals, Experimental Content actions and new actions. The first one is <b>Hang out</b>, to invite a villager to spend some time with you.</p>
+    </div>
+    <ul class="points">
+      <li>Hang out appears from <span class="hearts"><svg><use href="#heart"/></svg> 3</span> by default.</li>
+      <li>The invite is social by default. A light romantic mood only shows up in a safe adult romantic context.</li>
+      <li>The AI reads what you wrote, the villager's memories, the social context, your relationship and their availability before it answers.</li>
+      <li>If they accept, a short ready-made scene plays right away or waits at the agreed place, with lines generated from your invite. There are six templates to start: friendship, cozy, walk, slice of life, light date and awkward.</li>
+      <li>If they refuse, they explain their reason or limit in character, with no scene.</li>
+      <li>The invite goes into the villager's memory. Public invites can turn into gossip. With <b>Keep secret</b>, it goes to the secret diary and stays out of gossip.</li>
+      <li>Bonus actions hide during multi-turn conversations, during events and below the heart minimum. Children and child-coded characters don't get Hang out.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>Hang Out Action</b><span>on by default</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Hang Out Min Hearts</b><span>3 by default</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Accepted Hang Out Cooldown</b><span>days before you can invite the same villager again after a yes</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Rejected Hang Out Cooldown</b><span>days before you can invite the same villager again after a no</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-4-festivals">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>AI at the Egg Festival</h3>
+      <p class="lead">Festivals got AI dialogue, starting with the Egg Festival. Clicking a villager during the festival swaps the game's simple line for an in-character line that knows about the event.</p>
+    </div>
+    <ul class="points">
+      <li>The mod captures the game's original line and uses it as the starting point for the reply.</li>
+      <li>Talking at the festival doesn't use up your normal conversation of the day.</li>
+      <li>When the festival ends, what happened becomes a single memory, recorded in gossip and the diary.</li>
+      <li>The festival is recognized even with a translated name and on the temporary map the game uses during the event.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-3-4-arcs">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Arc endings on the real map</h3>
+      <p class="lead">The conclusion of a Story Arc can now play as a regular game event on a real map, with the usual sprites and speech bubbles. The black screen stays only for the title and the ending.</p>
+    </div>
+    <ul class="points">
+      <li>Each conclusion scene picks a stage, a map and safe positions.</li>
+      <li>The lines generated for the end of the arc stay the same. Nothing gets swapped for generic text.</li>
+      <li>Characters no longer end up on the same tile, inside walls or in wrong spots like the top of the Saloon.</li>
+      <li>A resolved debug arc lets you replay a conclusion scene without calling the AI.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-3-4-creators">
+    <div class="feature-head">
+      <span class="tag creators">For pack creators</span>
+      <h3>Experimental Content reaches gossip</h3>
+      <p class="lead">Experimental Content packs can now shape the end-of-day gossip, in a documented way.</p>
+    </div>
+    <ul class="points">
+      <li><code>promptBlocks</code> with <code>target: "gossip"</code> go into the gossip generation instructions. With <code>target: "gossip_interaction"</code>, they become notes in the list of interactions analyzed at the end of the day.</li>
+      <li>The API gained <code>RecordGossipInteraction</code>, so DLLs can record gossip notes for the current day, and <code>RegisterDynamicPromptBlock</code>, to inject dynamic blocks into the prompt at conversation time. Blocks respect a character limit and are switched off after 3 failures in a row.</li>
+      <li>Mode-scoped contributions also arrived: personality, NPC metadata, arc items and templates, arc proposals, lifecycle hooks, snapshots, buttons that appear depending on the situation, and experimental lore. All of it only applies while the pack's mode is active and never rewrites the global personality.</li>
+      <li>Packs' end-of-day hooks run before AliveNpcs' gossip. The analysis runs even on a day without conversations, if a pack note is pending.</li>
+      <li>With AI or gossip turned off, pending notes are cleared and don't carry over to the next day.</li>
+      <li>Pack scenes still come from <code>sceneEventDirectories</code>, using the pack's own i18n. <code>RegisterSceneEventJson</code> stays reserved for a future version.</li>
+      <li>Packs reload the right text when the game language changes.</li>
+      <li>The official Mayor Mode got its own gossip prompt, which treats public conversations as civic conduct when it fits. Its scene now has text in German, Spanish, French and Italian, and the pack now requires AliveNpcs 1.3.4.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-3-4-fixes">
+    <div class="feature-head">
+      <span class="tag fix">Fixes</span>
+      <h3>Right dates and fewer stumbles</h3>
+      <p class="lead">The mod now counts days with a single calendar, and some replies that broke the flow are handled.</p>
+    </div>
+    <ul class="points">
+      <li>Cooldowns, letters, gossip, promises, favors, arcs, the Hub and scenes share the same day count and agree on dates.</li>
+      <li>Old saves get their stored letter and social web days corrected on load, so nothing gets pushed too far ahead.</li>
+      <li>AI replies with empty fields no longer break dialogue, favors or actions.</li>
+      <li>The starting farm computer is more compact. Clicks only count on its body, so it no longer opens from the empty tile beside it.</li>
+    </ul>
+  </section>
+</section>
+
+<!-- 1.3.3 -->
+<section class="patch" id="v1-3-3">
+  <header class="patch-head"><span class="version">1.3.3</span><h2>Gemini high-demand notice</h2><span class="patch-date">Jun 11, 2026</span></header>
+  <p class="lead">A clear notice when Gemini is overloaded, villagers who stop repeating the same topic and a tidier settings menu.</p>
+
+  <section class="feature" id="v1-3-3-gemini">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Gemini high-demand notice</h3>
+      <p class="lead">When Google Gemini is overloaded, you get a clear notice in chat. Before, it looked like a problem with the mod's setup.</p>
+    </div>
+    <ul class="points">
+      <li>The mod recognizes Gemini's high-demand reply (a 503 error) and stops treating it as a generic server error.</li>
+      <li>Warnings show in orange. Normal AI messages stay gold.</li>
+      <li>The notice shows once per day, so it doesn't flood the screen when Gemini fails several times.</li>
+      <li>The existing quota, missing key and invalid key messages stay the same.</li>
+      <li>The new message is translated into English, Portuguese, German, Spanish, French and Italian.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-3-3-personality">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Villagers who stop circling one topic</h3>
+      <p class="lead">Some villagers kept going back to the same theme the more you talked to them. Now they vary more.</p>
+    </div>
+    <ul class="points">
+      <li>Haley, Harvey, Maru and Pierre got extra protection against repeated themes: sun, photos and fashion; coffee, jazz and health; science and experiments; the shop, Joja and sales.</li>
+      <li>The base-game villagers' sheets were rewritten to focus on motivations, vulnerabilities, relationships and inner tension.</li>
+      <li>Personality serves as the villager's identity baseline. The AI doesn't copy that text or use it as a list of topics.</li>
+      <li>Older conversations go in as a short summary. Only the ongoing conversation goes in word for word.</li>
+      <li>Memories that only echoed a villager's hobby, job, object or habit are filtered out. New emotional memories focus on relationship, trust, tension and continuity.</li>
+      <li>Personality growth stays in the subtext of what villagers say.</li>
+      <li>Old saves don't need a reset. The cleanup happens when the prompt is built.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-3-3-menu">
+    <div class="feature-head">
+      <span class="tag improved">Settings</span>
+      <h3>Reorganized settings menu</h3>
+      <p class="lead">GMCM is now split into general settings, narrative systems, Gemini, the custom provider and Experimental Content.</p>
+    </div>
+    <ul class="points">
+      <li>Gemini and the custom provider got their own pages: <b>AliveNpcs Gemini Config</b> and <b>AliveNpcs Custom LLM Provider Config</b>.</li>
+      <li>A new control picks whether Gemini or the custom provider is your primary AI provider.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>Reload custom LLM config from config.json each request</b><span>makes the OpenAI-compatible or local provider re-read its settings on every call</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-3-fixes">
+    <div class="feature-head">
+      <span class="tag fix">Fixes</span>
+      <h3>Correct names and conversations that keep the thread</h3>
+      <p class="lead">Fixes you'll notice in gossip, the diary and proposals.</p>
+    </div>
+    <ul class="points">
+      <li>Gossip, memories, chat and the diary show modded characters by name. Before, an internal ID could show up, like <code>Lucas.AliveNpcs.Ocs_CachorroChupetao</code>.</li>
+      <li>Dating and marriage proposals use the line on screen as context, so the conversation keeps its continuity.</li>
+      <li>AI-generated lines no longer get stuck in the game's dialogue queue.</li>
+      <li>Scene text and the new options were updated in German, Spanish and French.</li>
+    </ul>
+    <div class="sub">
+      <h3>Good to know</h3>
+      <ul class="points">
+        <li>The [CP] AliveNpcs OCs pack is out of the download for now, and Cachorro Chupetão left the active OCs pack. It's not goodbye: he may come back later in a pack of his own.</li>
+      </ul>
+    </div>
+  </section>
+</section>
+
+<!-- 1.3.2.1 -->
+<section class="patch" id="v1-3-2-1">
+  <header class="patch-head"><span class="version">1.3.2.1</span><h2>Experimental Content platform</h2><span class="patch-date">Jun 11, 2026</span></header>
+  <p class="lead">Experimental modes can now come in packs separate from AliveNpcs, and Mayor Mode became the first official pack. SMAPI shows this version as 1.3.2-1.</p>
+
+  <section class="feature" id="v1-3-2-1-mayor">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Mayor Mode becomes an official pack</h3>
+      <p class="lead">In Mayor Mode, Pelican Town thinks Lewis retired and you are the mayor now. The mode left the mod's core and now ships in the official [EC] AliveNpcs - Pelican Town Mayor pack.</p>
+    </div>
+    <ul class="points">
+      <li>With the pack installed, Mayor Mode shows up in the Experimental Content tab.</li>
+      <li>The mode's prompt and intro scene now come from the pack.</li>
+      <li>With the mode active, the reply menu gets an <b>Ask about mandate</b> button. The reply goes through the AI and counts toward the villager's emotional memory, social drama, personality and arcs.</li>
+      <li>An experimental action can't be combined with dating or marriage proposals or with the manual action field. One thing at a time.</li>
+      <li>Old configs that still use <code>PelicanTownMayor</code> keep working.</li>
+      <li>The other experimental modes stay in the same tab, including An Alien in the Valley, Slasher Mode, Valley Heartthrob, Valley Heartthrob (Cute), Vampire Mode and Yandere Mode.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-3-2-1-platform">
+    <div class="feature-head">
+      <span class="tag creators">For pack creators</span>
+      <h3>The groundwork for EC packs</h3>
+      <p class="lead">Experimental modes can now be distributed as packs, outside the AliveNpcs core.</p>
+    </div>
+    <ul class="points">
+      <li>AliveNpcs finds packs through their <code>alive-npcs-ec.json</code> file, and their modes show up in the settings menu on their own.</li>
+      <li>A public API lets addons register modes, dialogue actions and hooks that only run while the mode is active.</li>
+      <li>Packs can add extra buttons to the reply menu and bring their own scenes.</li>
+      <li>Fix: a pack's scene titles and scripts use the pack's own i18n, without relying on AliveNpcs' main i18n.</li>
+    </ul>
+  </section>
+</section>
+
+<!-- 1.3.2 -->
+<section class="patch" id="v1-3-2">
+  <header class="patch-head"><span class="version">1.3.2</span><h2>Gift hotfix</h2><span class="patch-date">Jun 7, 2026</span></header>
+  <p class="lead">A quick fix: with AliveNpcs installed, you couldn't give gifts to villagers. Now you can.</p>
+  <ul class="points">
+    <li>When you hold an item, Stardew handles the gift the normal way again.</li>
+    <li>With empty hands, AI conversations work as before.</li>
+    <li>After the game accepts the gift, AliveNpcs still records it in the villager's memory and context.</li>
+  </ul>
+</section>
+
+<!-- 1.3.1 -->
+<section class="patch" id="v1-3-1">
+  <header class="patch-head"><span class="version">1.3.1</span><h2>Big drama update</h2><span class="patch-date">Jun 7, 2026</span></header>
+  <p class="lead">More drama for players who turned that tone on, with canon still as the base.</p>
+  <ul class="points">
+    <li>Social drama got stronger and more visible in saves that enable it.</li>
+    <li>Villagers react better to tension, jealousy, gossip, romantic boundaries and the consequences of your save.</li>
+    <li>Emotional memory, relationships between villagers, the save's narrative state and dynamic scenes are more closely tied.</li>
+    <li>Dialogue, replies, proposals, letters, gossip and dynamic scenes got a polish.</li>
+    <li>Fewer broken replies and fewer inconsistent states in the middle of interactions.</li>
+  </ul>
+</section>
+
+<!-- 1.3.0 -->
+<section class="patch" id="v1-3-0">
+  <header class="patch-head"><span class="version">1.3.0</span><h2>The big update, through Preview 3</h2><span class="patch-date">Jun 3, 2026 · Preview 3 on Jun 4</span></header>
+  <p class="lead">The biggest AliveNpcs update up to that point, together with the Preview 3 batch. The default settings keep a balanced experience, and the more intense systems only turn on if you want them.</p>
+
+  <section class="feature" id="v1-3-0-providers">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>More AI providers and local models</h3>
+      <p class="lead">AliveNpcs now works with more than Gemini: OpenAI-compatible providers, OpenRouter, local LLMs and other compatible endpoints.</p>
+    </div>
+    <ul class="points">
+      <li>For a custom provider, you fill in the base URL, the model and, if needed, an API key.</li>
+      <li>Local LLM presets fill in the URL and model for common local servers.</li>
+      <li>Gemini handles multiple keys, usage limits, temporary failures and malformed replies better.</li>
+      <li>The Hub's AI Status tab shows the provider state, the model, fallbacks, requests, recent failures and, with debug stats on, token usage.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>LLM Provider</b><span>Google Gemini or OpenAI-compatible / local</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-0-drama">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Social Drama</h3>
+      <p class="lead">The village now tracks tension, misunderstandings, closeness and conflict between villagers. Gossip and what you say can change how one villager sees another.</p>
+    </div>
+    <ul class="points">
+      <li>Each villager forms an opinion of the others, made of trust, respect, irritation, suspicion, jealousy, loyalty, warmth and defensiveness.</li>
+      <li>Rumors carry credibility, distortion, emotional weight, social damage, reach and a lifetime.</li>
+      <li>Villagers only bring up gossip they actually know. Nobody knows everything.</li>
+      <li>With enough tension, a villager may vent in private, defend someone, make a sharp remark or show that a relationship took a hit. Drama shows up in conversation without needing a big event.</li>
+      <li>You can try to change someone's opinion by praising, defending, warning about or badmouthing another villager. They can accept it, get suspicious or reject it.</li>
+    </ul>
+    <div class="sub">
+      <h3>Three intensities</h3>
+      <ul class="points">
+        <li><b>Cozy</b> keeps social consequences softer.</li>
+        <li><b>Balanced</b> is the middle ground and the default.</li>
+        <li><b>Telenovela</b> brings wounded pride, jealousy, suspicion, pointed comments, romantic boundaries, confrontation and that "I heard things" energy. Preview 3 made it more direct and cutting, so it doesn't stay too polite. Conflict stays proportional to the character, non-explicit, consensual and based on the save's history.</li>
+      </ul>
+    </div>
+    <div class="option"><span class="label">In GMCM</span><b>Social Drama Enabled</b><span>turns on the social consequences of gossip, opinions and tension</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Drama Intensity</b><span>Cozy, Balanced or Telenovela. Balanced by default.</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Opinions from Gossip, Player Intrigue and Private Vents</b><span>turn each part on separately</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-0-adult">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Optional adult content</h3>
+      <p class="lead">The more intense systems come switched off and only apply to adult villagers. Children and child-coded characters are left out.</p>
+    </div>
+    <ul class="points">
+      <li><b>Orientation Discovery:</b> after repeated respectful flirting, an adult villager may privately question or recognize an attraction. It stays internal and never becomes public gossip or a label. By default, flirting only counts from <span class="hearts"><svg><use href="#heart"/></svg> 6</span>, and it takes 3 signals to become a private milestone.</li>
+      <li><b>NPC-NPC Romances:</b> moments between adult villagers can slowly turn into crushes or romantic curiosity. Family relationships are left out.</li>
+      <li><b>Adult Relationship Drama:</b> marital tension, risky attraction, guilt, jealousy and boundaries. It is non-explicit adult emotional drama. Turning it on doesn't enable any NSFW mode.</li>
+      <li><b>Infidelity Arcs:</b> only appear with adult drama on, infidelity arcs on and canon marriage protection off. Even then, they play out as temptation, conflict, limits and consequence. A breakup can happen through the story without any infidelity.</li>
+      <li><b>Protect Canon Marriages:</b> keeps the game's marriages from turning into affair arcs.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>Orientation Discovery</b><span>off by default</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>NPC-NPC Romances</b><span>off by default</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Adult Relationship Drama</b><span>off by default</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Infidelity Arcs</b><span>off by default</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Protect Canon Marriages</b><span>on by default, and best left on</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-0-proposals">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Dating and marriage proposals through conversation</h3>
+      <p class="lead">You can now ask a villager to date you or to marry you by writing it in your own words. The Bouquet and the Mermaid's Pendant still work as usual.</p>
+    </div>
+    <ul class="points">
+      <li>Choose <b>Ask to date</b> or <b>Propose marriage</b>, and the next message you write becomes the proposal.</li>
+      <li>The AI weighs what you said, your relationship, the context and the history. Lots of hearts don't force anyone to say yes.</li>
+      <li>Dating needs <span class="hearts"><svg><use href="#heart"/></svg> 8</span> by default. The villager must be romance-safe, can't be a child and must be available in the story, and you can't be in a conflicting commitment. A breakup arc can make someone available, like Robin.</li>
+      <li>Marriage needs <span class="hearts"><svg><use href="#heart"/></svg> 10</span> by default, an existing dating relationship and, with the option on, the game's house upgrade.</li>
+      <li>If the villager accepts, the mod applies the dating or engagement state in the game and saves it as a memory and milestone. The engagement also gets a small visual moment.</li>
+      <li>If they refuse, the refusal becomes part of the story. They may say "not now" or set a firm boundary.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>Dialogue Proposals</b><span>turns on dating and marriage proposals through free text</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Dating Proposals</b> and <b>Marriage Proposals</b><span>show each option for eligible villagers</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Proposal Cooldown</b><span>7 days by default, from 1 to 28. It is the wait after a refusal.</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Require House Upgrade</b><span>on by default</span></div>
+    <div class="sub">
+      <h3>Good to know</h3>
+      <ul class="points">
+        <li>When a villager sets a firm boundary because they really aren't interested, the wait is different: 28 days by default.</li>
+        <li>An internal setting, on by default, lets you propose through conversation without the Bouquet or the Pendant.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="feature" id="v1-3-0-personality">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Personalities that change with your save</h3>
+      <p class="lead">Villagers' personalities now evolve slowly inside each save. The game's personality stays the foundation: Abigail doesn't suddenly become someone else.</p>
+    </div>
+    <ul class="points">
+      <li>The mod picks up signals from your message, the proposed action, the villager's reaction and emotion, and friendship points.</li>
+      <li>These signals slowly shift openness, kindness, resentment, honesty, social confidence and romantic openness.</li>
+      <li>Support makes a villager more open or confident. An apology eases resentment. Rudeness, a harsh rejection or an insult makes them defensive or closed off for a while. Respectful flirting raises romantic curiosity, and invasive flirting makes them set boundaries.</li>
+      <li>Some changes fade, like being guarded after a bad exchange. Others become milestones once they pass a certain point and carry into future conversations.</li>
+      <li>Important moments leave stronger emotional memories. Rejections, rudeness and bad moments weigh on the relationship more consistently.</li>
+      <li>Relationships also depend on recent tone, context, social history and emotional state, on top of friendship points.</li>
+      <li>Each villager has a richer sheet, with personality, relationship, context, narrative state and what they think of you.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>Dynamic Personalities</b><span>turns on personality growth in the save</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-0-npc-social">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Villagers who bond with each other</h3>
+      <p class="lead">Moments between villagers got a lot better. They have small interactions every day and can form friendships and tensions beyond the scripted pairs.</p>
+    </div>
+    <ul class="points">
+      <li>Relationships between villagers weigh more on gossip, the tone of conversations, Story Arcs and small events in the village.</li>
+      <li>Unlikely pairs can lead to rare or funny moments.</li>
+      <li>Common moments can use a local template in place of an AI call, which saves requests.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>NPC Interactions</b> and <b>Dynamic NPC Friendships</b><span>turn on daily interactions and friendships outside the scripted pairs</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Max Interactions/Day</b><span>2 by default, from 1 to 5</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Social Chaos</b><span>35 by default, from 0 (safer) to 100 (more experimental). Sets how often the village tries unlikely pairs.</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Rare Moment Chance</b><span>8 by default, from 0 to 25</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Local Moment Chance</b><span>35 by default, from 0 to 100</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Social Moments as Gossip</b><span>lets public moments turn into gossip later</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-0-scenes">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Over 100 dynamic scenes</h3>
+      <p class="lead">Short scenes can happen while you play, once their conditions are met. The village has a life of its own without you starting every interaction.</p>
+    </div>
+    <ul class="points">
+      <li>Over 100 scenes with humor, routine, light drama, affection, social tension and small everyday events.</li>
+      <li>They cover many villagers and places, with family, friends, rivals, unlikely pairs and everyday encounters.</li>
+      <li>Preview 3 added a large batch of new slice-of-life scenes, with text in several languages.</li>
+      <li>Scheduled scenes start more reliably.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-3-0-world">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>News, letters, diary and arcs</h3>
+      <p class="lead">The valley keeps more of your save's history, with weekly news, letters in the mailbox, a diary and arcs with endings that make sense.</p>
+    </div>
+    <ul class="points">
+      <li>The weekly news sums up what happened in the valley. It uses an AI call.</li>
+      <li>Villagers send letters to react to you in different ways, sometimes with a small gesture or gift, within safety limits.</li>
+      <li>The valley diary records important social events and carries continuity from one day to the next.</li>
+      <li>Story Arcs got better guidance and steer toward consequences that matter. No arc ends with the grand finale of a new kind of watermelon anymore.</li>
+      <li>Social moments can become arcs, and the important history of your save feeds dialogue, gossip and memories later.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>Weekly News</b><span>on by default</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>NPC Letters</b><span>on by default</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-0-experimental">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Experimental content and dialogue modes</h3>
+      <p class="lead">GMCM got its own entry, AliveNPCS EXPERIMENTAL CONTENT. It gathers the more chaotic and narrative systems and four off-tone dialogue modes that arrived in Preview 3.</p>
+    </div>
+    <div class="notice">
+      <article><h4>An Alien in the Valley</h4><p>Everyone believes you came from another galaxy to plant parsnips. They react with suspicion, reverence, fear, curiosity or fascination.</p></article>
+      <article><h4>Valley Heartthrob</h4><p>Adult villagers find you absurdly charming and flirt a lot more.</p></article>
+      <article><h4>Vampire Mode</h4><p>"Do you sparkle in the sun?" The village suspects you're a vampire, or close to one. Sun, garlic, mirrors, a dramatic cape and night farming.</p></article>
+      <article><h4>Yandere Mode</h4><p>Adult villagers get clingy, jealous, dramatic and possessive. It's over-the-top romantic drama, with no heavy horror.</p></article>
+    </div>
+    <ul class="points">
+      <li>Only one mode can be active at a time.</li>
+      <li>With the mode off, nothing extra goes into the prompt. The normal tone and token use stay the same.</li>
+      <li>Children and child-coded characters stay out of the flirting and romance modes.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>Experimental mode</b><span>Off, An Alien in the Valley, Valley Heartthrob, Vampire Mode or Yandere Mode</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-0-hub">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Hub, menus and compatibility</h3>
+      <p class="lead">The AliveNpcs Hub got more useful in game, GMCM got more complete and modded characters feel less lost.</p>
+    </div>
+    <ul class="points">
+      <li>The Hub gives access to status, settings, character sheets, AI status, compatibility and the main features, without relying only on the external menu.</li>
+      <li>GMCM has more options, better organized and with clearer text: AI behavior, response tone, social systems, drama, scenes, memory, letters, news, interactions between villagers and experimental content.</li>
+      <li>Each feature's status shows when it is active, limited, unavailable or waiting for something in the game.</li>
+      <li>Stardew Valley Expanded villagers get more context about their own world. Base-game villagers can react to the expanded world when it makes sense.</li>
+      <li>Characters from other mods fit into conversations better. The mod is better at telling whether an NPC is from the base game, SVE or another mod, and why a character was skipped.</li>
+      <li>More text is ready for translation, and many Portuguese texts were adjusted to sound better in game.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>Show Hub Debug Stats</b><span>off by default. Shows token totals and request counts in the Hub.</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-0-stability">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Steadier conversations</h3>
+      <p class="lead">Conversations with the AI last longer and break a lot less.</p>
+    </div>
+    <ul class="points">
+      <li>A conversation keeps going for more than one exchange, and recent history keeps continuity, tone and context.</li>
+      <li>When the AI sends an incomplete, cut-off or malformed reply, with extra text or emojis, the mod tries to save the useful part and the conversation goes on. Numbers in the wrong format get fixed.</li>
+      <li>When a reply is cut off by the output limit, the SMAPI log gives better clues.</li>
+      <li>When you propose an action and the villager accepts, they comment on what happened. The line, the internal reason and the event summary are kept apart, so chat only shows the character's line.</li>
+      <li>Proposals, flirting, bold requests and emotionally strong moments got more natural replies.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-3-0-fixes">
+    <div class="feature-head">
+      <span class="tag fix">Fixes</span>
+      <h3>Preview 3 fixes</h3>
+      <p class="lead">Issues reported in the beta with the base game and Gemini.</p>
+    </div>
+    <ul class="points">
+      <li>Pierre's angry portrait showed up broken, as a blue square. Now he uses a safe alternative portrait and can still get irritated. He also no longer looks angry when he's reacting well.</li>
+      <li>The Evelyn and George bench scene respects the weather and no longer talks about sunshine on a rainy day.</li>
+      <li>Gossip or a diary entry processed at the end of the day only showed its detailed message the next day. Now the message shows close to when it's applied and doesn't repeat the next day.</li>
+      <li>Friendship points respect the configured limits better, and negative, positive and romantic reactions follow the active settings.</li>
+      <li>More safeguards keep romantic or experimental content away from children and child-coded characters, and keep experimental content out of the normal mode.</li>
+    </ul>
+  </section>
+</section>

@@ -1,0 +1,244 @@
+<header class="top">
+  <div class="eyebrow"><span class="version">1.5</span><span>1.5.0 – 1.5.1</span><span>lançadas · 24 e 25 jul 2026</span></div>
+  <h1>A amizade ganha um oposto, e a vila se abre pra outros mods e idiomas</h1>
+  <p class="lead">A 1.5.0 trouxe a inimizade, os arcos de expulsão, a base do multiplayer, o vietnamita e uma compatibilidade melhor com NPCs de outros mods. A 1.5.1 deixou outros mods mandarem fofocas pra vila e acertou a integração com o Personality Manager.</p>
+</header>
+
+<nav class="summary" aria-label="Versões da 1.5">
+  <a class="tile" href="#v1-5-1"><strong>1.5.1</strong><span>Fofocas vindas de outros mods, cumprimentos mais coerentes e correções no Personality Manager.</span></a>
+  <a class="tile" href="#v1-5-0"><strong>1.5.0 · Nós e Eles</strong><span>Inimizade, arcos de expulsão, base do multiplayer, vietnamita e mais compatibilidade com outros mods.</span></a>
+</nav>
+
+<!-- 1.5.1 -->
+<section class="patch" id="v1-5-1">
+  <header class="patch-head"><span class="version">1.5.1</span><h2>Fofocas de outros mods e correções</h2><span class="patch-date">25 jul 2026</span></header>
+  <p class="lead">Outros mods podem alimentar as fofocas da vila, e os personagens personalizados aparecem do jeito certo nos diálogos da IA.</p>
+
+  <section class="feature" id="v1-5-1-gossip">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Fofocas vindas de outros mods</h3>
+      <p class="lead">Outros mods compatíveis agora podem mandar boatos e acontecimentos pro sistema de fofocas da vila.</p>
+    </div>
+    <ul class="points">
+      <li>Você decide se aceita essas fofocas de fora e quantas delas entram por dia.</li>
+    </ul>
+    <div class="option"><span class="label">No GMCM</span><b>Aceitar fofocas de terceiros</b><span>liga ou desliga as fofocas vindas de outros mods</span></div>
+    <div class="option"><span class="label">No GMCM</span><b>Fofocas de terceiros por dia</b><span>quantas fofocas de outros mods a vila aceita por dia</span></div>
+  </section>
+
+  <section class="feature" id="v1-5-1-greetings">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>Cumprimentos que lembram de você</h3>
+      <p class="lead">O cumprimento de um morador agora combina melhor com a relação que vocês têm de verdade.</p>
+    </div>
+    <ul class="points">
+      <li>Quem já te conhece não te cumprimenta mais como se fosse o primeiro encontro.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-5-1-fixes">
+    <div class="feature-head">
+      <span class="tag fix">Correções</span>
+      <h3>Personality Manager e multiplayer</h3>
+      <p class="lead">Personagens personalizados aparecem do jeito certo, e o multiplayer sincroniza melhor as histórias de quem saiu do vale.</p>
+    </div>
+    <ul class="points">
+      <li>A compatibilidade com o AliveNpcs Personality Manager melhorou.</li>
+      <li>Nomes, identidades e pronomes personalizados dos NPCs aparecem com mais precisão nos diálogos da IA.</li>
+      <li>Com o Personality Manager instalado, apertar <code>F7</code> podia abrir duas telas de ficha de personagem ao mesmo tempo. Isso foi corrigido.</li>
+      <li>Os conflitos com outros mods que mudam informações dos NPCs diminuíram.</li>
+      <li>No multiplayer, os eventos de história com NPCs que foram embora ou foram expulsos do vale sincronizam melhor.</li>
+    </ul>
+  </section>
+</section>
+
+<!-- 1.5.0 -->
+<section class="patch" id="v1-5-0">
+  <header class="patch-head"><span class="version">1.5.0</span><h2>Nós e Eles</h2><span class="patch-date">24 jul 2026</span></header>
+  <p class="lead">A 1.5.0 gira em torno de amizade, ressentimento, pertencimento e consequências que atingem a vila inteira.</p>
+
+  <section class="feature" id="v1-5-0-enmity">
+    <div class="feature-head">
+      <span class="tag">Experimental</span>
+      <h3>Sistema de Inimizade</h3>
+      <p class="lead">Cada relação agora pode ter uma trilha de inimizade, separada da amizade. O sistema é experimental e vem desligado.</p>
+    </div>
+    <ul class="points">
+      <li>Interações negativas podem fazer a inimizade crescer.</li>
+      <li>Os corações de inimizade aparecem pretos nas telas social e de perfil.</li>
+      <li>Interações positivas ajudam a consertar a relação. Elas dão amizade e tiram parte da inimizade acumulada.</li>
+      <li>A IA recebe o contexto da inimizade quando avalia as suas respostas. Assim as reações e as consequências combinam melhor com uma relação difícil.</li>
+    </ul>
+    <div class="option"><span class="label">No GMCM</span><b>Ativar Sistema de Inimizade</b><span>desligado por padrão</span></div>
+  </section>
+
+  <section class="feature" id="v1-5-0-expulsion">
+    <div class="feature-head">
+      <span class="tag">Experimental</span>
+      <h3>Arcos de expulsão e retorno</h3>
+      <p class="lead">Arcos de história raros em que um NPC rejeitado pela vila é preso, exilado ou decide ir embora. Depois, um arco de retorno pode trazer ele de volta.</p>
+    </div>
+    <ul class="points">
+      <li>Crianças e o seu cônjuge atual estão sempre protegidos.</li>
+      <li>A expulsão tem volta. O que aconteceu vira parte da memória da história e aparece nos diálogos depois.</li>
+      <li>Cada save guarda o estado das próprias expulsões.</li>
+      <li>As lojas de NPCs expulsos continuam acessíveis, pra que uma consequência da história não tranque conteúdo do jogo.</li>
+    </ul>
+    <div class="option"><span class="label">No GMCM</span><b>Ativar arcos de expulsão</b><span>desligado por padrão</span></div>
+    <div class="option"><span class="label">No GMCM</span><b>Limite de hostilidade para expulsão</b><span>o nível mínimo de hostilidade pra um NPC poder ser expulso</span></div>
+    <div class="option"><span class="label">No GMCM</span><b>Chance de arco de expulsão</b><span>a chance de surgir um arco de expulsão</span></div>
+    <div class="option"><span class="label">No GMCM</span><b>Chance de arco de retorno</b><span>a chance de surgir um arco de retorno</span></div>
+  </section>
+
+  <section class="feature" id="v1-5-0-multiplayer">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>A base do multiplayer</h3>
+      <p class="lead">O AliveNpcs agora tem a base pra funcionar de forma coordenada em partidas multiplayer. Pra ligar isso, é preciso um mod complementar, que a 1.5.0 anunciou pra breve.</p>
+    </div>
+    <ul class="points">
+      <li>Com o complemento instalado, o host coordena o que afeta a vila toda: fofocas, arcos de história, momentos sociais, cartas, notícias semanais e mudanças de humor. Assim o mesmo conteúdo não é processado várias vezes.</li>
+      <li>O progresso dos arcos, os objetivos concluídos, as mudanças de relacionamento e as notificações podem ser sincronizados entre os jogadores.</li>
+      <li>Cada jogador mantém a própria perspectiva e gera o próprio diário com as interações que viveu. Os acontecimentos coletivos continuam compartilhados pela fazenda.</li>
+      <li>Pedidos pra concluir ou apagar arcos vão pro host, e a história fica igual pra todo mundo.</li>
+      <li>O mod principal sozinho não liga o multiplayer. Você vai precisar instalar o complemento compatível quando ele sair.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-5-0-shops">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Lojas abertas sem o dono no balcão</h3>
+      <p class="lead">Uma loja pode continuar aberta mesmo quando o dono não está atrás do balcão.</p>
+    </div>
+    <ul class="points">
+      <li>Assim a loja não fecha quando o dono casa com você, muda de rotina ou sai da vila por um tempo num arco de expulsão.</li>
+      <li>Essa configuração agora é salva por save, e os dados antigos migram sozinhos.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-5-0-computer">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>Computador AliveNpcs renovado</h3>
+      <p class="lead">O computador AliveNpcs chega sozinho no começo de um jogo novo, pronto pra abrir o Hub.</p>
+    </div>
+    <ul class="points">
+      <li>Ele tem três visuais pra escolher, com prévia, na tela da rede social da vila. As pixel arts são de @ChaseBlet.</li>
+      <li>O móvel ficou mais bonito, a área de interação melhorou e ele se integra melhor aos menus do mod.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-5-0-festivals">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Festivais e Beach Episode</h3>
+      <p class="lead">Os convites com IA agora funcionam em festivais personalizados, começando pelo Campeonato de Vôlei de Praia do Beach Episode.</p>
+    </div>
+    <ul class="points">
+      <li>Os NPCs aceitam ou recusam o convite pra formar dupla de acordo com o contexto. A resposta vem num formato estruturado, o que deixa a ação confiável.</li>
+      <li>O festival Noite dos Papagaios agora é reconhecido e tem diálogos de IA.</li>
+      <li>A integração com o Beach Episode é opcional. O AliveNpcs funciona normalmente sem ele.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-5-0-compat">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>NPCs de outros mods</h3>
+      <p class="lead">O AliveNpcs reconhece melhor os NPCs elegíveis de outros mods, com suporte maior ao Stardew Valley Expanded.</p>
+    </div>
+    <ul class="points">
+      <li>NPCs compatíveis participam dos diálogos, das fofocas, das cartas, dos arcos de história e dos outros sistemas sociais do AliveNpcs.</li>
+      <li>Pra tirar um NPC do mod, escreva o nome dele numa lista separada por vírgulas.</li>
+      <li>A lista de NPCs disponíveis respeita as suas configurações e a lista comunitária de personagens cujos autores não autorizam o uso com IA.</li>
+    </ul>
+    <div class="option"><span class="label">No GMCM</span><b>NPCs Desativados</b><span>nomes de NPCs separados por vírgula</span></div>
+  </section>
+
+  <section class="feature" id="v1-5-0-personality">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>Personality Manager</h3>
+      <p class="lead">A integração com o Personality Manager cresceu. Agora cada NPC pode ter o próprio arquivo de personalização, e dá pra recarregar tudo durante o jogo.</p>
+    </div>
+    <ul class="points">
+      <li>As personalizações podem mudar o nome exibido e outros dados do personagem. O nome novo aparece certo nos retratos e nas telas de diálogo.</li>
+      <li>O formato antigo do arquivo de personalidades continua funcionando.</li>
+      <li>Quando outros mods mexem nos mesmos dados, o AliveNpcs percebe, e isso reduz os conflitos.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-5-0-ec">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Seletor de Conteúdo Experimental</h3>
+      <p class="lead">Os modos de Conteúdo Experimental (EC) agora têm um seletor visual nas configurações do mod, com descrição e imagem de prévia de cada modo.</p>
+    </div>
+    <ul class="points">
+      <li>Os nomes antigos dos modos continuam funcionando.</li>
+      <li>Os pacotes EC podem acrescentar instruções pra IA, ações de diálogo, eventos de cena, arcos, memória da história e dados de NPCs de um jeito mais organizado.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-5-0-typing">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>Escrever e ler diálogos</h3>
+      <p class="lead">Os campos onde você escreve respostas e ações agora aceitam várias linhas, e os diálogos ficaram maiores.</p>
+    </div>
+    <ul class="points">
+      <li>Dá pra clicar com o mouse pra posicionar o cursor e usar as teclas de navegação pra andar pelo texto. Editar respostas longas ficou mais confortável.</li>
+      <li><code>Enter</code> cria uma linha nova. <code>Ctrl + Enter</code> envia a resposta.</li>
+      <li>O tamanho padrão dos diálogos subiu de 300 pra 800 caracteres, e o limite que você pode configurar subiu de 1.000 pra 2.000.</li>
+      <li>O limite que você escolhe agora vale sempre, nos diálogos comuns e nos diálogos de festival.</li>
+    </ul>
+    <div class="option"><span class="label">No GMCM</span><b>Tamanho Máx. Diálogo</b><span>padrão 800, até 2.000</span></div>
+  </section>
+
+  <section class="feature" id="v1-5-0-languages">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Vietnamita e escolha de idioma</h3>
+      <p class="lead">O AliveNpcs agora tem suporte completo a vietnamita, com fontes e renderização Unicode pros acentos aparecerem certo nas telas do jogo.</p>
+    </div>
+    <ul class="points">
+      <li>Agora nossos amigos vietnamitas podem dar em cima da Robin no próprio idioma.</li>
+      <li>Uma opção nova de idioma tem três escolhas: seguir o idioma do Stardew Valley, usar vietnamita ou escrever você mesmo o idioma das respostas da IA.</li>
+      <li>As traduções do mod e do pack EC oficial melhoraram.</li>
+      <li>Textos longos são encurtados com mais cuidado. Os caracteres Unicode são preservados e, sempre que dá, nenhuma palavra é cortada no meio.</li>
+      <li>Se você tiver qualquer problema pra jogar o AliveNpcs no seu idioma, fala comigo. Vou procurar uma solução pra que todo mundo aproveite o mod na própria língua.</li>
+    </ul>
+    <div class="option"><span class="label">No GMCM</span><b>Idioma do AliveNpcs</b><span>seguir o jogo, vietnamita ou um idioma que você escolhe</span></div>
+    <div class="option"><span class="label">No GMCM</span><b>Idioma personalizado da IA</b><span>o idioma das respostas da IA, quando você escreve o seu</span></div>
+  </section>
+
+  <section class="feature" id="v1-5-0-creators">
+    <div class="feature-head">
+      <span class="tag creators">Pra criadores de mods</span>
+      <h3>Integrações e API pública</h3>
+      <p class="lead">A API pública cresceu, e outros mods agora podem gerar conteúdo usando a IA que o jogador já configurou.</p>
+    </div>
+    <ul class="points">
+      <li>A API liga ou desliga NPCs em todos os sistemas do AliveNpcs.</li>
+      <li>Mods parceiros podem consultar os NPCs disponíveis e os geradores de conteúdo que o AliveNpcs oferece.</li>
+      <li>Outros mods podem gerar diálogos, cartas, interações, momentos sociais, análises de fofoca e conteúdo livre com o provedor de IA do jogador.</li>
+      <li>A API também controla lojas independentes, personalizações de personagens, fichas de jogador e pacotes de Conteúdo Experimental.</li>
+      <li>Mods complementares podem ler e atualizar a ficha do jogador, consultar os valores originais dos NPCs e restaurar personalizações com mais segurança.</li>
+      <li>A 1.5.0 anunciou uma documentação detalhada pra breve.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-5-0-notes">
+    <div class="feature-head">
+      <h3>Antes de atualizar</h3>
+    </div>
+    <ul class="points">
+      <li>A inimizade e os arcos de expulsão são experimentais e vêm desligados.</li>
+      <li>Nenhuma integração opcional é necessária pra usar o AliveNpcs. Beach Episode, Personality Manager e o complemento de multiplayer são todos opcionais.</li>
+      <li>As configurações antigas continuam valendo sempre que possível, incluindo os nomes antigos dos modos EC e o arquivo antigo de personalidades.</li>
+    </ul>
+  </section>
+</section>

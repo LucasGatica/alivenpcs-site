@@ -82,7 +82,7 @@
       const number = document.createElement("b");
       number.textContent = labelOf(v);
       const name = document.createElement("span");
-      name.textContent = nameOf(v) + (v.date ? " · " + formatDate(v.date, lang) : "");
+      name.textContent = [nameOf(v), formatDate(v.date, lang)].filter(Boolean).join(" · ");
       a.append(number, name);
       if (range(v)) {
         const patches = document.createElement("span");
@@ -99,7 +99,7 @@
 
       const option = document.createElement("option");
       option.value = v.version;
-      option.textContent = labelOf(v) + " · " + nameOf(v) + " (" + status + ")";
+      option.textContent = [labelOf(v), nameOf(v)].filter(Boolean).join(" · ") + " (" + status + ")";
       option.selected = v === current;
       select.append(option);
     }

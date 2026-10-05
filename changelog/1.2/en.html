@@ -1,0 +1,205 @@
+<header class="top">
+  <div class="eyebrow"><span class="version">1.2</span><span>1.2.0</span><span>released · Mar 27, 2026</span></div>
+  <h1>Story arcs get objectives and an ending you can watch</h1>
+  <p class="lead">Everything that changed in AliveNpcs in the 1.2 line, explained without the jargon. Arcs now have objectives and a conclusion scene, villagers talk about heart events, letters come with gifts and the mod switches Gemini keys on its own when the quota runs out.</p>
+</header>
+
+<nav class="summary" aria-label="Summary">
+  <a class="tile" href="#v1-2-0-arcs"><strong>Arcs with objectives</strong><span>Each arc has 3 to 5 objectives, and progress moves on its own.</span></a>
+  <a class="tile" href="#v1-2-0-arc-ending"><strong>Arc endings on screen</strong><span>A scene closes each arc, and every villager remembers the outcome for good.</span></a>
+  <a class="tile" href="#v1-2-0-heart-events"><strong>After a heart event</strong><span>In the first talk after the event, the villager reacts to what you shared.</span></a>
+  <a class="tile" href="#v1-2-0-api-keys"><strong>Multiple Gemini keys</strong><span>Up to 20 keys. When one runs out of quota, the mod moves to the next.</span></a>
+  <a class="tile" href="#v1-2-0-letters"><strong>Letters with gifts</strong><span>Villagers send along an item they love or like.</span></a>
+  <a class="tile" href="#v1-2-0-hub"><strong>Hub and game menu</strong><span>A Character Sheet tab, a button to turn the AI on and off, and access from the game menu.</span></a>
+  <a class="tile" href="#v1-2-0-conversations"><strong>Longer conversations</strong><span>Up to 15 turns per conversation, and your appearance goes on the sheet.</span></a>
+  <a class="tile" href="#v1-2-0-kent"><strong>Kent in Year 1</strong><span>Kent is away in the first year, and his family misses him.</span></a>
+  <a class="tile" href="#v1-2-0-stability"><strong>More stability</strong><span>Clear warnings when the quota runs out, with the game's own lines as a backup.</span></a>
+  <a class="tile" href="#v1-2-0-api"><strong>API for other mods</strong><span>Companion mods, like the Personality Editor, can work with personalities.</span></a>
+</nav>
+
+<section class="patch" id="v1-2-0">
+  <header class="patch-head"><span class="version">1.2.0</span><h2>Arcs with endings, letters with gifts</h2><span class="patch-date">Mar 27, 2026</span></header>
+  <p class="lead">Story arcs were rebuilt, letters bring gifts and the mod accepts several Gemini keys.</p>
+
+  <!-- Story arcs -->
+  <section class="feature" id="v1-2-0-arcs">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Story arcs with objectives</h3>
+      <p class="lead">Each story arc now has 3 to 5 objectives in a row, like talking to someone or bringing an item. The mod tracks progress on its own from the villagers' replies.</p>
+    </div>
+    <ul class="points">
+      <li>The arcs menu shows how many objectives you have done, for example 2/3.</li>
+      <li>Each arc gets a colored label: [READY!], [CONCLUDED] or [EXPIRED].</li>
+      <li>Once every objective is done, the <b>Conclude Arc!</b> button shows up in the menu.</li>
+    </ul>
+    <div class="sub">
+      <h3>Good to know</h3>
+      <ul class="points">
+        <li>Only one new arc is detected per week, so the valley doesn't fill up with stories all at once.</li>
+        <li>An arc that goes 2 or more seasons without progress expires on its own.</li>
+      </ul>
+    </div>
+    <div class="option"><span class="label">In GMCM</span><b>Arc Expiry (seasons)</b><span>default 2</span></div>
+  </section>
+
+  <!-- Arc ending -->
+  <section class="feature" id="v1-2-0-arc-ending">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Arc endings become a scene</h3>
+      <p class="lead">When you conclude an arc, a scene in the style of heart events shows how it ends. The AI writes the dialogue between the villagers involved.</p>
+    </div>
+    <ul class="points">
+      <li>The text appears letter by letter, like on a typewriter.</li>
+      <li>The villagers' portraits change emotion: neutral, happy, sad, angry and in love.</li>
+      <li>The scene switches between speakers, fades in and out, and has dramatic music and a setting that fits the story.</li>
+      <li>After the ending, the villagers involved and the ones outside it talk about the outcome for 3 days.</li>
+      <li>The outcome becomes part of your save's official story. Every villager remembers it in future conversations, so everyone tells the same story.</li>
+      <li>The outcome also goes into the village gossip.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>Arc Conclusion Scene</b><span>on by default</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Post-Arc Dialogue (days)</b><span>default 3</span></div>
+  </section>
+
+  <!-- Heart event follow-up -->
+  <section class="feature" id="v1-2-0-heart-events">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>The talk after a heart event</h3>
+      <p class="lead">The first conversation after a heart event now has a special line. The villager reacts to what you went through together without retelling the scene.</p>
+    </div>
+    <ul class="points">
+      <li>It works with all 12 villagers you can date. Their heart event IDs were fixed.</li>
+      <li>The mod keeps track of which heart events you have seen, from one conversation to the next.</li>
+      <li>Memories of these events in conversations follow your friendship level and only show up from <span class="hearts"><svg><use href="#heart"/></svg> 4</span>.</li>
+    </ul>
+  </section>
+
+  <!-- Gemini keys -->
+  <section class="feature" id="v1-2-0-api-keys">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Multiple Gemini keys</h3>
+      <p class="lead">You can now add up to 20 Gemini API keys. When a key hits its daily quota, the mod moves to the next one on its own, without interrupting the game.</p>
+    </div>
+    <ul class="points">
+      <li>During the session, the mod keeps track of which keys hit the limit and which ones look invalid.</li>
+      <li>An in-game message tells you when the mod switches keys and how the quota is doing.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>➕ Number of Keys</b><span>default 3, from 1 to 20. Sets how many key fields show up.</span></div>
+  </section>
+
+  <!-- Letters -->
+  <section class="feature" id="v1-2-0-letters">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Letters with gifts</h3>
+      <p class="lead">Villagers now send a gift along with their letters. The mod picks an item the villager loves or likes on its own.</p>
+    </div>
+    <ul class="points">
+      <li>The gift has a sell price limit: up to 500g for an item the villager likes and up to 750g for an item they love.</li>
+      <li>Rare or progression items, like the Prismatic Shard, are on a block list and never go in letters.</li>
+      <li>Each villager waits a while before sending another letter. The default is 7 days.</li>
+      <li>You can get more than one letter a day if you raise the limit.</li>
+      <li>Letters now take into account how the villager feels and the village gossip.</li>
+      <li>Villagers from other mods can send gifts too.</li>
+    </ul>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Option in config.json</th><th>Default</th><th>What it does</th></tr></thead>
+        <tbody>
+          <tr><td><code>LetterCooldownDays</code></td><td>7</td><td>Minimum days between two letters from the same villager.</td></tr>
+          <tr><td><code>MaxLettersPerDay</code></td><td>1</td><td>Maximum letters queued per day.</td></tr>
+          <tr><td><code>MaxLetterGiftSellPrice</code></td><td>500</td><td>Maximum price of a gift the villager likes.</td></tr>
+          <tr><td><code>MaxLetterGiftSellPriceForLoved</code></td><td>750</td><td>Maximum price of a gift the villager loves.</td></tr>
+          <tr><td><code>EnableLetterGiftsForModNpcs</code></td><td>on</td><td>Lets villagers from other mods send gifts in letters.</td></tr>
+          <tr><td><code>LetterGiftBlacklistItemIds</code></td><td>rare items</td><td>IDs of items that never go in letters. It comes with the Prismatic Shard, among others.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Hub and game menu -->
+  <section class="feature" id="v1-2-0-hub">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>AliveNpcs Hub and the game menu</h3>
+      <p class="lead">The AliveNpcs Hub (F9) has new tabs and a button to turn the AI on and off. You can now also open the Hub from the game's own menu.</p>
+    </div>
+    <ul class="points">
+      <li>New tab: <b>Character Sheet</b>.</li>
+      <li>The <b>Personalities</b> tab shows up when a companion mod, like the Personality Editor, is installed.</li>
+      <li>The AI button turns the AI features on and off. With the AI off, villagers use the game's normal lines.</li>
+      <li>The Hub can show your token usage.</li>
+      <li>The game menu has a new <b>AliveNpcs Hub</b> button next to the inventory tab. It looks like Stardew Valley's brown tabs and opens the Hub.</li>
+      <li>The arcs menu shows objective progress, the colored labels and the conclude button. See <a href="#v1-2-0-arcs">Story arcs with objectives</a>.</li>
+    </ul>
+    <div class="option"><span class="label">In the Hub</span><b>Enable AI features</b><span>on by default</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Show Token Usage</b><span>off by default. Shows token usage at the bottom of the Hub.</span></div>
+  </section>
+
+  <!-- Conversations -->
+  <section class="feature" id="v1-2-0-conversations">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Longer conversations</h3>
+      <p class="lead">A conversation with a villager can now have up to 15 turns. The old maximum was 3.</p>
+    </div>
+    <ul class="points">
+      <li>The Character Sheet has a fourth field: your character's appearance, like pronouns, hair color and clothing style.</li>
+      <li>When a villager has no personality of their own in AliveNpcs, the AI uses one of their original lines as a style guide.</li>
+      <li>A new option limits how many friendship points one conversation can give.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>Turns per Conversation</b><span>default 1, up to 15</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Max Points per Interaction</b><span>default 100</span></div>
+  </section>
+
+  <!-- Kent -->
+  <section class="feature" id="v1-2-0-kent">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Kent is away in Year 1</h3>
+      <p class="lead">In the first year, Kent is away from the valley. His family can talk about him with longing, and he stays out of arcs and gossip.</p>
+    </div>
+    <ul class="points">
+      <li>Jodi, Sam and Vincent can mention Kent with longing.</li>
+      <li>Jodi and Sam have different personalities in Year 1 and from Year 2 on.</li>
+      <li>Gossip leaves out interactions with villagers who are away, before and after the day's analysis.</li>
+    </ul>
+  </section>
+
+  <!-- Stability -->
+  <section class="feature" id="v1-2-0-stability">
+    <div class="feature-head">
+      <span class="tag fix">Fixes</span>
+      <h3>More stability</h3>
+      <p class="lead">The mod handles Gemini failures and replies generated in the background better.</p>
+    </div>
+    <ul class="points">
+      <li>If every key runs out of quota, villagers go back to the game's normal lines and a message tells you why.</li>
+      <li>The mod sorts Gemini errors by type: missing key, invalid key, usage limit, server error, timeout and network failure.</li>
+      <li>Lines generated in the background now reach the game through a safe queue.</li>
+      <li>Messages from calls made in the background now show up in the game.</li>
+      <li>The gossip that shows up in the chat in the morning uses the gossip summary when the message comes back empty.</li>
+    </ul>
+  </section>
+
+  <!-- Inter-mod API -->
+  <section class="feature" id="v1-2-0-api">
+    <div class="feature-head">
+      <span class="tag creators">For mod creators</span>
+      <h3>API for other mods</h3>
+      <p class="lead">AliveNpcs now has a public API for companion mods, like the Personality Editor.</p>
+    </div>
+    <ul class="points">
+      <li>Custom personalities can be loaded from external JSON files.</li>
+      <li>With the companion mod installed, the Hub gets the <b>Personalities</b> tab.</li>
+    </ul>
+    <div class="cmds">
+      <div><code>GetDefaultPersonality()</code><span>Returns a villager's default personality.</span></div>
+      <div><code>HasCustomPersonality()</code><span>Tells whether a villager has a custom personality.</span></div>
+      <div><code>ReloadCustomPersonalities()</code><span>Reloads the custom personalities.</span></div>
+    </div>
+  </section>
+</section>

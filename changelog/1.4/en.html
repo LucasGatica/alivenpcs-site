@@ -1,0 +1,258 @@
+<header class="top">
+  <div class="eyebrow"><span class="version">1.4</span><span>1.4.0 – 1.4.5</span><span>Jun 29 – Jul 13, 2026</span></div>
+  <h1>AI at festivals, invitations to hang out and small favors</h1>
+  <p class="lead">The 1.4 line opened with the Big Party Update preview, which brought AI lines at festivals, the Hang out action and item requests that become quests. The versions after it changed option defaults, started respecting the mod authors' AI opt-out list and connected AliveNpcs to the Personality Editor and the Beach Episode album.</p>
+</header>
+
+<nav class="summary" aria-label="Versions in the 1.4 line">
+  <a class="tile" href="#v1-4-5"><strong>1.4.5 · Beach Episode album</strong><span>Beach Episode actions that succeed count toward its achievement album.</span></a>
+  <a class="tile" href="#v1-4-4"><strong>1.4.4 · Personality Editor</strong><span>The editor lists who you can edit and restores the right original personality.</span></a>
+  <a class="tile" href="#v1-4-1"><strong>1.4.1 · New defaults</strong><span>Useful options on from the start, a scrollbar in Story Arcs and the AI opt-out list.</span></a>
+  <a class="tile" href="#v1-4-0"><strong>1.4.0 · Big Party Update</strong><span>Preview with AI at festivals, Bonus actions, Hang out and item requests.</span></a>
+</nav>
+
+<!-- 1.4.5 -->
+<section class="patch" id="v1-4-5">
+  <header class="patch-head"><span class="version">1.4.5</span><h2>Beach Episode album integration</h2><span class="patch-date">Jul 13, 2026</span></header>
+  <p class="lead">If you also play with the Beach Episode mod, AliveNpcs now opens its achievement album and records the actions that succeed there.</p>
+  <ul class="points">
+    <li>The AliveNpcs Hub shows the <b>Beach Episode Album</b> button only when SMAPI has loaded Beach Episode.</li>
+    <li>The album button and the Personality Editor button can show up together, and each one opens the right screen.</li>
+    <li>When a Beach Episode action is applied successfully in the game, AliveNpcs records the achievement in the album.</li>
+    <li>Only three actions count: watching the parrots, setting up a picnic and taking a photo.</li>
+    <li>Actions that failed, got no response or come from other packs don't unlock achievements.</li>
+    <li>Both mods keep working on their own. AliveNpcs doesn't require Beach Episode.</li>
+    <li>If your Beach Episode version is old or incompatible, the Hub stays open and the problem shows up as a warning in the SMAPI log.</li>
+    <li>If recording the achievement fails, the action AliveNpcs already applied still stands.</li>
+  </ul>
+</section>
+
+<!-- 1.4.4 -->
+<section class="patch" id="v1-4-4">
+  <header class="patch-head"><span class="version">1.4.4</span><h2>Personality Editor integration</h2><span class="patch-date">Jul 10, 2026</span></header>
+  <p class="lead">AliveNpcs now has an official integration with the Personality Editor, the companion mod that lets you change villagers' personalities. The editor follows the same compatibility and protection rules as AliveNpcs itself.</p>
+  <ul class="points">
+    <li>The editor lists the NPCs that can get a personality of your own in the current save: the base game villagers and the NPCs from mods you allowed.</li>
+    <li>NPCs blocked by your compatibility settings or by the community AI opt-out list don't show up for editing.</li>
+    <li>The editor keeps working even if you rename its folder.</li>
+    <li>The editor's data file has to be named <code>custom_personalities.json</code>. The default location is still <code>Mods/AliveNpcsPersonalityEditor/custom_personalities.json</code>.</li>
+    <li>Restoring the default in the editor now brings back the villager's correct original personality, without the version you saved.</li>
+  </ul>
+
+  <section class="feature" id="v1-4-4-api">
+    <div class="feature-head">
+      <span class="tag creators">For mod creators</span>
+      <h3>Three new functions in the public API</h3>
+      <p class="lead">The editor integration uses three new functions from the AliveNpcs public API.</p>
+    </div>
+    <ul class="points">
+      <li><code>GetEditableNpcNames</code> returns the NPCs that can get a custom personality in the current save, respecting compatibility and the AI opt-out list.</li>
+      <li><code>RegisterCustomPersonalityFile</code> registers the editor's data file, even when its folder was renamed. The path is only accepted if the file is named <code>custom_personalities.json</code>.</li>
+      <li><code>GetDefaultPersonality</code> returns the original personality, without applying the one saved by the editor.</li>
+    </ul>
+  </section>
+</section>
+
+<!-- 1.4.1 -->
+<section class="patch" id="v1-4-1">
+  <header class="patch-head"><span class="version">1.4.1</span><h2>New defaults and Hub polish</h2><span class="patch-date">Jul 2, 2026</span></header>
+  <p class="lead">A follow-up to 1.4.0 with more useful defaults for new setups, a clear limit on how long custom LLMs can take, a scrollbar in Story Arcs and the return of NPCs from mods, now respecting the AI opt-out list.</p>
+
+  <section class="feature" id="v1-4-1-defaults">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Options that start turned on</h3>
+      <p class="lead">Several options got more useful defaults for anyone starting a new configuration.</p>
+    </div>
+    <ul class="points">
+      <li>Multi-turn conversations now start turned on, with 3 turns of context.</li>
+      <li>The default Gemini model is now <code>gemini-3.1-flash-lite</code>.</li>
+      <li>Orientation discovery and romances between NPCs now start turned on.</li>
+      <li>The custom LLM waits up to 300 seconds by default. The maximum is 500, and the menu shows the right range, from 5 to 500 seconds.</li>
+      <li>Custom and OpenAI-compatible LLMs respect the 500-second cap, even when the saved setting has a higher value.</li>
+      <li>If you had already picked these values, yours stay. The new defaults apply to new configurations and to fields the mod corrects on its own.</li>
+      <li>The option help texts were updated in English, Portuguese, German, Spanish, French and Italian. So were the configuration guides in Portuguese and English.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>Gemini Model</b><span>default gemini-3.1-flash-lite</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Turns per Conversation</b><span>default 3</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Orientation Discovery</b><span>on by default</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>NPC-NPC Romances</b><span>on by default</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Custom LLM Timeout</b><span>default 300 seconds, from 5 to 500</span></div>
+  </section>
+
+  <section class="feature" id="v1-4-1-opt-out">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>NPCs from mods are back, with the AI opt-out list</h3>
+      <p class="lead">SVE and NPCs from other mods are turned on by default again. Only the mods on the community AI opt-out list stay out. This part arrived in a compliance update on Jul 10, 2026.</p>
+    </div>
+    <ul class="points">
+      <li>AliveNpcs checks the list (<code>AI_Mod_Exclusion.json</code>) straight from the Stardew Modding Wiki every time the game starts.</li>
+      <li>You can't turn the list off. Its mods stay blocked in dialogue and in the AI systems that run in the background.</li>
+      <li>The block covers dialogue, festivals, relationships, letters, emotional memory, gossip reused by the AI, the weekly newspaper, the web of relationships between NPCs, and Story Arc detection and endings.</li>
+      <li>Until the check finishes, or if the connection fails or the list comes back broken, NPCs from mods stay blocked to be safe. Base game villagers keep working.</li>
+      <li>The list can name a whole mod, several mods with a wildcard or specific NPCs. For older packs that don't tie their NPCs to the mod, AliveNpcs also checks the NPCs that each installed mod on the list defines in the game.</li>
+      <li>The Hub shows whether the list loaded, how many rules came in, which installed NPCs it matched and why each one is blocked.</li>
+      <li>If you remove a mod, the history of its NPCs stays saved, but it goes dormant and doesn't feed the AI again.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-4-1-arcs-tab">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Scrollbar in the Story Arcs tab</h3>
+      <p class="lead">The Hub's <b>Story Arcs</b> tab got a visible scrollbar, in the same style as the <b>Diary</b> and <b>Gossip</b> tabs.</p>
+    </div>
+    <ul class="points">
+      <li>The scrollbar shows up when the list runs past the visible area, and you can drag it.</li>
+      <li>The mouse wheel still works.</li>
+      <li>Clicks outside the visible area no longer trigger hidden cards.</li>
+    </ul>
+  </section>
+</section>
+
+<!-- 1.4.0 -->
+<section class="patch" id="v1-4-0">
+  <header class="patch-head"><span class="version">1.4.0</span><h2>Big Party Update (Preview): festivals, hangouts and favors</h2><span class="patch-date">Jun 29, 2026</span></header>
+  <p class="lead">The preview that opened the 1.4 line. Villagers got AI lines at festivals, you can ask someone to hang out, and sometimes they ask you for a favor that becomes a quest in your journal.</p>
+
+  <section class="feature" id="v1-4-0-festivals">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>AI dialogue at festivals</h3>
+      <p class="lead">A new AI dialogue system for festivals, starting with the Egg Festival.</p>
+    </div>
+    <ul class="points">
+      <li>At supported festivals, clicking a villager can replace the game's simple line with an in-character AI line that knows about the event. This happens when that festival's pack is active.</li>
+      <li>The game's original line is captured and used as an anchor for the context.</li>
+      <li>Festival conversations keep their context separate from everyday dialogue.</li>
+      <li>When the festival ends, the conversations turn into a summarized memory and a diary entry.</li>
+      <li>The mod recognizes the festival by the event's translated names and by temporary maps like <code>Temp</code>. This keeps the Egg Festival from going unnoticed.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-4-0-bonus-actions">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Bonus actions menu</h3>
+      <p class="lead">The reply menu got <b>Bonus actions</b>, which gathers relationship proposals, actions from EC (Experimental Content) packs and AliveNpcs' own actions.</p>
+    </div>
+    <ul class="points">
+      <li>The actions follow the context. If the villager or the moment in the conversation doesn't allow an action, it doesn't show up.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-4-0-hang-out">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Hang out</h3>
+      <p class="lead">A new action to invite a villager to spend some time with you. It shows up from <span class="hearts"><svg><use href="#heart"/></svg> 3</span> with that villager.</p>
+    </div>
+    <ul class="points">
+      <li>The invitation is social by default. A light romantic tone only comes in when the adult, romantic context allows it.</li>
+      <li>If the villager says yes, a short scene plays or gets ready at the agreed place, with up to 6 lines written by the AI.</li>
+      <li>Scene templates now have 4 or more villager lines, with longer versions for lightly romantic scenes.</li>
+      <li>The invitation itself can already bring reply choices for the scene, without a separate question at the end.</li>
+      <li>If you ask for a place that has no scene, the villager can suggest another spot. A popup asks whether you accept or refuse, and the suggested scene gets scheduled if you accept.</li>
+      <li>If the villager says no, they explain their reason or limit in character, and no scene happens.</li>
+      <li>The invitation goes into the villager's memory and can turn into gossip, unless you check <b>Keep secret</b>.</li>
+      <li>Children and child-coded NPCs never get the action or unsuitable scene templates.</li>
+      <li>The AliveNpcs Hub got an <b>Outings</b> tab, with pending invitations and a simple list of supported destinations.</li>
+      <li>Invitations are saved in a file of their own, <code>invite_out_state.json</code>.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>Hang Out Action</b><span>on by default</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Hang Out Min Hearts</b><span>default 3</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Accepted Hang Out Cooldown</b><span>how long to wait before inviting the same villager again after a yes</span></div>
+    <div class="option"><span class="label">In GMCM</span><b>Rejected Hang Out Cooldown</b><span>how long to wait before inviting the same villager again after a no</span></div>
+  </section>
+
+  <section class="feature" id="v1-4-0-item-requests">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Item requests</h3>
+      <p class="lead">Every now and then, a villager asks for a small item in the first line of a conversation. The request becomes a regular quest in the Stardew Valley journal.</p>
+    </div>
+    <ul class="points">
+      <li>A request can only come up in the first eligible line, and it doesn't compete with regular lines.</li>
+      <li>When you hand over the item, the favor ends and a short thank-you scene may play.</li>
+      <li>These requests are small favors, separate from Story Arcs. They don't grow into a long questline and don't change the game's official story on their own.</li>
+      <li>A villager with a pending favor doesn't ask for another item.</li>
+      <li>Active favor quests come back to the journal when you load your save.</li>
+      <li>If the game already marked a favor as complete, the mod fixes its state from the quest events.</li>
+      <li>Requests are saved in a file of their own, <code>item_request_favors.json</code>.</li>
+    </ul>
+    <div class="option"><span class="label">In GMCM</span><b>Item Request Chance</b><span>default 5%. Goes from 0% to 100% for testing.</span></div>
+  </section>
+
+  <section class="feature" id="v1-4-0-story-arcs">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Story Arc endings on the real map</h3>
+      <p class="lead">A Story Arc ending can now play on a real game map, like a regular Stardew event, with the usual sprites and speech bubbles. The black screen is only used for the title and the closing.</p>
+    </div>
+    <ul class="points">
+      <li>Each step of the ending has its own positions, set in JSON. This keeps the farmer and the villagers from standing on top of each other, inside walls or in the wrong spots.</li>
+      <li>If the ending takes you to another map, you go back to where you were when the event ends.</li>
+      <li>The Story Arcs menu now lets you delete saved arcs. A popup asks you to confirm first, and a message on screen confirms it afterwards.</li>
+      <li>The delete texts are available in English, Portuguese, German, Spanish, French and Italian.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-4-0-more">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Mayor Mode and the farm computer</h3>
+      <p class="lead">The official Mayor Mode got gossip of its own, and the starting farm computer got easier to use.</p>
+    </div>
+    <ul class="points">
+      <li>Mayor Mode got its own instructions for the end-of-day gossip.</li>
+      <li>The Mayor Mode scene got translations in German, Spanish, French and Italian.</li>
+      <li>The starting farm computer is more compact. Clicks only work on the body of the object, and the empty tile next to it no longer opens the computer.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-4-0-gemini">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Safer Gemini, with support for new keys</h3>
+      <p class="lead">The Gemini key no longer goes in the request address, and new keys in the <code>AQ.</code> format now work.</p>
+    </div>
+    <ul class="points">
+      <li>Regular keys go in the <code>x-goog-api-key</code> header, so the key never shows up in the URL.</li>
+      <li>Keys that start with <code>AQ.</code> use Gemini's <code>interactions</code> API, with token counting and the lowest thinking level when possible.</li>
+      <li>When Gemini rejects the authentication, the error now says clearly that the key is invalid.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-4-0-fixes">
+    <div class="feature-head">
+      <span class="tag fix">Fixes</span>
+      <h3>Fixes and stability</h3>
+      <p class="lead">Day counting is right again, and empty AI replies no longer break anything.</p>
+    </div>
+    <ul class="points">
+      <li>Day counting was fixed in cooldowns, letters, gossip, the Hub and scenes.</li>
+      <li>Older saves correct the stored days for letters and for the web of relationships between NPCs when they load.</li>
+      <li>AI replies with empty or null fields are cleaned up before reaching the game and no longer break the flow.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-4-0-creators">
+    <div class="feature-head">
+      <span class="tag creators">For pack creators</span>
+      <h3>More tools for EC packs</h3>
+      <p class="lead">EC packs got new ways to shape gossip, prompts, NPCs and Story Arcs. All of it only applies while the pack's mode is active.</p>
+    </div>
+    <ul class="points">
+      <li>An EC can add rules to the end-of-day gossip prompt (target <code>gossip</code>).</li>
+      <li>An EC can add static or dynamic notes to the list of interactions used to generate gossip (target <code>gossip_interaction</code>).</li>
+      <li><code>RecordGossipInteraction</code> lets a DLL record the day's events while the mode is active.</li>
+      <li><code>RegisterDynamicPromptBlock</code> lets a DLL add dynamic text to the prompt at conversation time, without registering the mode again.</li>
+      <li>An EC can also contribute NPC personality and metadata, Story Arc templates and items, arc proposals, hooks, snapshots, dynamic button availability and experimental lore.</li>
+      <li>The gossip flow keeps the experimental dialogue, gossip, analysis and interaction blocks separate.</li>
+      <li>EC scenes now have a documented path for per-pack translations.</li>
+      <li>External EC packs reload the right texts when you change the game language.</li>
+      <li><code>RegisterSceneEventJson</code> is still reserved for a future API version. For EC scenes in this preview, use <code>sceneEventDirectories</code>.</li>
+    </ul>
+  </section>
+</section>

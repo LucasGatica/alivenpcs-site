@@ -1,0 +1,487 @@
+<header class="top">
+  <div class="eyebrow"><span class="version">1.3</span><span>El Gran Drama</span><span>1.3.0 – 1.3.4</span><span>3 a 18 jun 2026</span></div>
+  <h1>Los vecinos empiezan a recordar, a relacionarse entre ellos y a armar drama</h1>
+  <p class="lead">La 1.3.0 fue la actualización más grande de AliveNpcs hasta ese momento, con drama social, personalidades que cambian con tu partida, propuestas de noviazgo y matrimonio por conversación y un pueblo que vive sin que tengas que empezar cada interacción. Las versiones siguientes reforzaron el drama, arreglaron los regalos, abrieron espacio para paquetes de Contenido Experimental y, en la preview 1.3.4, trajeron pedidos de objetos, invitaciones para salir e IA en el Festival del Huevo.</p>
+</header>
+
+<nav class="summary" aria-label="Versiones de la línea 1.3">
+  <a class="tile" href="#v1-3-4"><strong>1.3.4 · Preview</strong><span>Pedidos de objetos, la acción Salir juntos, finales de arco en el mapa real e IA en el Festival del Huevo.</span></a>
+  <a class="tile" href="#v1-3-3"><strong>1.3.3 · Aviso de alta demanda de Gemini</strong><span>Un aviso claro cuando Gemini está saturado, y vecinos que ya no se quedan en un solo tema.</span></a>
+  <a class="tile" href="#v1-3-2-1"><strong>1.3.2.1 · Plataforma de Contenido Experimental</strong><span>Los modos experimentales pueden venir en paquetes. El Modo Alcalde pasó a ser un paquete oficial.</span></a>
+  <a class="tile" href="#v1-3-2"><strong>1.3.2 · Arreglo de regalos</strong><span>Dar regalos vuelve a funcionar con AliveNpcs activo.</span></a>
+  <a class="tile" href="#v1-3-1"><strong>1.3.1 · Big drama update</strong><span>Drama social más fuerte y más conexión entre memoria, relaciones y escenas.</span></a>
+  <a class="tile" href="#v1-3-0"><strong>1.3.0 · La gran actualización</strong><span>Drama social, personalidades dinámicas, propuestas por diálogo, vecinos que se relacionan y más de 100 escenas.</span></a>
+</nav>
+
+<!-- 1.3.4 -->
+<section class="patch" id="v1-3-4">
+  <header class="patch-head"><span class="version">1.3.4</span><h2>Preview: pedidos de objetos por diálogo y ganchos de chismes para EC</h2><span class="patch-date">18 jun 2026</span></header>
+  <p class="lead">Una preview con pedidos de objetos por diálogo, la acción Salir juntos, finales de arco en el mapa real, IA en el Festival del Huevo y ganchos de chismes para creadores de paquetes. Esta preview luego se convirtió en la base de la 1.4.0.</p>
+
+  <section class="feature" id="v1-3-4-item-requests">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Pedidos de objetos: pequeños favores</h3>
+      <p class="lead">De vez en cuando, en la primera frase de la conversación, un vecino puede pedirte un objeto pequeño. El pedido se convierte en una misión normal en el diario de misiones de Stardew Valley.</p>
+    </div>
+    <ul class="points">
+      <li>Solo la primera frase elegible de la conversación puede traer un pedido. Quien ya tiene un favor abierto no pide otro.</li>
+      <li>Entrega el objeto como regalo o por la misión del juego. El favor se completa y puede mostrar una escena corta de agradecimiento.</li>
+      <li>Esas escenas salen de diez plantillas: acogedoras, de cita, de amistad, graciosas y del día a día. Si ya estás en el lugar indicado, la escena empieza enseguida. Si no, espera su lugar y su horario.</li>
+      <li>El favor puede dar una recompensa en oro, entre 50g y 500g.</li>
+      <li>El vecino recuerda el pedido abierto y los favores que le entregaste hace poco, así que no se repite ni se contradice.</li>
+      <li>Son microfavores, separados de los arcos de historia. No se convierten en una cadena larga de misiones y no cambian la historia del juego por sí solos.</li>
+      <li>Los niños y los personajes con aspecto infantil no reciben plantillas inadecuadas. Las escenas de cita quedan solo para parejas románticas adultas.</li>
+    </ul>
+    <div class="option"><span class="label">En GMCM</span><b>Probabilidad de Pedido de Objeto</b><span>5% por defecto, de 0% a 100%. En 0% los pedidos se detienen.</span></div>
+    <div class="sub">
+      <h3>Bueno saber</h3>
+      <ul class="points">
+        <li>Los nombres de objetos rotos en la partida o en el diario de misiones se reparan cuando se carga el favor.</li>
+        <li>Si la partida carga sin la misión del favor en el diario, vuelve sola. Los favores que el juego ya había completado también se reconocen.</li>
+        <li>Textos de la misión, del HUD, del GMCM y de las escenas en inglés, portugués, alemán, español, francés e italiano.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="feature" id="v1-3-4-hang-out">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Acciones extra y Salir juntos</h3>
+      <p class="lead">El menú de respuesta ganó <b>Acciones extra</b>, que reúnen las propuestas de noviazgo y matrimonio, las acciones de Contenido Experimental y acciones nuevas. La primera es <b>Salir juntos</b>, para invitar a un vecino a pasar un rato contigo.</p>
+    </div>
+    <ul class="points">
+      <li>Salir juntos aparece desde <span class="hearts"><svg><use href="#heart"/></svg> 3</span> por defecto.</li>
+      <li>La invitación es social por defecto. Un toque romántico ligero solo aparece en un contexto adulto y romántico seguro.</li>
+      <li>La IA lee lo que escribiste, los recuerdos, el contexto social, la relación y la disponibilidad del vecino antes de responder.</li>
+      <li>Si acepta, una escena corta ya armada se reproduce enseguida o te espera en el lugar acordado, con frases generadas a partir de tu invitación. Hay seis plantillas para empezar: amistad, acogedora, paseo, día a día, cita ligera e incómoda.</li>
+      <li>Si se niega, explica su motivo o su límite en personaje, sin escena.</li>
+      <li>La invitación entra en la memoria del vecino. Las invitaciones públicas pueden convertirse en chisme. Con <b>Guardar secreto</b>, va al diario secreto y queda fuera de los chismes.</li>
+      <li>Las acciones extra se ocultan en conversaciones de varios turnos, durante eventos y por debajo del mínimo de corazones. Los niños y los personajes con aspecto infantil no reciben Salir juntos.</li>
+    </ul>
+    <div class="option"><span class="label">En GMCM</span><b>Acción Salir Juntos</b><span>activada por defecto</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Corazones mínimos para salir</b><span>3 por defecto</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Cooldown de invitación aceptada</b><span>días antes de poder invitar otra vez al mismo vecino después de un sí</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Cooldown de invitación rechazada</b><span>días antes de poder invitar otra vez al mismo vecino después de un no</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-4-festivals">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>IA en el Festival del Huevo</h3>
+      <p class="lead">Los festivales ganaron diálogos con IA, empezando por el Festival del Huevo. Al hacer clic en un vecino durante el festival, la frase simple del juego se cambia por una frase en personaje que conoce el contexto del evento.</p>
+    </div>
+    <ul class="points">
+      <li>El mod captura la frase original del juego y la usa como punto de partida de la respuesta.</li>
+      <li>Hablar en el festival no gasta la conversación normal del día.</li>
+      <li>Cuando el festival termina, lo que pasó se convierte en un solo recuerdo, registrado en los chismes y en el diario.</li>
+      <li>El festival se reconoce aunque tenga el nombre traducido y en el mapa temporal que usa el juego durante el evento.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-3-4-arcs">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Finales de arco en el mapa real</h3>
+      <p class="lead">El final de un arco de historia ahora puede reproducirse como un evento normal del juego, en un mapa real, con los sprites y los globos de diálogo de siempre. La pantalla negra queda solo para el título y el cierre.</p>
+    </div>
+    <ul class="points">
+      <li>Cada escena de cierre elige un escenario, un mapa y posiciones seguras.</li>
+      <li>Las frases generadas para el final del arco se mantienen. Nada se cambia por texto genérico.</li>
+      <li>Los personajes ya no terminan en el mismo tile, dentro de paredes o en lugares equivocados como encima del Saloon.</li>
+      <li>Un arco de depuración ya resuelto permite repetir una escena de cierre sin llamar a la IA.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-3-4-creators">
+    <div class="feature-head">
+      <span class="tag creators">Para creadores de packs</span>
+      <h3>El Contenido Experimental llega a los chismes</h3>
+      <p class="lead">Los paquetes de Contenido Experimental ahora pueden influir en los chismes del final del día, de forma documentada.</p>
+    </div>
+    <ul class="points">
+      <li>Los <code>promptBlocks</code> con <code>target: "gossip"</code> entran en las instrucciones de generación de chismes. Con <code>target: "gossip_interaction"</code>, se convierten en notas en la lista de interacciones que se analiza al final del día.</li>
+      <li>La API ganó <code>RecordGossipInteraction</code>, para que las DLL registren notas de chismes en el día actual, y <code>RegisterDynamicPromptBlock</code>, para inyectar bloques dinámicos en el prompt durante la conversación. Los bloques respetan un límite de caracteres y se desactivan tras 3 fallos seguidos.</li>
+      <li>También llegaron aportes por modo: personalidad, datos de NPC, objetos y plantillas de arco, propuestas de arco, ganchos de ciclo de vida, snapshots, botones que aparecen según la situación y lore experimental. Todo esto solo vale con el modo del paquete activo y no reescribe la personalidad global.</li>
+      <li>Los ganchos de fin de día de los paquetes corren antes de los chismes de AliveNpcs. El análisis corre incluso en un día sin conversaciones tuyas, si hay una nota de paquete pendiente.</li>
+      <li>Con la IA o los chismes desactivados, las notas pendientes se borran y no pasan al día siguiente.</li>
+      <li>Las escenas de paquetes siguen viniendo de <code>sceneEventDirectories</code>, con textos del i18n del propio paquete. <code>RegisterSceneEventJson</code> sigue reservado para una versión futura.</li>
+      <li>Los paquetes recargan los textos correctos cuando cambia el idioma del juego.</li>
+      <li>El Modo Alcalde oficial ganó su propio prompt de chismes, que trata las conversaciones públicas como conducta cívica cuando tiene sentido. Su escena ahora tiene texto en alemán, español, francés e italiano, y el paquete pasa a pedir AliveNpcs 1.3.4.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-3-4-fixes">
+    <div class="feature-head">
+      <span class="tag fix">Correcciones</span>
+      <h3>Fechas correctas y menos tropiezos</h3>
+      <p class="lead">El mod ahora cuenta los días con un solo calendario, y algunas respuestas que rompían el flujo ya se manejan bien.</p>
+    </div>
+    <ul class="points">
+      <li>Cooldowns, cartas, chismes, promesas, favores, arcos, el Centro y las escenas usan el mismo conteo de días y coinciden en las fechas.</li>
+      <li>En partidas antiguas, los días guardados de cartas y de la red social se corrigen al cargar, para que nada quede empujado demasiado lejos.</li>
+      <li>Las respuestas de la IA con campos vacíos ya no rompen diálogos, favores ni acciones.</li>
+      <li>La computadora inicial de la granja es más compacta. El clic solo cuenta sobre su cuerpo, así que ya no se abre desde el tile vacío de al lado.</li>
+    </ul>
+  </section>
+</section>
+
+<!-- 1.3.3 -->
+<section class="patch" id="v1-3-3">
+  <header class="patch-head"><span class="version">1.3.3</span><h2>Aviso de alta demanda de Gemini</h2><span class="patch-date">11 jun 2026</span></header>
+  <p class="lead">Un aviso claro cuando Gemini está saturado, vecinos que dejan de repetir el mismo tema y un menú de configuración más ordenado.</p>
+
+  <section class="feature" id="v1-3-3-gemini">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Aviso de alta demanda de Gemini</h3>
+      <p class="lead">Cuando Google Gemini está saturado, recibes un aviso claro en el chat. Antes, parecía un error de configuración del mod.</p>
+    </div>
+    <ul class="points">
+      <li>El mod reconoce la respuesta de alta demanda de Gemini (error 503) y deja de tratarla como un error genérico de servidor.</li>
+      <li>Los avisos aparecen en naranja. Los mensajes normales de la IA siguen en dorado.</li>
+      <li>El aviso aparece una vez por día, para no llenar la pantalla cuando Gemini falla varias veces.</li>
+      <li>Los avisos que ya existían, de cuota, clave ausente y clave inválida, siguen igual.</li>
+      <li>El mensaje nuevo está traducido al inglés, portugués, alemán, español, francés e italiano.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-3-3-personality">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Vecinos que ya no se quedan en un solo tema</h3>
+      <p class="lead">Algunos vecinos volvían siempre al mismo tema cuanto más hablabas con ellos. Ahora varían más.</p>
+    </div>
+    <ul class="points">
+      <li>Haley, Harvey, Maru y Pierre recibieron protección extra contra temas repetidos: sol, fotos y moda; café, jazz y salud; ciencia y experimentos; la tienda, Joja y las ventas.</li>
+      <li>Las fichas de los vecinos del juego base se reescribieron con foco en motivaciones, vulnerabilidades, relaciones y tensiones internas.</li>
+      <li>La personalidad sirve como base de la identidad del vecino. La IA no copia ese texto ni lo usa como lista de temas.</li>
+      <li>Las conversaciones antiguas entran como un resumen corto. Solo la conversación en curso entra palabra por palabra.</li>
+      <li>Los recuerdos que solo repetían un pasatiempo, oficio, objeto o manía del vecino se filtran. Los recuerdos emocionales nuevos hablan de relación, confianza, tensión y continuidad.</li>
+      <li>La evolución de la personalidad queda en el subtexto de lo que dicen.</li>
+      <li>Las partidas antiguas no necesitan reiniciarse. La limpieza ocurre al armar el prompt.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-3-3-menu">
+    <div class="feature-head">
+      <span class="tag improved">Ajustes</span>
+      <h3>Menú de configuración reorganizado</h3>
+      <p class="lead">El GMCM ahora se divide en configuración general, sistemas narrativos, Gemini, proveedor personalizado y Contenido Experimental.</p>
+    </div>
+    <ul class="points">
+      <li>Gemini y el proveedor personalizado tienen páginas propias: <b>AliveNpcs Gemini Config</b> y <b>AliveNpcs Custom LLM Provider Config</b>.</li>
+      <li>Un control nuevo elige si Gemini o el proveedor personalizado es tu proveedor principal de IA.</li>
+    </ul>
+    <div class="option"><span class="label">En GMCM</span><b>Recargar configuración LLM personalizada en cada solicitud</b><span>hace que el proveedor compatible con OpenAI o local vuelva a leer su configuración en cada llamada</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-3-fixes">
+    <div class="feature-head">
+      <span class="tag fix">Correcciones</span>
+      <h3>Nombres correctos y conversaciones que no pierden el hilo</h3>
+      <p class="lead">Correcciones que se notan en los chismes, el diario y las propuestas.</p>
+    </div>
+    <ul class="points">
+      <li>Los chismes, recuerdos, el chat y el diario muestran a los personajes de mods por su nombre. Antes podía aparecer el ID interno, como <code>Lucas.AliveNpcs.Ocs_CachorroChupetao</code>.</li>
+      <li>Las propuestas de noviazgo y matrimonio usan la frase que está en pantalla como contexto, así la conversación no pierde la continuidad.</li>
+      <li>Las frases generadas por la IA ya no se quedan atascadas en la cola de diálogo del juego.</li>
+      <li>Los textos de las escenas y de las opciones nuevas se actualizaron en alemán, español y francés.</li>
+    </ul>
+    <div class="sub">
+      <h3>Bueno saber</h3>
+      <ul class="points">
+        <li>El paquete [CP] AliveNpcs OCs salió de la descarga por ahora, y Cachorro Chupetão salió del paquete activo de OCs. No es un adiós: puede volver más adelante en un paquete propio.</li>
+      </ul>
+    </div>
+  </section>
+</section>
+
+<!-- 1.3.2.1 -->
+<section class="patch" id="v1-3-2-1">
+  <header class="patch-head"><span class="version">1.3.2.1</span><h2>Plataforma de Contenido Experimental</h2><span class="patch-date">11 jun 2026</span></header>
+  <p class="lead">Los modos experimentales ahora pueden venir en paquetes separados de AliveNpcs, y el Modo Alcalde pasó a ser el primer paquete oficial. En SMAPI, esta versión aparece como 1.3.2-1.</p>
+
+  <section class="feature" id="v1-3-2-1-mayor">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>El Modo Alcalde pasa a ser un paquete oficial</h3>
+      <p class="lead">En el Modo Alcalde, Pueblo Pelícano cree que Lewis se jubiló y que ahora tú eres el alcalde. El modo salió del núcleo del mod y ahora viene en el paquete oficial [EC] AliveNpcs - Pelican Town Mayor.</p>
+    </div>
+    <ul class="points">
+      <li>Con el paquete instalado, el Modo Alcalde aparece en la pestaña Experimental Content.</li>
+      <li>El prompt del modo y la escena de introducción ahora vienen del paquete.</li>
+      <li>Con el modo activo, el menú de respuesta gana el botón <b>Preguntar por el mandato</b>. La respuesta pasa por la IA y cuenta para la memoria emocional, el drama social, la personalidad y los arcos del vecino.</li>
+      <li>Una acción experimental no se combina con propuestas de noviazgo o matrimonio ni con el campo de acción manual. Una cosa a la vez.</li>
+      <li>Las configuraciones antiguas que todavía usan <code>PelicanTownMayor</code> siguen funcionando.</li>
+      <li>Los demás modos experimentales siguen en la misma pestaña, entre ellos Un alien en el valle, Modo slasher, Bellezón del valle, Bellezón cute, Modo vampiro y Modo yandere.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-3-2-1-platform">
+    <div class="feature-head">
+      <span class="tag creators">Para creadores de packs</span>
+      <h3>La base de los paquetes EC</h3>
+      <p class="lead">Los modos experimentales ahora pueden distribuirse como paquetes, fuera del núcleo de AliveNpcs.</p>
+    </div>
+    <ul class="points">
+      <li>AliveNpcs encuentra los paquetes por su archivo <code>alive-npcs-ec.json</code>, y sus modos aparecen solos en el menú de configuración.</li>
+      <li>Una API pública permite que los addons registren modos, acciones de diálogo y ganchos que solo corren con el modo activo.</li>
+      <li>Los paquetes pueden agregar botones extra al menú de respuesta y traer escenas propias.</li>
+      <li>Corrección: el título y el guion de las escenas de un paquete usan el i18n del propio paquete, sin depender del i18n principal de AliveNpcs.</li>
+    </ul>
+  </section>
+</section>
+
+<!-- 1.3.2 -->
+<section class="patch" id="v1-3-2">
+  <header class="patch-head"><span class="version">1.3.2</span><h2>Arreglo de regalos</h2><span class="patch-date">7 jun 2026</span></header>
+  <p class="lead">Un arreglo rápido: con AliveNpcs activo, no se podían dar regalos a los vecinos. Ahora sí.</p>
+  <ul class="points">
+    <li>Con un objeto en la mano, Stardew vuelve a manejar el regalo de la forma normal.</li>
+    <li>Con las manos vacías, las conversaciones con la IA funcionan como antes.</li>
+    <li>Después de que el juego acepta el regalo, AliveNpcs lo sigue registrando en la memoria y el contexto del vecino.</li>
+  </ul>
+</section>
+
+<!-- 1.3.1 -->
+<section class="patch" id="v1-3-1">
+  <header class="patch-head"><span class="version">1.3.1</span><h2>Big drama update</h2><span class="patch-date">7 jun 2026</span></header>
+  <p class="lead">Más drama para quien activó ese tono, con el canon todavía como base.</p>
+  <ul class="points">
+    <li>El drama social se volvió más fuerte y más visible en las partidas que lo activan.</li>
+    <li>Los vecinos reaccionan mejor a la tensión, los celos, los chismes, los límites románticos y las consecuencias de tu partida.</li>
+    <li>La memoria emocional, las relaciones entre vecinos, el estado narrativo de la partida y las escenas dinámicas están más conectados.</li>
+    <li>Diálogos, respuestas, propuestas, cartas, chismes y escenas dinámicas recibieron pulido.</li>
+    <li>Menos respuestas rotas y menos estados inconsistentes en medio de las interacciones.</li>
+  </ul>
+</section>
+
+<!-- 1.3.0 -->
+<section class="patch" id="v1-3-0">
+  <header class="patch-head"><span class="version">1.3.0</span><h2>La gran actualización, hasta la Preview 3</h2><span class="patch-date">3 jun 2026 · Preview 3 el 4 jun</span></header>
+  <p class="lead">La actualización más grande de AliveNpcs hasta ese momento, junto con la tanda de la Preview 3. La configuración por defecto mantiene una experiencia equilibrada, y los sistemas más intensos solo se activan si tú quieres.</p>
+
+  <section class="feature" id="v1-3-0-providers">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Más proveedores de IA y modelos locales</h3>
+      <p class="lead">AliveNpcs ahora funciona con más que Gemini: proveedores compatibles con OpenAI, OpenRouter, LLM locales y otros endpoints compatibles.</p>
+    </div>
+    <ul class="points">
+      <li>Para un proveedor personalizado, completas la URL base, el modelo y, si hace falta, una clave de API.</li>
+      <li>Los presets de LLM local completan la URL y el modelo de servidores locales comunes.</li>
+      <li>Gemini maneja mejor varias claves, límites de uso, fallos temporales y respuestas con formato incorrecto.</li>
+      <li>La pestaña Estado IA del Centro muestra el estado del proveedor, el modelo, los respaldos, las solicitudes, los fallos recientes y, con las estadísticas de depuración activadas, el uso de tokens.</li>
+    </ul>
+    <div class="option"><span class="label">En GMCM</span><b>Proveedor LLM</b><span>Google Gemini u OpenAI-compatible / local</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-0-drama">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Drama Social</h3>
+      <p class="lead">El pueblo ahora sigue las tensiones, los malentendidos, los acercamientos y los conflictos entre los vecinos. Los chismes y lo que dices pueden cambiar cómo un vecino ve a otro.</p>
+    </div>
+    <ul class="points">
+      <li>Cada vecino forma una opinión de los demás, hecha de confianza, respeto, irritación, sospecha, celos, lealtad, cariño y actitud defensiva.</li>
+      <li>Los rumores tienen credibilidad, distorsión, peso emocional, daño social, alcance y tiempo de vida.</li>
+      <li>Los vecinos solo comentan los chismes que de verdad conocen. Nadie lo sabe todo.</li>
+      <li>Con suficiente tensión, un vecino puede desahogarse en privado, defender a alguien, soltar un comentario afilado o mostrar que una relación quedó tocada. El drama aparece en la conversación sin necesitar un gran evento.</li>
+      <li>Puedes intentar cambiar la opinión de alguien elogiando, defendiendo, advirtiendo o hablando mal de otro vecino. Puede aceptarlo, desconfiar o rechazarlo.</li>
+    </ul>
+    <div class="sub">
+      <h3>Tres intensidades</h3>
+      <ul class="points">
+        <li><b>Acogedor</b> deja las consecuencias sociales más suaves.</li>
+        <li><b>Equilibrado</b> es el punto medio y viene por defecto.</li>
+        <li><b>Telenovela</b> trae orgullo herido, celos, sospecha, comentarios con doble filo, límites románticos, confrontación y ese ambiente de "me contaron cosas". La Preview 3 lo volvió más directo y cortante, para que no se quede demasiado educado. El conflicto sigue siendo proporcional al personaje, no explícito, consensuado y basado en la historia de la partida.</li>
+      </ul>
+    </div>
+    <div class="option"><span class="label">En GMCM</span><b>Drama Social Activado</b><span>activa las consecuencias sociales de chismes, opiniones y tensión</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Intensidad del Drama</b><span>Acogedor, Equilibrado o Telenovela. Equilibrado por defecto.</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Opiniones por Chismes, Intriga del Jugador y Desahogos Privados</b><span>activan cada parte por separado</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-0-adult">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Contenido adulto opcional</h3>
+      <p class="lead">Los sistemas más intensos vienen desactivados y solo se aplican a vecinos adultos. Los niños y los personajes con aspecto infantil quedan fuera.</p>
+    </div>
+    <ul class="points">
+      <li><b>Descubrimiento de Orientación:</b> después de coqueteos respetuosos repetidos, un vecino adulto puede cuestionar o reconocer una atracción en privado. Queda en lo interno y nunca se convierte en chisme público ni en etiqueta. Por defecto, los coqueteos solo cuentan desde <span class="hearts"><svg><use href="#heart"/></svg> 6</span>, y hacen falta 3 señales para que se convierta en un hito privado.</li>
+      <li><b>Romances NPC-NPC:</b> los momentos entre vecinos adultos pueden convertirse con el tiempo en un flechazo o en curiosidad romántica. Las relaciones familiares quedan fuera.</li>
+      <li><b>Drama de Relaciones Adultas:</b> tensión en el matrimonio, atracción arriesgada, culpa, celos y límites. Es drama emocional adulto y no explícito. Activarlo no enciende ningún modo NSFW.</li>
+      <li><b>Arcos de Infidelidad:</b> solo aparecen con el drama adulto activado, los arcos de infidelidad activados y la protección de matrimonios canónicos desactivada. Aun así, se viven como tentación, conflicto, límites y consecuencias. Una ruptura puede ocurrir por la historia sin necesidad de infidelidad.</li>
+      <li><b>Proteger Matrimonios Canónicos:</b> evita que los matrimonios del juego se conviertan en arcos de affair.</li>
+    </ul>
+    <div class="option"><span class="label">En GMCM</span><b>Descubrimiento de Orientación</b><span>desactivado por defecto</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Romances NPC-NPC</b><span>desactivado por defecto</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Drama de Relaciones Adultas</b><span>desactivado por defecto</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Arcos de Infidelidad</b><span>desactivado por defecto</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Proteger Matrimonios Canónicos</b><span>activado por defecto, y conviene dejarlo así</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-0-proposals">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Propuestas de noviazgo y matrimonio por conversación</h3>
+      <p class="lead">Ahora puedes pedirle a un vecino que sea tu pareja o que se case contigo escribiéndolo a tu manera. El Ramo y el Colgante de sirena siguen funcionando con normalidad.</p>
+    </div>
+    <ul class="points">
+      <li>Elige <b>Pedir noviazgo</b> o <b>Pedir matrimonio</b>, y el siguiente mensaje que escribas se convierte en la propuesta.</li>
+      <li>La IA evalúa lo que dijiste, la relación, el contexto y la historia. Muchos corazones no obligan a nadie a aceptar.</li>
+      <li>El noviazgo pide <span class="hearts"><svg><use href="#heart"/></svg> 8</span> por defecto. El vecino tiene que poder tener romance, no puede ser un niño y tiene que estar disponible en la historia, y tú no puedes estar en un compromiso que choque. Un arco de ruptura puede dejar a alguien disponible, como a Robin.</li>
+      <li>El matrimonio pide <span class="hearts"><svg><use href="#heart"/></svg> 10</span> por defecto, que ya sean pareja y, con la opción activada, la mejora de la casa del juego.</li>
+      <li>Si el vecino acepta, el mod aplica el noviazgo o el compromiso en el juego y lo guarda como recuerdo e hito. El compromiso además tiene un pequeño momento visual.</li>
+      <li>Si se niega, el rechazo pasa a ser parte de la historia. Puede decir "ahora no" o poner un límite firme.</li>
+    </ul>
+    <div class="option"><span class="label">En GMCM</span><b>Propuestas por Diálogo</b><span>activa las propuestas de noviazgo y matrimonio por texto libre</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Propuestas de Noviazgo</b> y <b>Propuestas de Matrimonio</b><span>muestran cada opción a los vecinos elegibles</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Cooldown de Propuesta</b><span>7 días por defecto, de 1 a 28. Es la espera después de un rechazo.</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Exigir Mejora de Casa</b><span>activado por defecto</span></div>
+    <div class="sub">
+      <h3>Bueno saber</h3>
+      <ul class="points">
+        <li>Cuando el vecino pone un límite firme, porque de verdad no le interesas, la espera es otra: 28 días por defecto.</li>
+        <li>Una configuración interna, activada por defecto, permite proponer por conversación sin el Ramo ni el Colgante.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="feature" id="v1-3-0-personality">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Personalidades que cambian con tu partida</h3>
+      <p class="lead">La personalidad de los vecinos ahora evoluciona despacio dentro de cada partida. La personalidad del juego sigue siendo la base: Abigail no se vuelve otra persona de repente.</p>
+    </div>
+    <ul class="points">
+      <li>El mod toma señales de tu mensaje, de la acción propuesta, de la reacción y la emoción del vecino y de los puntos de amistad.</li>
+      <li>Esas señales mueven poco a poco la apertura, la amabilidad, el resentimiento, la honestidad, la confianza social y la apertura romántica.</li>
+      <li>El apoyo vuelve a un vecino más abierto o seguro. Una disculpa baja el resentimiento. La grosería, un rechazo duro o un insulto lo dejan a la defensiva o cerrado por un tiempo. El coqueteo respetuoso aumenta la curiosidad romántica, y el coqueteo invasivo hace que ponga límites.</li>
+      <li>Algunos cambios pasan, como quedar a la defensiva después de una mala conversación. Otros se convierten en hitos cuando superan cierto punto y entran en las conversaciones siguientes.</li>
+      <li>Los momentos importantes dejan recuerdos emocionales más fuertes. Los rechazos, las groserías y los malos momentos pesan en la relación de forma más coherente.</li>
+      <li>La relación también depende del tono reciente, del contexto, de la historia social y del estado emocional, además de los puntos de amistad.</li>
+      <li>Cada vecino tiene una ficha más completa, con personalidad, relación, contexto, estado narrativo y lo que piensa de ti.</li>
+    </ul>
+    <div class="option"><span class="label">En GMCM</span><b>Personalidades Dinámicas</b><span>activa la evolución de personalidad en la partida</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-0-npc-social">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Vecinos que se relacionan entre ellos</h3>
+      <p class="lead">Los momentos entre vecinos mejoraron mucho. Tienen pequeñas interacciones todos los días y pueden formar amistades y tensiones más allá de las parejas que ya venían armadas.</p>
+    </div>
+    <ul class="points">
+      <li>Las relaciones entre vecinos pesan más en los chismes, en el tono de las conversaciones, en los arcos de historia y en los pequeños sucesos del pueblo.</li>
+      <li>Las parejas improbables pueden dar momentos raros o graciosos.</li>
+      <li>Los momentos comunes pueden usar una plantilla local en lugar de una llamada a la IA, lo que ahorra solicitudes.</li>
+    </ul>
+    <div class="option"><span class="label">En GMCM</span><b>Interacciones entre NPCs</b> y <b>Amistades Dinámicas entre NPCs</b><span>activan las interacciones diarias y las amistades fuera de las parejas armadas</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Máx. Interacciones/Día</b><span>2 por defecto, de 1 a 5</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Caos Social</b><span>35 por defecto, de 0 (más seguro) a 100 (más experimental). Define cuánto intenta el pueblo juntar parejas improbables.</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Probabilidad de Momento Raro</b><span>8 por defecto, de 0 a 25</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Probabilidad de momento local</b><span>35 por defecto, de 0 a 100</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Momentos Sociales como Chismes</b><span>deja que los momentos públicos se conviertan en chismes después</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-0-scenes">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Más de 100 escenas dinámicas</h3>
+      <p class="lead">Pueden ocurrir escenas cortas mientras juegas, cuando se cumplen sus condiciones. El pueblo tiene vida propia sin que tengas que empezar cada interacción.</p>
+    </div>
+    <ul class="points">
+      <li>Más de 100 escenas con humor, rutina, drama ligero, cariño, tensión social y pequeños sucesos del día a día.</li>
+      <li>Cubren muchos vecinos y lugares, con familia, amigos, rivales, parejas improbables y encuentros cotidianos.</li>
+      <li>La Preview 3 trajo una gran tanda de escenas nuevas de vida cotidiana, con texto en varios idiomas.</li>
+      <li>Las escenas programadas empiezan de forma más confiable.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-3-0-world">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Noticias, cartas, diario y arcos</h3>
+      <p class="lead">El valle guarda más de la historia de tu partida, con noticias semanales, cartas en el buzón, un diario y arcos con finales que tienen sentido.</p>
+    </div>
+    <ul class="points">
+      <li>Las noticias semanales resumen lo que pasó en el valle. Usan una llamada a la IA.</li>
+      <li>Los vecinos mandan cartas para reaccionar a ti de distintas formas, a veces con un pequeño gesto o regalo, dentro de límites seguros.</li>
+      <li>El diario del valle registra los sucesos sociales importantes y da continuidad de un día a otro.</li>
+      <li>Los arcos de historia recibieron una mejor guía y avanzan hacia consecuencias que importan. Ningún arco termina ya con el gran final de un nuevo tipo de sandía.</li>
+      <li>Los momentos sociales pueden convertirse en arcos, y la historia importante de tu partida alimenta los diálogos, los chismes y los recuerdos después.</li>
+    </ul>
+    <div class="option"><span class="label">En GMCM</span><b>Noticias Semanales</b><span>activado por defecto</span></div>
+    <div class="option"><span class="label">En GMCM</span><b>Cartas de NPCs</b><span>activado por defecto</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-0-experimental">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Contenido experimental y modos de diálogo</h3>
+      <p class="lead">El GMCM ganó una entrada propia, AliveNPCS EXPERIMENTAL CONTENT. Reúne los sistemas más caóticos y narrativos y cuatro modos de diálogo fuera del tono normal, que llegaron en la Preview 3.</p>
+    </div>
+    <div class="notice">
+      <article><h4>Un alien en el valle</h4><p>Todos creen que viniste de otra galaxia a plantar chirivías. Reaccionan con sospecha, reverencia, miedo, curiosidad o fascinación.</p></article>
+      <article><h4>Bellezón del valle</h4><p>Los vecinos adultos te encuentran absurdamente encantador y coquetean mucho más.</p></article>
+      <article><h4>Modo vampiro</h4><p>"¿Brillas al sol?" El pueblo sospecha que eres un vampiro, o casi. Sol, ajo, espejos, capa dramática y agricultura nocturna.</p></article>
+      <article><h4>Modo yandere</h4><p>Los vecinos adultos se vuelven apegados, celosos, dramáticos y posesivos. Es drama romántico exagerado, sin terror pesado.</p></article>
+    </div>
+    <ul class="points">
+      <li>Solo puede haber un modo activo a la vez.</li>
+      <li>Con el modo desactivado, no entra nada extra en el prompt. El tono normal y el gasto de tokens siguen igual.</li>
+      <li>Los niños y los personajes con aspecto infantil quedan fuera de los modos de coqueteo y romance.</li>
+    </ul>
+    <div class="option"><span class="label">En GMCM</span><b>Modo experimental</b><span>Desactivado, Un alien en el valle, Bellezón del valle, Modo vampiro o Modo yandere</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-0-hub">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Centro, menús y compatibilidad</h3>
+      <p class="lead">El Centro AliveNpcs se volvió más útil dentro del juego, el GMCM está más completo y los personajes de mods están menos perdidos.</p>
+    </div>
+    <ul class="points">
+      <li>El Centro da acceso al estado, la configuración, las fichas de personajes, el estado de la IA, la compatibilidad y las funciones principales, sin depender solo del menú externo.</li>
+      <li>El GMCM tiene más opciones, mejor ordenadas y con textos más claros: comportamiento de la IA, tono de las respuestas, sistemas sociales, drama, escenas, memoria, cartas, noticias, interacciones entre vecinos y contenido experimental.</li>
+      <li>El estado de cada función muestra cuándo está activa, limitada, no disponible o esperando alguna condición del juego.</li>
+      <li>Los vecinos de Stardew Valley Expanded reciben más contexto de su propio mundo. Los del juego base pueden reaccionar al mundo ampliado cuando tiene sentido.</li>
+      <li>Los personajes de otros mods se integran mejor en las conversaciones. El mod distingue mejor si un NPC es del juego base, de SVE o de otro mod, y por qué un personaje quedó fuera.</li>
+      <li>Más textos listos para traducir, y muchos textos en portugués ajustados para sonar mejor en el juego.</li>
+    </ul>
+    <div class="option"><span class="label">En GMCM</span><b>Mostrar estadísticas debug</b><span>desactivado por defecto. Muestra los totales de tokens y de solicitudes en el Centro.</span></div>
+  </section>
+
+  <section class="feature" id="v1-3-0-stability">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Conversaciones más firmes</h3>
+      <p class="lead">Las conversaciones con la IA duran más y se rompen mucho menos.</p>
+    </div>
+    <ul class="points">
+      <li>La conversación sigue por más de un intercambio, y el historial reciente mantiene la continuidad, el tono y el contexto.</li>
+      <li>Cuando la IA manda una respuesta incompleta, cortada o con formato incorrecto, con texto de más o emojis, el mod intenta rescatar la parte útil y la conversación sigue. Los números en formato incorrecto se corrigen.</li>
+      <li>Cuando la respuesta llega cortada por el límite de salida, el log de SMAPI da mejores pistas.</li>
+      <li>Cuando propones una acción y el vecino acepta, comenta lo que pasó. La frase, el motivo interno y el resumen del evento quedan separados, así que el chat solo muestra la frase del personaje.</li>
+      <li>Las propuestas, los coqueteos, los pedidos atrevidos y los momentos de mucha emoción tienen respuestas más naturales.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-3-0-fixes">
+    <div class="feature-head">
+      <span class="tag fix">Correcciones</span>
+      <h3>Correcciones de la Preview 3</h3>
+      <p class="lead">Problemas reportados en la beta con el juego base y Gemini.</p>
+    </div>
+    <ul class="points">
+      <li>El retrato de enojo de Pierre aparecía roto, como un cuadrado azul. Ahora usa un retrato alternativo seguro y puede seguir enojándose. Tampoco aparece enojado cuando está reaccionando bien.</li>
+      <li>La escena de Evelyn y George en el banco respeta el clima y ya no habla del sol en un día de lluvia.</li>
+      <li>Un chisme o una entrada del diario procesados al final del día solo mostraban el mensaje detallado al día siguiente. Ahora el mensaje aparece cerca del momento en que se aplica y no se repite al otro día.</li>
+      <li>Los puntos de amistad respetan mejor los límites configurados, y las reacciones negativas, positivas y románticas siguen la configuración activa.</li>
+      <li>Más protecciones evitan que el contenido romántico o experimental llegue a niños y personajes con aspecto infantil, y que el contenido experimental se filtre al modo normal.</li>
+    </ul>
+  </section>
+</section>

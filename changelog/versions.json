@@ -28,5 +28,86 @@
     "patches": [
       "1.6.0"
     ]
+  },
+  {
+    "version": "1.5",
+    "label": "1.5",
+    "name": {
+      "pt-BR": "Nós e Eles",
+      "en": "Us and Them",
+      "es": "Nosotros y ellos"
+    },
+    "patches": [
+      "1.5.1",
+      "1.5.0"
+    ],
+    "date": "2026-07-25",
+    "status": "released",
+    "summary": {
+      "pt-BR": "A amizade ganha um oposto com a inimizade e os arcos de expulsão, o multiplayer ganha sua base, chega o vietnamita e outros mods podem mandar fofocas pra vila.",
+      "en": "Friendship gets an opposite with enmity and expulsion arcs, multiplayer gets its foundation, Vietnamese arrives and other mods can send gossip to the village.",
+      "es": "La amistad tiene un opuesto con la enemistad y los arcos de expulsión, el multijugador tiene su base, llega el vietnamita y otros mods pueden enviar chismes al pueblo."
+    }
+  },
+  {
+    "version": "1.4",
+    "label": "1.4",
+    "name": {
+      "pt-BR": "Festança Update",
+      "en": "Big Party Update",
+      "es": "La Gran Fiesta"
+    },
+    "patches": [
+      "1.4.5",
+      "1.4.4",
+      "1.4.1",
+      "1.4.0"
+    ],
+    "date": "2026-07-13",
+    "status": "released",
+    "summary": {
+      "pt-BR": "Falas de IA nos festivais, a ação Sair juntos, pedidos de item que viram quest, a lista de opt-out de IA e integrações com o Editor de Personalidade e o álbum do Beach Episode.",
+      "en": "AI lines at festivals, the Hang out action, item requests that become quests, the AI opt-out list, and integrations with the Personality Editor and the Beach Episode album.",
+      "es": "Frases de IA en los festivales, la acción Salir juntos, pedidos de objetos que se convierten en misiones, la lista de exclusión de IA e integraciones con el Editor de Personalidad y el álbum de Beach Episode."
+    }
+  },
+  {
+    "version": "1.3",
+    "label": "1.3",
+    "name": {
+      "pt-BR": "Big Drama",
+      "en": "Big Drama",
+      "es": "El Gran Drama"
+    },
+    "patches": [
+      "1.3.4",
+      "1.3.3",
+      "1.3.2.1",
+      "1.3.2",
+      "1.3.1",
+      "1.3.0"
+    ],
+    "date": "2026-06-18",
+    "status": "released",
+    "summary": {
+      "pt-BR": "Drama social, personalidades que mudam com o save, pedidos de namoro e casamento pela conversa, moradores que se relacionam entre si e mais de 100 cenas, além de pacotes de Conteúdo Experimental, pedidos de item e Sair juntos.",
+      "en": "Social drama, personalities that change with your save, dating and marriage proposals through conversation, villagers who bond with each other and over 100 scenes, plus Experimental Content packs, item requests and Hang out.",
+      "es": "Drama social, personalidades que cambian con tu partida, propuestas de noviazgo y matrimonio por conversación, vecinos que se relacionan entre ellos y más de 100 escenas, además de paquetes de Contenido Experimental, pedidos de objetos y Salir juntos."
+    }
+  },
+  {
+    "version": "1.2",
+    "label": "1.2",
+    "name": "",
+    "patches": [
+      "1.2.0"
+    ],
+    "date": "2026-03-27",
+    "status": "released",
+    "summary": {
+      "pt-BR": "Os arcos narrativos ganham objetivos e uma cena de conclusão, as cartas trazem presentes e o mod troca sozinho de chave do Gemini quando a cota acaba.",
+      "en": "Story arcs get objectives and a conclusion scene, letters come with gifts and the mod switches Gemini keys on its own when the quota runs out.",
+      "es": "Los arcos narrativos tienen objetivos y una escena de conclusión, las cartas traen regalos y el mod cambia solo de clave de Gemini cuando se acaba la cuota."
+    }
   }
 ]

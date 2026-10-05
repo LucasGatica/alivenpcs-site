@@ -257,6 +257,8 @@ section.feature { margin-top: 56px; display: grid; gap: 16px; scroll-margin-top:
 .tag.improved { background: var(--sky-soft); }
 .tag.creators { background: var(--plum-soft); }
 .tag.fix { background: var(--heart-soft); }
+.wip { padding: 12px 16px; border: 2px dashed var(--heart); border-radius: var(--radius); max-width: 68ch; line-height: 1.55; }
+.wip b { font-weight: 800; color: var(--heart); }
 .credit { padding: 14px 18px; background: var(--sun-soft); border-left: 4px solid var(--sun); border-radius: 0 var(--radius) var(--radius) 0; max-width: 68ch; line-height: 1.55; }
 .credit b { font-weight: 800; }
 .sub { display: grid; gap: 10px; margin-top: 8px; }

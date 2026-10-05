@@ -399,3 +399,4 @@ section.patch section.feature h3 { font-size: var(--step-1); }
 .member.friend .avatar { background: var(--sun); color: var(--sun-ink); }
 .team-soon { justify-self: start; font-family: var(--font-mono); font-size: var(--step--1); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); border: 1px dashed var(--line); border-radius: var(--radius); padding: 10px 14px; }
 footer.site a { text-decoration: underline; text-underline-offset: 3px; }
+.member.mod .avatar { background: var(--plum); color: var(--bg); }

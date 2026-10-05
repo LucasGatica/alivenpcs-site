@@ -129,7 +129,8 @@
     site.count("/changelog/" + label + "/" + file, "Changelog " + label + " (" + file + ")");
 
     const target = scrollTo ? anchorOf(scrollTo) : location.hash ? decodeURIComponent(location.hash.slice(1)) : null;
-    if (target) document.getElementById(target)?.scrollIntoView();
+    // "instant": the page scrolls smoothly, and a long smooth scroll gets cut short while the page settles
+    if (target) document.getElementById(target)?.scrollIntoView({ behavior: "instant", block: "start" });
   }
 
   function show(line, push) {

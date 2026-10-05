@@ -1,5 +1,8 @@
-// Changelog page: version list from changelog/versions.json, one HTML fragment per version and language
-// (changelog/<version>/<pt-BR|en>.html). The URL keeps ?v=<version>&lang=<pt|en> so links can be shared.
+// Changelog page. changelog/versions.json lists one entry per version line (1.N.x), newest first:
+//   { version: folder name, label: "1.3", name: text or {pt-BR, en, es}, patches: ["1.3.4", ...], date, status, summary }
+// Each line has one HTML fragment per language in changelog/<version>/<pt-BR|en|es>.html, with one
+// section per patch whose id is "v" + the patch number with dashes (v1-3-2).
+// ?v= takes a line (1.3), an old folder name (1.6.0) or a patch (1.3.2, which also scrolls to it).
 (async function () {
   const site = window.AliveSite;
   const entry = document.getElementById("entry");
@@ -37,12 +40,32 @@
     return;
   }
 
-  const wanted = new URLSearchParams(location.search).get("v");
-  let current = versions.some((v) => v.version === wanted) ? wanted : versions[0].version;
+  const labelOf = (v) => v.label || v.version;
+  const nameOf = (v) => (typeof v.name === "string" ? v.name : v.name[site.fileLang()] || v.name.en || "");
+  const anchorOf = (patch) => "v" + patch.replace(/\./g, "-");
+
+  // A line, an old folder name or a single patch → the line, plus the patch to scroll to.
+  function resolve(wanted) {
+    if (!wanted) return null;
+    for (const v of versions) {
+      if (v.version === wanted || labelOf(v) === wanted) return { line: v, patch: null };
+      if ((v.patches || []).includes(wanted)) return { line: v, patch: v.patches.length > 1 ? wanted : null };
+    }
+    return null;
+  }
+
+  const first = resolve(new URLSearchParams(location.search).get("v"));
+  let current = first ? first.line : versions[0];
+  let scrollTo = first ? first.patch : null;
 
   function formatDate(iso, lang) {
     if (!iso) return "";
     return new Date(iso + "T12:00:00").toLocaleDateString(LOCALES[lang], { day: "numeric", month: "short", year: "numeric" });
+  }
+
+  function range(v) {
+    const p = v.patches || [];
+    return p.length > 1 ? p[p.length - 1] + " – " + p[0] : "";
   }
 
   function renderList() {
@@ -53,24 +76,31 @@
       const status = v.status === "in-development" ? TEXT[lang].dev : TEXT[lang].released;
       const li = document.createElement("li");
       const a = document.createElement("a");
-      a.href = "?v=" + encodeURIComponent(v.version);
+      a.href = "?v=" + encodeURIComponent(labelOf(v));
       a.dataset.v = v.version;
-      if (v.version === current) a.setAttribute("aria-current", "true");
+      if (v === current) a.setAttribute("aria-current", "true");
       const number = document.createElement("b");
-      number.textContent = v.version;
+      number.textContent = labelOf(v);
       const name = document.createElement("span");
-      name.textContent = v.name + (v.date ? " · " + formatDate(v.date, lang) : "");
+      name.textContent = nameOf(v) + (v.date ? " · " + formatDate(v.date, lang) : "");
+      a.append(number, name);
+      if (range(v)) {
+        const patches = document.createElement("span");
+        patches.className = "patches";
+        patches.textContent = range(v);
+        a.append(patches);
+      }
       const chip = document.createElement("span");
       chip.className = "status" + (v.status === "in-development" ? " dev" : "");
       chip.textContent = status;
-      a.append(number, name, chip);
+      a.append(chip);
       li.append(a);
       list.append(li);
 
       const option = document.createElement("option");
       option.value = v.version;
-      option.textContent = v.version + " · " + v.name + " (" + status + ")";
-      option.selected = v.version === current;
+      option.textContent = labelOf(v) + " · " + nameOf(v) + " (" + status + ")";
+      option.selected = v === current;
       select.append(option);
     }
   }
@@ -81,7 +111,7 @@
     renderList();
     entry.setAttribute("aria-busy", "true");
     try {
-      const response = await fetch("changelog/" + encodeURIComponent(current) + "/" + file + ".html", { cache: "no-cache" });
+      const response = await fetch("changelog/" + encodeURIComponent(current.version) + "/" + file + ".html", { cache: "no-cache" });
       if (!response.ok) throw new Error(String(response.status));
       entry.innerHTML = await response.text();
     } catch {
@@ -90,35 +120,46 @@
     }
     entry.removeAttribute("aria-busy");
 
+    const label = labelOf(current);
     const url = new URL(location.href);
-    url.searchParams.set("v", current);
+    url.searchParams.set("v", scrollTo || label);
     url.searchParams.set("lang", lang);
-    history[push ? "pushState" : "replaceState"]({ v: current }, "", url);
-    document.title = "AliveNpcs " + current + " · Changelog";
-    site.count("/changelog/" + current + "/" + file, "Changelog " + current + " (" + file + ")");
+    history[push ? "pushState" : "replaceState"]({ v: label }, "", url);
+    document.title = "AliveNpcs " + label + " · Changelog";
+    site.count("/changelog/" + label + "/" + file, "Changelog " + label + " (" + file + ")");
 
-    if (location.hash) document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView();
+    const target = scrollTo ? anchorOf(scrollTo) : location.hash ? decodeURIComponent(location.hash.slice(1)) : null;
+    if (target) document.getElementById(target)?.scrollIntoView();
+  }
+
+  function show(line, push) {
+    current = line;
+    scrollTo = null;
+    history.replaceState(history.state, "", location.pathname + location.search);
+    load(push);
+    window.scrollTo(0, 0);
   }
 
   list.addEventListener("click", (event) => {
     const link = event.target.closest("a[data-v]");
     if (!link) return;
     event.preventDefault();
-    if (link.dataset.v === current) return;
-    current = link.dataset.v;
-    history.replaceState(history.state, "", location.pathname + location.search);
-    load(true);
-    window.scrollTo(0, 0);
+    const line = versions.find((v) => v.version === link.dataset.v);
+    if (line && line !== current) show(line, true);
   });
   select.addEventListener("change", () => {
-    current = select.value;
-    load(true);
+    const line = versions.find((v) => v.version === select.value);
+    if (line) show(line, true);
   });
-  document.addEventListener("alive:lang", () => load(false));
+  document.addEventListener("alive:lang", () => {
+    scrollTo = null;
+    load(false);
+  });
   window.addEventListener("popstate", () => {
-    const v = new URLSearchParams(location.search).get("v");
-    if (v && versions.some((x) => x.version === v)) {
-      current = v;
+    const found = resolve(new URLSearchParams(location.search).get("v"));
+    if (found) {
+      current = found.line;
+      scrollTo = found.patch;
       load(false);
     }
   });

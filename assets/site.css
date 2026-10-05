@@ -370,3 +370,12 @@ h1, h2, .brand, .version, .cal, .versions b { font-variant-ligatures: none; font
 /* contact line in the home hero */
 .contact { font-size: 0.95rem; color: var(--muted); }
 .contact a { font-weight: 800; }
+
+/* ---------- version lines: one section per patch inside a line page ---------- */
+.versions .patches { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); }
+section.patch { margin-top: 64px; padding-top: 28px; border-top: 2px solid var(--line); display: grid; gap: 14px; scroll-margin-top: 80px; }
+.patch-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 14px; }
+.patch-head h2 { font-size: var(--step-2); }
+.patch-date { font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); }
+section.patch section.feature { margin-top: 28px; }
+section.patch section.feature h3 { font-size: var(--step-1); }

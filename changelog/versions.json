@@ -8,7 +8,11 @@
       "en": "Villagers now notice what you do near them and react, fish with you, pull you into group conversations and look after you when you're hurt.",
       "pt-BR": "Os moradores agora percebem o que você faz perto deles e reagem, pescam com você, te chamam pra conversas em grupo e cuidam de você quando você está machucado.",
       "es": "Los vecinos ahora notan lo que haces cerca de ellos y reaccionan, pescan contigo, te llaman a conversaciones en grupo y te cuidan cuando estás herido."
-    }
+    },
+    "label": "1.7",
+    "patches": [
+      "1.7.0"
+    ]
   },
   {
     "version": "1.6.0",
@@ -19,6 +23,10 @@
       "en": "The AI starts from the game's own lines, heart events can become gossip, NPC mods get their own compatibility manager, and your spouse gets more conversations and dates.",
       "pt-BR": "A IA parte das falas do próprio jogo, eventos de coração podem virar fofoca, os mods de NPC ganham um gerenciador de compatibilidade e o cônjuge ganha mais conversas e encontros.",
       "es": "La IA parte de las frases del propio juego, los eventos de corazón pueden convertirse en chismes, los mods de NPC tienen su propio gestor de compatibilidad y tu cónyuge tiene más conversaciones y citas."
-    }
+    },
+    "label": "1.6",
+    "patches": [
+      "1.6.0"
+    ]
   }
 ]

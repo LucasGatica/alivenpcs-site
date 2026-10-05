@@ -379,3 +379,6 @@ section.patch { margin-top: 64px; padding-top: 28px; border-top: 2px solid var(-
 .patch-date { font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); }
 section.patch section.feature { margin-top: 28px; }
 section.patch section.feature h3 { font-size: var(--step-1); }
+
+/* the version rail stays in view and scrolls on its own when it is taller than the window */
+.rail { max-height: calc(100vh - 96px); overflow-y: auto; overscroll-behavior: contain; padding-right: 6px; padding-bottom: 12px; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }

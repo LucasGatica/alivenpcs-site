@@ -7,6 +7,7 @@ window.ALIVE_SITE = {
   nexus: "https://www.nexusmods.com/stardewvalley/mods/43475",
   discord: "https://discord.gg/8vUfXEH852",
   tiktok: "https://www.tiktok.com/@lucasgaticadev",
+  proxy: "https://stardewproxy.techryo.uk/",
   kofi: "https://ko-fi.com/lucasgatica",
   // Ko-fi floating donate button. Leave kofiUser empty to hide it.
   kofiUser: "lucasgatica",

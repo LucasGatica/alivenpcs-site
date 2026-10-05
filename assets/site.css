@@ -382,3 +382,20 @@ section.patch section.feature h3 { font-size: var(--step-1); }
 
 /* the version rail stays in view and scrolls on its own when it is taller than the window */
 .rail { max-height: calc(100vh - 96px); overflow-y: auto; overscroll-behavior: contain; padding-right: 6px; padding-bottom: 12px; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+
+/* ---------- team page ---------- */
+.team-page { padding-block: 48px 24px; display: grid; gap: 48px; }
+.team-head { display: grid; gap: 12px; }
+.team-head h1 { font-size: var(--step-4); line-height: 1; }
+.team-area { display: grid; gap: 16px; }
+.team-area-head { display: grid; gap: 4px; }
+.team-area-head p { color: var(--muted); }
+.team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+.member { display: flex; gap: 14px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; min-width: 0; }
+.member h3 { overflow-wrap: anywhere; }
+.member p { color: var(--muted); font-size: 0.93rem; line-height: 1.4; }
+.avatar { flex: none; width: 52px; height: 52px; border-radius: 10px; display: grid; place-items: center; font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; background: var(--accent); color: var(--accent-ink); }
+.member.art .avatar { background: var(--sky); color: var(--bg); }
+.member.friend .avatar { background: var(--sun); color: var(--sun-ink); }
+.team-soon { justify-self: start; font-family: var(--font-mono); font-size: var(--step--1); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); border: 1px dashed var(--line); border-radius: var(--radius); padding: 10px 14px; }
+footer.site a { text-decoration: underline; text-underline-offset: 3px; }

@@ -320,7 +320,7 @@ ul.points li { padding-left: 2px; }
 .cmds div code { justify-self: start; }
 
 /* ---------- footer ---------- */
-footer.site { margin-top: 72px; border-top: 1px solid var(--line); padding-block: 20px 40px; color: var(--muted); font-size: var(--step--1); }
+footer.site { margin-top: 72px; border-top: 1px solid var(--line); padding-block: 20px 96px; color: var(--muted); font-size: var(--step--1); }
 footer.site .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
 footer.site a { color: inherit; }
 

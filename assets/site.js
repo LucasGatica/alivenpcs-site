@@ -67,6 +67,14 @@
     document.querySelectorAll("[data-analytics-note]").forEach((el) => { el.hidden = false; });
   }
 
+  // Ko-fi floating donate button (Ko-fi's own overlay widget).
+  if (cfg.kofiUser) {
+    const kofi = document.createElement("script");
+    kofi.src = "https://storage.ko-fi.com/cdn/scripts/overlay-widget.js";
+    kofi.onload = () => window.kofiWidgetOverlay && window.kofiWidgetOverlay.draw(cfg.kofiUser, cfg.kofiButton || {});
+    document.body.appendChild(kofi);
+  }
+
   function count(path, title) {
     if (!cfg.goatcounter) return;
     const hit = { path, title: title || document.title };

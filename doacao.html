@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@500;600&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=15">
-<script src="assets/config.js?v=15"></script>
+<link rel="stylesheet" href="assets/site.css?v=16">
+<script src="assets/config.js?v=16"></script>
 </head>
 <body data-no-kofi-button>
 <a class="skip" href="#main"><span data-l="pt">Pular para o conteúdo</span><span data-l="en">Skip to content</span><span data-l="es">Saltar al contenido</span></a>
@@ -48,7 +48,7 @@
     <p class="lead" data-l="en">AliveNpcs started from wanting Pelican Town to feel truly alive: villagers who remember you, talk to each other and react to what happens in your save. It's made with care, in spare time, and it's free.</p>
     <p class="lead" data-l="es">AliveNpcs nació de las ganas de ver el Pueblo Pelícano vivo de verdad: vecinos que te recuerdan, hablan entre ellos y reaccionan a lo que pasa en tu partida. Está hecho con cariño, en el tiempo libre, y es gratis.</p>
 
-    <p data-l="pt">Se você curte o mod e quiser contribuir, dá pra deixar um café pelo Ko-fi. Qualquer valor é um agradecimento enorme.</p>
+    <p data-l="pt">Se você curte o mod e quiser contribuir, dá pra mandar um Pix pelo LivePix. Qualquer valor é um agradecimento enorme.</p>
     <p data-l="en">If you enjoy the mod and want to chip in, you can leave a coffee on Ko-fi. Any amount is a huge thank-you.</p>
     <p data-l="es">Si te gusta el mod y quieres contribuir, puedes dejar un café en Ko-fi. Cualquier cantidad es un agradecimiento enorme.</p>
 
@@ -94,8 +94,16 @@
     </div>
   </section>
 
-  <section class="donate-widget" aria-label="Ko-fi">
+  <section class="donate-widgets">
+    <div class="donate-widget pix" data-l="pt">
+      <h3>Pix</h3>
+      <iframe src="https://widget.livepix.gg/embed/d5474e0a-07bf-4856-ad34-272f5e71d176" title="Doação por Pix no LivePix" loading="lazy" style="border:none;width:100%;" height="560"></iframe>
+      <p class="pix-link">No celular? Doe direto em <a href="https://livepix.gg/gaticadev" target="_blank" rel="noopener">livepix.gg/gaticadev</a>.</p>
+    </div>
+    <div class="donate-widget" aria-label="Ko-fi" data-l-not="pt">
+    <h3>Ko-fi</h3>
     <iframe id='kofiframe' src='https://ko-fi.com/lucasgatica/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='lucasgatica'></iframe>
+    </div>
   </section>
 </main>
 
@@ -106,7 +114,7 @@
   </div>
 </footer>
 
-<script src="assets/site.js?v=15"></script>
+<script src="assets/site.js?v=16"></script>
 <script>window.AliveSite.count(location.pathname, "Doação");</script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+[
+  {
+    "version": "1.7.0",
+    "name": "Seen and Heard",
+    "date": null,
+    "status": "in-development",
+    "summary": {
+      "en": "Villagers now notice what you do near them and react, fish with you, pull you into group conversations and look after you when you're hurt.",
+      "pt-BR": "Os moradores agora percebem o que você faz perto deles e reagem, pescam com você, te chamam pra conversas em grupo e cuidam de você quando você está machucado."
+    }
+  },
+  {
+    "version": "1.6.0",
+    "name": "As You Were",
+    "date": "2026-09-10",
+    "status": "released",
+    "summary": {
+      "en": "The AI starts from the game's own lines, heart events can become gossip, NPC mods get their own compatibility manager, and your spouse gets more conversations and dates.",
+      "pt-BR": "A IA parte das falas do próprio jogo, eventos de coração podem virar fofoca, os mods de NPC ganham um gerenciador de compatibilidade e o cônjuge ganha mais conversas e encontros."
+    }
+  }
+]

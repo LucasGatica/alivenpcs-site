@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-BR" data-lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AliveNpcs</title>
+<meta name="title-pt" content="AliveNpcs · Pelican Town viva">
+<meta name="title-en" content="AliveNpcs · A living Pelican Town">
+<meta name="description" content="AliveNpcs: diálogo com IA, memória, fofoca, cenas e histórias que nascem do seu save em Stardew Valley.">
+<meta property="og:title" content="AliveNpcs">
+<meta property="og:description" content="AI-powered dialogue, memory, gossip, scenes and emergent stories for Stardew Valley.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 6' shape-rendering='crispEdges'%3E%3Cpath fill='%23d23f5c' d='M1 0h2v1h1V0h2v1h1v2H6v1H5v1H4v1H3V5H2V4H1V3H0V1h1z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/config.js"></script>
+</head>
+<body>
+<a class="skip" href="#main"><span data-l="pt">Pular para o conteúdo</span><span data-l="en">Skip to content</span></a>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="./"><svg viewBox="0 0 7 6" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 0h2v1h1V0h2v1h1v2H6v1H5v1H4v1H3V5H2V4H1V3H0V1h1z"/></svg>AliveNpcs</a>
+    <nav aria-label="Site">
+      <a href="./" aria-current="page"><span data-l="pt">Início</span><span data-l="en">Home</span></a>
+      <a href="changelog.html">Changelog</a>
+      <a data-href="nexus" href="https://www.nexusmods.com/stardewvalley/mods/43475">Nexus</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-set="pt" aria-pressed="true">PT</button>
+      <button type="button" data-set="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+  <section class="hero">
+    <figure>
+      <img src="assets/arte-victor-nashi.webp" width="2000" height="1452"
+           alt="Duas moradoras cochicham surpresas em frente ao Stardrop Saloon, com a loja do Pierre ao fundo"
+           data-alt-pt="Duas moradoras cochicham surpresas em frente ao Stardrop Saloon, com a loja do Pierre ao fundo"
+           data-alt-en="Two villagers whisper in surprise outside the Stardrop Saloon, with Pierre's shop behind them">
+      <figcaption><span data-l="pt">Arte oficial por</span><span data-l="en">Official art by</span> Victor Nashi</figcaption>
+    </figure>
+    <div class="hero-card">
+      <h1>AliveNpcs</h1>
+      <p class="tagline" data-l="pt">Diálogo com IA, memória, fofoca, cenas, festivais e histórias que nascem do seu save em Stardew Valley.</p>
+      <p class="tagline" data-l="en">AI-powered dialogue, memory, gossip, scenes, festivals and emergent stories for Stardew Valley.</p>
+      <div class="actions">
+        <a class="btn primary" data-href="nexus" href="https://www.nexusmods.com/stardewvalley/mods/43475"><span data-l="pt">Baixar na Nexus</span><span data-l="en">Download on Nexus</span></a>
+        <a class="btn" href="changelog.html"><span data-l="pt">O que mudou</span><span data-l="en">What's new</span></a>
+        <a class="btn" data-href="discord" href="https://discord.gg/8vUfXEH852">Discord</a>
+      </div>
+      <p class="latest" id="latest" hidden></p>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="what">
+    <h2 id="what"><span data-l="pt">Pelican Town de verdade viva</span><span data-l="en">A Pelican Town that feels alive</span></h2>
+    <p class="lead" data-l="pt">Os moradores lembram de você, reagem ao que acontece no seu save, conversam entre si, te chamam pra cenas, mandam cartas, espalham boatos e constroem histórias que mudam de um dia pro outro.</p>
+    <p class="lead" data-l="en">Villagers remember you, react to your save, talk to each other, invite you into small scenes, write letters, spread rumors and build stories that keep changing from day to day.</p>
+    <div class="features">
+      <article>
+        <h3><span data-l="pt">Conversa livre</span><span data-l="en">Free-text conversations</span></h3>
+        <p data-l="pt">Você escreve o que quiser. O morador responde levando em conta estação, clima, lugar, presentes, corações e o que já aconteceu no seu save.</p>
+        <p data-l="en">Type whatever you want. Villagers answer with the season, weather, place, gifts, hearts and your save's history in mind.</p>
+      </article>
+      <article>
+        <h3><span data-l="pt">Memória e emoções</span><span data-l="en">Memory and emotions</span></h3>
+        <p data-l="pt">Eles lembram de conversas importantes. Confiança, carinho e tensão mudam o tom, e o retrato muda junto com a emoção.</p>
+        <p data-l="en">They remember important conversations. Trust, warmth and tension change their tone, and portraits follow the emotion.</p>
+      </article>
+      <article>
+        <h3><span data-l="pt">Personalidades que mudam</span><span data-l="en">Personalities that grow</span></h3>
+        <p data-l="pt">Cada um mantém a personalidade do jogo, mas no seu save pode se abrir, ficar mais fechado ou guardar uma mágoa.</p>
+        <p data-l="en">Everyone keeps their canon personality, but in your save they can soften, become guarded or hold a grudge.</p>
+      </article>
+      <article>
+        <h3><span data-l="pt">Fofoca, diário e jornal</span><span data-l="en">Gossip, diary and news</span></h3>
+        <p data-l="pt">O que acontece em público vira fofoca, e quem é mais sociável espalha mais. O diário e o jornal da semana contam a história do save.</p>
+        <p data-l="en">Public moments become gossip, and sociable villagers spread it faster. Your diary and the weekly news tell your save's story.</p>
+      </article>
+      <article>
+        <h3><span data-l="pt">Drama na vila</span><span data-l="en">Village drama</span></h3>
+        <p data-l="pt">Os moradores formam opinião uns sobre os outros, e você pode influenciar. A intensidade vai de Cozy a Telenovela.</p>
+        <p data-l="en">Villagers form opinions about each other, and you can sway them. Intensity goes from Cozy to Telenovela.</p>
+      </article>
+      <article>
+        <h3><span data-l="pt">Cartas no correio</span><span data-l="en">Letters in the mail</span></h3>
+        <p data-l="pt">Eles mandam cartas sobre o que viveram com você, às vezes com um presente junto.</p>
+        <p data-l="en">They write letters about what you went through together, sometimes with a gift inside.</p>
+      </article>
+      <article>
+        <h3><span data-l="pt">Histórias que surgem</span><span data-l="en">Emergent story arcs</span></h3>
+        <p data-l="pt">O mod percebe padrões nas conversas e fofocas e cria histórias com objetivos, escolhas e consequências.</p>
+        <p data-l="en">The mod spots patterns in conversations and gossip and builds stories with objectives, choices and consequences.</p>
+      </article>
+      <article>
+        <h3><span data-l="pt">Cenas e passeios</span><span data-l="en">Scenes and hang-outs</span></h3>
+        <p data-l="pt">157 cenas espalhadas pelo vale e 72 passeios. Chame alguém pra sair com as suas próprias palavras.</p>
+        <p data-l="en">157 scenes around the valley and 72 hang-outs. Invite someone out in your own words.</p>
+      </article>
+      <article>
+        <h3><span data-l="pt">Festivais</span><span data-l="en">Festivals</span></h3>
+        <p data-l="pt">Nos festivais, os moradores falam como quem está lá. Depois, o festival vira memória e assunto na vila.</p>
+        <p data-l="en">At festivals, villagers talk like they're really there. Afterwards, the festival becomes a memory and village talk.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="start">
+    <h2 id="start"><span data-l="pt">Pra começar</span><span data-l="en">Getting started</span></h2>
+    <div class="facts">
+      <div>
+        <h3><span data-l="pt">Do que você precisa</span><span data-l="en">What you need</span></h3>
+        <ul class="points">
+          <li>Stardew Valley 1.6+</li>
+          <li>SMAPI 4.0+</li>
+          <li data-l="pt">Uma chave do Google Gemini (até 20, com rodízio quando uma atinge o limite) ou um endpoint compatível com OpenAI, inclusive modelo local.</li>
+          <li data-l="en">A Google Gemini API key (up to 20, rotated when one hits its limit) or an OpenAI-compatible endpoint, local models included.</li>
+          <li data-l="pt">Generic Mod Config Menu, opcional mas recomendado.</li>
+          <li data-l="en">Generic Mod Config Menu, optional but recommended.</li>
+        </ul>
+        <p><a data-href="geminiKey" href="https://aistudio.google.com/apikey"><span data-l="pt">Pegar uma chave do Gemini</span><span data-l="en">Get a Gemini API key</span></a></p>
+      </div>
+      <div>
+        <h3><span data-l="pt">Atalhos no jogo</span><span data-l="en">In-game keys</span></h3>
+        <div class="keys">
+          <div><kbd>F7</kbd><span data-l="pt">Ficha do personagem: conte quem é o seu fazendeiro.</span><span data-l="en">Character Sheet: tell the mod who your farmer is.</span></div>
+          <div><kbd>F8</kbd><span data-l="pt">Diário de fofocas.</span><span data-l="en">Gossip Diary.</span></div>
+          <div><kbd>F9</kbd><span data-l="pt">Hub do AliveNpcs: diário, histórias, cartas, status da IA e mais.</span><span data-l="en">AliveNpcs Hub: diary, story arcs, letters, AI status and more.</span></div>
+        </div>
+        <p data-l="pt">Em saves novos, um computador na casa da fazenda também abre o Hub.</p>
+        <p data-l="en">On new saves, a computer in the farmhouse opens the Hub too.</p>
+      </div>
+    </div>
+    <div class="facts">
+      <div>
+        <h3><span data-l="pt">Idiomas</span><span data-l="en">Languages</span></h3>
+        <div class="langs"><span>English</span><span>Português Brasileiro</span><span>Español</span><span>Français</span><span>Deutsch</span><span>Italiano</span><span>Tiếng Việt</span></div>
+      </div>
+      <div>
+        <h3><span data-l="pt">Comunidade</span><span data-l="en">Community</span></h3>
+        <div class="actions">
+          <a class="btn" data-href="discord" href="https://discord.gg/8vUfXEH852">Discord</a>
+          <a class="btn" data-href="kofi" href="https://ko-fi.com/lucasgatica">Ko-fi</a>
+        </div>
+        <p class="lead" style="font-size:0.9rem" data-l="pt">Doações são opcionais e não liberam arquivos, atualizações nem suporte.</p>
+        <p class="lead" style="font-size:0.9rem" data-l="en">Donations are optional and don't unlock files, updates or support.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span><span data-l="pt">AliveNpcs por Lucas Gatica · Arte por Victor Nashi</span><span data-l="en">AliveNpcs by Lucas Gatica · Art by Victor Nashi</span></span>
+    <span data-analytics-note hidden><span data-l="pt">Este site conta visitas sem cookies (GoatCounter).</span><span data-l="en">This site counts visits without cookies (GoatCounter).</span></span>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+<script>
+  // Latest released and in-development versions, read from the changelog index.
+  (async function () {
+    const box = document.getElementById("latest");
+    try {
+      const versions = await (await fetch("changelog/versions.json", { cache: "no-cache" })).json();
+      const released = versions.find((v) => v.status === "released");
+      const dev = versions.find((v) => v.status === "in-development");
+      const link = (v) => {
+        const a = document.createElement("a");
+        a.href = "changelog.html?v=" + encodeURIComponent(v.version);
+        a.textContent = v.version + " " + v.name;
+        return a;
+      };
+      const part = (pt, en, v) => {
+        const span = document.createElement("span");
+        const l = document.createElement("span");
+        l.innerHTML = '<span data-l="pt"></span><span data-l="en"></span> ';
+        l.firstChild.textContent = pt;
+        l.children[1].textContent = en;
+        span.append(l, link(v));
+        return span;
+      };
+      if (released) box.append(part("Versão atual:", "Current version:", released));
+      if (dev) box.append(part("Em desenvolvimento:", "In development:", dev));
+      box.hidden = !released && !dev;
+    } catch { /* no index yet: the strip stays hidden */ }
+  })();
+  window.AliveSite.count(location.pathname, "Home");
+</script>
+</body>
+</html>

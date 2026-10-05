@@ -1,0 +1,273 @@
+<header class="top">
+  <div class="eyebrow"><span class="version">1.7.0</span><span>compared with 1.6.0 “As You Were”</span><span>in development · Oct 5, 2026</span></div>
+  <h1>Villagers now see what you do</h1>
+  <p class="lead">Everything that changed in AliveNpcs since 1.6, explained without the jargon. The summary comes first, then each new feature in more detail.</p>
+</header>
+
+<nav class="summary" aria-label="Summary">
+  <a class="tile" href="#seen-and-heard"><strong>Seen and Heard</strong><span>Villagers notice what you do near them, remember it and sometimes walk over to talk about it right away.</span></a>
+  <a class="tile" href="#pesca"><strong>Fishing together</strong><span>A villager who sees you fishing may fish beside you and give you their catch.</span></a>
+  <a class="tile" href="#grupo"><strong>Group conversations</strong><span>Two villagers standing together may pull you into a three-way conversation.</span></a>
+  <a class="tile" href="#cuidado"><strong>Friends who look after you</strong><span>Hurt or exhausted? A friend comes over and gives you food.</span></a>
+  <a class="tile" href="#cenas"><strong>Scenes without teleporting</strong><span>Scene events happen where the villager already is.</span></a>
+  <a class="tile" href="#menu-radial"><strong>Interaction wheel</strong><span>Choose between talking, kissing, delivering a quest item, giving a gift or opening the shop.</span></a>
+  <a class="tile" href="#festivais"><strong>5 more festivals</strong><span>The Luau, the Moonlight Jellies, the Fair, Spirit's Eve and the Festival of Ice get AI dialogue.</span></a>
+  <a class="tile" href="#criadores"><strong>Triggers in JSON</strong><span>Pack creators add new reactions with a single file.</span></a>
+</nav>
+
+<!-- Seen and Heard -->
+<section class="feature" id="seen-and-heard">
+  <div class="feature-head">
+    <span class="tag">New</span>
+    <h2>Seen and Heard: they notice you</h2>
+    <p class="lead">When you do something near a villager, they may see or hear it. It becomes one of their memories. Depending on what it was, they walk over to comment right away. Later they may bring it up in other conversations or spread it as gossip at night.</p>
+  </div>
+
+  <div class="sub">
+    <h3>What they notice</h3>
+    <div class="notice">
+      <article><h4>Giving a gift <span class="pill walk">may walk over</span></h4><p>The person receiving it and anyone nearby remember the item, whether they liked it and whether it was their birthday.</p></article>
+      <article><h4>Eating or drinking <span class="pill walk">may walk over</span></h4><p>Including whether it was alcohol.</p></article>
+      <article><h4>Setting off bombs <span class="pill walk">may walk over</span></h4><p>The noise carries through walls and can wake up anyone who was asleep.</p></article>
+      <article><h4>Following someone closely <span class="pill walk">walks over</span></h4><p>Walk behind a villager for 3 seconds and a <span class="emote">!</span> appears. Keep going for 3 more and they turn around, come after you and tell you to stop.</p></article>
+      <article><h4>Fishing nearby <span class="pill walk">may fish with you</span></h4><p>See <a href="#pesca">Fishing together</a>.</p></article>
+      <article><h4>Digging through trash <span class="pill walk">may walk over</span></h4><p>They know whose trash can it was.</p></article>
+      <article><h4>Tool or weapon <span class="pill walk">may walk over</span></h4><p>Hitting someone (or only just missing) with an axe, pickaxe, hoe, watering can or weapon.</p></article>
+      <article><h4>Slingshot <span class="pill walk">may walk over</span></h4><p>Hitting someone or narrowly missing them.</p></article>
+      <article><h4>Bedroom door <span class="pill walk">may walk over</span></h4><p>Trying to open the bedroom of someone you barely know (under <span class="hearts"><svg><use href="#heart"/></svg> 2</span>) or opening the door for the first time.</p></article>
+      <article><h4>Dating or marriage proposal <span class="pill walk">may walk over</span></h4><p>With a bouquet, a Mermaid's Pendant or through dialogue. They remember whether the answer was yes or no. Someone already dating or married to you comes to confront you.</p></article>
+      <article><h4>Shopping <span class="pill memory">only remembers</span></h4><p>The shopkeeper and anyone in the shop remember what you bought on that visit.</p></article>
+      <article><h4>Passing out away from home <span class="pill memory">only remembers</span></h4><p>At 2 AM or from exhaustion. The day ends there, but anyone who saw it may bring it up in the following days.</p></article>
+      <article><h4>Walking by hurt or exhausted <span class="pill walk">comes to help</span></h4><p>See <a href="#cuidado">Friends who look after you</a>.</p></article>
+    </div>
+  </div>
+
+  <div class="sub">
+    <h3>How they walk over</h3>
+    <ul class="points">
+      <li>A <span class="emote">!</span> appears above their head and the villager walks quickly to your side. No teleporting.</li>
+      <li>Their line is generated while they walk. If they arrive first, they wait beside you until it's ready.</li>
+      <li>The line is about what happened. Each kind of action has its own prompt, so they don't change the subject or bring up old gossip instead.</li>
+      <li>When the conversation ends, including your replies, they walk back to where they were and pick up their routine.</li>
+      <li>Only one villager comes over at a time. If you save, sleep, change maps or enter an event, the approach is cancelled and they go back to normal.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>What they feel</h3>
+    <ul class="points">
+      <li>Seeing is different from hearing. Someone who saw it clearly talks about it in detail. Someone who only heard a noise sounds unsure and doesn't describe what they didn't see.</li>
+      <li>Doing the same thing again makes the reaction stronger. There are three kinds of reaction, each with three levels:</li>
+    </ul>
+    <div class="ladders">
+      <div class="ladder"><b>Scolding</b><div class="steps"><span>suspicious, curious</span><span>genuinely upset, wants an explanation</span><span>furious, won't have forgotten by tomorrow</span></div></div>
+      <div class="ladder"><b>Teasing</b><div class="steps"><span>pokes a little fun</span><span>laughs in your face, no malice</span><span>the funniest thing all week</span></div></div>
+      <div class="ladder"><b>Fondness</b><div class="steps"><span>pleased, wants to say something nice</span><span>likes having you around</span><span>touched, “this is what makes someone family”</span></div></div>
+    </div>
+    <ul class="points">
+      <li>Memories fade over time. Some grudges leave a little behind for the next day.</li>
+      <li>What they saw comes up later in normal conversations and can make it into the evening gossip.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>Compatibility</h3>
+    <ul class="points">
+      <li>SpaceCore is not required.</li>
+      <li>Villagers controlled by another mod, like PelicanCompanions companions, are left alone.</li>
+      <li>If a game update breaks the detection of one action, only that action stops working. The rest of the game and the mod carry on as normal.</li>
+    </ul>
+  </div>
+
+  <div class="option"><span class="label">In GMCM</span><b>Seen and Heard</b><span>on by default</span></div>
+</section>
+
+<!-- Fishing -->
+<section class="feature" id="pesca">
+  <div class="feature-head">
+    <span class="tag">New</span>
+    <h2>Fishing together</h2>
+    <p class="lead">If a villager sees you fishing, they may sit down on the bank and fish too.</p>
+  </div>
+  <ul class="points">
+    <li>Anyone within 12 tiles while you fish can join, including villagers who arrive after you started.</li>
+    <li>They look for a free spot on the same bank that is visible on screen, catch 1 or 2 fish and bring them over to you.</li>
+    <li>Then they say goodbye in a speech bubble and go back to their routine.</li>
+    <li>Each villager does this at most once a day.</li>
+    <li>11 villagers got a hand-drawn fishing pose: Jodi, Kent, Leah, Linus, Marnie, Maru, Pam, Penny, Pierre, Robin and Sam.</li>
+  </ul>
+  <div class="option"><span class="label">In GMCM</span><b>NPC fishing chance</b><span>0% to 100%, default 10%</span></div>
+</section>
+
+<!-- Group chat -->
+<section class="feature" id="grupo">
+  <div class="feature-head">
+    <span class="tag">New</span>
+    <h2>Group conversations</h2>
+    <p class="lead">When you arrive somewhere two villagers are standing together, they may call out “Hey, (your name)!”.</p>
+  </div>
+  <ul class="points">
+    <li>One of them walks over and the conversation opens in its own menu, with both villagers and you.</li>
+    <li>They answer you and each other. Each one has their own friendship change.</li>
+    <li>Afterwards both of them remember talking with you and with the other villager.</li>
+  </ul>
+  <div class="option"><span class="label">In GMCM</span><b>Group conversation chance</b><span>default 15%, rolled once per location per day. 0% turns it off.</span></div>
+</section>
+
+<!-- Help -->
+<section class="feature" id="cuidado">
+  <div class="feature-head">
+    <span class="tag">New</span>
+    <h2>Friends who look after you</h2>
+    <p class="lead">If you walk near someone (within 8 tiles) with your health or energy at 30% or less, how they react depends on your friendship.</p>
+  </div>
+  <ul class="points">
+    <li><span class="hearts"><svg><use href="#heart"/></svg> 4 or more</span>: the villager comes over, says something and gives you food. Many villagers have a food of their own; everyone else gives a simple snack. At most 1 helping per day, counting everyone.</li>
+    <li><span class="hearts"><svg><use href="#heart"/></svg> 2 or 3</span>: they only comment, also once a day.</li>
+  </ul>
+</section>
+
+<!-- Scenes -->
+<section class="feature" id="cenas">
+  <div class="feature-head">
+    <span class="tag improved">Improved</span>
+    <h2>Scenes without teleporting</h2>
+    <p class="lead">Scene events used to be cutscenes that moved you and the villagers somewhere else. Now, with the default style, a scene only happens if the villagers are actually there on their own schedule.</p>
+  </div>
+  <ul class="points">
+    <li><b>With 1 villager:</b> they notice you, call out, walk over and talk. Then they go back to what they were doing.</li>
+    <li><b>With 2 or more:</b> you overhear them chatting in speech bubbles nearby. Nothing locks and no menu opens, so you can keep doing what you were doing.</li>
+    <li>With AI, the lines are created from a short description of the moment, in each character's own voice. Without AI, the written lines are used.</li>
+    <li>If you talk to a villager who was getting ready to walk over to you, they don't come over afterwards to start a second conversation.</li>
+    <li>The two closing lines that repeated across 100 scenes are gone, in every language.</li>
+    <li>Fixed three scenes where a villager talked to themselves (Evelyn and the flour on Alex's face, Gus and Pam's empty mug, Alex calling George “Grandpa”).</li>
+  </ul>
+  <div class="sub">
+    <h3>You can pick the style</h3>
+    <p>These options used to live only in <code>config.json</code>. Now they have their own GMCM section, <b>Scene Events</b>:</p>
+    <ul class="points">
+      <li><b>Natural</b> (default): villagers walk over to talk with you or talk among themselves.</li>
+      <li><b>Ambient only</b>: you only overhear the conversations. Nobody walks over to you.</li>
+      <li><b>Cinematic</b>: the classic cutscenes, like before.</li>
+    </ul>
+    <p>You can also turn scenes on or off and choose how many happen per day (0 to 5).</p>
+  </div>
+  <div class="sub">
+    <h3>Good to know</h3>
+    <ul class="points">
+      <li>In multiplayer, walk-up scenes and overheard conversations only happen for the host. Other players don't get the cutscenes unless they pick Cinematic.</li>
+      <li>Experimental mode intros and scenes from Experimental Content packs still play as cutscenes. Packs can switch to the new format if they want.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Wheel -->
+<section class="feature" id="menu-radial">
+  <div class="feature-head">
+    <span class="tag">New</span>
+    <h2>Villager interaction wheel</h2>
+    <p class="lead">When there is more than one thing you can do with a villager, clicking them opens a pie menu so you can choose.</p>
+  </div>
+  <div class="wheel" aria-label="Wheel options">
+    <span>Talk</span><span>Continue conversation</span><span>Kiss</span><span>Hug</span><span>Deliver quest item</span><span>Give gift</span><span>Shop</span>
+  </div>
+  <ul class="points">
+    <li>It stops AI conversation from getting in the way of quests, gifts and shops. For example, handing Robin her lost axe.</li>
+    <li>If only one action is possible, it happens right away. Opening or cancelling the menu costs nothing.</li>
+    <li>If you already talked today, “Talk” is greyed out with the note “Already talked today. Come back tomorrow.”</li>
+    <li>Kiss (or Hug, for a roommate) needs empty hands, an idle spouse, <span class="hearts"><svg><use href="#heart"/></svg> 10+</span>, a time before 10 PM, and a spouse who slept in bed.</li>
+    <li>Works with mouse, keyboard and controller. Escape, B or right-click cancels.</li>
+  </ul>
+  <div class="option"><span class="label">In GMCM</span><b>NPC interaction wheel</b><span>on by default. When it's off, the game's own actions take priority over AI conversation.</span></div>
+</section>
+
+<!-- Festivals -->
+<section class="feature" id="festivais">
+  <div class="feature-head">
+    <span class="tag">New</span>
+    <h2>5 more festivals with AI dialogue</h2>
+    <p class="lead">When you talk to someone during these festivals, they speak like someone who is there in that moment. Afterwards the village keeps talking about the festival for about two days.</p>
+  </div>
+  <div class="fests">
+    <div><b>Luau</b><span class="cal">Summer 11</span></div>
+    <div><b>Dance of the Moonlight Jellies</b><span class="cal">Summer 28</span></div>
+    <div><b>Stardew Valley Fair</b><span class="cal">Fall 16</span></div>
+    <div><b>Spirit's Eve</b><span class="cal">Fall 27</span></div>
+    <div><b>Festival of Ice</b><span class="cal">Winter 8</span></div>
+  </div>
+  <p>They join the Egg Festival and the Flower Dance, which already had AI dialogue.</p>
+</section>
+
+<!-- UI -->
+<section class="feature" id="visual">
+  <div class="feature-head">
+    <span class="tag improved">Improved</span>
+    <h2>A new look for the reply menu</h2>
+  </div>
+  <ul class="points">
+    <li>It now matches the group conversation menu: the villager's portrait and name next to the line, reply fields underneath.</li>
+    <li>Text is never cut off in the middle of a line.</li>
+    <li>The bonus actions and the Keep secret box now sit on the same row.</li>
+  </ul>
+</section>
+
+<!-- Creators -->
+<section class="feature" id="criadores">
+  <div class="feature-head">
+    <span class="tag creators">For pack creators</span>
+    <h2>New triggers from a single JSON file</h2>
+    <p class="lead">A content pack can include an <code>alive-trigger.json</code> file and add new reactions to Seen and Heard, without writing code.</p>
+  </div>
+  <ul class="points">
+    <li><b>When:</b> a game condition (weather, time of day, items in your inventory and so on) checked near villagers.</li>
+    <li><b>On:</b> changes how villagers react to something they already notice, like a gift or a bomb.</li>
+    <li>You can filter by villager and by hearts, limit how many times a day it fires, keep it as a memory only, and have the villager give you an item.</li>
+    <li>Gifts, food and purchases now store the item ID, so triggers work in any game language.</li>
+    <li>Up to 50 triggers per pack. The pack must require AliveNpcs 1.7.0 in its manifest. The full format is in <code>ALIVE_TRIGGERS.md</code>.</li>
+  </ul>
+  <div class="sub">
+    <h3>Test commands in the SMAPI console</h3>
+    <div class="cmds">
+      <div><code>alive_trigger lint [pack]</code><span>Re-reads the file and explains each trigger: what was rejected, what has no effect and whether the condition holds right now.</span></div>
+      <div><code>alive_trigger reload</code><span>Applies the edited pack without restarting the game.</span></div>
+      <div><code>alive_trigger list</code><span>Shows the active triggers and how many times they fired today.</span></div>
+      <div><code>alive_sh fire &lt;event&gt;</code><span>Simulates an action near villagers and shows who saw it and who is walking over.</span></div>
+      <div><code>alive_group_chat</code><span>Forces a group conversation.</span></div>
+      <div><code>alivenpcs_scene_status</code><span>Shows the scenes planned for the day.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Settings -->
+<section class="feature" id="opcoes">
+  <div class="feature-head">
+    <span class="tag improved">Settings</span>
+    <h2>New GMCM options</h2>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Option</th><th>Default</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td>Seen and Heard</td><td>On</td><td>Villagers remember and react to what they see you do.</td></tr>
+        <tr><td>NPC fishing chance</td><td>10%</td><td>Chance that a villager fishes with you when they see you fishing.</td></tr>
+        <tr><td>Group conversation chance</td><td>15%</td><td>Chance that two villagers standing together call you over to talk.</td></tr>
+        <tr><td>NPC interaction wheel</td><td>On</td><td>Shows the pie menu when more than one action is available.</td></tr>
+        <tr><td>Enable Scene Events</td><td>On</td><td>Turns the mod's scenes on or off.</td></tr>
+        <tr><td>Delivery Style</td><td>Natural</td><td>Natural, Ambient only or Cinematic.</td></tr>
+        <tr><td>Scene Events per Day</td><td>1</td><td>0 to 5.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Notes -->
+<section class="feature" id="notas">
+  <div class="feature-head">
+    <h2>Before you update</h2>
+  </div>
+  <ul class="points">
+    <li>The new menu text is in English, Portuguese and Vietnamese. In German, Spanish, French, Italian and Chinese it shows in English for now.</li>
+    <li>The official Pelican Town Mayor pack was updated to 1.7.0.</li>
+    <li>1.7.0 is still in development, so details may change before release.</li>
+  </ul>
+</section>

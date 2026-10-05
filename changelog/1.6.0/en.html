@@ -1,0 +1,206 @@
+<header class="top">
+  <div class="eyebrow"><span class="version">1.6.0</span><span>“As You Were”</span><span>released · Sep 10, 2026</span></div>
+  <h1>The AI starts from the game's own lines, and married life gets more room</h1>
+  <p class="lead">Everything that changed in AliveNpcs 1.6.0, explained without the jargon. The first line now starts from what the game would say, heart events can turn into gossip, NPC mods get their own manager, and your spouse gets more conversations and dates. Your save keeps working.</p>
+</header>
+
+<nav class="summary" aria-label="Summary">
+  <a class="tile" href="#canon"><strong>Canon Mode</strong><span>The AI's first line starts from the line the game would show at that moment.</span></a>
+  <a class="tile" href="#heart-events"><strong>Heart events</strong><span>Heart events you watched can turn into gossip at the end of the day.</span></a>
+  <a class="tile" href="#compatibility"><strong>Compatibility Manager</strong><span>Choose which NPC mods AliveNpcs handles, in a menu of its own.</span></a>
+  <a class="tile" href="#blocklists"><strong>Blocklists</strong><span>The community list is now optional, and you get a list of your own.</span></a>
+  <a class="tile" href="#spouse-talks"><strong>Spouse conversations</strong><span>Several AI conversations a day with the person you married. The default is 3.</span></a>
+  <a class="tile" href="#spouse-dates"><strong>Spouse dates</strong><span>A new bonus action to take your spouse on a date.</span></a>
+  <a class="tile" href="#outings"><strong>Outing scenery</strong><span>Outings decorated with the game's own furniture and items.</span></a>
+  <a class="tile" href="#fixes"><strong>No more frozen dialogue</strong><span>The game no longer looks frozen while a reply is generated.</span></a>
+</nav>
+
+<!-- Canon Mode -->
+<section class="feature" id="canon">
+  <div class="feature-head">
+    <span class="tag">New</span>
+    <h2>Canon Mode: the game's own line comes first</h2>
+    <p class="lead">When you talk to a villager, AliveNpcs now captures the line Stardew Valley would have shown at that exact moment and uses it as the starting point for the AI's first line.</p>
+  </div>
+  <ul class="points">
+    <li>Works for base-game villagers, Stardew Valley Expanded villagers, the official AliveNpcs OCs and NPCs added by other mods.</li>
+    <li>The original line guides how the conversation opens. The villager doesn't have to repeat it or stay on its topic. Recent events and what is happening right then can take the conversation somewhere else.</li>
+    <li>In later turns the original line only helps with continuity. Your newest message and the villager's current reply stay the focus.</li>
+    <li>It also applies to the opening line after a heart event and to the first line in supported festivals.</li>
+  </ul>
+  <div class="sub">
+    <h3>Good to know</h3>
+    <ul class="points">
+      <li>The original line is cleaned up before it reaches the AI. It is cut to 260 characters at most, loses the game's presentation commands and is marked as reference text the AI must not treat as instructions.</li>
+      <li>The debug logs show the captured line and whether it was used as the opening anchor or as a soft reference in later turns.</li>
+    </ul>
+  </div>
+  <div class="option"><span class="label">In GMCM</span><b>Enable Canon Mode</b><span>on by default</span></div>
+</section>
+
+<!-- Heart events -->
+<section class="feature" id="heart-events">
+  <div class="feature-head">
+    <span class="tag">New</span>
+    <h2>Heart events become something to talk about</h2>
+    <p class="lead">When you watch a heart event, it can go into the end-of-day gossip analysis.</p>
+  </div>
+  <ul class="points">
+    <li>Covers the individual <span class="hearts"><svg><use href="#heart"/></svg> 2, 4, 6, 8, 10 and 14</span> events of the twelve base-game marriage candidates.</li>
+    <li>The AI decides whether the event is interesting enough. Seeing an event doesn't guarantee it becomes gossip.</li>
+    <li>The AI only gets a short, hand-written summary of each event. The event script and its raw text are never sent to the model.</li>
+    <li>Gossip that comes from a heart event keeps that villager as a source, so it can still show up in their memories and conversations later.</li>
+  </ul>
+  <div class="sub">
+    <h3>Good to know</h3>
+    <ul class="points">
+      <li>Events you saw before updating to 1.6 don't turn into new gossip.</li>
+      <li>At most twelve events are considered per day. Duplicates are dropped, the order is always the same, and anything left over is discarded after that day's analysis.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Compatibility Manager -->
+<section class="feature" id="compatibility">
+  <div class="feature-head">
+    <span class="tag">New</span>
+    <h2>AliveNpcs Compatibility Manager</h2>
+    <p class="lead">The settings that decide which NPC mods AliveNpcs handles now have their own entry in Generic Mod Config Menu, called AliveNpcs Compatibility Manager.</p>
+  </div>
+  <div class="wheel" aria-label="Activation modes">
+    <span>Vanilla only</span><span>Vanilla + SVE</span><span>Selected mods</span><span>All NPC mods</span>
+  </div>
+  <ul class="points">
+    <li>The two old switches, one for SVE and one for other mods, became a single choice with the four modes above.</li>
+    <li>In <b>Selected mods</b>, the menu finds the NPC packs you have installed and lists them with checkboxes.</li>
+    <li>Packs it can't detect on its own can be added by hand with their ModId.</li>
+    <li>A separate option decides what happens to NPCs whose source mod can't be identified.</li>
+    <li>Base-game villagers and the official AliveNpcs OCs work in every mode, unless another rule you set blocks them.</li>
+    <li>Long mod names display cleanly, the ModId shows when you hover an entry, and the list looks clearly disabled outside <b>Selected mods</b>.</li>
+    <li>The log explains more clearly why an NPC was blocked: your own block, the remote list, a mod you didn't select or an unknown origin.</li>
+  </ul>
+  <div class="option"><span class="label">In GMCM</span><b>NPC Mod Activation Mode</b><span>default All NPC mods</span></div>
+  <div class="option"><span class="label">In GMCM</span><b>Manual NPC ModIds</b><span>empty by default. Comma-separated ModIds used in Selected mods.</span></div>
+  <div class="option"><span class="label">In GMCM</span><b>Allow Unknown NPC Origins</b><span>off by default. Only applies in Selected mods.</span></div>
+  <div class="sub">
+    <h3>Good to know</h3>
+    <ul class="points">
+      <li>Your old SVE and other-NPC-mod settings move automatically to the closest new mode.</li>
+      <li>The ModIds you had selected and the NPCs you blocked by hand are kept.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Blocklists -->
+<section class="feature" id="blocklists">
+  <div class="feature-head">
+    <span class="tag improved">Improved</span>
+    <h2>Optional AI blocklists</h2>
+    <p class="lead">The community AI blocklist is now off by default and only runs if you turn it on. The options sit in the AI Blocklists section of AliveNpcs Compatibility Manager.</p>
+  </div>
+  <ul class="points">
+    <li>There is a single remote list address, and you can edit it. Clearing the address turns remote blocking off.</li>
+    <li>If the remote list fails (a timeout, a network error, broken JSON, a response that is too large or an empty address), nobody gets blocked because of it. Custom NPCs you allowed keep working.</li>
+    <li>When a refresh fails, the remote rules are dropped. Nothing stays blocked on old data.</li>
+    <li>You now also get a local list. Type internal NPC names separated by commas or line breaks.</li>
+    <li>Your own blocks always win over the activation mode, the mod checkboxes and the remote list.</li>
+    <li>NPCs already listed in <b>Disabled NPCs</b> stay blocked.</li>
+    <li>The menu shows the remote list status: disabled, empty, loading, loaded or failed. When it has failed, nobody is blocked by it.</li>
+  </ul>
+  <div class="option"><span class="label">In GMCM</span><b>Enable Community AI Blocklist</b><span>off by default</span></div>
+  <div class="option"><span class="label">In GMCM</span><b>AI Blocklist URL</b><span>comes with the community list address. Empty turns remote blocking off.</span></div>
+  <div class="option"><span class="label">In GMCM</span><b>Blocked NPC Names</b><span>empty by default. Wins over everything else.</span></div>
+</section>
+
+<!-- Spouse conversations -->
+<section class="feature" id="spouse-talks">
+  <div class="feature-head">
+    <span class="tag">New</span>
+    <h2>More conversations with your spouse</h2>
+    <p class="lead">Your current spouse can now have several separate AI conversations a day. Anyone who isn't your current spouse stays at one AI conversation a day.</p>
+  </div>
+  <ul class="points">
+    <li>The default is three a day, and you can choose from 1 to 10.</li>
+    <li>This count is separate from the turn limit inside each conversation.</li>
+    <li>Finishing or skipping a conversation uses up one of the day's conversations. Closing an unfinished reply keeps that conversation for later.</li>
+    <li>When you return to a paused conversation, the pending line and the turns you had left come back with it.</li>
+    <li>A new conversation with your spouse uses the earlier ones from that day as history and doesn't reuse the previous opening.</li>
+  </ul>
+  <div class="option"><span class="label">In GMCM</span><b>Spouse Conversations per Day</b><span>default 3, from 1 to 10</span></div>
+</section>
+
+<!-- Spouse dates -->
+<section class="feature" id="spouse-dates">
+  <div class="feature-head">
+    <span class="tag">New</span>
+    <h2>Spouse dates</h2>
+    <p class="lead">A new bonus action, <b>Spouse date</b>, lets you ask your current spouse out on a date. It is for adult spouses in a romantic marriage.</p>
+  </div>
+  <ul class="points">
+    <li>Spouse dates run on the same system as <b>Hang out</b>, with the same evaluation, pending scenes, cooldowns, memories, diary, gossip, counterproposals and scene playback.</li>
+    <li>Roommates, children, child-coded NPCs, villagers who aren't your spouse and NPCs of uncertain age never get romantic date content.</li>
+    <li>Two new scene categories: spouse romance, for affectionate dates with nothing sexual, and sensual spouse date, for consensual, adult, non-graphic dates.</li>
+    <li>New templates: an evening date at the farmhouse and a private late-evening date that only appears if you opt in.</li>
+    <li>Ordinary <b>Hang out</b> invitations can't pick spouse-only templates. A broken AI response never falls back to a sensual scene at random.</li>
+    <li>The Outings Planner now lists couple-date destinations, the scene categories available there and their time windows.</li>
+    <li>A pending scene can start when you are already at the destination and the right time arrives. This includes farmhouse dates accepted without changing location.</li>
+  </ul>
+  <div class="option"><span class="label">In GMCM</span><b>Enable Sensual Spouse Scenes</b><span>off by default. Turning it on only makes eligible templates available. The AI is never forced to pick one.</span></div>
+</section>
+
+<!-- Outing scenery -->
+<section class="feature" id="outings">
+  <div class="feature-head">
+    <span class="tag improved">Improved</span>
+    <h2>Outings with real scenery</h2>
+    <p class="lead">Outings now get temporary decorations built from the game's own furniture and item art, and they happen in more places.</p>
+  </div>
+  <ul class="points">
+    <li>New destination: the spa poolside, with four corners decorated separately for a tea break, a friendly chat, a gentle date and an evening with your spouse. Invitations respect the railroad unlock.</li>
+    <li>Farm outings now use seven areas: the farmhouse doorstep, a picnic clearing, the north, east and south entrances, a western corner and a shoreline.</li>
+    <li>On the farm, spots follow where your house and exits actually are, avoid things you placed and keep everyone together.</li>
+    <li>Each of the 72 outing templates has its own decorations, with rugs, table styles, books, plants, shells and lighting picked for that scene. Before, each location repeated one layout.</li>
+    <li>Some examples: beach luaus with rugs, palms and torches, lanterns on the pier, lakeside picnics, and tables, plants and rugs in town, the saloon, the museum, the community center and the farm.</li>
+    <li>Torches animate, and decorative lights turn on indoors or in the evening. The scene's dialogue instructions now include the planned setting for the location.</li>
+    <li>Outing scenes were moved so actors and decorations have usable ground. Shore outings are on the sand and pier outings are on the pier.</li>
+  </ul>
+  <div class="sub">
+    <h3>Good to know</h3>
+    <ul class="points">
+      <li>Farmhouse outings follow the real position of the entrance across house upgrades. Actors are never placed on empty map tiles, and the camera follows actors that were moved. This fixes scenes shown against a black background in expanded homes.</li>
+      <li>Decorations skip occupied or blocked tiles and disappear when the event ends or is skipped. No furniture is left behind and none of your items are used up.</li>
+      <li>Debug previews can show all four spa scenes at any time and use the same farm placement as real events.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Dialogue fixes -->
+<section class="feature" id="fixes">
+  <div class="feature-head">
+    <span class="tag fix">Fixes</span>
+    <h2>Dialogue that doesn't freeze the game</h2>
+    <p class="lead">The game no longer looks frozen while the first AI reply is being generated.</p>
+  </div>
+  <ul class="points">
+    <li>You can close the loading dialogue, the one with the three dots, again and keep moving while the reply is generated.</li>
+    <li>If you stay in the same place and no other menu is open, the finished dialogue appears on its own. Otherwise it is saved and shows up the next time you interact.</li>
+    <li>Replies generated in the background are now applied on the game's main thread. This avoids errors from the interface being updated from two places at once.</li>
+    <li>Cancelled spouse conversations restore better, and cleanup is better when conversations, bonus actions, counterproposals or skips finish.</li>
+    <li>The house-upgrade shop patch now uses the current Stardew Valley 1.6 code.</li>
+  </ul>
+</section>
+
+<!-- Notes -->
+<section class="feature" id="notes">
+  <div class="feature-head">
+    <h2>Before you update</h2>
+  </div>
+  <ul class="points">
+    <li>No save wipe needed. The save format, the mod's UniqueID (Lucas.AliveNpcs), APIs, namespaces and data folders are unchanged.</li>
+    <li>If you want the community AI blocklist, turn on <b>Enable Community AI Blocklist</b> in AliveNpcs Compatibility Manager after updating.</li>
+    <li>Sensual spouse scenes stay unavailable until you turn on <b>Enable Sensual Spouse Scenes</b>.</li>
+    <li>The new compatibility, Canon Mode, spouse conversation, spouse date and Outings Planner options have text in English, Brazilian Portuguese and Vietnamese.</li>
+    <li>The official Pelican Town Mayor pack was updated to 1.6.0 and now requires AliveNpcs 1.6.0.</li>
+    <li>Behind the scenes, the mod's version numbers were aligned to 1.6.0, temporary test code was left out of the release, and there are more automated tests for Canon Mode, compatibility modes and migration, heart events, spouse-scene safety and invitations.</li>
+  </ul>
+</section>

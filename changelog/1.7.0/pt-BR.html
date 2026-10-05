@@ -1,0 +1,273 @@
+<header class="top">
+  <div class="eyebrow"><span class="version">1.7.0</span><span>comparado com a 1.6.0 “As You Were”</span><span>em desenvolvimento · 5 out 2026</span></div>
+  <h1>Os moradores agora veem o que você faz</h1>
+  <p class="lead">Tudo que mudou no AliveNpcs desde a 1.6, explicado sem tecniquês. Primeiro o resumo; depois cada novidade com mais detalhe.</p>
+</header>
+
+<nav class="summary" aria-label="Resumo">
+  <a class="tile" href="#seen-and-heard"><strong>Seen and Heard</strong><span>Os moradores percebem o que você faz perto deles, lembram e às vezes vêm falar na hora.</span></a>
+  <a class="tile" href="#pesca"><strong>Pescar junto</strong><span>Quem te vê pescando pode pescar do lado e te dar o que pegou.</span></a>
+  <a class="tile" href="#grupo"><strong>Conversa em grupo</strong><span>Dois moradores juntos podem te chamar pra uma conversa a três.</span></a>
+  <a class="tile" href="#cuidado"><strong>Amigos que cuidam</strong><span>Machucado ou exausto? Um amigo vem até você e te dá comida.</span></a>
+  <a class="tile" href="#cenas"><strong>Cenas sem teletransporte</strong><span>Os eventos de cena acontecem onde o morador já está.</span></a>
+  <a class="tile" href="#menu-radial"><strong>Menu radial</strong><span>Escolha entre falar, beijar, entregar missão, dar presente ou abrir a loja.</span></a>
+  <a class="tile" href="#festivais"><strong>Mais 5 festivais</strong><span>Luau, Medusas, Feira, Dia dos Espíritos e Festival do Gelo com diálogo de IA.</span></a>
+  <a class="tile" href="#criadores"><strong>Gatilhos em JSON</strong><span>Criadores de packs adicionam reações novas com um único arquivo.</span></a>
+</nav>
+
+<!-- Seen and Heard -->
+<section class="feature" id="seen-and-heard">
+  <div class="feature-head">
+    <span class="tag">Novo</span>
+    <h2>Seen and Heard: eles reparam em você</h2>
+    <p class="lead">Quando você faz algo perto de um morador, ele pode ver ou ouvir. Isso vira uma memória dele. Dependendo do que foi, ele anda até você na hora pra comentar. Depois pode puxar o assunto em outras conversas ou espalhar como fofoca à noite.</p>
+  </div>
+
+  <div class="sub">
+    <h3>O que eles percebem</h3>
+    <div class="notice">
+      <article><h4>Dar presente <span class="pill walk">pode vir falar</span></h4><p>Quem recebe e quem está por perto lembram o item, se a pessoa gostou e se era aniversário.</p></article>
+      <article><h4>Comer ou beber <span class="pill walk">pode vir falar</span></h4><p>Inclusive se era bebida alcoólica.</p></article>
+      <article><h4>Explodir bombas <span class="pill walk">pode vir falar</span></h4><p>O barulho atravessa paredes e pode acordar quem estava dormindo.</p></article>
+      <article><h4>Seguir alguém de perto <span class="pill walk">vem falar</span></h4><p>Ande atrás de um morador por 3 segundos e aparece um <span class="emote">!</span>. Continue mais 3 e ele se vira, vem atrás de você e manda parar.</p></article>
+      <article><h4>Pescar por perto <span class="pill walk">pode pescar junto</span></h4><p>Veja <a href="#pesca">Pescar junto</a>.</p></article>
+      <article><h4>Revirar lixo <span class="pill walk">pode vir falar</span></h4><p>Eles sabem de quem era a lixeira.</p></article>
+      <article><h4>Ferramenta ou arma <span class="pill walk">pode vir falar</span></h4><p>Acertar alguém (ou passar raspando) com machado, picareta, enxada, regador ou arma.</p></article>
+      <article><h4>Estilingue <span class="pill walk">pode vir falar</span></h4><p>Acertar alguém ou errar por pouco.</p></article>
+      <article><h4>Porta de quarto <span class="pill walk">pode vir falar</span></h4><p>Tentar abrir o quarto de quem você conhece pouco (menos de <span class="hearts"><svg><use href="#heart"/></svg> 2</span>) ou abrir a porta pela primeira vez.</p></article>
+      <article><h4>Pedido de namoro ou casamento <span class="pill walk">pode vir falar</span></h4><p>Com buquê, pingente de sereia ou pelo diálogo. Lembram se foi sim ou não. Quem já namora ou é casado com você vem tirar satisfação.</p></article>
+      <article><h4>Compras na loja <span class="pill memory">só lembra</span></h4><p>O dono da loja e quem estava lá lembram o que você comprou naquela visita.</p></article>
+      <article><h4>Desmaiar fora de casa <span class="pill memory">só lembra</span></h4><p>Às 2h ou de exaustão. O dia acaba ali, mas quem viu pode comentar nos dias seguintes.</p></article>
+      <article><h4>Passar machucado ou exausto <span class="pill walk">vem ajudar</span></h4><p>Veja <a href="#cuidado">Amigos que cuidam de você</a>.</p></article>
+    </div>
+  </div>
+
+  <div class="sub">
+    <h3>Como eles vêm até você</h3>
+    <ul class="points">
+      <li>Aparece um <span class="emote">!</span> em cima da cabeça e o morador anda rápido até o seu lado. Nada de teletransporte.</li>
+      <li>A fala é gerada enquanto ele caminha. Se ele chegar antes, espera do seu lado até ela ficar pronta.</li>
+      <li>A fala é sobre o que aconteceu. Cada tipo de ação tem seu próprio prompt, então ele não troca de assunto nem puxa fofoca antiga no lugar.</li>
+      <li>Quando a conversa termina, incluindo as suas respostas, ele volta pro lugar onde estava e retoma a rotina.</li>
+      <li>Só um morador vem de cada vez. Se você salvar, dormir, mudar de mapa ou entrar num evento, a abordagem é cancelada e ele volta ao normal.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>O que eles sentem</h3>
+    <ul class="points">
+      <li>Ver é diferente de ouvir. Quem viu claramente fala com detalhes. Quem só ouviu um barulho fala com dúvida e não descreve o que não viu.</li>
+      <li>Repetir a mesma coisa faz a reação subir de tom. São três tipos de reação, cada um com três níveis:</li>
+    </ul>
+    <div class="ladders">
+      <div class="ladder"><b>Bronca</b><div class="steps"><span>desconfiado, curioso</span><span>chateado de verdade, quer explicação</span><span>furioso, não vai esquecer amanhã</span></div></div>
+      <div class="ladder"><b>Zoeira</b><div class="steps"><span>tira um sarro leve</span><span>ri na sua cara, sem maldade</span><span>a coisa mais engraçada da semana</span></div></div>
+      <div class="ladder"><b>Carinho</b><div class="steps"><span>contente, quer dizer algo legal</span><span>gosta de ter você por perto</span><span>emocionado, “é isso que faz alguém virar família”</span></div></div>
+    </div>
+    <ul class="points">
+      <li>As memórias vão se apagando com o tempo. Algumas mágoas deixam um resto pro dia seguinte.</li>
+      <li>O que eles viram aparece depois nas conversas normais e pode entrar na fofoca da noite.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>Compatibilidade</h3>
+    <ul class="points">
+      <li>Não precisa de SpaceCore.</li>
+      <li>Moradores controlados por outro mod, como os companheiros do PelicanCompanions, são deixados em paz.</li>
+      <li>Se uma atualização do jogo quebrar a detecção de alguma ação, só aquela para de funcionar. O resto do jogo e do mod continua normal.</li>
+    </ul>
+  </div>
+
+  <div class="option"><span class="label">No GMCM</span><b>Seen and Heard</b><span>ligado por padrão</span></div>
+</section>
+
+<!-- Fishing -->
+<section class="feature" id="pesca">
+  <div class="feature-head">
+    <span class="tag">Novo</span>
+    <h2>Pescar junto</h2>
+    <p class="lead">Se um morador te vê pescando, ele pode sentar na margem e pescar também.</p>
+  </div>
+  <ul class="points">
+    <li>Vale pra quem estiver a até 12 tiles enquanto você pesca, inclusive quem chegar depois que você começou.</li>
+    <li>Ele procura um ponto livre na mesma margem, que apareça na tela, pesca 1 ou 2 peixes e vem te entregar.</li>
+    <li>Depois se despede num balão e volta pra rotina dele.</li>
+    <li>Cada morador faz isso no máximo uma vez por dia.</li>
+    <li>11 moradores ganharam uma pose de pesca desenhada à mão: Jodi, Kent, Leah, Linus, Marnie, Maru, Pam, Penny, Pierre, Robin e Sam.</li>
+  </ul>
+  <div class="option"><span class="label">No GMCM</span><b>Chance do NPC pescar</b><span>de 0% a 100%, padrão 10%</span></div>
+</section>
+
+<!-- Group chat -->
+<section class="feature" id="grupo">
+  <div class="feature-head">
+    <span class="tag">Novo</span>
+    <h2>Conversa em grupo</h2>
+    <p class="lead">Quando você chega num lugar onde dois moradores estão juntos, eles podem te chamar: “Ei, Fulano!”.</p>
+  </div>
+  <ul class="points">
+    <li>Um deles anda até você e a conversa abre num menu próprio, com os dois moradores e você.</li>
+    <li>Eles respondem a você e um ao outro. Cada um tem a sua própria mudança de amizade.</li>
+    <li>Depois os dois lembram que conversaram com você e com o outro morador.</li>
+  </ul>
+  <div class="option"><span class="label">No GMCM</span><b>Chance de conversa em grupo</b><span>padrão 15%, sorteada uma vez por lugar por dia. 0% desliga.</span></div>
+</section>
+
+<!-- Help -->
+<section class="feature" id="cuidado">
+  <div class="feature-head">
+    <span class="tag">Novo</span>
+    <h2>Amigos que cuidam de você</h2>
+    <p class="lead">Se você passa perto de alguém (até 8 tiles) com vida ou energia em 30% ou menos, a reação depende da amizade.</p>
+  </div>
+  <ul class="points">
+    <li><span class="hearts"><svg><use href="#heart"/></svg> 4 ou mais</span>: o morador vem até você, fala alguma coisa e te dá comida. Cada morador conhecido tem a sua comida; os outros dão um lanche simples. No máximo 1 ajuda por dia, somando todo mundo.</li>
+    <li><span class="hearts"><svg><use href="#heart"/></svg> 2 ou 3</span>: ele só comenta, também uma vez por dia.</li>
+  </ul>
+</section>
+
+<!-- Scenes -->
+<section class="feature" id="cenas">
+  <div class="feature-head">
+    <span class="tag improved">Melhorado</span>
+    <h2>Cenas sem teletransporte</h2>
+    <p class="lead">Antes, os eventos de cena eram cutscenes que levavam você e os moradores pra outro lugar. Agora, no modo padrão, a cena só acontece se os moradores estiverem mesmo ali pela rotina deles.</p>
+  </div>
+  <ul class="points">
+    <li><b>Com 1 morador:</b> ele te nota, te chama, vem até você e conversa. Depois volta pro que estava fazendo.</li>
+    <li><b>Com 2 ou mais:</b> você escuta eles conversando em balões ali perto. Nada trava e nenhum menu abre, então dá pra continuar o que você estava fazendo.</li>
+    <li>Com IA, as falas são criadas a partir de uma descrição curta do momento, com a voz de cada um. Sem IA, entram as falas escritas.</li>
+    <li>Se você fala com um morador que estava se preparando pra vir até você, ele não vem depois puxar uma segunda conversa.</li>
+    <li>Saíram as duas frases de encerramento que se repetiam em 100 cenas, em todos os idiomas.</li>
+    <li>Corrigidas três cenas em que um morador falava com ele mesmo (Evelyn e a farinha no rosto do Alex, Gus e a caneca vazia da Pam, Alex chamando o George de “vovô”).</li>
+  </ul>
+  <div class="sub">
+    <h3>Dá pra escolher o estilo</h3>
+    <p>As opções saíram do <code>config.json</code> e agora ficam numa seção própria do GMCM, <b>Eventos de Cena</b>:</p>
+    <ul class="points">
+      <li><b>Natural</b> (padrão): os moradores vêm conversar com você ou conversam entre si.</li>
+      <li><b>Só ambiente</b>: você só escuta as conversas. Ninguém vem até você.</li>
+      <li><b>Cinemático</b>: as cutscenes clássicas, como era antes.</li>
+    </ul>
+    <p>Também dá pra ligar ou desligar as cenas e escolher quantas acontecem por dia (de 0 a 5).</p>
+  </div>
+  <div class="sub">
+    <h3>Bom saber</h3>
+    <ul class="points">
+      <li>No multiplayer, as cenas em que o morador vem até você e as conversas que você escuta de longe só acontecem pro host. Os outros jogadores não recebem as cutscenes, a não ser que escolham Cinemático.</li>
+      <li>As introduções dos modos experimentais e as cenas de packs de Experimental Content continuam como cutscene. Os packs podem adotar o formato novo se quiserem.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Wheel -->
+<section class="feature" id="menu-radial">
+  <div class="feature-head">
+    <span class="tag">Novo</span>
+    <h2>Menu radial dos moradores</h2>
+    <p class="lead">Quando dá pra fazer mais de uma coisa com um morador, clicar nele abre um menu em pizza pra você escolher.</p>
+  </div>
+  <div class="wheel" aria-label="Opções do menu">
+    <span>Falar</span><span>Continuar conversa</span><span>Beijar</span><span>Abraçar</span><span>Entregar item de missão</span><span>Dar presente</span><span>Loja</span>
+  </div>
+  <ul class="points">
+    <li>Resolve a conversa de IA atrapalhando missões, presentes e lojas. Exemplo: entregar o machado perdido da Robin.</li>
+    <li>Se só tem uma ação possível, ela acontece direto. Abrir ou cancelar o menu não gasta nada.</li>
+    <li>Se vocês já conversaram hoje, “Falar” aparece apagado com o aviso “Vocês já conversaram hoje. Volte amanhã.”</li>
+    <li>Beijar (ou Abraçar, se for colega de quarto) pede mãos vazias, cônjuge parado, <span class="hearts"><svg><use href="#heart"/></svg> 10+</span>, antes das 22h, e que o cônjuge tenha dormido na cama.</li>
+    <li>Funciona com mouse, teclado e controle. Esc, B ou clique direito cancela.</li>
+  </ul>
+  <div class="option"><span class="label">No GMCM</span><b>Menu radial dos NPCs</b><span>ligado por padrão. Desligado, as ações do jogo têm prioridade sobre a conversa de IA.</span></div>
+</section>
+
+<!-- Festivals -->
+<section class="feature" id="festivais">
+  <div class="feature-head">
+    <span class="tag">Novo</span>
+    <h2>Mais 5 festivais com diálogo de IA</h2>
+    <p class="lead">Conversando com alguém durante esses festivais, o morador fala como quem está lá naquele momento. Depois a vila fica comentando o festival por uns dois dias.</p>
+  </div>
+  <div class="fests">
+    <div><b>Luau</b><span class="cal">Verão 11</span></div>
+    <div><b>Dança das Medusas-da-Lua</b><span class="cal">Verão 28</span></div>
+    <div><b>Feira do Vale do Orvalho</b><span class="cal">Outono 16</span></div>
+    <div><b>Véspera do Dia dos Espíritos</b><span class="cal">Outono 27</span></div>
+    <div><b>Festival do Gelo</b><span class="cal">Inverno 8</span></div>
+  </div>
+  <p>Eles se juntam ao Festival do Ovo e à Dança das Flores, que já tinham diálogo de IA.</p>
+</section>
+
+<!-- UI -->
+<section class="feature" id="visual">
+  <div class="feature-head">
+    <span class="tag improved">Melhorado</span>
+    <h2>Menu de resposta com visual novo</h2>
+  </div>
+  <ul class="points">
+    <li>Ficou igual ao da conversa em grupo: retrato e nome do morador ao lado da fala, campos de resposta embaixo.</li>
+    <li>O texto nunca fica cortado no meio de uma linha.</li>
+    <li>As ações bônus e a caixinha de segredo agora ficam na mesma linha.</li>
+  </ul>
+</section>
+
+<!-- Creators -->
+<section class="feature" id="criadores">
+  <div class="feature-head">
+    <span class="tag creators">Pra criadores de packs</span>
+    <h2>Gatilhos novos com um único JSON</h2>
+    <p class="lead">Um content pack pode trazer um arquivo <code>alive-trigger.json</code> e adicionar reações novas ao Seen and Heard, sem escrever código.</p>
+  </div>
+  <ul class="points">
+    <li><b>When:</b> uma condição do jogo (clima, horário, itens no inventário e assim por diante) checada perto dos moradores.</li>
+    <li><b>On:</b> muda como os moradores reagem a algo que eles já percebem, como um presente ou uma bomba.</li>
+    <li>Dá pra filtrar por morador e por corações, limitar quantas vezes por dia, deixar só como memória e fazer o morador te dar um item.</li>
+    <li>Presentes, comidas e compras agora guardam o ID do item, então os gatilhos funcionam em qualquer idioma do jogo.</li>
+    <li>Até 50 gatilhos por pack. O pack precisa pedir AliveNpcs 1.7.0 no manifest. O formato completo está em <code>ALIVE_TRIGGERS.md</code>.</li>
+  </ul>
+  <div class="sub">
+    <h3>Comandos de teste no console do SMAPI</h3>
+    <div class="cmds">
+      <div><code>alive_trigger lint [pack]</code><span>Lê o arquivo de novo e explica cada gatilho: o que foi rejeitado, o que não tem efeito e se a condição vale agora.</span></div>
+      <div><code>alive_trigger reload</code><span>Aplica o pack editado sem reiniciar o jogo.</span></div>
+      <div><code>alive_trigger list</code><span>Mostra os gatilhos ativos e quantas vezes dispararam hoje.</span></div>
+      <div><code>alive_sh fire &lt;evento&gt;</code><span>Simula uma ação perto dos moradores e mostra quem viu e quem está vindo.</span></div>
+      <div><code>alive_group_chat</code><span>Força uma conversa em grupo.</span></div>
+      <div><code>alivenpcs_scene_status</code><span>Mostra as cenas planejadas pro dia.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Settings -->
+<section class="feature" id="opcoes">
+  <div class="feature-head">
+    <span class="tag improved">Configurações</span>
+    <h2>Opções novas no GMCM</h2>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Opção</th><th>Padrão</th><th>O que faz</th></tr></thead>
+      <tbody>
+        <tr><td>Seen and Heard</td><td>Ligado</td><td>Moradores lembram e reagem ao que veem você fazer.</td></tr>
+        <tr><td>Chance do NPC pescar</td><td>10%</td><td>Chance de um morador pescar junto quando te vê pescando.</td></tr>
+        <tr><td>Chance de conversa em grupo</td><td>15%</td><td>Chance de dois moradores juntos te chamarem pra conversar.</td></tr>
+        <tr><td>Menu radial dos NPCs</td><td>Ligado</td><td>Mostra o menu em pizza quando há mais de uma ação.</td></tr>
+        <tr><td>Ativar Eventos de Cena</td><td>Ligado</td><td>Liga ou desliga as cenas do mod.</td></tr>
+        <tr><td>Estilo de Apresentação</td><td>Natural</td><td>Natural, Só ambiente ou Cinemático.</td></tr>
+        <tr><td>Eventos de Cena por Dia</td><td>1</td><td>De 0 a 5.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Notes -->
+<section class="feature" id="notas">
+  <div class="feature-head">
+    <h2>Antes de atualizar</h2>
+  </div>
+  <ul class="points">
+    <li>Os textos novos dos menus estão em inglês, português e vietnamita. Em alemão, espanhol, francês, italiano e chinês eles aparecem em inglês por enquanto.</li>
+    <li>O pack oficial Pelican Town Mayor foi atualizado pra 1.7.0.</li>
+    <li>A 1.7.0 ainda está em desenvolvimento, então detalhes podem mudar até o lançamento.</li>
+  </ul>
+</section>

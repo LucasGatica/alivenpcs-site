@@ -68,7 +68,7 @@
   }
 
   // Ko-fi floating donate button (Ko-fi's own overlay widget).
-  if (cfg.kofiUser) {
+  if (cfg.kofiUser && !document.body.hasAttribute("data-no-kofi-button")) {
     const kofi = document.createElement("script");
     kofi.src = "https://storage.ko-fi.com/cdn/scripts/overlay-widget.js";
     kofi.onload = () => window.kofiWidgetOverlay && window.kofiWidgetOverlay.draw(cfg.kofiUser, cfg.kofiButton || {});

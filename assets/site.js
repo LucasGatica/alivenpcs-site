@@ -10,24 +10,29 @@
   function store(value) {
     try { localStorage.setItem(KEY, value); } catch { /* private mode: the choice just isn't remembered */ }
   }
+  // Site language → changelog file name and <html lang>.
+  const FILES = { pt: "pt-BR", en: "en", es: "es" };
+
   function normalize(value) {
     if (!value) return null;
     value = value.toLowerCase();
     if (value === "pt" || value === "pt-br") return "pt";
-    if (value === "en") return "en";
+    if (value === "en" || value === "es") return value;
     return null;
   }
 
+  const browser = (navigator.language || "").toLowerCase();
   let lang = normalize(new URLSearchParams(location.search).get("lang"))
     || normalize(readStored())
-    || ((navigator.language || "").toLowerCase().startsWith("pt") ? "pt" : "en");
+    || (browser.startsWith("pt") ? "pt" : browser.startsWith("es") ? "es" : "en");
 
   function apply(next) {
     lang = next;
     root.dataset.lang = next;
-    root.lang = next === "pt" ? "pt-BR" : "en";
+    root.lang = FILES[next];
     document.querySelectorAll(".lang button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.set === next)));
-    document.querySelectorAll("[data-alt-pt]").forEach((el) => { el.alt = el.dataset["alt" + (next === "pt" ? "Pt" : "En")]; });
+    const altKey = "alt" + next.charAt(0).toUpperCase() + next.slice(1);
+    document.querySelectorAll("[data-alt-pt]").forEach((el) => { el.alt = el.dataset[altKey] || el.dataset.altEn; });
     const title = document.querySelector('meta[name="title-' + next + '"]');
     if (title) document.title = title.content;
     document.dispatchEvent(new CustomEvent("alive:lang", { detail: next }));
@@ -71,7 +76,7 @@
 
   window.AliveSite = {
     get lang() { return lang; },
-    fileLang() { return lang === "pt" ? "pt-BR" : "en"; },
+    fileLang() { return FILES[lang]; },
     count
   };
 

@@ -18,8 +18,15 @@
       released: "Released",
       missing: "This version doesn't have an English changelog yet.",
       failed: "The version list couldn't load. Reload the page."
+    },
+    es: {
+      dev: "En desarrollo",
+      released: "Publicada",
+      missing: "Esta versión todavía no tiene changelog en español.",
+      failed: "No se pudo cargar la lista de versiones. Recarga la página."
     }
   };
+  const LOCALES = { pt: "pt-BR", en: "en-US", es: "es-ES" };
 
   let versions;
   try {
@@ -35,7 +42,7 @@
 
   function formatDate(iso, lang) {
     if (!iso) return "";
-    return new Date(iso + "T12:00:00").toLocaleDateString(lang === "pt" ? "pt-BR" : "en-US", { day: "numeric", month: "short", year: "numeric" });
+    return new Date(iso + "T12:00:00").toLocaleDateString(LOCALES[lang], { day: "numeric", month: "short", year: "numeric" });
   }
 
   function renderList() {

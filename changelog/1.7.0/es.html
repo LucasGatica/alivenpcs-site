@@ -1,0 +1,274 @@
+<header class="top">
+  <div class="eyebrow"><span class="version">1.7.0</span><span>comparada con la 1.6.0 “As You Were”</span><span>en desarrollo · 5 oct 2026</span></div>
+  <h1>Los vecinos ahora ven lo que haces</h1>
+  <p class="lead">Todo lo que cambió en AliveNpcs desde la 1.6, explicado sin tecnicismos. Primero el resumen; después, cada novedad con más detalle.</p>
+  <p class="credit"><b>Agradecimiento especial:</b> esta actualización y el sistema Seen and Heard recibieron muchísima ayuda de mi amigo <b>Xniffer</b>. Xniffer tuvo la idea de los disparadores, que dan a los vecinos más autonomía en el mundo, y desarrolló el primer prototipo de percepción de los NPC en el que me basé para construir esta versión.</p>
+</header>
+
+<nav class="summary" aria-label="Resumen">
+  <a class="tile" href="#seen-and-heard"><strong>Seen and Heard</strong><span>Los vecinos notan lo que haces cerca de ellos, lo recuerdan y a veces vienen a hablarte en el momento.</span></a>
+  <a class="tile" href="#pesca"><strong>Pescar juntos</strong><span>Un vecino que te ve pescando puede pescar a tu lado y darte lo que pesque.</span></a>
+  <a class="tile" href="#grupo"><strong>Conversación en grupo</strong><span>Dos vecinos que están juntos pueden llamarte para una conversación a tres.</span></a>
+  <a class="tile" href="#cuidado"><strong>Amigos que te cuidan</strong><span>¿Herido o agotado? Un amigo se acerca y te da comida.</span></a>
+  <a class="tile" href="#cenas"><strong>Escenas sin teletransporte</strong><span>Los eventos de escena ocurren donde ya está el vecino.</span></a>
+  <a class="tile" href="#menu-radial"><strong>Menú radial</strong><span>Elige entre hablar, besar, entregar un objeto de misión, dar un regalo o abrir la tienda.</span></a>
+  <a class="tile" href="#festivais"><strong>5 festivales más</strong><span>Luau, Medusas lunares, Feria, Víspera de los espíritus y Festival del hielo con diálogo de IA.</span></a>
+  <a class="tile" href="#criadores"><strong>Disparadores en JSON</strong><span>Los creadores de packs añaden reacciones nuevas con un solo archivo.</span></a>
+</nav>
+
+<!-- Seen and Heard -->
+<section class="feature" id="seen-and-heard">
+  <div class="feature-head">
+    <span class="tag">Nuevo</span>
+    <h2>Seen and Heard: se fijan en ti</h2>
+    <p class="lead">Cuando haces algo cerca de un vecino, puede verlo u oírlo. Eso se convierte en uno de sus recuerdos. Según lo que haya sido, camina hacia ti en el momento para comentarlo. Después puede sacar el tema en otras conversaciones o contarlo como chisme por la noche.</p>
+  </div>
+
+  <div class="sub">
+    <h3>Qué notan</h3>
+    <div class="notice">
+      <article><h4>Dar un regalo <span class="pill walk">puede acercarse</span></h4><p>Quien lo recibe y quien está cerca recuerdan el objeto, si le gustó y si era su cumpleaños.</p></article>
+      <article><h4>Comer o beber <span class="pill walk">puede acercarse</span></h4><p>Incluso si era una bebida alcohólica.</p></article>
+      <article><h4>Hacer explotar bombas <span class="pill walk">puede acercarse</span></h4><p>El ruido atraviesa las paredes y puede despertar a quien estaba durmiendo.</p></article>
+      <article><h4>Seguir a alguien de cerca <span class="pill walk">se acerca</span></h4><p>Camina detrás de un vecino durante 3 segundos y aparece un <span class="emote">!</span>. Sigue 3 segundos más y se da la vuelta, va hacia ti y te dice que pares.</p></article>
+      <article><h4>Pescar cerca <span class="pill walk">puede pescar contigo</span></h4><p>Mira <a href="#pesca">Pescar juntos</a>.</p></article>
+      <article><h4>Revolver la basura <span class="pill walk">puede acercarse</span></h4><p>Saben de quién era el contenedor de basura.</p></article>
+      <article><h4>Herramienta o arma <span class="pill walk">puede acercarse</span></h4><p>Golpear a alguien (o pasar rozando) con un hacha, un pico, una azada, una regadera o un arma.</p></article>
+      <article><h4>Tirachinas <span class="pill walk">puede acercarse</span></h4><p>Darle a alguien o fallar por poco.</p></article>
+      <article><h4>Puerta del dormitorio <span class="pill walk">puede acercarse</span></h4><p>Intentar abrir el dormitorio de alguien a quien apenas conoces (menos de <span class="hearts"><svg><use href="#heart"/></svg> 2</span>) o abrir la puerta por primera vez.</p></article>
+      <article><h4>Propuesta de noviazgo o matrimonio <span class="pill walk">puede acercarse</span></h4><p>Con un ramo, un colgante de sirena o por diálogo. Recuerdan si la respuesta fue sí o no. Quien ya sale contigo o está casado contigo viene a pedirte explicaciones.</p></article>
+      <article><h4>Compras en la tienda <span class="pill memory">solo recuerda</span></h4><p>El dueño de la tienda y quienes estaban allí recuerdan lo que compraste en esa visita.</p></article>
+      <article><h4>Desmayarte fuera de casa <span class="pill memory">solo recuerda</span></h4><p>A las 2 de la madrugada o por agotamiento. El día termina ahí, pero quien lo vio puede comentarlo en los días siguientes.</p></article>
+      <article><h4>Pasar herido o agotado <span class="pill walk">viene a ayudar</span></h4><p>Mira <a href="#cuidado">Amigos que te cuidan</a>.</p></article>
+    </div>
+  </div>
+
+  <div class="sub">
+    <h3>Cómo se acercan</h3>
+    <ul class="points">
+      <li>Aparece un <span class="emote">!</span> sobre su cabeza y el vecino camina rápido hasta tu lado. Nada de teletransporte.</li>
+      <li>Su frase se genera mientras camina. Si llega antes, espera a tu lado hasta que esté lista.</li>
+      <li>La frase trata de lo que pasó. Cada tipo de acción tiene su propio prompt, así que no cambia de tema ni saca un chisme viejo en su lugar.</li>
+      <li>Cuando termina la conversación, incluidas tus respuestas, vuelve al lugar donde estaba y retoma su rutina.</li>
+      <li>Solo se acerca un vecino a la vez. Si guardas, duermes, cambias de mapa o entras en un evento, el acercamiento se cancela y el vecino vuelve a lo suyo.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>Qué sienten</h3>
+    <ul class="points">
+      <li>Ver no es lo mismo que oír. Quien lo vio claramente habla con detalle. Quien solo oyó un ruido habla con dudas y no describe lo que no vio.</li>
+      <li>Repetir lo mismo hace que la reacción suba de tono. Hay tres tipos de reacción, cada uno con tres niveles:</li>
+    </ul>
+    <div class="ladders">
+      <div class="ladder"><b>Regaño</b><div class="steps"><span>desconfiado, curioso</span><span>molesto de verdad, quiere una explicación</span><span>furioso, mañana no lo habrá olvidado</span></div></div>
+      <div class="ladder"><b>Burla</b><div class="steps"><span>se burla un poco</span><span>se ríe en tu cara, sin maldad</span><span>lo más gracioso de la semana</span></div></div>
+      <div class="ladder"><b>Cariño</b><div class="steps"><span>contento, quiere decirte algo bonito</span><span>le gusta tenerte cerca</span><span>emocionado, “esto es lo que hace que alguien sea familia”</span></div></div>
+    </div>
+    <ul class="points">
+      <li>Los recuerdos se borran con el tiempo. Algunos rencores dejan un resto para el día siguiente.</li>
+      <li>Lo que vieron aparece después en las conversaciones normales y puede entrar en los chismes de la noche.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>Compatibilidad</h3>
+    <ul class="points">
+      <li>No necesita SpaceCore.</li>
+      <li>AliveNpcs deja en paz a los vecinos que controla otro mod, como los compañeros de PelicanCompanions.</li>
+      <li>Si una actualización del juego rompe la detección de una acción, solo esa acción deja de funcionar. El resto del juego y del mod sigue con normalidad.</li>
+    </ul>
+  </div>
+
+  <div class="option"><span class="label">En GMCM</span><b>Seen and Heard</b><span>activado por defecto</span></div>
+</section>
+
+<!-- Fishing -->
+<section class="feature" id="pesca">
+  <div class="feature-head">
+    <span class="tag">Nuevo</span>
+    <h2>Pescar juntos</h2>
+    <p class="lead">Si un vecino te ve pescando, puede sentarse en la orilla y pescar también.</p>
+  </div>
+  <ul class="points">
+    <li>Vale para cualquiera que esté a 12 casillas o menos mientras pescas, incluso quien llegue después de que empezaste.</li>
+    <li>Busca un sitio libre en la misma orilla que se vea en pantalla, pesca 1 o 2 peces y te los trae.</li>
+    <li>Después se despide con un globo de diálogo y vuelve a su rutina.</li>
+    <li>Cada vecino lo hace como máximo una vez al día.</li>
+    <li>11 vecinos tienen una pose de pesca dibujada a mano: Jodi, Kent, Leah, Linus, Marnie, Maru, Pam, Penny, Pierre, Robin y Sam.</li>
+  </ul>
+  <div class="option"><span class="label">En GMCM</span><b>NPC fishing chance</b><span>de 0% a 100%, 10% por defecto</span></div>
+</section>
+
+<!-- Group chat -->
+<section class="feature" id="grupo">
+  <div class="feature-head">
+    <span class="tag">Nuevo</span>
+    <h2>Conversación en grupo</h2>
+    <p class="lead">Cuando llegas a un lugar donde hay dos vecinos juntos, pueden llamarte: “Hey, (tu nombre)!”.</p>
+  </div>
+  <ul class="points">
+    <li>Uno de ellos camina hasta ti y la conversación se abre en su propio menú, con los dos vecinos y contigo.</li>
+    <li>Te responden a ti y se responden entre ellos. Cada uno tiene su propio cambio de amistad.</li>
+    <li>Después, los dos recuerdan que hablaron contigo y con el otro vecino.</li>
+  </ul>
+  <div class="option"><span class="label">En GMCM</span><b>Group conversation chance</b><span>15% por defecto, se sortea una vez por lugar y por día. Con 0% se desactiva.</span></div>
+</section>
+
+<!-- Help -->
+<section class="feature" id="cuidado">
+  <div class="feature-head">
+    <span class="tag">Nuevo</span>
+    <h2>Amigos que te cuidan</h2>
+    <p class="lead">Si pasas cerca de alguien (a 8 casillas o menos) con la salud o la energía al 30% o menos, su reacción depende de la amistad que tenga contigo.</p>
+  </div>
+  <ul class="points">
+    <li><span class="hearts"><svg><use href="#heart"/></svg> 4 o más</span>: el vecino se acerca, dice algo y te da comida. Muchos vecinos tienen su propia comida; los demás te dan un refrigerio sencillo. Como máximo 1 ayuda al día, contando a todos.</li>
+    <li><span class="hearts"><svg><use href="#heart"/></svg> 2 o 3</span>: solo lo comenta, también una vez al día.</li>
+  </ul>
+</section>
+
+<!-- Scenes -->
+<section class="feature" id="cenas">
+  <div class="feature-head">
+    <span class="tag improved">Mejorado</span>
+    <h2>Escenas sin teletransporte</h2>
+    <p class="lead">Antes, los eventos de escena eran cinemáticas que te llevaban a ti y a los vecinos a otro lugar. Ahora, con el estilo por defecto, una escena solo ocurre si los vecinos están de verdad allí por su propia rutina.</p>
+  </div>
+  <ul class="points">
+    <li><b>Con 1 vecino:</b> te nota, te llama, se acerca y habla contigo. Después vuelve a lo que estaba haciendo.</li>
+    <li><b>Con 2 o más:</b> los oyes conversar en globos de diálogo cerca de ti. Nada se bloquea y no se abre ningún menú, así que puedes seguir con lo que estabas haciendo.</li>
+    <li>Con IA, las frases se crean a partir de una descripción corta del momento, con la voz de cada personaje. Sin IA, se usan las frases escritas.</li>
+    <li>Si hablas con un vecino que se preparaba para acercarse a ti, después no viene a empezar una segunda conversación.</li>
+    <li>Desaparecen las dos frases de cierre que se repetían en 100 escenas, en todos los idiomas.</li>
+    <li>Se corrigieron tres escenas en las que un vecino hablaba consigo mismo (Evelyn y la harina en la cara de Alex, Gus y la taza vacía de Pam, Alex llamando “abuelo” a George).</li>
+  </ul>
+  <div class="sub">
+    <h3>Puedes elegir el estilo</h3>
+    <p>Antes, estas opciones solo estaban en <code>config.json</code>. Ahora tienen su propia sección en GMCM, <b>Scene Events</b>:</p>
+    <ul class="points">
+      <li><b>Natural</b> (por defecto): los vecinos vienen a hablar contigo o conversan entre ellos.</li>
+      <li><b>Ambient only</b>: solo oyes las conversaciones. Nadie se acerca a ti.</li>
+      <li><b>Cinematic</b>: las cinemáticas clásicas, como antes.</li>
+    </ul>
+    <p>También puedes activar o desactivar las escenas y elegir cuántas ocurren al día (de 0 a 5).</p>
+  </div>
+  <div class="sub">
+    <h3>Conviene saber</h3>
+    <ul class="points">
+      <li>En multijugador, las escenas en las que el vecino se acerca y las conversaciones que oyes de lejos solo ocurren para el anfitrión. Los demás jugadores no ven las cinemáticas, salvo que elijan Cinematic.</li>
+      <li>Las introducciones de los modos experimentales y las escenas de los packs de Experimental Content siguen siendo cinemáticas. Los packs pueden pasarse al formato nuevo si quieren.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Wheel -->
+<section class="feature" id="menu-radial">
+  <div class="feature-head">
+    <span class="tag">Nuevo</span>
+    <h2>Menú radial de los vecinos</h2>
+    <p class="lead">Cuando puedes hacer más de una cosa con un vecino, al hacer clic en él se abre un menú circular para que elijas.</p>
+  </div>
+  <div class="wheel" aria-label="Opciones del menú">
+    <span>Talk</span><span>Continue conversation</span><span>Kiss</span><span>Hug</span><span>Deliver quest item</span><span>Give gift</span><span>Shop</span>
+  </div>
+  <ul class="points">
+    <li>Evita que la conversación de IA se interponga en las misiones, los regalos y las tiendas. Por ejemplo, al entregarle a Robin su hacha perdida.</li>
+    <li>Si solo hay una acción posible, ocurre directamente. Abrir o cancelar el menú no gasta nada.</li>
+    <li>Si ya hablaste hoy con ese vecino, “Talk” aparece en gris con el aviso “Already talked today. Come back tomorrow.”</li>
+    <li>La opción Kiss (o Hug, si es tu compañero de cuarto) requiere las manos vacías, un cónyuge quieto, <span class="hearts"><svg><use href="#heart"/></svg> 10+</span>, que sea antes de las 22:00 y que tu cónyuge haya dormido en la cama.</li>
+    <li>Funciona con ratón, teclado y mando. Esc, B o clic derecho lo cancelan.</li>
+  </ul>
+  <div class="option"><span class="label">En GMCM</span><b>NPC interaction wheel</b><span>activado por defecto. Si lo desactivas, las acciones del juego tienen prioridad sobre la conversación de IA.</span></div>
+</section>
+
+<!-- Festivals -->
+<section class="feature" id="festivais">
+  <div class="feature-head">
+    <span class="tag">Nuevo</span>
+    <h2>5 festivales más con diálogo de IA</h2>
+    <p class="lead">Si hablas con alguien durante estos festivales, el vecino habla como alguien que está allí en ese momento. Después, el pueblo sigue comentando el festival durante unos dos días.</p>
+  </div>
+  <div class="fests">
+    <div><b>Luau</b><span class="cal">Verano 11</span></div>
+    <div><b>Danza de las medusas lunares</b><span class="cal">Verano 28</span></div>
+    <div><b>Feria de Stardew Valley</b><span class="cal">Otoño 16</span></div>
+    <div><b>Víspera de los espíritus</b><span class="cal">Otoño 27</span></div>
+    <div><b>Festival del hielo</b><span class="cal">Invierno 8</span></div>
+  </div>
+  <p>Se suman al Festival del Huevo y a la Danza Floral, que ya tenían diálogo de IA.</p>
+</section>
+
+<!-- UI -->
+<section class="feature" id="visual">
+  <div class="feature-head">
+    <span class="tag improved">Mejorado</span>
+    <h2>Nuevo aspecto del menú de respuesta</h2>
+  </div>
+  <ul class="points">
+    <li>Ahora es igual al menú de la conversación en grupo: el retrato y el nombre del vecino junto a su frase, y los campos de respuesta debajo.</li>
+    <li>El texto nunca queda cortado a mitad de línea.</li>
+    <li>Las acciones extra y la casilla Guardar secreto ahora están en la misma fila.</li>
+  </ul>
+</section>
+
+<!-- Creators -->
+<section class="feature" id="criadores">
+  <div class="feature-head">
+    <span class="tag creators">Para creadores de packs</span>
+    <h2>Disparadores nuevos con un solo archivo JSON</h2>
+    <p class="lead">Un content pack puede incluir un archivo <code>alive-trigger.json</code> y añadir reacciones nuevas a Seen and Heard, sin escribir código.</p>
+  </div>
+  <ul class="points">
+    <li><b>When:</b> una condición del juego (el clima, la hora, los objetos del inventario, etc.) que se comprueba cerca de los vecinos.</li>
+    <li><b>On:</b> cambia cómo reaccionan los vecinos a algo que ya notan, como un regalo o una bomba.</li>
+    <li>Puedes filtrar por vecino y por corazones, limitar cuántas veces se activa al día, dejarlo solo como recuerdo y hacer que el vecino te dé un objeto.</li>
+    <li>Los regalos, las comidas y las compras ahora guardan el ID del objeto, así que los disparadores funcionan en cualquier idioma del juego.</li>
+    <li>Hasta 50 disparadores por pack. El pack debe pedir AliveNpcs 1.7.0 en su manifest. El formato completo está en <code>ALIVE_TRIGGERS.md</code>.</li>
+  </ul>
+  <div class="sub">
+    <h3>Comandos de prueba en la consola de SMAPI</h3>
+    <div class="cmds">
+      <div><code>alive_trigger lint [pack]</code><span>Vuelve a leer el archivo y explica cada disparador: qué se rechazó, qué no tiene efecto y si la condición se cumple ahora.</span></div>
+      <div><code>alive_trigger reload</code><span>Aplica el pack editado sin reiniciar el juego.</span></div>
+      <div><code>alive_trigger list</code><span>Muestra los disparadores activos y cuántas veces se activaron hoy.</span></div>
+      <div><code>alive_sh fire &lt;evento&gt;</code><span>Simula una acción cerca de los vecinos y muestra quién la vio y quién se está acercando.</span></div>
+      <div><code>alive_group_chat</code><span>Fuerza una conversación en grupo.</span></div>
+      <div><code>alivenpcs_scene_status</code><span>Muestra las escenas planeadas para el día.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Settings -->
+<section class="feature" id="opcoes">
+  <div class="feature-head">
+    <span class="tag improved">Ajustes</span>
+    <h2>Opciones nuevas en GMCM</h2>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Opción</th><th>Por defecto</th><th>Qué hace</th></tr></thead>
+      <tbody>
+        <tr><td>Seen and Heard</td><td>Activado</td><td>Los vecinos recuerdan lo que te ven hacer y reaccionan.</td></tr>
+        <tr><td>NPC fishing chance</td><td>10%</td><td>Probabilidad de que un vecino pesque contigo cuando te ve pescando.</td></tr>
+        <tr><td>Group conversation chance</td><td>15%</td><td>Probabilidad de que dos vecinos que están juntos te llamen para hablar.</td></tr>
+        <tr><td>NPC interaction wheel</td><td>Activado</td><td>Muestra el menú circular cuando hay más de una acción.</td></tr>
+        <tr><td>Enable Scene Events</td><td>Activado</td><td>Activa o desactiva las escenas del mod.</td></tr>
+        <tr><td>Delivery Style</td><td>Natural</td><td>Natural, Ambient only o Cinematic.</td></tr>
+        <tr><td>Scene Events per Day</td><td>1</td><td>De 0 a 5.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Notes -->
+<section class="feature" id="notas">
+  <div class="feature-head">
+    <h2>Antes de actualizar</h2>
+  </div>
+  <ul class="points">
+    <li>Los textos nuevos de los menús están en inglés, portugués y vietnamita. En alemán, español, francés, italiano y chino aparecen en inglés por ahora.</li>
+    <li>El pack oficial Pelican Town Mayor se actualizó a la 1.7.0.</li>
+    <li>La 1.7.0 todavía está en desarrollo, así que algunos detalles pueden cambiar antes del lanzamiento.</li>
+  </ul>
+</section>

@@ -1,0 +1,206 @@
+<header class="top">
+  <div class="eyebrow"><span class="version">1.6.0</span><span>“As You Were”</span><span>publicada · 10 sept 2026</span></div>
+  <h1>La IA parte de las frases del juego y la vida de casado gana espacio</h1>
+  <p class="lead">Todo lo que cambió en AliveNpcs en la 1.6.0, explicado sin tecnicismos. La primera frase ahora parte de lo que diría el juego, los eventos de corazón pueden convertirse en chismes, los mods de NPC tienen su propio gestor y tu cónyuge tiene más conversaciones y citas. Tu partida guardada sigue funcionando.</p>
+</header>
+
+<nav class="summary" aria-label="Resumen">
+  <a class="tile" href="#canon"><strong>Modo Canon</strong><span>La primera frase de la IA parte de la frase que el juego mostraría en ese momento.</span></a>
+  <a class="tile" href="#heart-events"><strong>Eventos de corazón</strong><span>Los eventos de corazón que viste pueden convertirse en chismes al final del día.</span></a>
+  <a class="tile" href="#compatibility"><strong>Compatibility Manager</strong><span>Elige qué mods de NPC controla AliveNpcs, en un menú propio.</span></a>
+  <a class="tile" href="#blocklists"><strong>Listas de bloqueo</strong><span>La lista comunitaria ahora es opcional, y tienes una lista propia.</span></a>
+  <a class="tile" href="#spouse-talks"><strong>Conversaciones con tu cónyuge</strong><span>Varias conversaciones de IA al día con la persona con la que te casaste. Por defecto son 3.</span></a>
+  <a class="tile" href="#spouse-dates"><strong>Citas en pareja</strong><span>Una acción extra nueva para invitar a tu cónyuge a una cita.</span></a>
+  <a class="tile" href="#outings"><strong>Escenarios para salidas</strong><span>Salidas decoradas con muebles y objetos del propio juego.</span></a>
+  <a class="tile" href="#fixes"><strong>Diálogo sin congelarse</strong><span>El juego ya no parece congelado mientras se genera una respuesta.</span></a>
+</nav>
+
+<!-- Canon Mode -->
+<section class="feature" id="canon">
+  <div class="feature-head">
+    <span class="tag">Nuevo</span>
+    <h2>Modo Canon: la frase del juego va primero</h2>
+    <p class="lead">Cuando hablas con un vecino, AliveNpcs ahora toma la frase que Stardew Valley mostraría en ese momento exacto y la usa como punto de partida para la primera frase de la IA.</p>
+  </div>
+  <ul class="points">
+    <li>Funciona con los vecinos del juego base, los de Stardew Valley Expanded, los OC oficiales de AliveNpcs y los NPC de otros mods.</li>
+    <li>La frase original guía el comienzo de la conversación. El vecino no tiene que repetirla ni quedarse en su tema. Los acontecimientos recientes y lo que pasa en ese momento pueden llevar la conversación hacia otro lado.</li>
+    <li>En los turnos siguientes, la frase original solo ayuda a mantener la continuidad. Tu mensaje más reciente y la respuesta actual del vecino siguen siendo lo principal.</li>
+    <li>También se aplica al comienzo de la conversación después de un evento de corazón y al comienzo de las conversaciones en los festivales compatibles.</li>
+  </ul>
+  <div class="sub">
+    <h3>Conviene saber</h3>
+    <ul class="points">
+      <li>AliveNpcs limpia la frase original antes de enviarla a la IA. La recorta a 260 caracteres como máximo, le quita los comandos de presentación del juego y la marca como texto de referencia, que la IA no debe tratar como instrucciones.</li>
+      <li>Los logs de depuración muestran la frase capturada y si se usó como punto de partida o como referencia ligera en los turnos siguientes.</li>
+    </ul>
+  </div>
+  <div class="option"><span class="label">En GMCM</span><b>Enable Canon Mode</b><span>activado por defecto</span></div>
+</section>
+
+<!-- Heart events -->
+<section class="feature" id="heart-events">
+  <div class="feature-head">
+    <span class="tag">Nuevo</span>
+    <h2>Los eventos de corazón dan que hablar</h2>
+    <p class="lead">Cuando ves un evento de corazón, puede entrar en el análisis de chismes del final del día.</p>
+  </div>
+  <ul class="points">
+    <li>Incluye los eventos individuales de <span class="hearts"><svg><use href="#heart"/></svg> 2, 4, 6, 8, 10 y 14</span> de los doce candidatos a matrimonio del juego base.</li>
+    <li>La IA decide si el evento es lo bastante interesante. Ver un evento no garantiza que se convierta en chisme.</li>
+    <li>La IA solo recibe un resumen corto de cada evento, escrito a mano. AliveNpcs nunca envía al modelo el guion del evento ni su texto en bruto.</li>
+    <li>El chisme que nace de un evento de corazón guarda a ese vecino como fuente. Así puede seguir apareciendo en sus recuerdos y conversaciones más adelante.</li>
+  </ul>
+  <div class="sub">
+    <h3>Conviene saber</h3>
+    <ul class="points">
+      <li>Los eventos que viste antes de actualizar a la 1.6 no se convierten en chismes nuevos.</li>
+      <li>Entran como máximo doce eventos al día. Los repetidos se descartan, el orden siempre es el mismo y lo que sobra se desecha después del análisis de ese día.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Compatibility Manager -->
+<section class="feature" id="compatibility">
+  <div class="feature-head">
+    <span class="tag">Nuevo</span>
+    <h2>AliveNpcs Compatibility Manager</h2>
+    <p class="lead">Las opciones que deciden qué mods de NPC controla AliveNpcs ahora tienen su propia entrada en Generic Mod Config Menu, llamada AliveNpcs Compatibility Manager.</p>
+  </div>
+  <div class="wheel" aria-label="Modos de activación">
+    <span>Vanilla only</span><span>Vanilla + SVE</span><span>Selected mods</span><span>All NPC mods</span>
+  </div>
+  <ul class="points">
+    <li>Los dos interruptores antiguos, uno para SVE y otro para otros mods, se convirtieron en una sola opción con los cuatro modos de arriba.</li>
+    <li>En el modo <b>Selected mods</b>, el menú encuentra los packs de NPC que tienes instalados y los muestra en una lista con casillas para marcar.</li>
+    <li>Puedes añadir a mano, con su ModId, los packs que el menú no detecta solo.</li>
+    <li>Una opción aparte decide qué pasa con los NPC cuyo mod de origen no se puede identificar.</li>
+    <li>Los vecinos del juego base y los OC oficiales de AliveNpcs funcionan en todos los modos, salvo que otra regla tuya los bloquee.</li>
+    <li>Los nombres de mod largos se muestran bien, el ModId aparece al pasar el ratón por encima y la lista se ve claramente desactivada fuera del modo <b>Selected mods</b>.</li>
+    <li>El log explica mejor por qué se bloqueó un NPC: un bloqueo tuyo, la lista remota, un mod que no seleccionaste o un origen desconocido.</li>
+  </ul>
+  <div class="option"><span class="label">En GMCM</span><b>NPC Mod Activation Mode</b><span>por defecto, All NPC mods</span></div>
+  <div class="option"><span class="label">En GMCM</span><b>Manual NPC ModIds</b><span>vacío por defecto. ModIds separados por comas, que se usan en el modo Selected mods.</span></div>
+  <div class="option"><span class="label">En GMCM</span><b>Allow Unknown NPC Origins</b><span>desactivado por defecto. Solo se aplica en el modo Selected mods.</span></div>
+  <div class="sub">
+    <h3>Conviene saber</h3>
+    <ul class="points">
+      <li>Tu configuración antigua de SVE y de otros mods de NPC pasa sola al modo nuevo más parecido.</li>
+      <li>Los ModIds que habías elegido y los NPC que bloqueaste a mano se mantienen.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Blocklists -->
+<section class="feature" id="blocklists">
+  <div class="feature-head">
+    <span class="tag improved">Mejorado</span>
+    <h2>Listas de bloqueo de IA opcionales</h2>
+    <p class="lead">La lista comunitaria de bloqueo de IA ahora viene desactivada y solo funciona si la activas. Las opciones están en la sección AI Blocklists de AliveNpcs Compatibility Manager.</p>
+  </div>
+  <ul class="points">
+    <li>Hay una única dirección de lista remota, y puedes editarla. Si borras la dirección, se desactiva el bloqueo remoto.</li>
+    <li>Si la lista remota falla (tiempo de espera agotado, error de red, JSON no válido, respuesta demasiado grande o dirección vacía), no se bloquea a nadie por eso. Los NPC de mods que permitiste siguen funcionando.</li>
+    <li>Cuando falla la actualización de la lista, las reglas remotas se descartan. Nada queda bloqueado con datos viejos.</li>
+    <li>Ahora también tienes una lista local. Escribe los nombres internos de los NPC separados por comas o por saltos de línea.</li>
+    <li>Tus bloqueos manuales siempre tienen prioridad sobre el modo de activación, las casillas de mods y la lista remota.</li>
+    <li>Los NPC que ya estaban en <b>NPC Desactivados</b> siguen bloqueados.</li>
+    <li>El menú muestra el estado de la lista remota: desactivada, vacía, cargando, cargada o con error. Si tiene un error, no bloquea a nadie.</li>
+  </ul>
+  <div class="option"><span class="label">En GMCM</span><b>Enable Community AI Blocklist</b><span>desactivado por defecto</span></div>
+  <div class="option"><span class="label">En GMCM</span><b>AI Blocklist URL</b><span>viene con la dirección de la lista comunitaria. Si la dejas vacía, se desactiva el bloqueo remoto.</span></div>
+  <div class="option"><span class="label">En GMCM</span><b>Blocked NPC Names</b><span>vacío por defecto. Tiene prioridad sobre todo lo demás.</span></div>
+</section>
+
+<!-- Spouse conversations -->
+<section class="feature" id="spouse-talks">
+  <div class="feature-head">
+    <span class="tag">Nuevo</span>
+    <h2>Más conversaciones con tu cónyuge</h2>
+    <p class="lead">Tu cónyuge actual ahora puede tener varias conversaciones de IA separadas al día. Quien no es tu cónyuge actual sigue con una conversación de IA al día.</p>
+  </div>
+  <ul class="points">
+    <li>Por defecto son tres al día, y puedes elegir de 1 a 10.</li>
+    <li>Esta cuenta es aparte del límite de turnos de cada conversación.</li>
+    <li>Terminar o saltar una conversación gasta una de las conversaciones del día. Cerrar una respuesta a medias guarda esa conversación para después.</li>
+    <li>Cuando vuelves a una conversación en pausa, la frase pendiente y los turnos que te quedaban vuelven con ella.</li>
+    <li>Una conversación nueva con tu cónyuge usa las anteriores del mismo día como historial y no repite la apertura anterior.</li>
+  </ul>
+  <div class="option"><span class="label">En GMCM</span><b>Spouse Conversations per Day</b><span>3 por defecto, de 1 a 10</span></div>
+</section>
+
+<!-- Spouse dates -->
+<section class="feature" id="spouse-dates">
+  <div class="feature-head">
+    <span class="tag">Nuevo</span>
+    <h2>Citas en pareja</h2>
+    <p class="lead">Una acción extra nueva, <b>Spouse date</b>, sirve para invitar a tu cónyuge actual a una cita. Es para cónyuges adultos en un matrimonio romántico.</p>
+  </div>
+  <ul class="points">
+    <li>Las citas usan el mismo sistema que <b>Salir juntos</b>, con la misma evaluación, escenas pendientes, intervalos entre invitaciones, recuerdos, diario, chismes, contrapropuestas y reproducción de la escena.</li>
+    <li>Los compañeros de cuarto, los niños, los NPC con rasgos infantiles, quien no es tu cónyuge y los NPC de edad incierta nunca reciben contenido de citas románticas.</li>
+    <li>Dos categorías nuevas de escena: spouse romance, para citas cariñosas y sin nada sexual, y sensual spouse date, para citas adultas, consentidas y sin nada explícito.</li>
+    <li>Plantillas nuevas: una cita por la noche en la casa de la granja y una cita privada a última hora de la noche, que solo aparece si la activas.</li>
+    <li>Las invitaciones normales de <b>Salir juntos</b> no eligen plantillas exclusivas de pareja. Una respuesta no válida de la IA nunca acaba por azar en una escena sensual.</li>
+    <li>El Planificador de Salidas ahora muestra los destinos para citas en pareja, las categorías de escena disponibles allí y sus horarios.</li>
+    <li>Una escena pendiente puede empezar cuando ya estás en el destino y llega la hora indicada. Esto incluye las citas en la casa de la granja aceptadas sin cambiar de lugar.</li>
+  </ul>
+  <div class="option"><span class="label">En GMCM</span><b>Enable Sensual Spouse Scenes</b><span>desactivado por defecto. Activarlo solo deja disponibles las plantillas elegibles. La IA nunca está obligada a elegir una.</span></div>
+</section>
+
+<!-- Outing scenery -->
+<section class="feature" id="outings">
+  <div class="feature-head">
+    <span class="tag improved">Mejorado</span>
+    <h2>Salidas con escenario de verdad</h2>
+    <p class="lead">Las salidas ahora tienen decoración temporal hecha con los muebles y objetos del propio juego, y ocurren en más lugares.</p>
+  </div>
+  <ul class="points">
+    <li>Destino nuevo: el borde de la piscina del spa, con cuatro rincones decorados por separado para tomar un té, charlar entre amigos, una cita tranquila y una noche con tu cónyuge. Las invitaciones tienen en cuenta si ya desbloqueaste el ferrocarril.</li>
+    <li>Las salidas en la granja ahora usan siete zonas: la puerta de la casa, un claro para pícnic, las entradas norte, este y sur, un rincón al oeste y una orilla.</li>
+    <li>En la granja, los puntos siguen la posición real de tu casa y de los accesos, esquivan lo que colocaste en el suelo y mantienen a todos juntos.</li>
+    <li>Cada una de las 72 plantillas de salida tiene su propia decoración, con alfombras, mesas, libros, plantas, conchas y luces elegidas para esa escena. Antes, cada lugar repetía el mismo montaje.</li>
+    <li>Algunos ejemplos: luaus en la playa con alfombras, palmeras y antorchas, faroles en el muelle, pícnics a orillas del lago, y mesas, plantas y alfombras en el pueblo, el saloon, el museo, el centro cívico y la granja.</li>
+    <li>Las antorchas tienen animación, y las luces decorativas se encienden en interiores o por la noche. Las instrucciones de diálogo de la escena ahora incluyen el escenario previsto para el lugar.</li>
+    <li>Las escenas de salida cambiaron de posición para que los personajes y la decoración tengan suelo de verdad. Las salidas en la playa quedan en la arena y las salidas en el muelle quedan en el muelle.</li>
+  </ul>
+  <div class="sub">
+    <h3>Conviene saber</h3>
+    <ul class="points">
+      <li>Las salidas en la casa de la granja siguen la posición real de la entrada después de cada mejora de la casa. Los personajes nunca quedan en casillas vacías del mapa, y la cámara sigue a quien se recolocó. Esto corrige escenas que aparecían con fondo negro en casas ampliadas.</li>
+      <li>La decoración se salta las casillas ocupadas o bloqueadas y desaparece cuando el evento termina o se salta. No queda ningún mueble atrás y no se gasta ningún objeto tuyo.</li>
+      <li>Las vistas previas de depuración muestran las cuatro escenas del spa en cualquier momento y usan las mismas posiciones que los eventos reales en la granja.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Dialogue fixes -->
+<section class="feature" id="fixes">
+  <div class="feature-head">
+    <span class="tag fix">Correcciones</span>
+    <h2>Diálogo que no congela el juego</h2>
+    <p class="lead">El juego ya no parece congelado mientras se genera la primera respuesta de la IA.</p>
+  </div>
+  <ul class="points">
+    <li>Puedes volver a cerrar el diálogo de carga, el de los puntos suspensivos, y seguir caminando mientras se genera la respuesta.</li>
+    <li>Si sigues en el mismo lugar y no hay otro menú abierto, el diálogo listo aparece solo. Si no, se guarda y aparece la próxima vez que interactúes.</li>
+    <li>Las respuestas generadas en segundo plano ahora se aplican en el hilo principal del juego. Esto evita errores cuando la interfaz se actualizaba desde dos lugares a la vez.</li>
+    <li>Las conversaciones con tu cónyuge que se cancelaron se recuperan mejor, y la limpieza funciona mejor cuando terminan conversaciones, acciones extra, contrapropuestas o saltos.</li>
+    <li>El ajuste de la tienda de mejoras de la casa ahora usa el código actual de Stardew Valley 1.6.</li>
+  </ul>
+</section>
+
+<!-- Notes -->
+<section class="feature" id="notes">
+  <div class="feature-head">
+    <h2>Antes de actualizar</h2>
+  </div>
+  <ul class="points">
+    <li>No hace falta borrar tu partida. El formato de guardado, el UniqueID del mod (Lucas.AliveNpcs), las API, los namespaces y las carpetas de datos siguen iguales.</li>
+    <li>Si quieres usar la lista comunitaria de bloqueo, activa <b>Enable Community AI Blocklist</b> en AliveNpcs Compatibility Manager después de actualizar.</li>
+    <li>Las escenas sensuales de pareja siguen sin estar disponibles hasta que actives <b>Enable Sensual Spouse Scenes</b>.</li>
+    <li>Las opciones nuevas de compatibilidad, Modo Canon, conversaciones con tu cónyuge, citas en pareja y Planificador de Salidas tienen texto en inglés, portugués y vietnamita.</li>
+    <li>El pack oficial Pelican Town Mayor se actualizó a la 1.6.0 y ahora pide AliveNpcs 1.6.0.</li>
+    <li>Por dentro, las versiones del mod se alinearon en 1.6.0, el código temporal de pruebas quedó fuera de la versión final y hay más pruebas automáticas para el Modo Canon, los modos de compatibilidad y la migración, los eventos de corazón, la seguridad de las escenas de pareja y las invitaciones.</li>
+  </ul>
+</section>

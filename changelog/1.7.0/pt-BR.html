@@ -7,14 +7,18 @@
 </header>
 
 <nav class="summary" aria-label="Resumo">
-  <a class="tile" href="#seen-and-heard"><strong>Seen and Heard</strong><span>Os moradores percebem o que você faz perto deles, lembram e às vezes vêm falar na hora.</span></a>
-  <a class="tile" href="#pesca"><strong>Pescar junto</strong><span>Quem te vê pescando pode pescar do lado e te dar o que pegou.</span></a>
+  <a class="tile" href="#seen-and-heard"><strong>Seen and Heard</strong><span>Os moradores percebem o que você faz perto deles, sentem alguma coisa e às vezes vêm falar na hora.</span></a>
+  <a class="tile" href="#computador"><strong>Computador da fazenda</strong><span>Uma área de trabalho de verdade, cheia de apps e joguinhos.</span></a>
+  <a class="tile" href="#telas"><strong>Telas novas</strong><span>Diário, cartas, arcos, fofocas, ficha e a Central com visual novo.</span></a>
+  <a class="tile" href="#tentar-novamente"><strong>Nada se perde</strong><span>Se a IA falhar, o botão Tentar novamente salva o diário, a fofoca e a conversa.</span></a>
   <a class="tile" href="#grupo"><strong>Conversa em grupo</strong><span>Dois moradores juntos podem te chamar pra uma conversa a três.</span></a>
+  <a class="tile" href="#configuracoes"><strong>Menu de configurações</strong><span>Um menu próprio, com páginas, busca e a explicação de cada opção.</span></a>
+  <a class="tile" href="#pesca"><strong>Pescar junto</strong><span>Quem te vê pescando pode pescar do lado e te dar o que pegou.</span></a>
   <a class="tile" href="#cuidado"><strong>Amigos que cuidam</strong><span>Machucado ou exausto? Um amigo vem até você e te dá comida.</span></a>
   <a class="tile" href="#cenas"><strong>Cenas sem teletransporte</strong><span>Os eventos de cena acontecem onde o morador já está.</span></a>
   <a class="tile" href="#menu-radial"><strong>Menu radial</strong><span>Escolha entre falar, beijar, entregar missão, dar presente ou abrir a loja.</span></a>
   <a class="tile" href="#festivais"><strong>Mais 5 festivais</strong><span>Luau, Medusas, Feira, Dia dos Espíritos e Festival do Gelo com diálogo de IA.</span></a>
-  <a class="tile" href="#criadores"><strong>Gatilhos em JSON</strong><span>Criadores de packs adicionam reações novas com um único arquivo.</span></a>
+  <a class="tile" href="#criadores"><strong>Pra criadores</strong><span>Gatilhos novos com um único JSON e apps pro computador.</span></a>
 </nav>
 
 <!-- Seen and Heard -->
@@ -22,22 +26,25 @@
   <div class="feature-head">
     <span class="tag">Novo</span>
     <h2>Seen and Heard: eles reparam em você</h2>
-    <p class="lead">Quando você faz algo perto de um morador, ele pode ver ou ouvir. Isso vira uma memória dele. Dependendo do que foi, ele anda até você na hora pra comentar. Depois pode puxar o assunto em outras conversas ou espalhar como fofoca à noite.</p>
+    <p class="lead">Quando você faz algo perto de um morador, ele pode ver ou ouvir. Isso vira uma memória dele e mexe com o que ele sente. Dependendo do que foi, ele anda até você na hora pra comentar. Depois pode puxar o assunto em outras conversas ou espalhar como fofoca à noite.</p>
   </div>
 
   <div class="sub">
     <h3>O que eles percebem</h3>
     <div class="notice">
-      <article><h4>Dar presente <span class="pill walk">pode vir falar</span></h4><p>Quem recebe e quem está por perto lembram o item, se a pessoa gostou e se era aniversário.</p></article>
-      <article><h4>Comer ou beber <span class="pill walk">pode vir falar</span></h4><p>Inclusive se era bebida alcoólica.</p></article>
+      <article><h4>Dar presente <span class="pill walk">pode vir falar</span></h4><p>Quem recebe e quem está por perto lembram o item, se a pessoa gostou e se era aniversário. Quem ganhou só volta pra agradecer se não desgostou nem odiou o presente.</p></article>
+      <article><h4>Comer ou beber <span class="pill walk">bebida: pode vir falar</span></h4><p>Comida comum fica só na memória. Bebida alcoólica pode fazer alguém vir até você, e cada um reage do seu jeito.</p></article>
       <article><h4>Explodir bombas <span class="pill walk">pode vir falar</span></h4><p>O barulho atravessa paredes e pode acordar quem estava dormindo.</p></article>
       <article><h4>Seguir alguém de perto <span class="pill walk">vem falar</span></h4><p>Ande atrás de um morador por 3 segundos e aparece um <span class="emote">!</span>. Continue mais 3 e ele se vira, vem atrás de você e manda parar.</p></article>
       <article><h4>Pescar por perto <span class="pill walk">pode pescar junto</span></h4><p>Veja <a href="#pesca">Pescar junto</a>.</p></article>
-      <article><h4>Revirar lixo <span class="pill walk">pode vir falar</span></h4><p>Eles sabem de quem era a lixeira.</p></article>
+      <article><h4>Revirar lixo <span class="pill walk">pode vir falar</span></h4><p>Eles sabem de quem era a lixeira, e só o dono vem tirar satisfação.</p></article>
       <article><h4>Ferramenta ou arma <span class="pill walk">pode vir falar</span></h4><p>Acertar alguém (ou passar raspando) com machado, picareta, enxada, regador ou arma.</p></article>
       <article><h4>Estilingue <span class="pill walk">pode vir falar</span></h4><p>Acertar alguém ou errar por pouco.</p></article>
       <article><h4>Porta de quarto <span class="pill walk">pode vir falar</span></h4><p>Tentar abrir o quarto de quem você conhece pouco (menos de <span class="hearts"><svg><use href="#heart"/></svg> 2</span>) ou abrir a porta pela primeira vez.</p></article>
+      <article><h4>Entrar no quarto de alguém <span class="pill walk">pode vir falar</span></h4><p>Eles reparam quanto tempo você ficou lá dentro, e o dono do quarto pode vir falar com você.</p></article>
       <article><h4>Pedido de namoro ou casamento <span class="pill walk">pode vir falar</span></h4><p>Com buquê, pingente de sereia ou pelo diálogo. Lembram se foi sim ou não. Quem já namora ou é casado com você vem tirar satisfação.</p></article>
+      <article><h4>Conversar com alguém <span class="pill memory">só lembra</span></h4><p>Quem está perto vê vocês conversando. O que foi dito só é ouvido se a conversa não foi marcada como segredo.</p></article>
+      <article><h4>Andar pela vila <span class="pill memory">só lembra</span></h4><p>Entrar e sair de casas e lojas, ou passar de uma área do mapa pra outra.</p></article>
       <article><h4>Compras na loja <span class="pill memory">só lembra</span></h4><p>O dono da loja e quem estava lá lembram o que você comprou naquela visita.</p></article>
       <article><h4>Desmaiar fora de casa <span class="pill memory">só lembra</span></h4><p>Às 2h ou de exaustão. O dia acaba ali, mas quem viu pode comentar nos dias seguintes.</p></article>
       <article><h4>Passar machucado ou exausto <span class="pill walk">vem ajudar</span></h4><p>Veja <a href="#cuidado">Amigos que cuidam de você</a>.</p></article>
@@ -45,30 +52,44 @@
   </div>
 
   <div class="sub">
-    <h3>Como eles vêm até você</h3>
-    <ul class="points">
-      <li>Aparece um <span class="emote">!</span> em cima da cabeça e o morador anda rápido até o seu lado. Nada de teletransporte.</li>
-      <li>A fala é gerada enquanto ele caminha. Se ele chegar antes, espera do seu lado até ela ficar pronta.</li>
-      <li>A fala é sobre o que aconteceu. Cada tipo de ação tem seu próprio prompt, então ele não troca de assunto nem puxa fofoca antiga no lugar.</li>
-      <li>Quando a conversa termina, incluindo as suas respostas, ele volta pro lugar onde estava e retoma a rotina.</li>
-      <li>Só um morador vem de cada vez. Se você salvar, dormir, mudar de mapa ou entrar num evento, a abordagem é cancelada e ele volta ao normal.</li>
-    </ul>
-  </div>
-
-  <div class="sub">
     <h3>O que eles sentem</h3>
     <ul class="points">
-      <li>Ver é diferente de ouvir. Quem viu claramente fala com detalhes. Quem só ouviu um barulho fala com dúvida e não descreve o que não viu.</li>
-      <li>Repetir a mesma coisa faz a reação subir de tom. São três tipos de reação, cada um com três níveis:</li>
+      <li>Uma coisa pequena fica só na memória. Repetir na frente da mesma pessoa, ou fazer algo sério, é o que faz ela vir até você. São quatro sentimentos, cada um com três níveis:</li>
     </ul>
     <div class="ladders">
       <div class="ladder"><b>Bronca</b><div class="steps"><span>desconfiado, curioso</span><span>chateado de verdade, quer explicação</span><span>furioso, não vai esquecer amanhã</span></div></div>
       <div class="ladder"><b>Zoeira</b><div class="steps"><span>tira um sarro leve</span><span>ri na sua cara, sem maldade</span><span>a coisa mais engraçada da semana</span></div></div>
       <div class="ladder"><b>Carinho</b><div class="steps"><span>contente, quer dizer algo legal</span><span>gosta de ter você por perto</span><span>emocionado, “é isso que faz alguém virar família”</span></div></div>
+      <div class="ladder"><b>Romance</b><div class="steps"><span>sem graça, não consegue ficar quieto</span><span>encantado, nem disfarça mais</span><span>apaixonado, quer que você ouça dele</span></div></div>
     </div>
     <ul class="points">
-      <li>As memórias vão se apagando com o tempo. Algumas mágoas deixam um resto pro dia seguinte.</li>
+      <li>Cada morador lê a mesma cena do seu jeito. O Shane ri de você bebendo, o Gus te paga uma cerveja depois de algumas rodadas e a Penny fica chateada se você bebe perto de uma criança.</li>
+      <li>Presente que a pessoa odiou não gera carinho nenhum. E se o seu par te vê pedindo outra pessoa em namoro, ele vem tirar satisfação.</li>
+      <li>Na terceira vez que alguém te vê tentando abrir a porta do quarto dele, já não é só curiosidade.</li>
+      <li>Cada nível sobe no máximo uma vez por dia, e cada sentimento tem um limite diário por morador. Raiva forte e romance passam em parte pro dia seguinte.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>Como eles vêm até você</h3>
+    <ul class="points">
+      <li>Aparece um <span class="emote">!</span> em cima da cabeça e o morador anda rápido até o seu lado. Nada de teletransporte.</li>
+      <li>A fala é gerada enquanto ele caminha. Se ele chegar antes, espera do seu lado até ela ficar pronta.</li>
+      <li>A fala é sobre o que aconteceu, no tom do que ele está sentindo. Ele não troca de assunto nem puxa fofoca antiga no lugar.</li>
+      <li>Só vem quem tem o melhor motivo. Quem também sentiu algo forte, ou não teve certeza do que viu, puxa o assunto na próxima vez que vocês conversarem.</li>
+      <li>Se você falar com alguém que estava prestes a vir, ele fala disso na própria conversa.</li>
+      <li>Quando a conversa termina, incluindo as suas respostas, ele volta pro lugar onde estava e retoma a rotina.</li>
+      <li>Se você salvar, dormir, mudar de mapa ou entrar num evento, a abordagem é cancelada e ele volta ao normal.</li>
+    </ul>
+  </div>
+
+  <div class="sub">
+    <h3>Como eles lembram</h3>
+    <ul class="points">
+      <li>A memória é escrita do ponto de vista do morador e com a certeza que ele tem. Quem estava do seu lado “viu claramente”, quem estava mais longe “acha que viu”, e uma explosão é ouvida, não vista.</li>
+      <li>Cada memória se apaga no seu ritmo. Uma explosão ou alguém levando uma pancada fica semanas. Passar por alguém dura mais ou menos um dia. Quando junta coisa demais, as mais esquecíveis saem primeiro.</li>
       <li>O que eles viram aparece depois nas conversas normais e pode entrar na fofoca da noite.</li>
+      <li>Dá pra ver o que cada um sente por você hoje no <a href="#telas">Diário do aldeão</a>.</li>
     </ul>
   </div>
 
@@ -81,7 +102,201 @@
     </ul>
   </div>
 
-  <div class="option"><span class="label">No GMCM</span><b>Seen and Heard</b><span>ligado por padrão</span></div>
+  <div class="option"><span class="label">Nas configurações</span><b>Seen and Heard</b><span>ligado por padrão</span></div>
+  <div class="option"><span class="label">Nas configurações</span><b>Moradores percebem quem chega</b><span>desligado por padrão. Ligado, quem está dentro de casa lembra quando outro morador chega.</span></div>
+</section>
+
+<!-- Farm computer -->
+<section class="feature" id="computador">
+  <div class="feature-head">
+    <span class="tag">Novo</span>
+    <h2>O computador da fazenda virou uma área de trabalho</h2>
+    <p class="lead">O computador do AliveNpcs, aquele da casa da fazenda, agora liga uma área de trabalho de verdade, cheia de apps e joguinhos. Antes ele só abria a Rede Social da Vila.</p>
+  </div>
+  <div class="shots">
+    <figure class="shot">
+      <img src="assets/prints/1.7/computador-area-de-trabalho.webp" width="1400" height="901" loading="lazy" alt="A área de trabalho do Computador AliveNpcs com Bom dia, Lucas!, os ícones dos apps e a barra de tarefas com a fazenda, a data e a hora.">
+      <figcaption>A área de trabalho num teste anterior. Os ícones mudaram desde este print: hoje Arcos, Fofocas e Cartas ficam na pasta Apps.</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="assets/prints/1.7/corrida-de-galinhas.webp" width="1400" height="855" loading="lazy" alt="O app Corrida de Galinhas: seis animais da fazenda correndo em raias, o Prefeito Lewis narrando ao vivo e a aposta de 100 fichas.">
+      <figcaption>Corrida de Galinhas: os animais da sua fazenda na pista, com o Prefeito Lewis narrando ao vivo.</figcaption>
+    </figure>
+  </div>
+  <ul class="points">
+    <li>Ele liga com som e animação e te dá bom dia, boa tarde ou boa noite. O papel de parede acompanha a hora: o sol anda pelo céu, o fim de tarde fica laranja e a noite tem estrelas e lua.</li>
+    <li>A barra de tarefas mostra o nome da fazenda, o app aberto, o clima, a data e a hora.</li>
+    <li>As cores seguem o visual do PC que você escolheu: azul-petróleo clássico, rosa com orelhinhas de gato ou menta com gabinete azul.</li>
+    <li>Na área de trabalho ficam a Rede Social da Vila, Perfeição, Diário, Mensageiro, Retrospectiva do Ano, Visual do PC, Configurações e a pasta <b>Apps</b>. Arcos, Fofocas e Cartas agora moram dentro da pasta.</li>
+    <li>A pasta Apps cabe quantos apps forem, em páginas. Outros mods também podem colocar apps lá (veja <a href="#criadores">Pra criadores</a>).</li>
+  </ul>
+  <div class="sub">
+    <h3>Apps</h3>
+    <div class="apps">
+      <div><b>Perfeição</b><span>Sua porcentagem de perfeição, contada igual ao rastreador do Sr. Qi, e exatamente o que falta: itens pra enviar, peixes (com estação, horário e clima), receitas, corações, habilidades, frutas estelares, obeliscos, nozes douradas e mais.</span></div>
+      <div><b>Mensageiro</b><span class="ai">usa IA</span><span>Mande mensagem pros moradores que você conhece. Eles respondem e lembram da conversa, que pode virar fofoca ou ir pro diário. Também dá pra mandar em segredo. Até 5 mensagens por dia.</span></div>
+      <div><b>Retrospectiva do Ano</b><span>O resumo do seu ano: com quem você mais conversou, seu presente marca registrada, a fofoca do ano, as histórias concluídas e um título pra sua fama na vila.</span></div>
+      <div><b>Pelicangram</b><span>Cada fofoca vira um post com foto de quem espalhou, e os dias do seu diário viram posts da Haley sobre você, com hashtags e comentários da galera da vila.</span></div>
+      <div><b>Cadê Todo Mundo?</b><span>Onde cada morador está agora, pra onde vai depois e quando volta pra casa. Em lista ou com os rostos no mapa do vale e da Ilha Gengibre.</span></div>
+      <div><b>Fofocômetro</b><span>Escolha um boato e veja quem contou pra quem, e quanto a história mudou no caminho: fiel, exagerada ou distorcida.</span></div>
+      <div><b>Previsão do Humor</b><span>O humor de cada morador no dia como previsão do tempo, de arco-íris a tempestade, com os motivos e uma dica do meteorologista.</span></div>
+      <div><b>Aquário</b><span>Os peixes que você já pescou nadam num aquário animado, e os que faltam aparecem como sombra. Cada um tem ficha com recorde, onde e quando morde.</span></div>
+      <div><b>Visual do PC</b><span>Troca o visual do computador entre três estilos, na hora.</span></div>
+      <div><b>Meus outros mods</b><span>Uma vitrine com os outros mods do autor, Beach Episode e Pelican Companions, com link pro Nexus.</span></div>
+      <div><b>Mais (+)</b><span>Links pra apoiar o AliveNpcs no Nexus, pro tutorial de como criar seu próprio addon e pra este site.</span></div>
+    </div>
+  </div>
+  <div class="sub">
+    <h3>Joguinhos</h3>
+    <div class="apps">
+      <div><b>Corrida de Galinhas</b><span>Os animais e pets da sua fazenda apostam corrida, com narração do Prefeito Lewis. Tipo do bicho, amizade e felicidade pesam na velocidade. Você aposta fichas de mentira, e seu ouro nunca é tocado.</span></div>
+      <div><b>Quem Disse Isso?</b><span>Um quiz com falas que os moradores disseram de verdade pra você. Adivinhe quem falou. São 10 perguntas por rodada.</span></div>
+      <div><b>Caça-Minas</b><span>Campo minado com cara de mina: pedras, bombas-cereja e tochas como bandeira. Três dificuldades, e o primeiro clique é sempre seguro.</span></div>
+      <div><b>Cobrinha da Minhoca</b><span>O jogo da cobrinha, com uma minhoca na terra comendo folhas. A folha dourada vale mais.</span></div>
+      <div><b>Junimogotchi</b><span>Um bichinho virtual Junimo que fica feliz com o que você faz de verdade no jogo: conversas, presentes, envios e favores. Ele sobe 7 níveis e muda de cor.</span></div>
+      <div><b>Digitação Junimo</b><span>Os Junimos jogam nomes de cultivos e peixes, e você digita antes de caírem. São 12 níveis, com combo até x4.</span></div>
+    </div>
+    <p>Os recordes dos joguinhos e as fichas da corrida ficam guardados no computador, valendo pra todos os saves.</p>
+  </div>
+  <div class="sub">
+    <h3>Anúncios da Joja</h3>
+    <p>Às vezes, quando o computador liga, pula um anúncio da Joja Co.: lata de Joja Cola girando, manchete berrando, contagem regressiva que nunca acaba e um botão enorme que só abre mais anúncios. O X de fechar é minúsculo de propósito (Esc e B também fecham). Quem é membro da Joja, ou fechou o JojaMart pelo Centro Comunitário, ganha anúncios próprios.</p>
+    <p>O anúncio aparece sempre na primeira vez que você liga o computador num save. Depois, a chance é de 3%.</p>
+  </div>
+  <div class="option"><span class="label">Nas configurações</span><b>Anúncios da Joja</b><span>em Geral → Computador da fazenda. Desligado, De vez em quando (padrão) ou Sempre.</span></div>
+</section>
+
+<!-- Screens -->
+<section class="feature" id="telas">
+  <div class="feature-head">
+    <span class="tag improved">Visual novo</span>
+    <h2>Telas novas em todo canto</h2>
+    <p class="lead">A Central e quase todas as telas do mod foram refeitas, com o mesmo visual do menu de configurações novo.</p>
+  </div>
+  <div class="shots">
+    <figure class="shot">
+      <img src="assets/prints/1.7/cartas-recebidas.webp" width="1400" height="967" loading="lazy" alt="Tela Cartas Recebidas: lista de cartas à esquerda e a carta da Abigail aberta à direita, com uma ametista anexada.">
+      <figcaption>Cartas Recebidas: a carta aberta no papel de carta do jogo, com o presente anexado.</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="assets/prints/1.7/ficha-de-personagem.webp" width="1400" height="901" loading="lazy" alt="Ficha de Personagem com o retrato do fazendeiro à esquerda e quatro campos de texto à direita.">
+      <figcaption>A Ficha de Personagem, com as quatro perguntas e os exemplos em cinza.</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="assets/prints/1.7/arcos-narrativos.webp" width="1400" height="963" loading="lazy" alt="Tela Arcos Narrativos com a lista de arcos à esquerda e o arco O Presente de Shane aberto à direita.">
+      <figcaption>Arcos Narrativos. Os arcos deste print são arcos de teste, usados só pra mostrar a tela.</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="assets/prints/1.7/passeios.webp" width="1300" height="950" loading="lazy" alt="Aba Passeios com um convite pendente da Haley no Saloon e os destinos com horários.">
+      <figcaption>Passeios: o convite combinado com a Haley e os destinos com horário. Print de teste: alguns textos ainda estão em inglês.</figcaption>
+    </figure>
+  </div>
+  <div class="notice">
+    <article><h4>Diário do Jogador</h4><p>Um caderno de capa de couro com páginas pautadas e as entradas escritas a tinta. Vire as páginas com as setas, a roda do mouse ou LB/RB. Ele abre nas entradas mais recentes.</p></article>
+    <article><h4>Diário de Fofocas</h4><p>Cada boato é um balão de fala de quem espalhou, com quem começou e o rosto de quem já sabe. A fofoca do dia ganha a etiqueta <b>Fresquinha!</b>, e o jornal da semana aparece como um recorte no topo.</p></article>
+    <article><h4>Cartas Recebidas</h4><p>As cartas ficam numa pilha à esquerda, com o rosto de quem mandou no selo. A carta aberta aparece à direita, com saudação, assinatura e presente. Cartas longas viram página.</p></article>
+    <article><h4>Arcos Narrativos</h4><p>Lista à esquerda (os prontos primeiro), com rosto, barrinha de progresso e estação. Os botões <b>Concluir Arco!</b> e <b>Excluir arco</b> ficam sempre à mão. Os objetivos mostram o ícone de verdade do item a entregar.</p></article>
+    <article><h4>Ficha de Personagem</h4><p>Seu retrato, nome e fazenda ao lado das quatro perguntas, cada uma com dica e contador de caracteres. Tem botão Colar e pergunta antes de jogar fora o que você digitou. Enquanto ela estiver em branco, o card dela na Central brilha com um <span class="emote">!</span> vermelho.</p></article>
+    <article><h4>Rede Social da Vila</h4><p>Posts em cards com o rosto dos moradores, etiquetas e o botão <b>Ver conversa</b>. Os relacionamentos mostram os dois rostos e as barras, e as conversas aparecem como balões de chat.</p></article>
+    <article><h4>Passeios</h4><p>Os passeios combinados viram ingressos de convite, com onde e quando encontrar, um status (pendente, expirando, vá agora) e uma folhinha com o último dia. Embaixo ficam os destinos e seus horários.</p></article>
+    <article><h4>Diário do aldeão <span class="pill walk">novo</span></h4><p>Clique num morador na aba NPCs e abre o diário dele sobre você: retrato, corações, humor e cinco capítulos. Perfil emocional, sentimentos de hoje, o que ele quer te contar, favores e arcos. Antes isso só aparecia no console.</p></article>
+    <article><h4>NPCs, Status IA e Ajustes Rápidos</h4><p>Os NPCs viram cards com rosto, agrupados por origem, dizendo se o AliveNpcs cuida deles e por quê. O Status IA mostra uma luz e um veredito de uma linha. Os Ajustes Rápidos salvam na hora e levam pro menu completo.</p></article>
+  </div>
+</section>
+
+<!-- Retry -->
+<section class="feature" id="tentar-novamente">
+  <div class="feature-head">
+    <span class="tag">Novo</span>
+    <h2>Nada se perde quando a IA falha</h2>
+    <p class="lead">Provedor sobrecarregado, resposta que demorou demais ou que veio ilegível: antes você perdia o dia ou a conversa. Agora tem o botão <b>Tentar novamente</b>. Nunca mais você perde uma entrada do diário por instabilidade dos provedores.</p>
+  </div>
+  <figure class="shot">
+    <img src="assets/prints/1.7/diario-tentar-novamente.webp" width="1400" height="1018" loading="lazy" alt="O Diário do Jogador novo, um caderno de duas páginas, com o botão Tentar novamente e o aviso Diário gerado embaixo.">
+    <figcaption>O Diário do Jogador novo. Embaixo, o botão Tentar novamente e o aviso “Diário gerado!”.</figcaption>
+  </figure>
+  <div class="sub">
+    <h3>Diário e fofoca</h3>
+    <ul class="points">
+      <li>Se a IA falhar durante a noite, você recebe um aviso no chat. O Diário do Jogador e o Diário de Fofocas ganham um botão que roda a análise de novo, com as mesmas conversas daquele dia.</li>
+      <li>O botão fica laranja enquanto falta o diário ou a fofoca do dia. Se já foi gerado, ele só avisa.</li>
+      <li>Quando dá certo, a entrada da IA substitui as anotações curtas que ficaram na noite da falha.</li>
+      <li>Só o último dia pode ser refeito, e o botão continua funcionando depois de sair e voltar pro jogo.</li>
+      <li>No multiplayer, cada jogador refaz o próprio diário. A fofoca da vila só o host refaz.</li>
+    </ul>
+  </div>
+  <div class="sub">
+    <h3>Conversas</h3>
+    <ul class="points">
+      <li>Se a IA falhar ao responder você, a conversa não fecha mais. A janela de resposta continua aberta, explica o que houve e mostra <b>Tentar novamente</b>, <b>Editar</b> e <b>Encerrar</b>.</li>
+      <li><b>Tentar novamente</b> manda a sua resposta de novo, do jeitinho que você escreveu, com a ação escolhida.</li>
+      <li>Antes, uma falha do segundo turno em diante encerrava a conversa, e você não podia mais falar com aquele morador no dia.</li>
+      <li>Vale também pra ações bônus, convites, pedidos de relacionamento e ações de festival.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Group chat -->
+<section class="feature" id="grupo">
+  <div class="feature-head">
+    <span class="tag">Novo</span>
+    <h2>Conversa em grupo</h2>
+    <p class="lead">Quando você chega num lugar onde dois moradores estão juntos, eles podem te chamar: “Ei, Fulano!”.</p>
+  </div>
+  <div class="shots">
+    <figure class="shot">
+      <img src="assets/prints/1.7/conversa-em-grupo-1.webp" width="1200" height="610" loading="lazy" alt="Conversa em grupo com Alex e Evelyn. O fazendeiro escreve que está plantando batata-doce e curte academia.">
+      <figcaption>Alex e Evelyn puxaram conversa. Você responde aos dois de uma vez.</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="assets/prints/1.7/conversa-em-grupo-2.webp" width="1200" height="610" loading="lazy" alt="Alex comenta sobre treino e a Evelyn chama a atenção dele por ser bruto.">
+      <figcaption>E eles respondem a você e um ao outro: a Evelyn dá bronca no Alex.</figcaption>
+    </figure>
+  </div>
+  <ul class="points">
+    <li>Um deles anda até você com o <span class="emote">!</span> enquanto o outro te chama. A conversa abre num menu próprio, com os dois moradores e você.</li>
+    <li>Eles respondem a você e um ao outro. Cada um tem a sua própria mudança de amizade.</li>
+    <li>Dá pra fechar a conversa mesmo enquanto eles estão respondendo. Sair sem dizer nada também fica na memória.</li>
+    <li>Depois os dois lembram que conversaram com você e com o outro morador.</li>
+  </ul>
+  <div class="option"><span class="label">Nas configurações</span><b>Chance de conversa em grupo</b><span>padrão 15%, sorteada uma vez por lugar por dia. 0% desliga.</span></div>
+</section>
+
+<!-- Settings menu -->
+<section class="feature" id="configuracoes">
+  <div class="feature-head">
+    <span class="tag improved">Melhorado</span>
+    <h2>Um menu de configurações só do AliveNpcs</h2>
+    <p class="lead">Escolher o AliveNpcs no Generic Mod Config Menu agora abre um menu próprio. Dentro do jogo, ele também abre em <b>Todas as configurações...</b>, na aba Ajustes Rápidos da Central, sem precisar do GMCM.</p>
+  </div>
+  <ul class="points">
+    <li><b>Páginas:</b> Geral, Provedor de IA, Conversas, Romance, Vida na Vila, Drama e Personalidades, Fofocas e Notícias, Arcos Narrativos, Conteúdo Experimental, Compatibilidade, Atalhos e Avançado. Opções que andam juntas agora ficam juntas.</li>
+    <li>Em tela grande, as páginas ficam numa barra lateral e um painel explica a opção embaixo do cursor, com o valor padrão. Em tela pequena, a explicação aparece como dica.</li>
+    <li>Opções que dependem de outra ficam apagadas até você ligar a principal. A página do provedor mostra só o provedor que você escolheu, e as chaves de API ficam escondidas.</li>
+    <li>Nada é salvo até você apertar <b>Salvar</b> ou <b>Salvar e Fechar</b>. O que mudou fica marcado, e fechar com mudanças pede confirmação. <b>Padrão</b> restaura só a página aberta e não apaga suas chaves.</li>
+    <li><b>Busca:</b> digite e ele acha opções em todas as páginas na hora, agrupadas por página. Dá pra mudar a opção ali mesmo. Acento, maiúscula e um errinho de digitação não atrapalham. Abre com Ctrl+F (Cmd+F no Mac) ou Y no controle.</li>
+    <li>Atalhos se trocam clicando e apertando a tecla nova, e o menu avisa quando dois atalhos usam a mesma tecla.</li>
+    <li>As chaves de API têm um botão <b>Colar</b>, que ajuda muito no celular.</li>
+    <li><b>Turnos por Conversa</b> agora vai até 50 (era 15). O recomendado é de 3 a 10, porque conversa longa manda mais histórico a cada resposta.</li>
+    <li>As entradas separadas do AliveNpcs no GMCM (Experimental Content, Gemini, provedor personalizado e Compatibility Manager) sumiram. Viraram páginas do menu novo.</li>
+    <li>Funciona com mouse, teclado e controle.</li>
+  </ul>
+  <div class="sub">
+    <h3>Padrões novos pra quem instalar agora</h3>
+    <p>Quem já tem uma config continua com os valores que tinha.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Opção</th><th>Agora</th><th>Antes</th></tr></thead>
+        <tbody>
+          <tr><td>Sistema de Inimizade</td><td>Ligado</td><td>Desligado</td></tr>
+          <tr><td>Lista Comunitária de Bloqueio de IA (respeita autores de mods de NPC que não querem IA)</td><td>Ligada</td><td>Desligada</td></tr>
+          <tr><td>Máx. Pontos por Interação</td><td>20</td><td>100</td></tr>
+          <tr><td>Tamanho Máx. do Diálogo</td><td>500</td><td>800</td></tr>
+          <tr><td>Campos de chave de API</td><td>2</td><td>3</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </section>
 
 <!-- Fishing -->
@@ -98,22 +313,7 @@
     <li>Cada morador faz isso no máximo uma vez por dia.</li>
     <li>11 moradores ganharam uma pose de pesca desenhada à mão: Jodi, Kent, Leah, Linus, Marnie, Maru, Pam, Penny, Pierre, Robin e Sam.</li>
   </ul>
-  <div class="option"><span class="label">No GMCM</span><b>Chance do NPC pescar</b><span>de 0% a 100%, padrão 10%</span></div>
-</section>
-
-<!-- Group chat -->
-<section class="feature" id="grupo">
-  <div class="feature-head">
-    <span class="tag">Novo</span>
-    <h2>Conversa em grupo</h2>
-    <p class="lead">Quando você chega num lugar onde dois moradores estão juntos, eles podem te chamar: “Ei, Fulano!”.</p>
-  </div>
-  <ul class="points">
-    <li>Um deles anda até você e a conversa abre num menu próprio, com os dois moradores e você.</li>
-    <li>Eles respondem a você e um ao outro. Cada um tem a sua própria mudança de amizade.</li>
-    <li>Depois os dois lembram que conversaram com você e com o outro morador.</li>
-  </ul>
-  <div class="option"><span class="label">No GMCM</span><b>Chance de conversa em grupo</b><span>padrão 15%, sorteada uma vez por lugar por dia. 0% desliga.</span></div>
+  <div class="option"><span class="label">Nas configurações</span><b>Chance do NPC pescar</b><span>de 0% a 100%, padrão 10%</span></div>
 </section>
 
 <!-- Help -->
@@ -146,7 +346,7 @@
   </ul>
   <div class="sub">
     <h3>Dá pra escolher o estilo</h3>
-    <p>As opções saíram do <code>config.json</code> e agora ficam numa seção própria do GMCM, <b>Eventos de Cena</b>:</p>
+    <p>As opções saíram do <code>config.json</code> e agora ficam nas configurações, na página <b>Vida na Vila</b>, seção <b>Cenas do dia a dia</b>:</p>
     <ul class="points">
       <li><b>Natural</b> (padrão): os moradores vêm conversar com você ou conversam entre si.</li>
       <li><b>Só ambiente</b>: você só escuta as conversas. Ninguém vem até você.</li>
@@ -180,7 +380,7 @@
     <li>Beijar (ou Abraçar, se for colega de quarto) pede mãos vazias, cônjuge parado, <span class="hearts"><svg><use href="#heart"/></svg> 10+</span>, antes das 22h, e que o cônjuge tenha dormido na cama.</li>
     <li>Funciona com mouse, teclado e controle. Esc, B ou clique direito cancela.</li>
   </ul>
-  <div class="option"><span class="label">No GMCM</span><b>Menu radial dos NPCs</b><span>ligado por padrão. Desligado, as ações do jogo têm prioridade sobre a conversa de IA.</span></div>
+  <div class="option"><span class="label">Nas configurações</span><b>Menu radial dos NPCs</b><span>ligado por padrão. Desligado, as ações do jogo têm prioridade sobre a conversa de IA.</span></div>
 </section>
 
 <!-- Festivals -->
@@ -206,8 +406,13 @@
     <span class="tag improved">Melhorado</span>
     <h2>Menu de resposta com visual novo</h2>
   </div>
+  <figure class="shot">
+    <img src="assets/prints/1.7/menu-de-resposta.webp" width="1100" height="769" loading="lazy" alt="Menu de resposta com o retrato do Pierre ao lado da fala dele e os campos Sua resposta e Ação embaixo.">
+    <figcaption>O retrato e o nome do morador ao lado da fala, e os campos de resposta embaixo.</figcaption>
+  </figure>
   <ul class="points">
     <li>Ficou igual ao da conversa em grupo: retrato e nome do morador ao lado da fala, campos de resposta embaixo.</li>
+    <li>O retrato muda junto com a emoção da resposta.</li>
     <li>O texto nunca fica cortado no meio de uma linha.</li>
     <li>As ações bônus e a caixinha de segredo agora ficam na mesma linha.</li>
   </ul>
@@ -222,11 +427,17 @@
   </div>
   <ul class="points">
     <li><b>When:</b> uma condição do jogo (clima, horário, itens no inventário e assim por diante) checada perto dos moradores.</li>
-    <li><b>On:</b> muda como os moradores reagem a algo que eles já percebem, como um presente ou uma bomba.</li>
+    <li><b>On:</b> muda como os moradores reagem a algo que eles já percebem, como um presente, uma bomba, entrar num quarto ou conversar com alguém.</li>
+    <li>Dá pra filtrar pelos detalhes de cada ação: se a bebida era alcoólica, de quem era a lixeira ou o quarto, se o presente era pro seu par ou de aniversário, em que loja foi a compra.</li>
+    <li>Um gatilho com reação ou item manda o morador direto até você. Um gatilho só com resumo deixa a decisão pros sentimentos dele.</li>
     <li>Dá pra filtrar por morador e por corações, limitar quantas vezes por dia, deixar só como memória e fazer o morador te dar um item.</li>
     <li>Presentes, comidas e compras agora guardam o ID do item, então os gatilhos funcionam em qualquer idioma do jogo.</li>
     <li>Até 50 gatilhos por pack. O pack precisa pedir AliveNpcs 1.7.0 no manifest. O formato completo está em <code>ALIVE_TRIGGERS.md</code>.</li>
   </ul>
+  <div class="sub">
+    <h3>Apps pro computador</h3>
+    <p>Outros mods podem colocar os próprios apps na pasta Apps do computador da fazenda, pela <code>IAliveNpcsComputerApi</code>. O passo a passo está em <code>COMPUTER_APPS.md</code>.</p>
+  </div>
   <div class="sub">
     <h3>Comandos de teste no console do SMAPI</h3>
     <div class="cmds">
@@ -234,6 +445,7 @@
       <div><code>alive_trigger reload</code><span>Aplica o pack editado sem reiniciar o jogo.</span></div>
       <div><code>alive_trigger list</code><span>Mostra os gatilhos ativos e quantas vezes dispararam hoje.</span></div>
       <div><code>alive_sh fire &lt;evento&gt;</code><span>Simula uma ação perto dos moradores e mostra quem viu e quem está vindo.</span></div>
+      <div><code>alive_sh feelings [npc]</code><span>Mostra o que cada morador sente por você hoje e quanto falta pra ele vir falar.</span></div>
       <div><code>alive_group_chat</code><span>Força uma conversa em grupo.</span></div>
       <div><code>alivenpcs_scene_status</code><span>Mostra as cenas planejadas pro dia.</span></div>
     </div>
@@ -244,19 +456,21 @@
 <section class="feature" id="opcoes">
   <div class="feature-head">
     <span class="tag improved">Configurações</span>
-    <h2>Opções novas no GMCM</h2>
+    <h2>Opções novas</h2>
   </div>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Opção</th><th>Padrão</th><th>O que faz</th></tr></thead>
       <tbody>
         <tr><td>Seen and Heard</td><td>Ligado</td><td>Moradores lembram e reagem ao que veem você fazer.</td></tr>
+        <tr><td>Moradores percebem quem chega</td><td>Desligado</td><td>Quem está dentro de casa lembra quando outro morador chega.</td></tr>
         <tr><td>Chance do NPC pescar</td><td>10%</td><td>Chance de um morador pescar junto quando te vê pescando.</td></tr>
         <tr><td>Chance de conversa em grupo</td><td>15%</td><td>Chance de dois moradores juntos te chamarem pra conversar.</td></tr>
         <tr><td>Menu radial dos NPCs</td><td>Ligado</td><td>Mostra o menu em pizza quando há mais de uma ação.</td></tr>
         <tr><td>Ativar Eventos de Cena</td><td>Ligado</td><td>Liga ou desliga as cenas do mod.</td></tr>
         <tr><td>Estilo de Apresentação</td><td>Natural</td><td>Natural, Só ambiente ou Cinemático.</td></tr>
         <tr><td>Eventos de Cena por Dia</td><td>1</td><td>De 0 a 5.</td></tr>
+        <tr><td>Anúncios da Joja</td><td>De vez em quando</td><td>Desligado, De vez em quando ou Sempre.</td></tr>
       </tbody>
     </table>
   </div>
@@ -268,7 +482,7 @@
     <h2>Antes de atualizar</h2>
   </div>
   <ul class="points">
-    <li>Os textos novos dos menus estão em inglês, português e vietnamita. Em alemão, espanhol, francês, italiano e chinês eles aparecem em inglês por enquanto.</li>
+    <li>Os textos novos estão completos em inglês, português e vietnamita. Em espanhol, alemão, francês, italiano e chinês, uma parte deles, principalmente do menu de configurações, ainda aparece em inglês.</li>
     <li>O pack oficial Pelican Town Mayor foi atualizado pra 1.7.0.</li>
     <li>A 1.7.0 ainda está em desenvolvimento, então detalhes podem mudar até o lançamento.</li>
   </ul>

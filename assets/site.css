@@ -321,6 +321,21 @@ ul.points li { padding-left: 2px; }
 .cmds div { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 10px; align-items: baseline; }
 .cmds div code { justify-self: start; }
 
+/* game screenshots inside a changelog section */
+figure.shot { margin: 0; display: grid; gap: 8px; min-width: 0; }
+figure.shot img {
+  display: block; width: 100%; height: auto;
+  border-radius: var(--radius); border: 1px solid var(--line);
+  background: #3a2414; box-shadow: 0 6px 18px rgba(30, 20, 10, 0.12);
+}
+figure.shot figcaption { color: var(--muted); font-size: var(--step--1); line-height: 1.45; }
+.shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-items: start; }
+.apps { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; }
+.apps div { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 10px 12px; display: grid; gap: 2px; align-content: start; min-width: 0; }
+.apps b { font-weight: 800; }
+.apps span { color: var(--muted); font-size: 0.9rem; line-height: 1.45; }
+.apps .ai { color: var(--plum); font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.04em; text-transform: uppercase; }
+
 /* ---------- footer ---------- */
 footer.site { margin-top: 72px; border-top: 1px solid var(--line); padding-block: 20px 96px; color: var(--muted); font-size: var(--step--1); }
 footer.site .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
@@ -338,7 +353,7 @@ footer.site a { color: inherit; }
   .bar .lang { margin-left: auto; }
   .hero-card { margin: 12px 0 0; padding: 18px 18px; box-shadow: none; }
   .hero-card h1 { font-size: 2.4rem; }
-  .features, .facts, .summary, .notice { grid-template-columns: minmax(0, 1fr); }
+  .features, .facts, .summary, .notice, .shots { grid-template-columns: minmax(0, 1fr); }
   .ladder, .steps { grid-template-columns: minmax(0, 1fr); }
   .cmds div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
 }

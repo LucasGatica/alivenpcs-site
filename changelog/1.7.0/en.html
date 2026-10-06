@@ -7,14 +7,18 @@
 </header>
 
 <nav class="summary" aria-label="Summary">
-  <a class="tile" href="#seen-and-heard"><strong>Seen and Heard</strong><span>Villagers notice what you do near them, remember it and sometimes walk over to talk about it right away.</span></a>
-  <a class="tile" href="#pesca"><strong>Fishing together</strong><span>A villager who sees you fishing may fish beside you and give you their catch.</span></a>
+  <a class="tile" href="#seen-and-heard"><strong>Seen and Heard</strong><span>Villagers notice what you do near them, feel something about it and sometimes walk over to talk about it right away.</span></a>
+  <a class="tile" href="#computador"><strong>Farm computer</strong><span>A real desktop, full of apps and little games.</span></a>
+  <a class="tile" href="#telas"><strong>New screens</strong><span>The diary, letters, arcs, gossip, character sheet and the Hub get a new look.</span></a>
+  <a class="tile" href="#tentar-novamente"><strong>Nothing gets lost</strong><span>If the AI fails, you can retry the diary, the gossip and the conversation.</span></a>
   <a class="tile" href="#grupo"><strong>Group conversations</strong><span>Two villagers standing together may pull you into a three-way conversation.</span></a>
+  <a class="tile" href="#configuracoes"><strong>Settings menu</strong><span>A menu of its own, with pages, search and an explanation for every option.</span></a>
+  <a class="tile" href="#pesca"><strong>Fishing together</strong><span>A villager who sees you fishing may fish beside you and give you their catch.</span></a>
   <a class="tile" href="#cuidado"><strong>Friends who look after you</strong><span>Hurt or exhausted? A friend comes over and gives you food.</span></a>
   <a class="tile" href="#cenas"><strong>Scenes without teleporting</strong><span>Scene events happen where the villager already is.</span></a>
   <a class="tile" href="#menu-radial"><strong>Interaction wheel</strong><span>Choose between talking, kissing, delivering a quest item, giving a gift or opening the shop.</span></a>
   <a class="tile" href="#festivais"><strong>5 more festivals</strong><span>The Luau, the Moonlight Jellies, the Fair, Spirit's Eve and the Festival of Ice get AI dialogue.</span></a>
-  <a class="tile" href="#criadores"><strong>Triggers in JSON</strong><span>Pack creators add new reactions with a single file.</span></a>
+  <a class="tile" href="#criadores"><strong>For creators</strong><span>New triggers from a single JSON file, and apps for the computer.</span></a>
 </nav>
 
 <!-- Seen and Heard -->
@@ -22,22 +26,25 @@
   <div class="feature-head">
     <span class="tag">New</span>
     <h2>Seen and Heard: they notice you</h2>
-    <p class="lead">When you do something near a villager, they may see or hear it. It becomes one of their memories. Depending on what it was, they walk over to comment right away. Later they may bring it up in other conversations or spread it as gossip at night.</p>
+    <p class="lead">When you do something near a villager, they may see or hear it. It becomes one of their memories and affects how they feel. Depending on what it was, they walk over to comment right away. Later they may bring it up in other conversations or spread it as gossip at night.</p>
   </div>
 
   <div class="sub">
     <h3>What they notice</h3>
     <div class="notice">
-      <article><h4>Giving a gift <span class="pill walk">may walk over</span></h4><p>The person receiving it and anyone nearby remember the item, whether they liked it and whether it was their birthday.</p></article>
-      <article><h4>Eating or drinking <span class="pill walk">may walk over</span></h4><p>Including whether it was alcohol.</p></article>
+      <article><h4>Giving a gift <span class="pill walk">may walk over</span></h4><p>The person receiving it and anyone nearby remember the item, whether they liked it and whether it was their birthday. The person who got it only walks over to thank you if they didn't dislike or hate the gift.</p></article>
+      <article><h4>Eating or drinking <span class="pill walk">drinks: may walk over</span></h4><p>Ordinary food is only remembered. Alcohol can make someone walk over, and each villager reacts in their own way.</p></article>
       <article><h4>Setting off bombs <span class="pill walk">may walk over</span></h4><p>The noise carries through walls and can wake up anyone who was asleep.</p></article>
       <article><h4>Following someone closely <span class="pill walk">walks over</span></h4><p>Walk behind a villager for 3 seconds and a <span class="emote">!</span> appears. Keep going for 3 more and they turn around, come after you and tell you to stop.</p></article>
       <article><h4>Fishing nearby <span class="pill walk">may fish with you</span></h4><p>See <a href="#pesca">Fishing together</a>.</p></article>
-      <article><h4>Digging through trash <span class="pill walk">may walk over</span></h4><p>They know whose trash can it was.</p></article>
+      <article><h4>Digging through trash <span class="pill walk">may walk over</span></h4><p>They know whose trash can it was, and only the owner comes over to confront you.</p></article>
       <article><h4>Tool or weapon <span class="pill walk">may walk over</span></h4><p>Hitting someone (or only just missing) with an axe, pickaxe, hoe, watering can or weapon.</p></article>
       <article><h4>Slingshot <span class="pill walk">may walk over</span></h4><p>Hitting someone or narrowly missing them.</p></article>
       <article><h4>Bedroom door <span class="pill walk">may walk over</span></h4><p>Trying to open the bedroom of someone you barely know (under <span class="hearts"><svg><use href="#heart"/></svg> 2</span>) or opening the door for the first time.</p></article>
+      <article><h4>Walking into someone's bedroom <span class="pill walk">may walk over</span></h4><p>They notice how long you stayed inside, and the owner of the room may come over to talk to you.</p></article>
       <article><h4>Dating or marriage proposal <span class="pill walk">may walk over</span></h4><p>With a bouquet, a Mermaid's Pendant or through dialogue. They remember whether the answer was yes or no. Someone already dating or married to you comes to confront you.</p></article>
+      <article><h4>Talking with someone <span class="pill memory">only remembers</span></h4><p>Anyone nearby sees you two talking. What was said is only overheard if the conversation wasn't marked as secret.</p></article>
+      <article><h4>Walking around town <span class="pill memory">only remembers</span></h4><p>Going in and out of homes and shops, or moving from one area of the map to another.</p></article>
       <article><h4>Shopping <span class="pill memory">only remembers</span></h4><p>The shopkeeper and anyone in the shop remember what you bought on that visit.</p></article>
       <article><h4>Passing out away from home <span class="pill memory">only remembers</span></h4><p>At 2 AM or from exhaustion. The day ends there, but anyone who saw it may bring it up in the following days.</p></article>
       <article><h4>Walking by hurt or exhausted <span class="pill walk">comes to help</span></h4><p>See <a href="#cuidado">Friends who look after you</a>.</p></article>
@@ -45,30 +52,44 @@
   </div>
 
   <div class="sub">
-    <h3>How they walk over</h3>
+    <h3>What they feel</h3>
     <ul class="points">
-      <li>A <span class="emote">!</span> appears above their head and the villager walks quickly to your side. No teleporting.</li>
-      <li>Their line is generated while they walk. If they arrive first, they wait beside you until it's ready.</li>
-      <li>The line is about what happened. Each kind of action has its own prompt, so they don't change the subject or bring up old gossip instead.</li>
-      <li>When the conversation ends, including your replies, they walk back to where they were and pick up their routine.</li>
-      <li>Only one villager comes over at a time. If you save, sleep, change maps or enter an event, the approach is cancelled and they go back to normal.</li>
+      <li>A small thing is only remembered. Doing it again in front of the same person, or doing something serious, is what makes them walk over. There are four feelings, each with three levels:</li>
+    </ul>
+    <div class="ladders">
+      <div class="ladder"><b>Confrontation</b><div class="steps"><span>suspicious, curious</span><span>genuinely upset, wants an explanation</span><span>furious, won't have forgotten by tomorrow</span></div></div>
+      <div class="ladder"><b>Amusement</b><div class="steps"><span>pokes a little fun</span><span>laughs in your face, no malice</span><span>the funniest thing all week</span></div></div>
+      <div class="ladder"><b>Fondness</b><div class="steps"><span>pleased, wants to say something nice</span><span>likes having you around</span><span>touched, “this is what makes someone family”</span></div></div>
+      <div class="ladder"><b>Romance</b><div class="steps"><span>flustered, can't leave it unsaid</span><span>openly taken with you, past pretending</span><span>head over heels, wants you to hear it from them</span></div></div>
+    </div>
+    <ul class="points">
+      <li>Each villager reads the same scene their own way. Shane laughs at your drinking, Gus buys you a beer after a few rounds and Penny gets upset if you drink near a child.</li>
+      <li>A gift the person hated earns no fondness at all. And if your partner sees you asking someone else out, they come over to confront you.</li>
+      <li>The third time someone sees you trying to open their bedroom door, it's not just curiosity anymore.</li>
+      <li>Each level goes up at most once a day, and each feeling has a daily limit per villager. Strong anger and romance partly carry over to the next day.</li>
     </ul>
   </div>
 
   <div class="sub">
-    <h3>What they feel</h3>
+    <h3>How they walk over</h3>
     <ul class="points">
-      <li>Seeing is different from hearing. Someone who saw it clearly talks about it in detail. Someone who only heard a noise sounds unsure and doesn't describe what they didn't see.</li>
-      <li>Doing the same thing again makes the reaction stronger. There are three kinds of reaction, each with three levels:</li>
+      <li>A <span class="emote">!</span> appears above their head and the villager walks quickly to your side. No teleporting.</li>
+      <li>Their line is generated while they walk. If they arrive first, they wait beside you until it's ready.</li>
+      <li>The line is about what happened, in the tone of what they're feeling. They don't change the subject or bring up old gossip instead.</li>
+      <li>Only the villager with the best reason comes over. Anyone else who also felt strongly, or wasn't sure of what they saw, brings it up the next time you talk.</li>
+      <li>If you talk to someone who was about to come over, they bring it up in that conversation.</li>
+      <li>When the conversation ends, including your replies, they walk back to where they were and pick up their routine.</li>
+      <li>If you save, sleep, change maps or enter an event, the approach is canceled and they go back to normal.</li>
     </ul>
-    <div class="ladders">
-      <div class="ladder"><b>Scolding</b><div class="steps"><span>suspicious, curious</span><span>genuinely upset, wants an explanation</span><span>furious, won't have forgotten by tomorrow</span></div></div>
-      <div class="ladder"><b>Teasing</b><div class="steps"><span>pokes a little fun</span><span>laughs in your face, no malice</span><span>the funniest thing all week</span></div></div>
-      <div class="ladder"><b>Fondness</b><div class="steps"><span>pleased, wants to say something nice</span><span>likes having you around</span><span>touched, “this is what makes someone family”</span></div></div>
-    </div>
+  </div>
+
+  <div class="sub">
+    <h3>How they remember</h3>
     <ul class="points">
-      <li>Memories fade over time. Some grudges leave a little behind for the next day.</li>
+      <li>Memories are written from the villager's own point of view, and only as sure as they are. Someone right next to you “clearly saw” it, someone further away “thinks they saw” it, and an explosion is heard, not seen.</li>
+      <li>Each memory fades at its own pace. An explosion or someone getting hit sticks around for weeks. Walking past someone lasts about a day. When too much piles up, the most forgettable ones go first.</li>
       <li>What they saw comes up later in normal conversations and can make it into the evening gossip.</li>
+      <li>You can see what each villager feels about you today in the <a href="#telas">villager diary</a>.</li>
     </ul>
   </div>
 
@@ -81,7 +102,201 @@
     </ul>
   </div>
 
-  <div class="option"><span class="label">In GMCM</span><b>Seen and Heard</b><span>on by default</span></div>
+  <div class="option"><span class="label">In the settings</span><b>Seen and Heard</b><span>on by default</span></div>
+  <div class="option"><span class="label">In the settings</span><b>Villagers notice each other arriving</b><span>off by default. When it's on, villagers indoors remember when another villager arrives.</span></div>
+</section>
+
+<!-- Farm computer -->
+<section class="feature" id="computador">
+  <div class="feature-head">
+    <span class="tag">New</span>
+    <h2>The farm computer is now a desktop</h2>
+    <p class="lead">The AliveNpcs computer, the one in your farmhouse, now boots into a real desktop full of apps and little games. Before, it only opened the Village Social Network.</p>
+  </div>
+  <div class="shots">
+    <figure class="shot">
+      <img src="assets/prints/1.7/computador-area-de-trabalho.webp" width="1400" height="901" loading="lazy" alt="The AliveNpcs Computer desktop with Good morning, Lucas!, the app icons and the taskbar with the farm, the date and the time.">
+      <figcaption>The desktop in an earlier test. The icons have changed since this screenshot: the arcs, gossip and letters are now in the Apps folder.</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="assets/prints/1.7/corrida-de-galinhas.webp" width="1400" height="855" loading="lazy" alt="The Chicken Race app: six farm animals racing in lanes, Mayor Lewis commentating live and a 100-chip bet.">
+      <figcaption>Chicken Race: your farm animals on the track, with Mayor Lewis commentating live.</figcaption>
+    </figure>
+  </div>
+  <ul class="points">
+    <li>It boots up with sound and animation and says good morning, good afternoon or good evening. The wallpaper follows the time of day: the sun moves across the sky, late afternoon turns orange and the night has stars and a moon.</li>
+    <li>The taskbar shows the farm name, the open app, the weather, the date and the time.</li>
+    <li>The colors match the PC look you picked: classic teal, pink with cat ears, or mint with a blue case.</li>
+    <li>The desktop has the Village Social Network, Perfection, Diary, Messenger, Year in Review, PC Look, Settings and the <b>Apps</b> folder. The arcs, gossip and letters now live inside the folder.</li>
+    <li>The Apps folder holds any number of apps, in pages. Other mods can add apps there too (see <a href="#criadores">For creators</a>).</li>
+  </ul>
+  <div class="sub">
+    <h3>Apps</h3>
+    <div class="apps">
+      <div><b>Perfection</b><span>Your perfection score, counted just like Mr. Qi's tracker, and exactly what's missing: items to ship, fish (with season, time and weather), recipes, hearts, skills, Stardrops, obelisks, golden walnuts and more.</span></div>
+      <div><b>Messenger</b><span class="ai">uses AI</span><span>Send messages to the villagers you know. They reply and remember the conversation, which can turn into gossip or end up in the diary. You can also send them in secret. Up to 5 messages a day.</span></div>
+      <div><b>Year in Review</b><span>A recap of your year: who you talked to most, your signature gift, the gossip of the year, the stories you finished and a title for your reputation in town.</span></div>
+      <div><b>Pelicangram</b><span>Each piece of gossip becomes a post with a photo of whoever spread it, and the days in your diary become posts by Haley about you, with hashtags and comments from the folks in town.</span></div>
+      <div><b>Where Is Everyone?</b><span>Where each villager is right now, where they're going next and when they head home. As a list, or with their faces on the map of the valley and Ginger Island.</span></div>
+      <div><b>Gossip-o-meter</b><span>Pick a rumor and see who told whom, and how much the story changed along the way: faithful, exaggerated or twisted.</span></div>
+      <div><b>Mood Forecast</b><span>Each villager's mood for the day as a weather forecast, from rainbow to storm, with the reasons and a tip from the weatherman.</span></div>
+      <div><b>Aquarium</b><span>The fish you've caught swim in an animated aquarium, and the ones you're missing show up as shadows. Each one has a card with its record, and where and when it bites.</span></div>
+      <div><b>PC Look</b><span>Switches the computer's look between three styles, instantly.</span></div>
+      <div><b>My other mods</b><span>A showcase of the author's other mods, Beach Episode and Pelican Companions, with a link to Nexus.</span></div>
+      <div><b>More (+)</b><span>Links to support AliveNpcs on Nexus, to the tutorial on making your own addon and to this site.</span></div>
+    </div>
+  </div>
+  <div class="sub">
+    <h3>Games</h3>
+    <div class="apps">
+      <div><b>Chicken Race</b><span>Your farm animals and pets race each other, with Mayor Lewis commentating. The kind of animal, friendship and happiness affect their speed. You bet pretend chips, and your gold is never touched.</span></div>
+      <div><b>Who Said It?</b><span>A quiz with lines the villagers really said to you. Guess who said it. 10 questions per round.</span></div>
+      <div><b>Minesweeper</b><span>Minesweeper styled like the mines: rocks, cherry bombs and torches as flags. Three difficulty levels, and the first click is always safe.</span></div>
+      <div><b>Worm Snake</b><span>The snake game, with a worm in the dirt eating leaves. The golden leaf is worth more.</span></div>
+      <div><b>Junimogotchi</b><span>A Junimo virtual pet that gets happy from what you really do in the game: conversations, gifts, shipping and favors. It goes up 7 levels and changes color.</span></div>
+      <div><b>Junimo Typing</b><span>The Junimos throw out names of crops and fish, and you type them before they land. 12 levels, with combos up to x4.</span></div>
+    </div>
+    <p>High scores and Chicken Race chips are stored on your computer, so they count for every save.</p>
+  </div>
+  <div class="sub">
+    <h3>Joja ads</h3>
+    <p>Sometimes, when the computer switches on, a Joja Co. ad pops up: a spinning can of Joja Cola, a shouting headline, a countdown that never ends and a huge button that only opens more ads. The close X is tiny on purpose (Escape and B close it too). Joja members, or anyone who closed JojaMart through the Community Center, get ads of their own.</p>
+    <p>The ad always shows the first time you switch on the computer in a save. After that, the chance is 3%.</p>
+  </div>
+  <div class="option"><span class="label">In the settings</span><b>Joja ads</b><span>under General → Farm computer. Off, Now and then (default) or Every time.</span></div>
+</section>
+
+<!-- Screens -->
+<section class="feature" id="telas">
+  <div class="feature-head">
+    <span class="tag improved">New look</span>
+    <h2>New screens everywhere</h2>
+    <p class="lead">The Hub and almost every screen in the mod were rebuilt, with the same look as the new settings menu.</p>
+  </div>
+  <div class="shots">
+    <figure class="shot">
+      <img src="assets/prints/1.7/cartas-recebidas.webp" width="1400" height="967" loading="lazy" alt="Received Letters screen: a list of letters on the left and Abigail's letter open on the right, with an amethyst attached.">
+      <figcaption>Received Letters: the open letter on the game's own letter paper, with the gift attached.</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="assets/prints/1.7/ficha-de-personagem.webp" width="1400" height="901" loading="lazy" alt="Character Sheet with the farmer's portrait on the left and four text fields on the right.">
+      <figcaption>The Character Sheet, with the four questions and the examples in gray.</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="assets/prints/1.7/arcos-narrativos.webp" width="1400" height="963" loading="lazy" alt="Story Arcs screen with the list of arcs on the left and the arc Shane's Gift open on the right.">
+      <figcaption>Story Arcs. The arcs in this screenshot are test arcs, used only to show the screen.</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="assets/prints/1.7/passeios.webp" width="1300" height="950" loading="lazy" alt="Outings tab with a pending invitation from Haley at the Saloon and the destinations with their hours.">
+      <figcaption>Outings: the invitation you agreed to with Haley and the destinations with their hours. Test screenshot: some of the text isn't translated yet.</figcaption>
+    </figure>
+  </div>
+  <div class="notice">
+    <article><h4>Player Diary</h4><p>A leather-bound notebook with ruled pages and entries written in ink. Turn the pages with the arrows, the mouse wheel or LB/RB. It opens on the latest entries.</p></article>
+    <article><h4>Gossip Diary</h4><p>Each rumor is a speech bubble from whoever spread it, with who started it and the faces of who already knows. Today's gossip gets the <b>Fresh!</b> tag, and the weekly news shows up as a clipping at the top.</p></article>
+    <article><h4>Received Letters</h4><p>Letters sit in a pile on the left, with the sender's face on the stamp. The open letter shows on the right, with the greeting, signature and gift. Long letters turn pages.</p></article>
+    <article><h4>Story Arcs</h4><p>A list on the left (ready ones first), with a face, a little progress bar and the season. The <b>Conclude Arc!</b> and <b>Delete arc</b> buttons are always within reach. Objectives show the real icon of the item to deliver.</p></article>
+    <article><h4>Character Sheet</h4><p>Your portrait, name and farm next to the four questions, each with a hint and a character counter. It has a Paste button and asks before throwing away what you typed. While it's blank, its card in the Hub glows with a red <span class="emote">!</span>.</p></article>
+    <article><h4>Village Social Network</h4><p>Posts as cards with the villagers' faces, tags and the <b>View conversation</b> button. Relationships show both faces and their bars, and conversations show up as chat bubbles.</p></article>
+    <article><h4>Outings</h4><p>The outings you agreed to become invitation tickets, with where and when to meet, a status (pending, expiring, go now) and a calendar page with the last day. Below them are the destinations and their hours.</p></article>
+    <article><h4>Villager diary <span class="pill walk">new</span></h4><p>Click a villager on the NPCs tab to open their diary about you: portrait, hearts, mood and five chapters. Emotional profile, today's feelings, what they want to tell you, favors and arcs. Before, this only showed up in the console.</p></article>
+    <article><h4>NPCs, AI Status and Quick Settings</h4><p>NPCs become cards with faces, grouped by where they come from, saying whether AliveNpcs handles them and why. AI Status shows a light and a one-line verdict. Quick Settings save instantly and take you to the full menu.</p></article>
+  </div>
+</section>
+
+<!-- Retry -->
+<section class="feature" id="tentar-novamente">
+  <div class="feature-head">
+    <span class="tag">New</span>
+    <h2>Nothing gets lost when the AI fails</h2>
+    <p class="lead">An overloaded provider, or an answer that took too long or came back unreadable: before, you lost the day or the conversation. Now there's a <b>Retry</b> button. You'll never lose a diary entry to provider hiccups again.</p>
+  </div>
+  <figure class="shot">
+    <img src="assets/prints/1.7/diario-tentar-novamente.webp" width="1400" height="1018" loading="lazy" alt="The new Player Diary, a two-page notebook, with the Retry button and the Diary entry generated notice below.">
+    <figcaption>The new Player Diary. At the bottom, the Retry button and the “Diary entry generated!” notice.</figcaption>
+  </figure>
+  <div class="sub">
+    <h3>Diary and gossip</h3>
+    <ul class="points">
+      <li>If the AI fails during the night, you get a warning in chat. The Player Diary and the Gossip Diary get a button that runs the analysis again, with the same conversations from that day.</li>
+      <li>The button turns orange while the day's diary or gossip is missing. If it was already generated, it just tells you so.</li>
+      <li>When it works, the AI's entry replaces the short notes left on the night it failed.</li>
+      <li>Only the latest day can be retried, and the button keeps working after you quit and come back to the game.</li>
+      <li>In multiplayer, each player retries their own diary. Only the host can retry the village gossip.</li>
+    </ul>
+  </div>
+  <div class="sub">
+    <h3>Conversations</h3>
+    <ul class="points">
+      <li>If the AI fails to answer you, the conversation no longer closes. The reply window stays open, explains what happened and shows <b>Try again</b>, <b>Edit</b> and <b>End</b>.</li>
+      <li><b>Try again</b> sends your reply again, exactly as you wrote it, with the action you chose.</li>
+      <li>Before, a failure from the second turn on ended the conversation, and you couldn't talk to that villager again that day.</li>
+      <li>This also covers bonus actions, invitations, relationship proposals and festival actions.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Group chat -->
+<section class="feature" id="grupo">
+  <div class="feature-head">
+    <span class="tag">New</span>
+    <h2>Group conversations</h2>
+    <p class="lead">When you arrive somewhere two villagers are standing together, they may call out “Hey, (your name)!”.</p>
+  </div>
+  <div class="shots">
+    <figure class="shot">
+      <img src="assets/prints/1.7/conversa-em-grupo-1.webp" width="1200" height="610" loading="lazy" alt="Group conversation with Alex and Evelyn. The farmer writes that they're planting sweet potatoes and enjoy the gym.">
+      <figcaption>Alex and Evelyn started a conversation. You answer both of them at once.</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="assets/prints/1.7/conversa-em-grupo-2.webp" width="1200" height="610" loading="lazy" alt="Alex talks about working out and Evelyn scolds him for being rough.">
+      <figcaption>And they answer you and each other: Evelyn scolds Alex.</figcaption>
+    </figure>
+  </div>
+  <ul class="points">
+    <li>One of them walks over with the <span class="emote">!</span> while the other calls out to you. The conversation opens in its own menu, with both villagers and you.</li>
+    <li>They answer you and each other. Each one has their own friendship change.</li>
+    <li>You can close the conversation even while they're answering. Leaving without saying anything is remembered too.</li>
+    <li>Afterwards both of them remember talking with you and with the other villager.</li>
+  </ul>
+  <div class="option"><span class="label">In the settings</span><b>Group conversation chance</b><span>default 15%, rolled once per location per day. 0% turns it off.</span></div>
+</section>
+
+<!-- Settings menu -->
+<section class="feature" id="configuracoes">
+  <div class="feature-head">
+    <span class="tag improved">Improved</span>
+    <h2>A settings menu just for AliveNpcs</h2>
+    <p class="lead">Picking AliveNpcs in Generic Mod Config Menu now opens a menu of its own. In game, it also opens from <b>All settings...</b> on the Hub's Quick Settings tab, no GMCM needed.</p>
+  </div>
+  <ul class="points">
+    <li><b>Pages:</b> General, AI Provider, Conversations, Romance, Village Life, Drama &amp; Personalities, Gossip &amp; News, Story Arcs, Experimental Content, Compatibility, Shortcuts and Advanced. Options that go together now sit together.</li>
+    <li>On large screens, the pages sit in a sidebar and a panel explains the option under the cursor, with its default value. On small screens, the explanation shows up as a tooltip.</li>
+    <li>Options that depend on another one stay grayed out until you turn the main one on. The provider page only shows the provider you picked, and API keys are hidden.</li>
+    <li>Nothing is saved until you press <b>Save</b> or <b>Save &amp; Close</b>. Changed options are marked, and closing with changes asks you to confirm. <b>Default</b> restores only the open page and doesn't erase your keys.</li>
+    <li><b>Search:</b> type and it finds options on every page instantly, grouped by page. You can change an option right there. Accents, capital letters and a small typo don't get in the way. Open it with Ctrl+F (Cmd+F on Mac) or Y on a controller.</li>
+    <li>To change a shortcut, click it and press the new key. The menu warns you when two shortcuts use the same key.</li>
+    <li>API keys have a <b>Paste</b> button, which helps a lot on mobile.</li>
+    <li><b>Turns per Conversation</b> now goes up to 50 (was 15). 3 to 10 is recommended, because a long conversation sends more history with every reply.</li>
+    <li>The separate AliveNpcs entries in GMCM (Experimental Content, Gemini, custom provider and Compatibility Manager) are gone. They're now pages of the new menu.</li>
+    <li>Works with mouse, keyboard and controller.</li>
+  </ul>
+  <div class="sub">
+    <h3>New defaults for new installs</h3>
+    <p>If you already have a config, you keep the values you had.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Option</th><th>Now</th><th>Before</th></tr></thead>
+        <tbody>
+          <tr><td>Enable Enmity System</td><td>On</td><td>Off</td></tr>
+          <tr><td>Enable Community AI Blocklist (respects NPC mod authors who don't want AI)</td><td>On</td><td>Off</td></tr>
+          <tr><td>Max Points per Interaction</td><td>20</td><td>100</td></tr>
+          <tr><td>Max Dialogue Length</td><td>500</td><td>800</td></tr>
+          <tr><td>API key fields</td><td>2</td><td>3</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </section>
 
 <!-- Fishing -->
@@ -98,22 +313,7 @@
     <li>Each villager does this at most once a day.</li>
     <li>11 villagers got a hand-drawn fishing pose: Jodi, Kent, Leah, Linus, Marnie, Maru, Pam, Penny, Pierre, Robin and Sam.</li>
   </ul>
-  <div class="option"><span class="label">In GMCM</span><b>NPC fishing chance</b><span>0% to 100%, default 10%</span></div>
-</section>
-
-<!-- Group chat -->
-<section class="feature" id="grupo">
-  <div class="feature-head">
-    <span class="tag">New</span>
-    <h2>Group conversations</h2>
-    <p class="lead">When you arrive somewhere two villagers are standing together, they may call out “Hey, (your name)!”.</p>
-  </div>
-  <ul class="points">
-    <li>One of them walks over and the conversation opens in its own menu, with both villagers and you.</li>
-    <li>They answer you and each other. Each one has their own friendship change.</li>
-    <li>Afterwards both of them remember talking with you and with the other villager.</li>
-  </ul>
-  <div class="option"><span class="label">In GMCM</span><b>Group conversation chance</b><span>default 15%, rolled once per location per day. 0% turns it off.</span></div>
+  <div class="option"><span class="label">In the settings</span><b>NPC fishing chance</b><span>0% to 100%, default 10%</span></div>
 </section>
 
 <!-- Help -->
@@ -146,7 +346,7 @@
   </ul>
   <div class="sub">
     <h3>You can pick the style</h3>
-    <p>These options used to live only in <code>config.json</code>. Now they have their own GMCM section, <b>Scene Events</b>:</p>
+    <p>These options used to live only in <code>config.json</code>. Now they are in the settings, on the <b>Village Life</b> page, under <b>Everyday scenes</b>:</p>
     <ul class="points">
       <li><b>Natural</b> (default): villagers walk over to talk with you or talk among themselves.</li>
       <li><b>Ambient only</b>: you only overhear the conversations. Nobody walks over to you.</li>
@@ -175,12 +375,12 @@
   </div>
   <ul class="points">
     <li>It stops AI conversation from getting in the way of quests, gifts and shops. For example, handing Robin her lost axe.</li>
-    <li>If only one action is possible, it happens right away. Opening or cancelling the menu costs nothing.</li>
-    <li>If you already talked today, “Talk” is greyed out with the note “Already talked today. Come back tomorrow.”</li>
+    <li>If only one action is possible, it happens right away. Opening or canceling the menu costs nothing.</li>
+    <li>If you already talked today, “Talk” is grayed out with the note “Already talked today. Come back tomorrow.”</li>
     <li>Kiss (or Hug, for a roommate) needs empty hands, an idle spouse, <span class="hearts"><svg><use href="#heart"/></svg> 10+</span>, a time before 10 PM, and a spouse who slept in bed.</li>
     <li>Works with mouse, keyboard and controller. Escape, B or right-click cancels.</li>
   </ul>
-  <div class="option"><span class="label">In GMCM</span><b>NPC interaction wheel</b><span>on by default. When it's off, the game's own actions take priority over AI conversation.</span></div>
+  <div class="option"><span class="label">In the settings</span><b>NPC interaction wheel</b><span>on by default. When it's off, the game's own actions take priority over AI conversation.</span></div>
 </section>
 
 <!-- Festivals -->
@@ -206,8 +406,13 @@
     <span class="tag improved">Improved</span>
     <h2>A new look for the reply menu</h2>
   </div>
+  <figure class="shot">
+    <img src="assets/prints/1.7/menu-de-resposta.webp" width="1100" height="769" loading="lazy" alt="Reply menu with Pierre's portrait next to his line and the Your response and Action fields below.">
+    <figcaption>The villager's portrait and name next to the line, and the reply fields below.</figcaption>
+  </figure>
   <ul class="points">
     <li>It now matches the group conversation menu: the villager's portrait and name next to the line, reply fields underneath.</li>
+    <li>The portrait changes along with the emotion of the reply.</li>
     <li>Text is never cut off in the middle of a line.</li>
     <li>The bonus actions and the Keep secret box now sit on the same row.</li>
   </ul>
@@ -222,11 +427,17 @@
   </div>
   <ul class="points">
     <li><b>When:</b> a game condition (weather, time of day, items in your inventory and so on) checked near villagers.</li>
-    <li><b>On:</b> changes how villagers react to something they already notice, like a gift or a bomb.</li>
+    <li><b>On:</b> changes how villagers react to something they already notice, like a gift, a bomb, walking into a bedroom or talking with someone.</li>
+    <li>You can filter by the details of each action: whether the drink was alcoholic, whose trash can or bedroom it was, whether the gift was for your partner or a birthday, and which shop the purchase was in.</li>
+    <li>A trigger with a reaction or an item sends the villager straight to you. A trigger with only a summary leaves it up to their feelings.</li>
     <li>You can filter by villager and by hearts, limit how many times a day it fires, keep it as a memory only, and have the villager give you an item.</li>
     <li>Gifts, food and purchases now store the item ID, so triggers work in any game language.</li>
     <li>Up to 50 triggers per pack. The pack must require AliveNpcs 1.7.0 in its manifest. The full format is in <code>ALIVE_TRIGGERS.md</code>.</li>
   </ul>
+  <div class="sub">
+    <h3>Apps for the computer</h3>
+    <p>Other mods can put their own apps in the farm computer's Apps folder, through <code>IAliveNpcsComputerApi</code>. The step-by-step guide is in <code>COMPUTER_APPS.md</code>.</p>
+  </div>
   <div class="sub">
     <h3>Test commands in the SMAPI console</h3>
     <div class="cmds">
@@ -234,6 +445,7 @@
       <div><code>alive_trigger reload</code><span>Applies the edited pack without restarting the game.</span></div>
       <div><code>alive_trigger list</code><span>Shows the active triggers and how many times they fired today.</span></div>
       <div><code>alive_sh fire &lt;event&gt;</code><span>Simulates an action near villagers and shows who saw it and who is walking over.</span></div>
+      <div><code>alive_sh feelings [npc]</code><span>Shows what each villager feels about you today and how close they are to walking over.</span></div>
       <div><code>alive_group_chat</code><span>Forces a group conversation.</span></div>
       <div><code>alivenpcs_scene_status</code><span>Shows the scenes planned for the day.</span></div>
     </div>
@@ -244,19 +456,21 @@
 <section class="feature" id="opcoes">
   <div class="feature-head">
     <span class="tag improved">Settings</span>
-    <h2>New GMCM options</h2>
+    <h2>New options</h2>
   </div>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Option</th><th>Default</th><th>What it does</th></tr></thead>
       <tbody>
         <tr><td>Seen and Heard</td><td>On</td><td>Villagers remember and react to what they see you do.</td></tr>
+        <tr><td>Villagers notice each other arriving</td><td>Off</td><td>Villagers indoors remember when another villager arrives.</td></tr>
         <tr><td>NPC fishing chance</td><td>10%</td><td>Chance that a villager fishes with you when they see you fishing.</td></tr>
         <tr><td>Group conversation chance</td><td>15%</td><td>Chance that two villagers standing together call you over to talk.</td></tr>
         <tr><td>NPC interaction wheel</td><td>On</td><td>Shows the pie menu when more than one action is available.</td></tr>
         <tr><td>Enable Scene Events</td><td>On</td><td>Turns the mod's scenes on or off.</td></tr>
         <tr><td>Delivery Style</td><td>Natural</td><td>Natural, Ambient only or Cinematic.</td></tr>
         <tr><td>Scene Events per Day</td><td>1</td><td>0 to 5.</td></tr>
+        <tr><td>Joja ads</td><td>Now and then</td><td>Off, Now and then or Every time.</td></tr>
       </tbody>
     </table>
   </div>
@@ -268,7 +482,7 @@
     <h2>Before you update</h2>
   </div>
   <ul class="points">
-    <li>The new menu text is in English, Portuguese and Vietnamese. In German, Spanish, French, Italian and Chinese it shows in English for now.</li>
+    <li>The new text is complete in English, Portuguese and Vietnamese. In Spanish, German, French, Italian and Chinese, some of it, mostly in the settings menu, still shows in English.</li>
     <li>The official Pelican Town Mayor pack was updated to 1.7.0.</li>
     <li>1.7.0 is still in development, so details may change before release.</li>
   </ul>

@@ -5,9 +5,9 @@
     "date": null,
     "status": "in-development",
     "summary": {
-      "en": "Villagers now notice what you do near them and react, fish with you, pull you into group conversations and look after you when you're hurt.",
-      "pt-BR": "Os moradores agora percebem o que você faz perto deles e reagem, pescam com você, te chamam pra conversas em grupo e cuidam de você quando você está machucado.",
-      "es": "Los vecinos ahora notan lo que haces cerca de ellos y reaccionan, pescan contigo, te llaman a conversaciones en grupo y te cuidan cuando estás herido."
+      "en": "Villagers now notice what you do near them and react, fish with you and pull you into group conversations. The farm computer becomes a desktop full of apps, the menus get a new look, and a Try again button keeps the AI from losing your day.",
+      "pt-BR": "Os moradores agora percebem o que você faz perto deles e reagem, pescam com você e te chamam pra conversas em grupo. O computador da fazenda vira uma área de trabalho cheia de apps, as telas ganham visual novo e o botão Tentar novamente não deixa a IA perder o seu dia.",
+      "es": "Los vecinos ahora notan lo que haces cerca de ellos y reaccionan, pescan contigo y te llaman a conversaciones en grupo. La computadora de la granja se vuelve un escritorio lleno de apps, los menús estrenan aspecto y el botón Reintentar evita que la IA te haga perder el día."
     },
     "label": "1.7",
     "patches": [

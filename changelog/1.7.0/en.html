@@ -1,8 +1,7 @@
 <header class="top">
-  <div class="eyebrow"><span class="version">1.7.0</span><span>compared with 1.6.0 “As You Were”</span><span>in development · Oct 5, 2026</span></div>
+  <div class="eyebrow"><span class="version">1.7.0</span><span>compared with 1.6.0 “As You Were”</span><span>released · Oct 6, 2026</span></div>
   <h1>Villagers now see what you do</h1>
   <p class="lead">Everything that changed in AliveNpcs since 1.6, explained without the jargon. The summary comes first, then each new feature in more detail.</p>
-  <p class="wip"><b>Work in progress:</b> 1.7.0 isn't finished yet and may change before release.</p>
   <p class="credit"><b>Special thanks:</b> this update and the Seen and Heard system got a huge amount of help from my friend <b>Xniffer</b>. The idea behind the triggers, which give villagers more agency in the world, came from Xniffer, who also built the first prototype of NPC awareness that I based this version on.</p>
 </header>
 
@@ -13,6 +12,7 @@
   <a class="tile" href="#tentar-novamente"><strong>Nothing gets lost</strong><span>If the AI fails, you can retry the diary, the gossip and the conversation.</span></a>
   <a class="tile" href="#grupo"><strong>Group conversations</strong><span>Two villagers standing together may pull you into a three-way conversation.</span></a>
   <a class="tile" href="#configuracoes"><strong>Settings menu</strong><span>A menu of its own, with pages, search and an explanation for every option.</span></a>
+  <a class="tile" href="#nvidia"><strong>NVIDIA NIM</strong><span>A new AI provider, with free API keys.</span></a>
   <a class="tile" href="#pesca"><strong>Fishing together</strong><span>A villager who sees you fishing may fish beside you and give you their catch.</span></a>
   <a class="tile" href="#cuidado"><strong>Friends who look after you</strong><span>Hurt or exhausted? A friend comes over and gives you food.</span></a>
   <a class="tile" href="#cenas"><strong>Scenes without teleporting</strong><span>Scene events happen where the villager already is.</span></a>
@@ -299,6 +299,23 @@
   </div>
 </section>
 
+<!-- NVIDIA NIM -->
+<section class="feature" id="nvidia">
+  <div class="feature-head">
+    <span class="tag">New</span>
+    <h2>NVIDIA NIM, a new AI provider</h2>
+    <p class="lead">Besides Gemini and OpenAI-compatible servers, you can now use NVIDIA NIM. The API keys are free at <a href="https://build.nvidia.com">build.nvidia.com</a>.</p>
+  </div>
+  <ul class="points">
+    <li>You can add up to 20 keys (3 by default). The mod takes turns with them and, when one hits its limit, moves to the next one on its own and tells you.</li>
+    <li>A key that gets rejected is set aside until you close the game.</li>
+    <li>Create each key with a different NVIDIA account: keys from the same account share the same limit.</li>
+    <li>The default model is <code>nvidia/nemotron-3-ultra-550b-a55b</code>, and you can switch to another one.</li>
+    <li>Switching providers keeps your Gemini and custom server settings.</li>
+  </ul>
+  <div class="option"><span class="label">In the settings</span><b>AI Provider</b><span>NVIDIA NIM has its own section, with the keys and the model.</span></div>
+</section>
+
 <!-- Fishing -->
 <section class="feature" id="pesca">
   <div class="feature-head">
@@ -471,6 +488,7 @@
         <tr><td>Delivery Style</td><td>Natural</td><td>Natural, Ambient only or Cinematic.</td></tr>
         <tr><td>Scene Events per Day</td><td>1</td><td>0 to 5.</td></tr>
         <tr><td>Joja ads</td><td>Now and then</td><td>Off, Now and then or Every time.</td></tr>
+        <tr><td>Number of NVIDIA Keys</td><td>3</td><td>From 1 to 20 NVIDIA NIM key fields.</td></tr>
       </tbody>
     </table>
   </div>
@@ -484,6 +502,6 @@
   <ul class="points">
     <li>The new text is complete in English, Portuguese and Vietnamese. In Spanish, German, French, Italian and Chinese, some of it, mostly in the settings menu, still shows in English.</li>
     <li>The official Pelican Town Mayor pack was updated to 1.7.0.</li>
-    <li>1.7.0 is still in development, so details may change before release.</li>
+    <li>To play in multiplayer, also install the <a href="https://www.nexusmods.com/stardewvalley/mods/50946">AliveNpcs multiplayer mod</a>.</li>
   </ul>
 </section>

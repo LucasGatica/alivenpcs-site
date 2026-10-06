@@ -1,8 +1,7 @@
 <header class="top">
-  <div class="eyebrow"><span class="version">1.7.0</span><span>comparada con la 1.6.0 “As You Were”</span><span>en desarrollo · 5 oct 2026</span></div>
+  <div class="eyebrow"><span class="version">1.7.0</span><span>comparada con la 1.6.0 “As You Were”</span><span>publicada · 6 oct 2026</span></div>
   <h1>Los vecinos ahora ven lo que haces</h1>
   <p class="lead">Todo lo que cambió en AliveNpcs desde la 1.6, explicado sin tecnicismos. Primero el resumen; después, cada novedad con más detalle.</p>
-  <p class="wip"><b>Versión en desarrollo:</b> la 1.7.0 todavía no está terminada y puede cambiar antes del lanzamiento.</p>
   <p class="credit"><b>Agradecimiento especial:</b> esta actualización y el sistema Seen and Heard recibieron muchísima ayuda de mi amigo <b>Xniffer</b>. Xniffer tuvo la idea de los disparadores, que dan a los vecinos más autonomía en el mundo, y desarrolló el primer prototipo de percepción de los NPC en el que me basé para construir esta versión.</p>
 </header>
 
@@ -13,6 +12,7 @@
   <a class="tile" href="#tentar-novamente"><strong>Nada se pierde</strong><span>Si la IA falla, el botón Reintentar salva el diario, el chisme y la conversación.</span></a>
   <a class="tile" href="#grupo"><strong>Conversación en grupo</strong><span>Dos vecinos que están juntos pueden llamarte para una conversación a tres.</span></a>
   <a class="tile" href="#configuracoes"><strong>Menú de ajustes</strong><span>Un menú propio, con páginas, búsqueda y la explicación de cada opción.</span></a>
+  <a class="tile" href="#nvidia"><strong>NVIDIA NIM</strong><span>Un proveedor de IA nuevo, con claves de API gratis.</span></a>
   <a class="tile" href="#pesca"><strong>Pescar juntos</strong><span>Un vecino que te ve pescando puede pescar a tu lado y darte lo que pesque.</span></a>
   <a class="tile" href="#cuidado"><strong>Amigos que te cuidan</strong><span>¿Herido o agotado? Un amigo se acerca y te da comida.</span></a>
   <a class="tile" href="#cenas"><strong>Escenas sin teletransporte</strong><span>Los eventos de escena ocurren donde ya está el vecino.</span></a>
@@ -299,6 +299,23 @@
   </div>
 </section>
 
+<!-- NVIDIA NIM -->
+<section class="feature" id="nvidia">
+  <div class="feature-head">
+    <span class="tag">Nuevo</span>
+    <h2>NVIDIA NIM, un proveedor de IA nuevo</h2>
+    <p class="lead">Además de Gemini y de los servidores compatibles con OpenAI, ahora puedes usar NVIDIA NIM. Las claves de API son gratis en <a href="https://build.nvidia.com">build.nvidia.com</a>.</p>
+  </div>
+  <ul class="points">
+    <li>Puedes poner hasta 20 claves (3 por defecto). El mod las va turnando y, cuando una llega al límite, pasa sola a la siguiente y te avisa.</li>
+    <li>Una clave rechazada queda apartada hasta que cierres el juego.</li>
+    <li>Crea cada clave con una cuenta de NVIDIA distinta: las claves de una misma cuenta comparten el mismo límite.</li>
+    <li>El modelo por defecto es <code>nvidia/nemotron-3-ultra-550b-a55b</code>, y puedes cambiarlo por otro.</li>
+    <li>Cambiar de proveedor no borra los ajustes de Gemini ni del servidor personalizado.</li>
+  </ul>
+  <div class="option"><span class="label">En los ajustes</span><b>Proveedor de IA</b><span>NVIDIA NIM tiene su propia sección, con las claves y el modelo.</span></div>
+</section>
+
 <!-- Fishing -->
 <section class="feature" id="pesca">
   <div class="feature-head">
@@ -471,6 +488,7 @@
         <tr><td>Delivery Style</td><td>Natural</td><td>Natural, Ambient only o Cinematic.</td></tr>
         <tr><td>Scene Events per Day</td><td>1</td><td>De 0 a 5.</td></tr>
         <tr><td>Anuncios de Joja</td><td>De vez en cuando</td><td>Desactivado, De vez en cuando o Siempre.</td></tr>
+        <tr><td>Número de claves NVIDIA</td><td>3</td><td>De 1 a 20 campos de clave de NVIDIA NIM.</td></tr>
       </tbody>
     </table>
   </div>
@@ -484,6 +502,6 @@
   <ul class="points">
     <li>Los textos nuevos están completos en inglés, portugués y vietnamita. En español, alemán, francés, italiano y chino, una parte de ellos, sobre todo del menú de ajustes, todavía aparece en inglés.</li>
     <li>El pack oficial Pelican Town Mayor se actualizó a la 1.7.0.</li>
-    <li>La 1.7.0 todavía está en desarrollo, así que algunos detalles pueden cambiar antes del lanzamiento.</li>
+    <li>Para jugar en multijugador, instala también el <a href="https://www.nexusmods.com/stardewvalley/mods/50946">mod multijugador de AliveNpcs</a>.</li>
   </ul>
 </section>

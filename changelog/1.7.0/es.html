@@ -1,9 +1,195 @@
 <header class="top">
-  <div class="eyebrow"><span class="version">1.7.0</span><span>“Seen and Heard”</span><span>publicada · 6 oct 2026</span></div>
+  <div class="eyebrow"><span class="version">1.7</span><span>“Seen and Heard”</span><span>1.7.0 – 1.7.2</span><span>desde el 6 oct 2026</span></div>
   <h1>Los vecinos ahora ven lo que haces</h1>
-  <p class="lead">Todo lo que cambió en AliveNpcs desde la 1.6, explicado sin tecnicismos. Primero el resumen; después, cada novedad con más detalle.</p>
+  <p class="lead">La 1.7.0 trajo Seen and Heard y fue la actualización más grande de AliveNpcs hasta ahora. La 1.7.1 te puso un móvil en el bolsillo, con fotos en el Mensajero y más apps en la computadora. La 1.7.2, “Keep in Touch”, todavía está en desarrollo.</p>
   <p class="credit"><b>Agradecimiento especial:</b> esta actualización y el sistema Seen and Heard recibieron muchísima ayuda de mi amigo <b>Xniffer</b>. Xniffer tuvo la idea de los disparadores, que dan a los vecinos más autonomía en el mundo, y desarrolló el primer prototipo de percepción de los NPC en el que me basé para construir esta versión.</p>
 </header>
+
+<nav class="summary" aria-label="Versiones de la línea 1.7">
+  <a class="tile" href="#v1-7-2"><strong>1.7.2 · Keep in Touch</strong><span>Muy pronto: más apps en el móvil, un Mensajero más vivo, el diario con fan arts y Gemini reintentando solo.</span></a>
+  <a class="tile" href="#v1-7-1"><strong>1.7.1 · El móvil</strong><span>El móvil de AliveNpcs, fotos en el Mensajero, cuatro apps nuevas en la computadora y correcciones.</span></a>
+  <a class="tile" href="#v1-7-0"><strong>1.7.0 · Seen and Heard</strong><span>Los vecinos ven lo que haces, la computadora se vuelve un PC, pantallas nuevas y 7 festivales con IA.</span></a>
+</nav>
+
+<!-- 1.7.2 -->
+<section class="patch" id="v1-7-2">
+  <header class="patch-head"><span class="version">1.7.2</span><h2>Keep in Touch</h2><span class="patch-date">en desarrollo</span></header>
+  <p class="wip"><b>Todavía no salió:</b> la 1.7.2 está en desarrollo, y lo que hay aquí puede cambiar antes del lanzamiento.</p>
+  <p class="lead">Una actualización de mitad de temporada, llena de novedades y correcciones. El móvil gana más apps, el Mensajero cobra vida, el diario se vuelve un scrapbook con fan arts de los vecinos hechas por artistas independientes, y AliveNpcs vuelve a intentarlo solo cuando Gemini está sobrecargado.</p>
+
+  <section class="feature" id="v1-7-2-celular">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Más apps en el móvil</h3>
+    </div>
+    <figure class="shot" style="max-width:300px">
+      <img src="assets/prints/1.7/celular-tela-inicial.webp" width="642" height="1328" loading="lazy" alt="La pantalla de inicio del móvil con la hora, la fecha y las apps Junimogotchi, Más, Mensajero y Ajustes.">
+      <figcaption>La pantalla de inicio del móvil.</figcaption>
+    </figure>
+    <ul class="points">
+      <li><b>Ajustes</b>, <b>Junimogotchi</b> y <b>Más</b> ahora también están en el móvil, cada uno con un diseño hecho para su pantalla.</li>
+      <li><b>Pomodoro</b> (solo en el móvil): elige los minutos de concentración y de descanso, pulsa <b>Empezar concentración</b> y guarda el móvil. Cuenta el tiempo real, incluso con el juego en pausa, y suena cuando termina.</li>
+      <li><b>Tareas</b> (solo en el móvil): tu propia lista de pendientes, guardada por partida. Marca lo que ya hiciste y usa <b>Borrar las hechas</b> para quitarlo.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-2-mensageiro">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Un Mensajero más vivo</h3>
+    </div>
+    <ul class="points">
+      <li><b>Selfies:</b> un vecino que te escribe primero puede mandar una selfie desde donde está, comentando el lugar.</li>
+      <li><b>Parece que escriben de verdad:</b> después de que la IA responde, el vecino sigue “escribiendo” un poco más, y el texto aparece poco a poco.</li>
+      <li><b>Cumpleaños:</b> en el cumpleaños de alguien, su chat sube arriba con un pastel, y la respuesta de ese día es especial. Reacciona a que te acordaste, o a que te olvidaste.</li>
+      <li><b>Después de la 1 de la mañana:</b> el vecino nota la hora y, según cómo sea, puede responder con sueño, preocupado o molesto. Hasta puedes perder un poco de amistad.</li>
+      <li><b>No todos tienen móvil:</b> Linus, Krobus, el Mago, Leo, Birdie, Vincent y Jas aparecen en gris, con el motivo. Vincent, por ejemplo, está castigado por tiempo indefinido.</li>
+      <li>La lista tiene dos pestañas: <b>Contactos</b>, con todos, y <b>Chats</b>, solo con quienes ya hablaste.</li>
+    </ul>
+    <div class="option"><span class="label">En los ajustes</span><b>Apps</b><span>una página nueva con las opciones de las apps. Mensajes por día: 5 por defecto, hasta 15.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-2-diario">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>El diario se vuelve un scrapbook</h3>
+      <p class="lead">El Diario del Jugador ahora puede mostrar fan arts de los vecinos, dibujadas por artistas independientes que dieron su permiso.</p>
+    </div>
+    <ul class="points">
+      <li>Cuando una entrada habla de un vecino, uno de sus dibujos aparece pegado al lado como una polaroid, con el nombre del artista. Cada dibujo se pega una sola vez y se queda ahí para siempre.</li>
+      <li>Haz clic en el dibujo para verlo grande, con el enlace al portafolio del artista.</li>
+      <li><b>Álbum:</b> una pestaña al pie del diario con todos los dibujos, por vecino, con siluetas de los que todavía no encontraste y los créditos de cada artista.</li>
+      <li><b>Portada de la estación:</b> el diario abre cerrado, y la portada, con el arte de un artista, gira hasta la página de título que le da el crédito.</li>
+      <li><b>Exportar PDF:</b> todo el diario, con portada, páginas y créditos, se vuelve un PDF en la carpeta del mod, con los enlaces de los artistas clicables.</li>
+      <li>Las páginas del diario ahora están numeradas.</li>
+      <li>Los dibujos son de sus artistas y no se pueden usar fuera de AliveNpcs.</li>
+    </ul>
+    <div class="option"><span class="label">En los ajustes</span><b>Scrapbook del diario</b><span>en Chismes y Noticias. Puedes desactivarlo, y también la <b>Animación de apertura del diario</b>.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-2-fofoca">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Chismes sobre el pueblo, no solo sobre ti</h3>
+      <p class="lead">El chisme de la noche ya no tiene que ser sobre ti.</p>
+    </div>
+    <ul class="points">
+      <li><b>Equilibrado</b> (el nuevo valor por defecto): el pueblo chismea primero sobre los vecinos, con lo que hicieron entre ellos y lo que te contaron unos de otros. Solo te vuelves el tema cuando haces algo fuera de lo común.</li>
+      <li><b>Solo aldeanos:</b> el chisme siempre es sobre los vecinos, y ellos se encuentran un poco más durante el día.</li>
+      <li><b>Normal:</b> el chisme sale de tu día, como antes.</li>
+      <li>Tu diario no cambia: sigue siendo sobre tu día.</li>
+    </ul>
+    <div class="option"><span class="label">En los ajustes</span><b>Chismes sobre ti</b><span>en Chismes y Noticias.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-2-regar">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Mojar a un vecino con la regadera</h3>
+    </div>
+    <ul class="points">
+      <li>Échale agua a un vecino y vendrá a preguntarte por qué. Fuera del verano queda mojado y molesto, y en invierno el agua está helada. En verano, según cómo sea, hasta puede disfrutarlo.</li>
+      <li>Quien solo miró lo encuentra gracioso y lo recuerda. También vale con la regadera cargada, en todas las casillas que moja.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-2-gemini">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>¿Gemini sobrecargado? Vuelve a intentarlo solo</h3>
+    </div>
+    <ul class="points">
+      <li>Cuando Gemini dice que está sobrecargado, AliveNpcs vuelve a enviar el pedido al instante, hasta 5 veces. Ya no tienes que volver a hacer clic en el vecino.</li>
+      <li>Mientras tanto, la ventana muestra en qué intento va, por ejemplo 2/5.</li>
+    </ul>
+  </section>
+</section>
+
+<!-- 1.7.1 -->
+<section class="patch" id="v1-7-1">
+  <header class="patch-head"><span class="version">1.7.1</span><h2>El móvil de AliveNpcs</h2><span class="patch-date">7 oct 2026</span></header>
+  <p class="lead">Un móvil en tu bolsillo, fotos en el Mensajero, cuatro apps nuevas en la computadora y varias correcciones.</p>
+
+  <section class="feature" id="v1-7-1-celular">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>El móvil</h3>
+      <p class="lead">Pulsa <b>P</b> para sacar el móvil en la esquina de la pantalla, con los colores del estilo de tu PC. Por ahora, su app es el Mensajero.</p>
+    </div>
+    <figure class="shot">
+      <img src="assets/prints/1.7/celular-notificacao.webp" width="1400" height="893" loading="lazy" alt="El móvil en la esquina de la pantalla con una notificación de Pam en el Mensajero.">
+      <figcaption>Pam respondió: el móvil sube en la esquina con el mensaje, sin pausar el juego.</figcaption>
+    </figure>
+    <ul class="points">
+      <li>Tres tamaños: en la esquina, más grande o del alto de la pantalla. Usa el + y el − del costado del móvil.</li>
+      <li><b>Notificaciones:</b> cuando un vecino responde, o te escribe primero, el móvil sube con el mensaje y queda con una marca roja hasta que lo leas.</li>
+      <li><b>Te escriben primero:</b> de vez en cuando llega una charla graciosa, una pregunta al azar, un comentario sobre un chisme o un coqueteo (solo de tu pareja o de alguien soltero que te tiene cariño). Solo amigos con 2 corazones o más, y nadie dos veces en tres días.</li>
+      <li><b>Escribirle a alguien que está a tu lado:</b> se da cuenta y reacciona. Y los vecinos de alrededor te ven pegado al móvil y pueden venir a burlarse.</li>
+    </ul>
+    <div class="option"><span class="label">En los ajustes</span><b>Mensajes de aldeanos para ti por semana</b><span>3 por defecto, de 0 a 10. Cada uno es un pedido a la IA.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-1-fotos">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Fotos en el Mensajero</h3>
+    </div>
+    <ul class="points">
+      <li>Pregunta por alguien (“¿dónde está Pam?”, “mándame una foto de Pam”) y el vecino te manda una foto del lugar donde está, dibujada del mapa real, con todos los que estén ahí.</li>
+      <li>¿Pediste una foto sin nombrar a nadie? Llega una selfie, como una publicación de Pelicangram.</li>
+      <li>La IA sabe qué hay en la foto, así que la respuesta encaja con ella.</li>
+      <li>Las fotos se guardan en la carpeta del mod, nunca en tu partida.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-1-apps">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Cuatro apps nuevas en la computadora</h3>
+    </div>
+    <div class="apps">
+      <div><b>Concierto de la Banda</b><span>Un juego de ritmo en el escenario del Saloon, con Sam, Sebastian y Abigail tocando y el público aplaudiendo o abucheando.</span></div>
+      <div><b>Solitario Junimo</b><span>El solitario clásico, con los vecinos en las cartas. La partida sigue donde la dejaste.</span></div>
+      <div><b>Museo de Gunther</b><span>Todos los artefactos y minerales del museo: lo que ya donaste, lo que falta y dónde suele aparecer.</span></div>
+      <div><b>SVpaint</b><span>El viejo Paint con los colores del valle, con galería de dibujos. Reemplaza al Estudio de Leah.</span></div>
+    </div>
+  </section>
+
+  <section class="feature" id="v1-7-1-favores">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Favores</h3>
+    </div>
+    <ul class="points">
+      <li>Los favores de objetos ahora aparecen en el menú radial para entregarlos. Antes, cuando la IA escribía el pedido un poco distinto, desaparecía sin que pudieras entregarlo. Los favores que ya están en tu partida también se arreglaron.</li>
+      <li>Entregar el objeto da 150 de amistad, como una misión de entrega del juego, y el vecino lo recuerda durante una semana.</li>
+      <li>Los vecinos ahora solo piden objetos.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-1-correcoes">
+    <div class="feature-head">
+      <span class="tag fix">Correcciones</span>
+      <h3>Correcciones y ajustes</h3>
+    </div>
+    <ul class="points">
+      <li>Se corrigió una caída de FPS causada por Seen and Heard, que notaban quienes juegan con muchos mods.</li>
+      <li>Algunas frases que aparecían en portugués en cualquier idioma ahora están traducidas.</li>
+      <li>El texto en chino y japonés ahora cambia de línea bien en el diario, los arcos y los menús de pergamino.</li>
+      <li>Una frase de la IA con comillas en medio ya no se corta.</li>
+      <li>Después del beso, tu cónyuge se levanta al mismo tiempo que tú.</li>
+      <li>Más vecinos tienen su propia pose de pesca.</li>
+      <li>La pestaña NPCs y el diario del vecino ahora están traducidos a todos los idiomas del mod.</li>
+      <li>Los modelos GPT-5 y o1, o3 y o4 de OpenAI ahora funcionan. Cuando un servidor rechaza algún parámetro, AliveNpcs ajusta el pedido solo.</li>
+    </ul>
+  </section>
+</section>
+
+<!-- 1.7.0 -->
+<section class="patch" id="v1-7-0">
+  <header class="patch-head"><span class="version">1.7.0</span><h2>Seen and Heard</h2><span class="patch-date">6 oct 2026</span></header>
+  <p class="lead">Todo lo que cambió en AliveNpcs desde la 1.6, explicado sin tecnicismos. Primero el resumen; después cada novedad con más detalle.</p>
+
 
 <nav class="summary" aria-label="Resumen">
   <a class="tile" href="#seen-and-heard"><strong>Seen and Heard</strong><span>Los vecinos notan lo que haces cerca de ellos, sienten algo y a veces vienen a hablarte en el momento.</span></a>
@@ -506,4 +692,5 @@
     <li>El pack oficial Pelican Town Mayor se actualizó a la 1.7.0.</li>
     <li>Para jugar en multijugador, instala también el <a href="https://www.nexusmods.com/stardewvalley/mods/50946">mod multijugador de AliveNpcs</a>.</li>
   </ul>
+</section>
 </section>

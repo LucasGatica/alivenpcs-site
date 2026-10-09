@@ -1,9 +1,195 @@
 <header class="top">
-  <div class="eyebrow"><span class="version">1.7.0</span><span>“Seen and Heard”</span><span>lançada · 6 out 2026</span></div>
+  <div class="eyebrow"><span class="version">1.7</span><span>“Seen and Heard”</span><span>1.7.0 – 1.7.2</span><span>desde 6 out 2026</span></div>
   <h1>Os moradores agora veem o que você faz</h1>
-  <p class="lead">Tudo que mudou no AliveNpcs desde a 1.6, explicado sem tecniquês. Primeiro o resumo; depois cada novidade com mais detalhe.</p>
+  <p class="lead">A 1.7.0 trouxe o Seen and Heard e foi a maior atualização do AliveNpcs até agora. A 1.7.1 colocou um celular no seu bolso, com fotos no Mensageiro e mais apps no computador. A 1.7.2, “Keep in Touch”, ainda está em desenvolvimento.</p>
   <p class="credit"><b>Agradecimento especial:</b> esta atualização e o sistema Seen and Heard receberam uma ajuda enorme do meu amigo <b>Xniffer</b>. Foi dele a ideia por trás dos gatilhos, que dão aos moradores mais agência no mundo, e foi ele quem desenvolveu o protótipo inicial de percepção dos NPCs em que eu me baseei pra construir esta versão.</p>
 </header>
+
+<nav class="summary" aria-label="Versões da linha 1.7">
+  <a class="tile" href="#v1-7-2"><strong>1.7.2 · Keep in Touch</strong><span>Em breve: mais apps no celular, um Mensageiro mais vivo, o diário com fan arts e o Gemini tentando de novo sozinho.</span></a>
+  <a class="tile" href="#v1-7-1"><strong>1.7.1 · O celular</strong><span>O celular do AliveNpcs, fotos no Mensageiro, quatro apps novos no computador e correções.</span></a>
+  <a class="tile" href="#v1-7-0"><strong>1.7.0 · Seen and Heard</strong><span>Os moradores veem o que você faz, o computador vira PC, telas novas e 7 festivais com IA.</span></a>
+</nav>
+
+<!-- 1.7.2 -->
+<section class="patch" id="v1-7-2">
+  <header class="patch-head"><span class="version">1.7.2</span><h2>Keep in Touch</h2><span class="patch-date">em desenvolvimento</span></header>
+  <p class="wip"><b>Ainda não saiu:</b> a 1.7.2 está em desenvolvimento, e o que está aqui pode mudar até o lançamento.</p>
+  <p class="lead">Uma atualização de meio de temporada, cheia de novidades e correções. O celular ganha mais apps, o Mensageiro fica mais vivo, o diário vira um scrapbook com fan arts dos moradores feitas por artistas independentes, e o AliveNpcs tenta de novo sozinho quando o Gemini está sobrecarregado.</p>
+
+  <section class="feature" id="v1-7-2-celular">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Mais apps no celular</h3>
+    </div>
+    <figure class="shot" style="max-width:300px">
+      <img src="assets/prints/1.7/celular-tela-inicial.webp" width="642" height="1328" loading="lazy" alt="A tela inicial do celular com a hora, a data e os apps Junimogotchi, Mais, Mensageiro e Configurações.">
+      <figcaption>A tela inicial do celular.</figcaption>
+    </figure>
+    <ul class="points">
+      <li><b>Configurações</b>, <b>Junimogotchi</b> e <b>Mais</b> agora também estão no celular, cada um com um layout feito pra tela dele.</li>
+      <li><b>Pomodoro</b> (só no celular): escolha os minutos de foco e de pausa, aperte <b>Começar foco</b> e guarde o celular. Ele conta o tempo de verdade, mesmo com o jogo pausado, e toca quando acaba.</li>
+      <li><b>Tarefas</b> (só no celular): a sua lista de afazeres, guardada por save. Marque o que já fez e use <b>Limpar concluídas</b> pra tirar da lista.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-2-mensageiro">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Um Mensageiro mais vivo</h3>
+    </div>
+    <ul class="points">
+      <li><b>Selfies:</b> quem te escreve primeiro pode mandar uma selfie de onde está, comentando o lugar.</li>
+      <li><b>Parece que estão digitando:</b> depois que a IA responde, o morador fica “digitando” mais um pouco, e o texto aparece aos poucos.</li>
+      <li><b>Aniversários:</b> no aniversário de alguém, a conversa vai pro topo com um bolo, e a resposta daquele dia é especial. Ele reage a você ter lembrado, ou ter esquecido.</li>
+      <li><b>Depois da 1h da manhã:</b> o morador repara na hora e, dependendo do jeito dele, pode responder com sono, preocupado ou irritado. Dá até pra perder um pouco de amizade.</li>
+      <li><b>Nem todo mundo tem celular:</b> Linus, Krobus, o Mago, Leo, Passarinha, Vicente e Jas aparecem apagados, com o motivo. O Vicente, por exemplo, está de castigo por tempo indeterminado.</li>
+      <li>A lista ganhou duas abas: <b>Contatos</b>, com todo mundo, e <b>Conversas</b>, só com quem você já falou.</li>
+    </ul>
+    <div class="option"><span class="label">Nas configurações</span><b>Apps</b><span>uma página nova com as opções dos apps. Mensagens por dia: 5 por padrão, até 15.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-2-diario">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>O diário vira um scrapbook</h3>
+      <p class="lead">O Diário do Jogador agora pode mostrar fan arts dos moradores, feitas por artistas independentes que deram permissão pra isso.</p>
+    </div>
+    <ul class="points">
+      <li>Quando uma entrada fala de um morador, uma arte dele aparece colada do lado, como uma polaroid, com o nome de quem desenhou. Cada arte é colada uma vez só e fica lá pra sempre.</li>
+      <li>Clique na arte pra ver grande, com o link do portfólio do artista.</li>
+      <li><b>Álbum:</b> uma aba no pé do diário com todas as artes, separadas por morador, com silhuetas das que você ainda não achou e os créditos de cada artista.</li>
+      <li><b>Capa da estação:</b> o diário abre fechado, e a capa, com a arte de um artista, vira até a folha de rosto com o crédito.</li>
+      <li><b>Exportar PDF:</b> o diário inteiro, com capa, páginas e créditos, vira um PDF na pasta do mod, com os links dos artistas clicáveis.</li>
+      <li>As páginas agora são numeradas.</li>
+      <li>As artes são dos artistas e não podem ser usadas fora do AliveNpcs.</li>
+    </ul>
+    <div class="option"><span class="label">Nas configurações</span><b>Scrapbook do diário</b><span>em Fofocas e Notícias. Dá pra desligar, e também a <b>Animação de abertura do diário</b>.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-2-fofoca">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Fofoca sobre a vila, não só sobre você</h3>
+      <p class="lead">A fofoca da noite não precisa mais ser sobre você.</p>
+    </div>
+    <ul class="points">
+      <li><b>Equilibrado</b> (o novo padrão): a vila fofoca primeiro sobre os moradores, com o que eles fizeram entre si e o que te contaram uns dos outros. Você só vira o assunto quando faz algo fora do comum.</li>
+      <li><b>Só aldeões:</b> a fofoca é sempre sobre os moradores, e eles se encontram um pouco mais durante o dia.</li>
+      <li><b>Normal:</b> a fofoca vem do seu dia, como antes.</li>
+      <li>O seu diário não muda: continua sendo sobre o seu dia.</li>
+    </ul>
+    <div class="option"><span class="label">Nas configurações</span><b>Fofocas sobre você</b><span>em Fofocas e Notícias.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-2-regar">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Molhar um morador com o regador</h3>
+    </div>
+    <ul class="points">
+      <li>Jogue água num morador e ele vem perguntar por quê. Fora do verão ele fica molhado e irritado, e no inverno a água está gelada. No verão, dependendo do jeito dele, pode até gostar.</li>
+      <li>Quem só viu acha graça e lembra. Vale também pro regador carregado, em todos os tiles que ele molha.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-2-gemini">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>Gemini sobrecarregado? Ele tenta de novo sozinho</h3>
+    </div>
+    <ul class="points">
+      <li>Quando o Gemini diz que está sobrecarregado, o AliveNpcs manda o pedido de novo na hora, até 5 vezes. Você não precisa mais clicar no morador de novo.</li>
+      <li>Enquanto isso, a janela mostra em qual tentativa está, por exemplo 2/5.</li>
+    </ul>
+  </section>
+</section>
+
+<!-- 1.7.1 -->
+<section class="patch" id="v1-7-1">
+  <header class="patch-head"><span class="version">1.7.1</span><h2>O celular do AliveNpcs</h2><span class="patch-date">7 out 2026</span></header>
+  <p class="lead">Um celular no seu bolso, fotos no Mensageiro, quatro apps novos no computador e várias correções.</p>
+
+  <section class="feature" id="v1-7-1-celular">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>O celular</h3>
+      <p class="lead">Aperte <b>P</b> pra tirar o celular no canto da tela, nas cores do visual do PC. Por enquanto, o app dele é o Mensageiro.</p>
+    </div>
+    <figure class="shot">
+      <img src="assets/prints/1.7/celular-notificacao.webp" width="1400" height="893" loading="lazy" alt="O celular no canto da tela com uma notificação da Pam no Mensageiro.">
+      <figcaption>A Pam respondeu: o celular sobe no canto com a mensagem, sem pausar o jogo.</figcaption>
+    </figure>
+    <ul class="points">
+      <li>Três tamanhos: no canto, maior ou da altura da tela. Use + e − na lateral do celular.</li>
+      <li><b>Notificações:</b> quando alguém responde, ou te escreve primeiro, o celular sobe com a mensagem e fica com um selo vermelho até você ler.</li>
+      <li><b>Eles te escrevem primeiro:</b> de vez em quando chega um papo engraçado, uma pergunta aleatória, um comentário sobre uma fofoca ou um flerte (só do seu par ou de alguém solteiro que gosta de você). Só amigos com 2 corações ou mais, e ninguém duas vezes em três dias.</li>
+      <li><b>Mensagem pra quem está do seu lado:</b> ele percebe e reage. E quem está por perto vê você grudado no celular e pode vir te zoar.</li>
+    </ul>
+    <div class="option"><span class="label">Nas configurações</span><b>Mensagens dos aldeões para você por semana</b><span>3 por padrão, de 0 a 10. Cada uma é um pedido pra IA.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-1-fotos">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Fotos no Mensageiro</h3>
+    </div>
+    <ul class="points">
+      <li>Pergunte por alguém (“cadê a Pam?”, “manda uma foto da Pam”) e o morador manda uma foto do lugar onde está, desenhada do mapa de verdade, com quem estiver lá.</li>
+      <li>Pediu foto sem citar ninguém? Vem uma selfie, no estilo de um post do Pelicangram.</li>
+      <li>A IA sabe o que tem na foto, então a resposta combina com ela.</li>
+      <li>As fotos ficam salvas na pasta do mod, nunca no seu save.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-1-apps">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Quatro apps novos no computador</h3>
+    </div>
+    <div class="apps">
+      <div><b>Show da Banda</b><span>Um jogo de ritmo no palco do Saloon, com Sam, Sebastian e Abigail tocando e a plateia vibrando ou vaiando.</span></div>
+      <div><b>Solitário Junimo</b><span>A paciência clássica, com os moradores nas cartas. O jogo continua de onde você parou.</span></div>
+      <div><b>Museu do Gunther</b><span>Todos os artefatos e minerais do museu, com o que você já doou, o que falta e onde costuma aparecer.</span></div>
+      <div><b>SVpaint</b><span>O velho Paint com as cores do vale, com galeria de desenhos. Substitui o Ateliê da Leah.</span></div>
+    </div>
+  </section>
+
+  <section class="feature" id="v1-7-1-favores">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>Favores</h3>
+    </div>
+    <ul class="points">
+      <li>Os favores de item agora aparecem no menu radial pra entregar. Antes, quando a IA escrevia o pedido um pouco diferente, ele sumia sem você conseguir entregar. Os favores que já estão no seu save também foram consertados.</li>
+      <li>Entregar o item rende 150 de amizade, como uma missão de entrega do jogo, e o morador lembra disso por uma semana.</li>
+      <li>Os moradores agora só pedem itens.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-1-correcoes">
+    <div class="feature-head">
+      <span class="tag fix">Correções</span>
+      <h3>Correções e ajustes</h3>
+    </div>
+    <ul class="points">
+      <li>Corrigida uma queda de FPS causada pelo Seen and Heard, que quem jogava com muitos mods sentia.</li>
+      <li>Algumas falas que apareciam em português em qualquer idioma agora são traduzidas.</li>
+      <li>Texto em chinês e japonês agora quebra a linha direito no diário, nos arcos e nos menus de pergaminho.</li>
+      <li>Uma fala da IA com aspas no meio não é mais cortada.</li>
+      <li>Depois do beijo, o cônjuge levanta junto com você.</li>
+      <li>Mais moradores ganharam pose de pesca própria.</li>
+      <li>A aba NPCs e o diário do aldeão agora estão traduzidos em todos os idiomas do mod.</li>
+      <li>Os modelos GPT-5 e o1, o3 e o4 da OpenAI agora funcionam. Quando um servidor recusa algum parâmetro, o AliveNpcs ajusta o pedido sozinho.</li>
+    </ul>
+  </section>
+</section>
+
+<!-- 1.7.0 -->
+<section class="patch" id="v1-7-0">
+  <header class="patch-head"><span class="version">1.7.0</span><h2>Seen and Heard</h2><span class="patch-date">6 out 2026</span></header>
+  <p class="lead">Tudo que mudou desde a 1.6, explicado sem tecniquês. Primeiro o resumo; depois cada novidade com mais detalhe.</p>
+
 
 <nav class="summary" aria-label="Resumo">
   <a class="tile" href="#seen-and-heard"><strong>Seen and Heard</strong><span>Os moradores percebem o que você faz perto deles, sentem alguma coisa e às vezes vêm falar na hora.</span></a>
@@ -506,4 +692,5 @@
     <li>O pack oficial Pelican Town Mayor foi atualizado pra 1.7.0.</li>
     <li>Pra jogar em multiplayer, instale também o <a href="https://www.nexusmods.com/stardewvalley/mods/50946">mod de multiplayer do AliveNpcs</a>.</li>
   </ul>
+</section>
 </section>

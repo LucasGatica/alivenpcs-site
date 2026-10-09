@@ -1,9 +1,195 @@
 <header class="top">
-  <div class="eyebrow"><span class="version">1.7.0</span><span>“Seen and Heard”</span><span>released · Oct 6, 2026</span></div>
+  <div class="eyebrow"><span class="version">1.7</span><span>“Seen and Heard”</span><span>1.7.0 – 1.7.2</span><span>since Oct 6, 2026</span></div>
   <h1>Villagers now see what you do</h1>
-  <p class="lead">Everything that changed in AliveNpcs since 1.6, explained without the jargon. The summary comes first, then each new feature in more detail.</p>
+  <p class="lead">1.7.0 brought Seen and Heard and was the biggest AliveNpcs update yet. 1.7.1 put a phone in your pocket, with photos on the Messenger and more apps on the computer. 1.7.2, “Keep in Touch”, is still in development.</p>
   <p class="credit"><b>Special thanks:</b> this update and the Seen and Heard system got a huge amount of help from my friend <b>Xniffer</b>. The idea behind the triggers, which give villagers more agency in the world, came from Xniffer, who also built the first prototype of NPC awareness that I based this version on.</p>
 </header>
+
+<nav class="summary" aria-label="Versions in the 1.7 line">
+  <a class="tile" href="#v1-7-2"><strong>1.7.2 · Keep in Touch</strong><span>Coming soon: more phone apps, a livelier Messenger, a diary with fan art and Gemini retrying on its own.</span></a>
+  <a class="tile" href="#v1-7-1"><strong>1.7.1 · The phone</strong><span>The AliveNpcs phone, photos on the Messenger, four new computer apps and fixes.</span></a>
+  <a class="tile" href="#v1-7-0"><strong>1.7.0 · Seen and Heard</strong><span>Villagers see what you do, the computer becomes a PC, new screens and 7 festivals with AI.</span></a>
+</nav>
+
+<!-- 1.7.2 -->
+<section class="patch" id="v1-7-2">
+  <header class="patch-head"><span class="version">1.7.2</span><h2>Keep in Touch</h2><span class="patch-date">in development</span></header>
+  <p class="wip"><b>Not out yet:</b> 1.7.2 is in development, and what's here may change before release.</p>
+  <p class="lead">A mid-season update packed with features and fixes. The phone gets more apps, the Messenger comes alive, the diary becomes a scrapbook with fan art of the villagers by independent artists, and AliveNpcs tries again on its own when Gemini is overloaded.</p>
+
+  <section class="feature" id="v1-7-2-celular">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>More apps on the phone</h3>
+    </div>
+    <figure class="shot" style="max-width:300px">
+      <img src="assets/prints/1.7/celular-tela-inicial.webp" width="642" height="1328" loading="lazy" alt="The phone's home screen with the time, the date and the Junimogotchi, More, Messenger and Settings apps.">
+      <figcaption>The phone's home screen.</figcaption>
+    </figure>
+    <ul class="points">
+      <li><b>Settings</b>, <b>Junimogotchi</b> and <b>More</b> are on the phone too, each with a layout made for its screen.</li>
+      <li><b>Pomodoro</b> (phone only): pick your focus and break minutes, press <b>Start focus</b> and put the phone away. It counts real time, even with the game paused, and rings when the time is up.</li>
+      <li><b>To-do</b> (phone only): your own to-do list, kept per save. Tick off what you've done and use <b>Clear done tasks</b> to sweep it away.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-2-mensageiro">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>A livelier Messenger</h3>
+    </div>
+    <ul class="points">
+      <li><b>Selfies:</b> a villager who texts you first can send a selfie from wherever they are, with a comment on the place.</li>
+      <li><b>They really seem to type:</b> after the AI answers, the villager keeps “typing” a moment longer, and the text appears bit by bit.</li>
+      <li><b>Birthdays:</b> on a villager's birthday their chat moves to the top with a cake, and that day's reply is special. They react to you remembering, or forgetting.</li>
+      <li><b>After 1 am:</b> the villager notices the hour and, depending on who they are, may answer sleepy, worried or annoyed. You may even lose some friendship.</li>
+      <li><b>Not everyone has a phone:</b> Linus, Krobus, the Wizard, Leo, Birdie, Vincent and Jas show greyed out, with the reason why. Vincent, for one, is grounded indefinitely.</li>
+      <li>The list has two tabs: <b>Contacts</b>, with everyone, and <b>Chats</b>, with only the villagers you've already texted.</li>
+    </ul>
+    <div class="option"><span class="label">In the settings</span><b>Apps</b><span>a new page with the apps' options. Messages per day: 5 by default, up to 15.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-2-diario">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>The diary becomes a scrapbook</h3>
+      <p class="lead">The Player Diary can now show fan art of the villagers, drawn by independent artists who gave permission for it.</p>
+    </div>
+    <ul class="points">
+      <li>When an entry mentions a villager, one of their pictures is taped beside it like a polaroid, with the artist's name. Each picture is pasted only once and stays there for good.</li>
+      <li>Click a picture to see it large, with a link to the artist's portfolio.</li>
+      <li><b>Album:</b> a tab at the foot of the diary with every picture, by villager, with silhouettes for the ones you haven't found yet and credits for every artist.</li>
+      <li><b>Seasonal cover:</b> the diary opens closed, and its cover, with an artist's art, turns to a title page that credits them.</li>
+      <li><b>Export PDF:</b> the whole diary, with cover, pages and credits, becomes a PDF in the mod's folder, with clickable links to the artists.</li>
+      <li>Diary pages are now numbered.</li>
+      <li>The pictures belong to their artists and may not be used outside AliveNpcs.</li>
+    </ul>
+    <div class="option"><span class="label">In the settings</span><b>Diary scrapbook</b><span>under Gossip &amp; News. You can turn it off, and the <b>Diary opening animation</b> too.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-2-fofoca">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Gossip about the villagers, not just you</h3>
+      <p class="lead">The nightly gossip no longer has to be about you.</p>
+    </div>
+    <ul class="points">
+      <li><b>Balanced</b> (the new default): the village gossips about the villagers first, using what they did among themselves and what they told you about each other. You only become the talk of the town when you do something out of the ordinary.</li>
+      <li><b>Villagers only:</b> the gossip is always about the villagers, and they meet each other a little more often each day.</li>
+      <li><b>Normal:</b> the gossip comes from your day, as before.</li>
+      <li>Your diary doesn't change: it's still about your own day.</li>
+    </ul>
+    <div class="option"><span class="label">In the settings</span><b>Gossip About You</b><span>under Gossip &amp; News.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-2-regar">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Watering a villager</h3>
+    </div>
+    <ul class="points">
+      <li>Pour your watering can over a villager and they come over to ask why. Out of summer they're wet and annoyed, and in winter the water is freezing. In summer, depending on who they are, they may even enjoy it.</li>
+      <li>Villagers who only watched find it funny and remember it. It counts for a charged watering can too, on every tile it waters.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-2-gemini">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Gemini overloaded? It tries again on its own</h3>
+    </div>
+    <ul class="points">
+      <li>When Gemini says it's overloaded, AliveNpcs sends the request again right away, up to 5 times. You no longer have to click the villager again.</li>
+      <li>Meanwhile, the window shows which try it's on, for example 2/5.</li>
+    </ul>
+  </section>
+</section>
+
+<!-- 1.7.1 -->
+<section class="patch" id="v1-7-1">
+  <header class="patch-head"><span class="version">1.7.1</span><h2>The AliveNpcs phone</h2><span class="patch-date">Oct 7, 2026</span></header>
+  <p class="lead">A phone in your pocket, photos on the Messenger, four new computer apps and a round of fixes.</p>
+
+  <section class="feature" id="v1-7-1-celular">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>The phone</h3>
+      <p class="lead">Press <b>P</b> to take out a phone in the corner of the screen, in the colours of your PC look. For now, its app is the Messenger.</p>
+    </div>
+    <figure class="shot">
+      <img src="assets/prints/1.7/celular-notificacao.webp" width="1400" height="893" loading="lazy" alt="The phone in the corner of the screen with a Messenger notification from Pam.">
+      <figcaption>Pam answered: the phone slides up in the corner with the message, without pausing the game.</figcaption>
+    </figure>
+    <ul class="points">
+      <li>Three sizes: in the corner, bigger, or as tall as the screen. Use the + and − on the side of the phone.</li>
+      <li><b>Notifications:</b> when a villager answers, or texts you first, the phone slides up with the message and keeps a red badge until you read it.</li>
+      <li><b>They text you first:</b> now and then you get funny small talk, a random question, a comment on some gossip or a flirt (only from your partner or a single villager who's fond of you). Only friends with 2+ hearts, and nobody twice in three days.</li>
+      <li><b>Texting someone right next to you:</b> they notice and react. And the villagers around see you glued to your phone and may come over to tease you.</li>
+    </ul>
+    <div class="option"><span class="label">In the settings</span><b>Villager messages to you per week</b><span>3 by default, 0 to 10. Each one is one AI request.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-1-fotos">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Photos on the Messenger</h3>
+    </div>
+    <ul class="points">
+      <li>Ask about someone (“where's Pam?”, “send me a photo of Pam”) and the villager texts back a photo of the place they're in, drawn from the real map with everyone who's there.</li>
+      <li>Ask for a photo without naming anyone and you get a selfie, like a Pelicangram post.</li>
+      <li>The AI knows what's in the photo, so the reply matches it.</li>
+      <li>Photos are kept in the mod's folder, never in your save.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-1-apps">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Four new computer apps</h3>
+    </div>
+    <div class="apps">
+      <div><b>Band Show</b><span>A rhythm game on the saloon stage, with Sam, Sebastian and Abigail playing and the crowd cheering or booing.</span></div>
+      <div><b>Junimo Solitaire</b><span>Classic solitaire with the villagers on the cards. Your game is still there when you come back.</span></div>
+      <div><b>Gunther's Museum</b><span>Every artifact and mineral the museum takes: what you've donated, what's missing and where it usually turns up.</span></div>
+      <div><b>SVpaint</b><span>The good old Paint in the valley's colours, with a gallery of your pictures. It replaces Leah's Studio.</span></div>
+    </div>
+  </section>
+
+  <section class="feature" id="v1-7-1-favores">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Favors</h3>
+    </div>
+    <ul class="points">
+      <li>Item favors now show up on the interaction wheel to hand over. Before, a request the AI wrote slightly differently disappeared before you could deliver it. Favors already in your save are fixed too.</li>
+      <li>Handing over the item earns 150 friendship, like a delivery quest in the base game, and the villager remembers it for a week.</li>
+      <li>Villagers now only ask for items.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-1-correcoes">
+    <div class="feature-head">
+      <span class="tag fix">Fixes</span>
+      <h3>Fixes and polish</h3>
+    </div>
+    <ul class="points">
+      <li>Fixed an FPS drop caused by Seen and Heard, which players with large modlists noticed.</li>
+      <li>A few lines that showed up in Portuguese in every language are now translated.</li>
+      <li>Chinese and Japanese text now wraps properly in the diary, story arcs and parchment menus.</li>
+      <li>An AI line with quotes inside it no longer gets cut off.</li>
+      <li>After a kiss, your spouse stands back up at the same moment you do.</li>
+      <li>More villagers have a fishing pose of their own.</li>
+      <li>The NPCs tab and the villager diary are now translated into every language the mod supports.</li>
+      <li>GPT-5 and OpenAI's o1, o3 and o4 models now work. When a server refuses a parameter, AliveNpcs adjusts the request on its own.</li>
+    </ul>
+  </section>
+</section>
+
+<!-- 1.7.0 -->
+<section class="patch" id="v1-7-0">
+  <header class="patch-head"><span class="version">1.7.0</span><h2>Seen and Heard</h2><span class="patch-date">Oct 6, 2026</span></header>
+  <p class="lead">Everything that changed in AliveNpcs since 1.6, explained without the jargon. The summary comes first, then each new feature in more detail.</p>
+
 
 <nav class="summary" aria-label="Summary">
   <a class="tile" href="#seen-and-heard"><strong>Seen and Heard</strong><span>Villagers notice what you do near them, feel something about it and sometimes walk over to talk about it right away.</span></a>
@@ -506,4 +692,5 @@
     <li>The official Pelican Town Mayor pack was updated to 1.7.0.</li>
     <li>To play in multiplayer, also install the <a href="https://www.nexusmods.com/stardewvalley/mods/50946">AliveNpcs multiplayer mod</a>.</li>
   </ul>
+</section>
 </section>

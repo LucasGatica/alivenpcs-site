@@ -425,3 +425,9 @@ footer.site a { text-decoration: underline; text-underline-offset: 3px; }
 
 /* data-l-not="pt": shown in every language except Portuguese */
 :root[data-lang="pt"] [data-l-not="pt"] { display: none !important; }
+
+/* illustrators on the team page */
+.member.illustrator .avatar { background: var(--heart); color: var(--bg); }
+.member .member-link { font-family: var(--font-mono); font-size: 0.78rem; margin-top: 2px; overflow-wrap: anywhere; }
+.member .member-link a { color: var(--accent); }
+.team-soon a { color: var(--accent); }

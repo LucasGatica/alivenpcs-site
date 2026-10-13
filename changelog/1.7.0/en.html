@@ -1,15 +1,120 @@
 <header class="top">
-  <div class="eyebrow"><span class="version">1.7</span><span>“Seen and Heard”</span><span>1.7.0 – 1.7.2</span><span>Oct 6 – 9, 2026</span></div>
+  <div class="eyebrow"><span class="version">1.7</span><span>“Seen and Heard”</span><span>1.7.0 – 1.7.3</span><span>Oct 6 – 13, 2026</span></div>
   <h1>Villagers now see what you do</h1>
-  <p class="lead">1.7.0 brought Seen and Heard and was the biggest AliveNpcs update yet. 1.7.1 put a phone in your pocket, with photos on the Messenger and more apps on the computer. 1.7.2, “Keep in Touch”, filled the phone with apps, made the Messenger livelier and turned the diary into a scrapbook.</p>
+  <p class="lead">1.7.0 brought Seen and Heard and was the biggest AliveNpcs update yet. 1.7.1 put a phone in your pocket, with photos on the Messenger and more apps on the computer. 1.7.2, “Keep in Touch”, filled the phone with apps, made the Messenger livelier and turned the diary into a scrapbook. 1.7.3 brought your birthday and shorter, faster conversations.</p>
   <p class="credit"><b>Special thanks:</b> this update and the Seen and Heard system got a huge amount of help from my friend <b>Xniffer</b>. The idea behind the triggers, which give villagers more agency in the world, came from Xniffer, who also built the first prototype of NPC awareness that I based this version on.</p>
 </header>
 
 <nav class="summary" aria-label="Versions in the 1.7 line">
+  <a class="tile" href="#v1-7-3"><strong>1.7.3 · Your birthday</strong><span>Your birthday in the game, group talk from the wheel, shorter and faster AI, and fixes.</span></a>
   <a class="tile" href="#v1-7-2"><strong>1.7.2 · Keep in Touch</strong><span>More phone apps, a livelier Messenger, a diary with fan art and Gemini retrying on its own.</span></a>
   <a class="tile" href="#v1-7-1"><strong>1.7.1 · The phone</strong><span>The AliveNpcs phone, photos on the Messenger, four new computer apps and fixes.</span></a>
   <a class="tile" href="#v1-7-0"><strong>1.7.0 · Seen and Heard</strong><span>Villagers see what you do, the computer becomes a PC, new screens and 7 festivals with AI.</span></a>
 </nav>
+
+<!-- 1.7.3 -->
+<section class="patch" id="v1-7-3">
+  <header class="patch-head"><span class="version">1.7.3</span><h2>Your birthday</h2><span class="patch-date">Oct 13, 2026</span></header>
+  <p class="lead">Your birthday is now part of the game. 1.7.3 also makes AI conversations shorter and faster, adds group talk to the interaction wheel and fixes bugs from 1.7.2.</p>
+
+  <section class="feature" id="v1-7-3-aniversario">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Your birthday</h3>
+      <p class="lead">Villagers now know when your birthday is, and they remember it.</p>
+    </div>
+    <figure class="shot">
+      <img src="assets/prints/1.7/ficha-aniversario.webp" width="1400" height="882" loading="lazy" alt="The Character Sheet with the Birthday field, set to Spring 24, in the left column.">
+      <figcaption>The Birthday field on the Character Sheet.</figcaption>
+    </figure>
+    <ul class="points">
+      <li>On the Character Sheet (F7), pick the season and the day with the arrows. Festival days are skipped, including festivals from other mods.</li>
+      <li>On the day, one or two villagers who have your number wish you a happy birthday on the Messenger in the morning.</li>
+      <li>Close friends (6+ hearts, and your spouse always) mail you a birthday letter with a present.</li>
+      <li>These texts and letters are ready-made, so they cost no AI requests, and they never arrive twice if you reload the day.</li>
+      <li>Every reply you get that day, face to face or by text, knows it's your birthday. The villager reacts in their own way, and knows whether they already sent you a present or a text.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-3-conversa-dupla">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Group talk from the interaction wheel</h3>
+      <p class="lead">Now you can start a group conversation whenever you want, no luck needed.</p>
+    </div>
+    <div class="shots">
+      <figure class="shot">
+        <img src="assets/prints/1.7/menu-radial-conversa-dupla.webp" width="1400" height="882" loading="lazy" alt="George's interaction wheel with Talk and group talk with Evelyn, with Evelyn's face above the option.">
+        <figcaption>Evelyn is next to George, so the wheel offers a group talk.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/prints/1.7/conversa-dupla.webp" width="1400" height="882" loading="lazy" alt="Group conversation with Evelyn and George answering I LOVE YOU ALL.">
+        <figcaption>And both of them talk with you at once.</figcaption>
+      </figure>
+    </div>
+    <ul class="points">
+      <li>When another villager stands near the one you click, the wheel shows <b>Group talk with</b> their name, with their face above the option.</li>
+      <li>Pick it and the two of them talk with you in the group conversation window.</li>
+      <li>Each villager still joins at most one group conversation a day. When they can't, the option is greyed out and says why.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-3-ia">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Shorter, faster conversations</h3>
+      <p class="lead">Villagers now talk like people, not like they're writing an essay.</p>
+    </div>
+    <ul class="points">
+      <li>Replies come in one or two short sentences. Villagers also only ask you something when it fits, instead of asking all the time.</li>
+      <li>The conversation prompt is about half the size, and villagers keep their memory.</li>
+      <li>What stays the same during the day now comes first in the prompt, so Gemini and OpenAI-compatible APIs can reuse that start in your next conversations with the same villager.</li>
+    </ul>
+    <div class="option"><span class="label">In the settings</span><b>Max Dialogue Length</b><span>the default is now 275 characters (it was 500). If you already have a config, you keep your value; lower it to 275 to feel the difference.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-3-passeios">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Outings are generated much faster</h3>
+      <p class="lead">Inviting someone out is a lot snappier.</p>
+    </div>
+    <figure class="shot">
+      <img src="assets/prints/1.7/passeio-praia-harvey.webp" width="1400" height="882" loading="lazy" alt="A beach outing with Harvey, who says he is glad they left the clinic and that the sea air beats the smell of antiseptic.">
+      <figcaption>A beach outing with Harvey, who couldn't wait to get out of the clinic.</figcaption>
+    </figure>
+    <ul class="points">
+      <li>Before, an invite waited for one huge reply with the whole scene already written. Now the villager answers first, briefly, and the scene's lines are generated while you walk to the place.</li>
+      <li>If you get there before the lines are ready, the scene waits up to 30 seconds.</li>
+      <li>When your spouse invites you out, it works the same way: the scene is only written once you say yes.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-3-sled-valley">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Sled Valley in the More app</h3>
+    </div>
+    <ul class="points">
+      <li>A new card at the top of the More app links to Sled Valley, my new sled racing mod.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-3-correcoes">
+    <div class="feature-head">
+      <span class="tag fix">Fixes</span>
+      <h3>Fixes</h3>
+    </div>
+    <ul class="points">
+      <li><b>Skipping is no longer a snub:</b> pressing Skip in a conversation no longer makes villagers trust you less or see you as cold.</li>
+      <li><b>The clinic is not Harvey's bedroom:</b> walking into the clinic no longer makes Seen and Heard react as if you had barged into his bedroom.</li>
+      <li><b>Story arcs without item requests:</b> arcs now only ask you to talk to someone, since there was no way to hand the items over. Item objectives in arcs from older saves are removed on load, and an arc whose other objectives are done can be completed.</li>
+      <li><b>Nobody vanishes anymore:</b> a villager who came over to you in the middle of the day goes back to their routine normally, instead of disappearing on the way.</li>
+      <li><b>Heart events no longer freeze:</b> the reply menu no longer pops up over the lines of an event.</li>
+      <li><b>The computer on existing saves:</b> if you added AliveNpcs to a save that was already started and you still don't have the computer, Mayor Lewis mails it to you.</li>
+    </ul>
+  </section>
+</section>
 
 <!-- 1.7.2 -->
 <section class="patch" id="v1-7-2">
@@ -360,7 +465,7 @@
       <div><b>Mood Forecast</b><span>Each villager's mood for the day as a weather forecast, from rainbow to storm, with the reasons and a tip from the weatherman.</span></div>
       <div><b>Aquarium</b><span>The fish you've caught swim in an animated aquarium, and the ones you're missing show up as shadows. Each one has a card with its record, and where and when it bites.</span></div>
       <div><b>PC Look</b><span>Switches the computer's look between three styles, instantly.</span></div>
-      <div><b>My other mods</b><span>A showcase of the author's other mods, Beach Episode and Pelican Companions, with a link to Nexus.</span></div>
+      <div><b>My other mods</b><span>A showcase of my other mods, Beach Episode and Pelican Companions, with a link to Nexus.</span></div>
       <div><b>More (+)</b><span>Links to support AliveNpcs on Nexus, to the tutorial on making your own addon and to this site.</span></div>
     </div>
   </div>

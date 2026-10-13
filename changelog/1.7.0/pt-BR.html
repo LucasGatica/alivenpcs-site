@@ -1,15 +1,120 @@
 <header class="top">
-  <div class="eyebrow"><span class="version">1.7</span><span>“Seen and Heard”</span><span>1.7.0 – 1.7.2</span><span>6 a 9 out 2026</span></div>
+  <div class="eyebrow"><span class="version">1.7</span><span>“Seen and Heard”</span><span>1.7.0 – 1.7.3</span><span>6 a 13 out 2026</span></div>
   <h1>Os moradores agora veem o que você faz</h1>
-  <p class="lead">A 1.7.0 trouxe o Seen and Heard e foi a maior atualização do AliveNpcs até agora. A 1.7.1 colocou um celular no seu bolso, com fotos no Mensageiro e mais apps no computador. A 1.7.2, “Keep in Touch”, encheu o celular de apps, deixou o Mensageiro mais vivo e transformou o diário num scrapbook.</p>
+  <p class="lead">A 1.7.0 trouxe o Seen and Heard e foi a maior atualização do AliveNpcs até agora. A 1.7.1 colocou um celular no seu bolso, com fotos no Mensageiro e mais apps no computador. A 1.7.2, “Keep in Touch”, encheu o celular de apps, deixou o Mensageiro mais vivo e transformou o diário num scrapbook. A 1.7.3 trouxe o seu aniversário e conversas mais curtas e rápidas.</p>
   <p class="credit"><b>Agradecimento especial:</b> esta atualização e o sistema Seen and Heard receberam uma ajuda enorme do meu amigo <b>Xniffer</b>. Foi dele a ideia por trás dos gatilhos, que dão aos moradores mais agência no mundo, e foi ele quem desenvolveu o protótipo inicial de percepção dos NPCs em que eu me baseei pra construir esta versão.</p>
 </header>
 
 <nav class="summary" aria-label="Versões da linha 1.7">
+  <a class="tile" href="#v1-7-3"><strong>1.7.3 · O seu aniversário</strong><span>O seu aniversário no jogo, conversa dupla pelo menu radial, uma IA mais curta e rápida e correções.</span></a>
   <a class="tile" href="#v1-7-2"><strong>1.7.2 · Keep in Touch</strong><span>Mais apps no celular, um Mensageiro mais vivo, o diário com fan arts e o Gemini tentando de novo sozinho.</span></a>
   <a class="tile" href="#v1-7-1"><strong>1.7.1 · O celular</strong><span>O celular do AliveNpcs, fotos no Mensageiro, quatro apps novos no computador e correções.</span></a>
   <a class="tile" href="#v1-7-0"><strong>1.7.0 · Seen and Heard</strong><span>Os moradores veem o que você faz, o computador vira PC, telas novas e 7 festivais com IA.</span></a>
 </nav>
+
+<!-- 1.7.3 -->
+<section class="patch" id="v1-7-3">
+  <header class="patch-head"><span class="version">1.7.3</span><h2>O seu aniversário</h2><span class="patch-date">13 out 2026</span></header>
+  <p class="lead">Agora o seu aniversário faz parte do jogo. A 1.7.3 também deixa as conversas com a IA mais curtas e rápidas, traz a conversa dupla pelo menu radial e corrige bugs da 1.7.2.</p>
+
+  <section class="feature" id="v1-7-3-aniversario">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>O seu aniversário</h3>
+      <p class="lead">Os moradores agora sabem quando é o seu aniversário, e lembram dele.</p>
+    </div>
+    <figure class="shot">
+      <img src="assets/prints/1.7/ficha-aniversario.webp" width="1400" height="882" loading="lazy" alt="A Ficha de Personagem com o campo Aniversário, marcado como 24 de Primavera, na coluna da esquerda.">
+      <figcaption>O campo Aniversário na Ficha de Personagem.</figcaption>
+    </figure>
+    <ul class="points">
+      <li>Na Ficha de Personagem (F7), escolha a estação e o dia com as setas. Dias de festival ficam de fora, inclusive os de outros mods.</li>
+      <li>No dia, um ou dois moradores que têm o seu número te dão parabéns no Mensageiro pela manhã.</li>
+      <li>Amigos próximos (6 corações ou mais, e o cônjuge sempre) mandam uma carta de aniversário com presente.</li>
+      <li>Essas mensagens e cartas são prontas, então não gastam pedidos da IA, e nunca chegam duas vezes se você recarregar o dia.</li>
+      <li>Toda resposta nesse dia, cara a cara ou por mensagem, sabe que é o seu aniversário. O morador reage do jeito dele, e sabe se já te mandou presente ou mensagem.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-3-conversa-dupla">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Conversa dupla pelo menu radial</h3>
+      <p class="lead">Agora dá pra começar uma conversa em grupo quando você quiser, sem depender da sorte.</p>
+    </div>
+    <div class="shots">
+      <figure class="shot">
+        <img src="assets/prints/1.7/menu-radial-conversa-dupla.webp" width="1400" height="882" loading="lazy" alt="O menu radial do George com as opções Falar e Conversa dupla com Evelyn, com o rosto da Evelyn em cima da opção.">
+        <figcaption>A Evelyn está perto do George: o menu oferece a conversa dupla.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/prints/1.7/conversa-dupla.webp" width="1400" height="882" loading="lazy" alt="Conversa em grupo com a Evelyn e o George respondendo a EU AMO VOCES.">
+        <figcaption>E os dois conversam com você ao mesmo tempo.</figcaption>
+      </figure>
+    </div>
+    <ul class="points">
+      <li>Quando outro morador está perto de quem você clicou, o menu radial mostra <b>Conversa dupla com</b> o nome dele, com o rosto dele em cima da opção.</li>
+      <li>Escolha e os dois conversam com você na janela de conversa em grupo.</li>
+      <li>Cada morador ainda entra em no máximo uma conversa em grupo por dia. Quando não dá, a opção aparece apagada e avisa o motivo.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-3-ia">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>Conversas mais curtas e mais rápidas</h3>
+      <p class="lead">Os moradores agora falam como gente, não como quem escreve uma redação.</p>
+    </div>
+    <ul class="points">
+      <li>As respostas vêm em uma ou duas frases curtas. Os moradores também só fazem perguntas quando faz sentido, em vez de perguntar o tempo todo.</li>
+      <li>O prompt da conversa ficou com mais ou menos metade do tamanho, sem perder a memória dos moradores.</li>
+      <li>O que não muda durante o dia vem primeiro no prompt. Assim, o Gemini e as APIs compatíveis com OpenAI conseguem reaproveitar esse começo nas próximas conversas com o mesmo morador.</li>
+    </ul>
+    <div class="option"><span class="label">Nas configurações</span><b>Tamanho Máx. do Diálogo</b><span>o padrão agora é 275 caracteres (era 500). Quem já tem uma config continua com o valor que tinha; baixe pra 275 pra sentir a diferença.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-3-passeios">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>Passeios gerados bem mais rápido</h3>
+      <p class="lead">Chamar alguém pra sair ficou muito mais ágil.</p>
+    </div>
+    <figure class="shot">
+      <img src="assets/prints/1.7/passeio-praia-harvey.webp" width="1400" height="882" loading="lazy" alt="Passeio na praia com o Harvey: Fico feliz que tenhamos saído da clínica, Lucas. O ar do mar é muito mais revigorante do que o cheiro de antisséptico.">
+      <figcaption>Um passeio na praia com o Harvey, que estava louco pra sair da clínica.</figcaption>
+    </figure>
+    <ul class="points">
+      <li>Antes, o convite esperava uma resposta enorme, com a cena inteira já escrita. Agora o morador responde primeiro, curto, e as falas da cena são geradas enquanto você vai até o lugar.</li>
+      <li>Se você chegar antes das falas ficarem prontas, a cena espera até 30 segundos.</li>
+      <li>Quando o cônjuge te convida pra sair, funciona do mesmo jeito: a cena só é escrita depois que você aceita.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-3-sled-valley">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Sled Valley no app Mais</h3>
+    </div>
+    <ul class="points">
+      <li>Um card novo no topo do app Mais leva pro Sled Valley, o meu mod novo de corrida de trenó.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-3-correcoes">
+    <div class="feature-head">
+      <span class="tag fix">Correções</span>
+      <h3>Correções</h3>
+    </div>
+    <ul class="points">
+      <li><b>Pular não é mais desfeita:</b> apertar Pular numa conversa não deixa mais os moradores desconfiados ou frios com você.</li>
+      <li><b>A clínica não é o quarto do Harvey:</b> entrar na clínica não faz mais o Seen and Heard reagir como se você tivesse invadido o quarto dele.</li>
+      <li><b>Arcos sem pedidos de item:</b> os arcos agora só pedem pra você conversar com alguém, já que não tinha como entregar os itens. Os itens dos arcos de saves antigos são tirados ao carregar, e um arco com o resto já feito pode ser concluído.</li>
+      <li><b>Ninguém some mais:</b> um morador que veio falar com você no meio do dia volta pra rotina dele normalmente, em vez de sumir no caminho.</li>
+      <li><b>Eventos de coração não travam mais:</b> o menu de resposta não aparece mais em cima das falas de um evento.</li>
+      <li><b>O computador em saves antigos:</b> se você colocou o AliveNpcs num save que já tinha começado e ainda não tem o computador, o Prefeito Lewis manda ele pelo correio.</li>
+    </ul>
+  </section>
+</section>
 
 <!-- 1.7.2 -->
 <section class="patch" id="v1-7-2">
@@ -360,7 +465,7 @@
       <div><b>Previsão do Humor</b><span>O humor de cada morador no dia como previsão do tempo, de arco-íris a tempestade, com os motivos e uma dica do meteorologista.</span></div>
       <div><b>Aquário</b><span>Os peixes que você já pescou nadam num aquário animado, e os que faltam aparecem como sombra. Cada um tem ficha com recorde, onde e quando morde.</span></div>
       <div><b>Visual do PC</b><span>Troca o visual do computador entre três estilos, na hora.</span></div>
-      <div><b>Meus outros mods</b><span>Uma vitrine com os outros mods do autor, Beach Episode e Pelican Companions, com link pro Nexus.</span></div>
+      <div><b>Meus outros mods</b><span>Uma vitrine com os meus outros mods, Beach Episode e Pelican Companions, com link pro Nexus.</span></div>
       <div><b>Mais (+)</b><span>Links pra apoiar o AliveNpcs no Nexus, pro tutorial de como criar seu próprio addon e pra este site.</span></div>
     </div>
   </div>

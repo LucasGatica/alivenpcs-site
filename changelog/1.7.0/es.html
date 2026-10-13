@@ -1,15 +1,120 @@
 <header class="top">
-  <div class="eyebrow"><span class="version">1.7</span><span>“Seen and Heard”</span><span>1.7.0 – 1.7.2</span><span>del 6 al 9 oct 2026</span></div>
+  <div class="eyebrow"><span class="version">1.7</span><span>“Seen and Heard”</span><span>1.7.0 – 1.7.3</span><span>del 6 al 13 oct 2026</span></div>
   <h1>Los vecinos ahora ven lo que haces</h1>
-  <p class="lead">La 1.7.0 trajo Seen and Heard y fue la actualización más grande de AliveNpcs hasta ahora. La 1.7.1 te puso un móvil en el bolsillo, con fotos en el Mensajero y más apps en la computadora. La 1.7.2, “Keep in Touch”, llenó el móvil de apps, le dio vida al Mensajero y convirtió el diario en un scrapbook.</p>
+  <p class="lead">La 1.7.0 trajo Seen and Heard y fue la actualización más grande de AliveNpcs hasta ahora. La 1.7.1 te puso un móvil en el bolsillo, con fotos en el Mensajero y más apps en la computadora. La 1.7.2, “Keep in Touch”, llenó el móvil de apps, le dio vida al Mensajero y convirtió el diario en un scrapbook. La 1.7.3 trajo tu cumpleaños y conversaciones más cortas y rápidas.</p>
   <p class="credit"><b>Agradecimiento especial:</b> esta actualización y el sistema Seen and Heard recibieron muchísima ayuda de mi amigo <b>Xniffer</b>. Xniffer tuvo la idea de los disparadores, que dan a los vecinos más autonomía en el mundo, y desarrolló el primer prototipo de percepción de los NPC en el que me basé para construir esta versión.</p>
 </header>
 
 <nav class="summary" aria-label="Versiones de la línea 1.7">
+  <a class="tile" href="#v1-7-3"><strong>1.7.3 · Tu cumpleaños</strong><span>Tu cumpleaños en el juego, conversación en grupo desde el menú radial, una IA más corta y rápida y correcciones.</span></a>
   <a class="tile" href="#v1-7-2"><strong>1.7.2 · Keep in Touch</strong><span>Más apps en el móvil, un Mensajero más vivo, el diario con fan arts y Gemini reintentando solo.</span></a>
   <a class="tile" href="#v1-7-1"><strong>1.7.1 · El móvil</strong><span>El móvil de AliveNpcs, fotos en el Mensajero, cuatro apps nuevas en la computadora y correcciones.</span></a>
   <a class="tile" href="#v1-7-0"><strong>1.7.0 · Seen and Heard</strong><span>Los vecinos ven lo que haces, la computadora se vuelve un PC, pantallas nuevas y 7 festivales con IA.</span></a>
 </nav>
+
+<!-- 1.7.3 -->
+<section class="patch" id="v1-7-3">
+  <header class="patch-head"><span class="version">1.7.3</span><h2>Tu cumpleaños</h2><span class="patch-date">13 oct 2026</span></header>
+  <p class="lead">Tu cumpleaños ahora es parte del juego. La 1.7.3 también hace las conversaciones con la IA más cortas y rápidas, trae la conversación en grupo desde el menú radial y corrige errores de la 1.7.2.</p>
+
+  <section class="feature" id="v1-7-3-aniversario">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Tu cumpleaños</h3>
+      <p class="lead">Los vecinos ahora saben cuándo es tu cumpleaños, y lo recuerdan.</p>
+    </div>
+    <figure class="shot">
+      <img src="assets/prints/1.7/ficha-aniversario.webp" width="1400" height="882" loading="lazy" alt="La Ficha de Personaje con el campo de cumpleaños, marcado en el 24 de primavera, en la columna de la izquierda.">
+      <figcaption>El campo de cumpleaños en la Ficha de Personaje.</figcaption>
+    </figure>
+    <ul class="points">
+      <li>En la Ficha de Personaje (F7), elige la estación y el día de tu cumpleaños (<b>Birthday</b>) con las flechas. Los días de festival quedan fuera, también los de otros mods.</li>
+      <li>Ese día, uno o dos vecinos que tienen tu número te felicitan por el Mensajero por la mañana.</li>
+      <li>Los amigos cercanos (6 corazones o más, y tu cónyuge siempre) te mandan una carta de cumpleaños con un regalo.</li>
+      <li>Esos mensajes y cartas ya vienen escritos, así que no gastan pedidos a la IA, y nunca llegan dos veces si recargas el día.</li>
+      <li>Todas las respuestas de ese día, en persona o por mensaje, saben que es tu cumpleaños. El vecino reacciona a su manera, y sabe si ya te mandó un regalo o un mensaje.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-3-conversa-dupla">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Conversación en grupo desde el menú radial</h3>
+      <p class="lead">Ahora puedes empezar una conversación en grupo cuando quieras, sin depender de la suerte.</p>
+    </div>
+    <div class="shots">
+      <figure class="shot">
+        <img src="assets/prints/1.7/menu-radial-conversa-dupla.webp" width="1400" height="882" loading="lazy" alt="El menú radial de George con Hablar y la conversación en grupo con Evelyn, con la cara de Evelyn sobre la opción.">
+        <figcaption>Evelyn está cerca de George: el menú ofrece la conversación en grupo.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/prints/1.7/conversa-dupla.webp" width="1400" height="882" loading="lazy" alt="Conversación en grupo con Evelyn y George respondiendo a LOS QUIERO.">
+        <figcaption>Y los dos hablan contigo al mismo tiempo.</figcaption>
+      </figure>
+    </div>
+    <ul class="points">
+      <li>Cuando otro vecino está cerca del que tocaste, el menú radial muestra la opción de conversación en grupo (<b>Group talk with</b> y su nombre), con su cara encima.</li>
+      <li>Elígela y los dos hablan contigo en la ventana de conversación en grupo.</li>
+      <li>Cada vecino sigue entrando en una sola conversación en grupo por día como máximo. Cuando no puede, la opción aparece en gris y dice por qué.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-3-ia">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Conversaciones más cortas y más rápidas</h3>
+      <p class="lead">Los vecinos ahora hablan como personas, no como quien escribe una redacción.</p>
+    </div>
+    <ul class="points">
+      <li>Las respuestas llegan en una o dos frases cortas. Los vecinos además solo preguntan algo cuando tiene sentido, en vez de preguntar todo el tiempo.</li>
+      <li>El prompt de la conversación quedó más o menos a la mitad, sin que los vecinos pierdan la memoria.</li>
+      <li>Lo que no cambia durante el día ahora va primero en el prompt. Así, Gemini y las APIs compatibles con OpenAI pueden reutilizar ese comienzo en tus próximas conversaciones con el mismo vecino.</li>
+    </ul>
+    <div class="option"><span class="label">En los ajustes</span><b>Longitud Máx. Diálogo</b><span>el valor por defecto ahora es 275 caracteres (era 500). Si ya tienes una configuración, se queda con tu valor; bájalo a 275 para notar la diferencia.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-3-passeios">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Salidas generadas mucho más rápido</h3>
+      <p class="lead">Invitar a alguien a salir es mucho más ágil.</p>
+    </div>
+    <figure class="shot">
+      <img src="assets/prints/1.7/passeio-praia-harvey.webp" width="1400" height="882" loading="lazy" alt="Una salida a la playa con Harvey, que dice que se alegra de haber salido de la clínica y que el aire del mar es mejor que el olor a antiséptico.">
+      <figcaption>Una salida a la playa con Harvey, que tenía muchas ganas de salir de la clínica.</figcaption>
+    </figure>
+    <ul class="points">
+      <li>Antes, la invitación esperaba una respuesta enorme con toda la escena ya escrita. Ahora el vecino responde primero, corto, y las frases de la escena se generan mientras vas al lugar.</li>
+      <li>Si llegas antes de que estén listas, la escena espera hasta 30 segundos.</li>
+      <li>Cuando tu cónyuge te invita a salir, funciona igual: la escena solo se escribe cuando aceptas.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-3-sled-valley">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Sled Valley en la app Más</h3>
+    </div>
+    <ul class="points">
+      <li>Una tarjeta nueva arriba de la app Más lleva a Sled Valley, mi nuevo mod de carreras de trineo.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-3-correcoes">
+    <div class="feature-head">
+      <span class="tag fix">Correcciones</span>
+      <h3>Correcciones</h3>
+    </div>
+    <ul class="points">
+      <li><b>Saltar ya no es un desaire:</b> pulsar Saltar en una conversación ya no hace que los vecinos desconfíen de ti o te vean frío.</li>
+      <li><b>La clínica no es el cuarto de Harvey:</b> entrar a la clínica ya no hace que Seen and Heard reaccione como si hubieras invadido su cuarto.</li>
+      <li><b>Arcos sin pedidos de objetos:</b> los arcos ahora solo te piden hablar con alguien, ya que no había forma de entregar los objetos. Los objetos de los arcos de partidas antiguas se quitan al cargar, y un arco con lo demás ya hecho se puede concluir.</li>
+      <li><b>Ya nadie desaparece:</b> un vecino que vino a hablarte a mitad del día vuelve a su rutina normalmente, en vez de desaparecer por el camino.</li>
+      <li><b>Los eventos de corazones ya no se congelan:</b> el menú de respuesta ya no aparece encima de las frases de un evento.</li>
+      <li><b>La computadora en partidas antiguas:</b> si agregaste AliveNpcs a una partida que ya había empezado y todavía no tienes la computadora, el alcalde Lewis te la manda por correo.</li>
+    </ul>
+  </section>
+</section>
 
 <!-- 1.7.2 -->
 <section class="patch" id="v1-7-2">
@@ -360,7 +465,7 @@
       <div><b>Pronóstico del Humor</b><span>El humor de cada vecino en el día como un pronóstico del tiempo, del arcoíris a la tormenta, con los motivos y un consejo del meteorólogo.</span></div>
       <div><b>Acuario</b><span>Los peces que ya pescaste nadan en un acuario animado, y los que faltan aparecen como sombras. Cada uno tiene una ficha con su récord, dónde pica y cuándo.</span></div>
       <div><b>Estilo del PC</b><span>Cambia el aspecto de la computadora entre tres estilos, al instante.</span></div>
-      <div><b>Mis otros mods</b><span>Un escaparate con los otros mods del autor, Beach Episode y Pelican Companions, con enlace a Nexus.</span></div>
+      <div><b>Mis otros mods</b><span>Un escaparate con mis otros mods, Beach Episode y Pelican Companions, con enlace a Nexus.</span></div>
       <div><b>Más (+)</b><span>Enlaces para apoyar AliveNpcs en Nexus, al tutorial para crear tu propio addon y a este sitio.</span></div>
     </div>
   </div>

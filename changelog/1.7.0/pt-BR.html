@@ -1,16 +1,191 @@
 <header class="top">
-  <div class="eyebrow"><span class="version">1.7</span><span>“Seen and Heard”</span><span>1.7.0 – 1.7.3</span><span>6 a 13 out 2026</span></div>
+  <div class="eyebrow"><span class="version">1.7</span><span>“Seen and Heard”</span><span>1.7.0 – 1.7.4</span><span>6 a 21 out 2026</span></div>
   <h1>Os moradores agora veem o que você faz</h1>
-  <p class="lead">A 1.7.0 trouxe o Seen and Heard e foi a maior atualização do AliveNpcs até agora. A 1.7.1 colocou um celular no seu bolso, com fotos no Mensageiro e mais apps no computador. A 1.7.2, “Keep in Touch”, encheu o celular de apps, deixou o Mensageiro mais vivo e transformou o diário num scrapbook. A 1.7.3 trouxe o seu aniversário e conversas mais curtas e rápidas.</p>
+  <p class="lead">A 1.7.0 trouxe o Seen and Heard e foi a maior atualização do AliveNpcs até agora. A 1.7.1 colocou um celular no seu bolso, com fotos no Mensageiro e mais apps no computador. A 1.7.2, “Keep in Touch”, encheu o celular de apps, deixou o Mensageiro mais vivo e transformou o diário num scrapbook. A 1.7.3 trouxe o seu aniversário e conversas mais curtas e rápidas. A 1.7.4, “Tudo deixa marca”, deu consequência ao que os moradores veem e fez cenas, passeios e eventos deixarem memória.</p>
   <p class="credit"><b>Agradecimento especial:</b> esta atualização e o sistema Seen and Heard receberam uma ajuda enorme do meu amigo <b>Xniffer</b>. Foi dele a ideia por trás dos gatilhos, que dão aos moradores mais agência no mundo, e foi ele quem desenvolveu o protótipo inicial de percepção dos NPCs em que eu me baseei pra construir esta versão.</p>
 </header>
 
 <nav class="summary" aria-label="Versões da linha 1.7">
+  <a class="tile" href="#v1-7-4"><strong>1.7.4 · Tudo deixa marca</strong><span>Consequências no Seen and Heard, balões de fala, cenas e passeios que deixam memória, cartas depois de eventos e o Festival da Estrela Invernal com IA.</span></a>
   <a class="tile" href="#v1-7-3"><strong>1.7.3 · O seu aniversário</strong><span>O seu aniversário no jogo, conversa dupla pelo menu radial, uma IA mais curta e rápida e correções.</span></a>
   <a class="tile" href="#v1-7-2"><strong>1.7.2 · Keep in Touch</strong><span>Mais apps no celular, um Mensageiro mais vivo, o diário com fan arts e o Gemini tentando de novo sozinho.</span></a>
   <a class="tile" href="#v1-7-1"><strong>1.7.1 · O celular</strong><span>O celular do AliveNpcs, fotos no Mensageiro, quatro apps novos no computador e correções.</span></a>
   <a class="tile" href="#v1-7-0"><strong>1.7.0 · Seen and Heard</strong><span>Os moradores veem o que você faz, o computador vira PC, telas novas e 7 festivais com IA.</span></a>
 </nav>
+
+<!-- 1.7.4 -->
+<section class="patch" id="v1-7-4">
+  <header class="patch-head"><span class="version">1.7.4</span><h2>Tudo deixa marca</h2><span class="patch-date">21 out 2026</span></header>
+  <p class="lead">Uma atualização que melhora o que já existia, e traz mais um festival. Os moradores sabem mais do seu dia quando conversam, o que eles veem passa a ter consequência, e cenas, passeios e eventos deixam memória e rendem cartas.</p>
+
+  <section class="feature" id="v1-7-4-contexto">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>Os moradores sabem mais quando conversam</h3>
+      <p class="lead">Toda conversa agora sabe coisas que o jogo já tinha e a IA não via.</p>
+    </div>
+    <ul class="points">
+      <li>A previsão do tempo de amanhã, se você tem uma missão aberta que envolve o morador, há quantos dias vocês não conversam e o que ele estava fazendo quando você chegou (dormindo, lendo, sentado, atrás do balcão).</li>
+      <li>Dentro de casa, o clima vira “dentro de casa, lá fora está chovendo”, em vez de chuva na cabeça deles.</li>
+      <li>A conversa em grupo agora tem o mesmo contexto da conversa a dois: o humor do dia, o que cada um sente por você, as fofocas que cada um sabe, o que viram e ouviram, a sua Ficha de Personagem, a data completa e o que os dois são um do outro (“Sam e Sebastian são melhores amigos”).</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-consequencias">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>O Seen and Heard tem consequências</h3>
+      <p class="lead">O que os moradores sentem pelo que viram agora pode mudar o dia, a amizade e a próxima conversa.</p>
+    </div>
+    <ul class="points">
+      <li><b>Sentimentos mudam o humor do dia</b> (ligado): a partir do nível 2, uma bronca deixa o morador irritado com você pelo resto do dia, e carinho ou afeto deixam ele contente.</li>
+      <li><b>Sentimentos mudam a amizade</b> (desligado): quando o sentimento chega até você (dito numa abordagem, trazido numa conversa ou mandado por mensagem), ele vale pontos: −10, −25 e −50 nos três níveis de confronto, +10 e +25 pro carinho e o afeto, e +10 pra uma boa risada. Crianças nunca rendem pontos de romance.</li>
+      <li><b>Mensagem quando não conseguem te alcançar</b> (desligado): se o morador tem celular e não conseguiu chegar até você (você saiu do mapa, ou o momento passou), ele manda pelo Mensageiro o que ia dizer. Conta no limite semanal de mensagens dos moradores.</li>
+      <li><b>Cara fechada depois de uma bronca</b> (desligado): por até uma hora depois de uma bronca no nível mais forte, clicar no morador faz ele virar de costas, mostrar um balão de raiva e soltar uma frase curta, sem IA. Uma vez por morador por dia.</li>
+    </ul>
+    <div class="option"><span class="label">Nas configurações</span><b>Seen and Heard</b><span>cada consequência é uma opção separada, então quem preferir pode deixar as reações só de enfeite.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-4-baloes">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Balões de fala e nove coisas novas que eles percebem</h3>
+      <p class="lead">Pra coisas pequenas, o morador não precisa vir até você: ele reage com uma frase curta num balão em cima da cabeça.</p>
+    </div>
+    <ul class="points">
+      <li>A frase depende do que ele é pra você (cônjuge, namorado, amigo, criança ou qualquer um) e não usa a IA. O momento continua sendo lembrado e, se acumular, ele ainda vem falar com você.</li>
+      <li>Molhar alguém com o regador e quase acertar alguém com uma ferramenta ou o estilingue agora começam como balão.</li>
+      <li>Os moradores agora também percebem quando você encara eles de perto, fica no caminho, beija o cônjuge em público, nada perto deles, discute numa conversa ou flerta com alguém na frente do seu par.</li>
+      <li>E, dentro da casa deles, quando você senta nos móveis, usa a TV, as luminárias ou a lareira, ou mexe nas cômodas, nos bilhetes e nas cartas.</li>
+      <li>Pra quem faz content pack: todas essas situações podem ser disparadas com <code>alive_sh fire</code> e usadas em gatilhos com <code>On</code>, e o campo <code>Bubble</code> deixa um gatilho responder com um balão.</li>
+    </ul>
+    <div class="option"><span class="label">Nas configurações</span><b>Balões de fala para coisas pequenas</b><span>ligado por padrão.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-4-memoria">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>Cenas e passeios deixam memória</h3>
+      <p class="lead">O que você viveu com os moradores não some mais no fim do dia.</p>
+    </div>
+    <ul class="points">
+      <li>Quando você presencia uma cena, ou um morador vem até você no meio de uma, cada morador da cena guarda uma memória dela. O diário e a fofoca da noite sabem que você estava lá, e a vizinhança pode comentar por um tempo. Das 151 cenas que vêm com o mod, 88 deixam memória.</li>
+      <li>A primeira e a última fala do morador no passeio entram no histórico de conversa, então a próxima conversa lembra do passeio como lembra de qualquer papo.</li>
+      <li>A memória do passeio (o lugar, o clima, o tom e a fala que mais marcou) agora vem do que aconteceu de verdade na cena, e não do resumo escrito quando ele aceitou o convite. A fofoca da vila também.</li>
+      <li>Terminar um passeio agora dá pontos de amizade.</li>
+    </ul>
+    <div class="option"><span class="label">Nas configurações</span><b>Moradores Lembram das Cenas</b><span>ligado por padrão.</span></div>
+    <div class="option"><span class="label">Nas configurações</span><b>Amizade ao Concluir o Convite</b><span>10 pontos por padrão; 0 desliga.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-4-diarios">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>Diários que sabem o que aconteceu</h3>
+      <p class="lead">O seu diário para de inventar ou esquecer o que aconteceu, e o diário dos moradores mostra a vida deles.</p>
+    </div>
+    <ul class="points">
+      <li>A entrada da noite recebe os fatos do dia: a data, o clima, o festival, os aniversários, as cartas que você recebeu, os presentes que deu e os passeios.</li>
+      <li>As entradas também guardam o clima e o humor do dia, e a página mostra o clima ao lado da data.</li>
+      <li>O diário de cada morador ganha três capítulos quando tem o que mostrar: <b>Entre aldeões</b> (de quem ele é próximo ou com quem se estranha, e os momentos recentes juntos), <b>Como mudou</b> (os traços de personalidade que mudaram) e <b>No que acredita</b> (os boatos que ouviu e as opiniões mais fortes sobre os outros).</li>
+      <li>Crianças nunca recebem conteúdo romântico nessas páginas.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-cartas">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Cartas depois do que vocês viveram</h3>
+      <p class="lead">Os moradores agora te escrevem por causa do que aconteceu entre vocês.</p>
+    </div>
+    <ul class="points">
+      <li>Um morador te escreve quando termina um arco que você viveu, dois dias depois de um festival em que vocês conversaram, quando você dá um presente que ele ama no aniversário dele e depois de um passeio juntos.</li>
+      <li>Cada evento rende uma carta só, de um morador, e o intervalo entre cartas e o limite por dia continuam valendo.</li>
+      <li>As cartas também sabem a data, o humor do morador, como ele mudou, os favores em aberto e com quem ele tem passado o tempo.</li>
+      <li>Os marcos de coração que geram carta (3, 6, 8 e 10) e os dias até a carta de saudade (7) agora são opções.</li>
+    </ul>
+    <div class="option"><span class="label">Nas configurações</span><b>Cartas de eventos</b><span>ligado por padrão. Ao lado ficam <b>Cartas por marco de corações</b> e <b>Dias até a carta de saudade</b>.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-4-favores">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>Favores com mais peso</h3>
+      <p class="lead">Esquecer um favor agora pesa, e dar o que foi pedido sempre conta.</p>
+    </div>
+    <ul class="points">
+      <li>Quando um favor expira, o morador fica mais frio com você por três dias, mesmo num dia de bom humor. Ele comenta uma vez, não pede de novo e não é cruel. Depois disso o favor vira só uma lembrança, até sumir de vez em duas semanas.</li>
+      <li>Dar de presente o item que o morador pediu cumpre o favor, igual à opção <b>Entregar</b> do menu radial, e você ganha a mesma amizade.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-estrela">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>O Festival da Estrela Invernal com IA</h3>
+    </div>
+    <ul class="points">
+      <li>O festival de 25 de inverno se junta aos sete que já tinham diálogo com IA.</li>
+      <li>Os moradores falam da árvore, do banquete do Gus e do amigo secreto, sem entregar quem tirou quem, e a vila continua comentando o festival por dois dias.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-idiomas">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>O mod entende o que você digita em qualquer idioma</h3>
+    </div>
+    <ul class="points">
+      <li>Várias listas de palavras estavam só em inglês e português, direto no código: pedidos de desculpa, assuntos de conversa, sinais de drama, flerte e insultos, nomes de lugares e horários nos convites (“praia às 6”) e o diário de reserva quando a IA não responde. Agora elas estão nas traduções dos oito idiomas e valem todas juntas, então o que você digita é entendido em qualquer um deles, seja qual for o idioma do jogo.</li>
+      <li>Completei as traduções que faltavam em alemão, espanhol, francês, italiano, chinês e vietnamita, incluindo todo o aniversário, que aparecia em inglês nesses idiomas.</li>
+      <li>O cabeçalho do Jornal Semanal e vinte textos que só existiam em inglês (diagnóstico da IA, configurações rápidas e o aviso do hub) agora são traduzidos.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-gemini">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>Gemini 3.5 Flash-Lite como modelo padrão</h3>
+    </div>
+    <ul class="points">
+      <li>O modelo padrão agora é o <code>gemini-3.5-flash-lite</code> (antes era o 3.1).</li>
+      <li>Vale pra instalações novas e pra quem nunca mexeu no campo <b>Modelo Gemini</b>. Se você escreveu um modelo lá, ele continua.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-addons">
+    <div class="feature-head">
+      <span class="tag fix">Correções</span>
+      <h3>Addons voltam a funcionar</h3>
+      <p class="lead">Duas mudanças minhas por dentro do AliveNpcs tinham quebrado addons que dependem dele.</p>
+    </div>
+    <ul class="points">
+      <li><b>Mod de multiplayer:</b> desde a 1.7.3, o <a href="https://www.nexusmods.com/stardewvalley/mods/50946">mod de multiplayer do AliveNpcs</a> mostrava “Ambiguous match found” ao carregar, e o farmhand ficava sem a rede social, sem cartas e sem as opiniões dos moradores sobre ele.</li>
+      <li><b>AliveNpcs Economy:</b> desde a 1.7.2, o addon desligava as transações com o aviso “Economy layer DISABLED”.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-correcoes">
+    <div class="feature-head">
+      <span class="tag fix">Correções</span>
+      <h3>Correções</h3>
+    </div>
+    <ul class="points">
+      <li><b>Trocar de save não mistura mais os dados:</b> o que a IA terminava de gerar depois que você voltava ao título ou carregava outro save não é mais gravado no save errado. As mensagens de aniversário e a contraproposta de um convite também não passam mais de um save pro outro.</li>
+      <li><b>Quem estava preso no lugar agora vem falar com você:</b> o cônjuge dentro de casa, a Robin construindo, quem está no cinema e quem acabou de passar por um festival ou pelo casamento nunca vinham falar com você pelo que viram no Seen and Heard. Agora vêm, e depois voltam pro lugar onde estavam.</li>
+      <li><b>Sem caixa de diálogo vazia:</b> quando a IA responde num formato um pouco diferente do esperado, a fala aparece normalmente. Uma resposta sem fala nenhuma não abre mais uma caixa vazia nem fica no histórico como se o morador tivesse sido frio com você.</li>
+      <li><b>A fofoca liga e desliga na hora:</b> mudar a fofoca nas configurações rápidas funciona com o jogo aberto. Antes, desligar não fazia efeito e ligar exigia reiniciar.</li>
+      <li><b>Provedores lentos:</b> com uma LLM local ou outro provedor demorado, a análise da noite não é mais descartada no meio. O limite de tempo agora acompanha o <b>Timeout da LLM Customizada</b>.</li>
+      <li><b>As datas certas nas conversas:</b> os moradores não chamam mais qualquer coisa de “hoje mais cedo”. Só entra o que aconteceu nos últimos 7 dias, com quantos dias faz de verdade.</li>
+      <li><b>Um erro ao salvar não leva o resto junto:</b> se uma parte do mod falha ao salvar, as outras salvam mesmo assim.</li>
+      <li><b>Sem resposta duplicada:</b> cancelar uma resposta bem na hora em que a IA terminava não deixa mais uma entrada a mais no histórico quando você reenvia.</li>
+      <li><b>Arcos pedem só conversas:</b> a IA não sugere mais objetivos de entregar item, que o jogo descartava e que podiam fazer o arco inteiro ser recusado. Quando a história envolve um objeto, ele vira assunto de conversa, e todo objetivo vem com um assunto pra conversar.</li>
+      <li><b>Cenas em qualquer nível de amizade:</b> onze cenas que só apareciam com 0 corações agora aparecem com qualquer amizade. Pra quem faz content pack: <code>maxHearts: 0</code> agora quer dizer “sem limite”, como <code>maxTriggersPerSave: 0</code>.</li>
+      <li><b>Tamanho das falas:</b> as falas curtas e as que continuam um evento de coração respeitam o <b>Tamanho Máx. Diálogo</b>, em vez de um limite fixo de 200 caracteres.</li>
+      <li><b>Limite de drama:</b> o limite de momentos de drama por dia (<code>MaxDramaBeatsPerDay</code> no config.json) agora é respeitado.</li>
+    </ul>
+  </section>
+</section>
 
 <!-- 1.7.3 -->
 <section class="patch" id="v1-7-3">

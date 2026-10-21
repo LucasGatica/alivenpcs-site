@@ -1,16 +1,191 @@
 <header class="top">
-  <div class="eyebrow"><span class="version">1.7</span><span>“Seen and Heard”</span><span>1.7.0 – 1.7.3</span><span>Oct 6 – 13, 2026</span></div>
+  <div class="eyebrow"><span class="version">1.7</span><span>“Seen and Heard”</span><span>1.7.0 – 1.7.4</span><span>Oct 6 – 21, 2026</span></div>
   <h1>Villagers now see what you do</h1>
-  <p class="lead">1.7.0 brought Seen and Heard and was the biggest AliveNpcs update yet. 1.7.1 put a phone in your pocket, with photos on the Messenger and more apps on the computer. 1.7.2, “Keep in Touch”, filled the phone with apps, made the Messenger livelier and turned the diary into a scrapbook. 1.7.3 brought your birthday and shorter, faster conversations.</p>
+  <p class="lead">1.7.0 brought Seen and Heard and was the biggest AliveNpcs update yet. 1.7.1 put a phone in your pocket, with photos on the Messenger and more apps on the computer. 1.7.2, “Keep in Touch”, filled the phone with apps, made the Messenger livelier and turned the diary into a scrapbook. 1.7.3 brought your birthday and shorter, faster conversations. 1.7.4, “Everything leaves a mark”, gave consequences to what villagers see and made scenes, outings and events leave memories.</p>
   <p class="credit"><b>Special thanks:</b> this update and the Seen and Heard system got a huge amount of help from my friend <b>Xniffer</b>. The idea behind the triggers, which give villagers more agency in the world, came from Xniffer, who also built the first prototype of NPC awareness that I based this version on.</p>
 </header>
 
 <nav class="summary" aria-label="Versions in the 1.7 line">
+  <a class="tile" href="#v1-7-4"><strong>1.7.4 · Everything leaves a mark</strong><span>Consequences in Seen and Heard, speech bubbles, scenes and outings that leave memories, letters after events and the Feast of the Winter Star with AI.</span></a>
   <a class="tile" href="#v1-7-3"><strong>1.7.3 · Your birthday</strong><span>Your birthday in the game, group talk from the wheel, shorter and faster AI, and fixes.</span></a>
   <a class="tile" href="#v1-7-2"><strong>1.7.2 · Keep in Touch</strong><span>More phone apps, a livelier Messenger, a diary with fan art and Gemini retrying on its own.</span></a>
   <a class="tile" href="#v1-7-1"><strong>1.7.1 · The phone</strong><span>The AliveNpcs phone, photos on the Messenger, four new computer apps and fixes.</span></a>
   <a class="tile" href="#v1-7-0"><strong>1.7.0 · Seen and Heard</strong><span>Villagers see what you do, the computer becomes a PC, new screens and 7 festivals with AI.</span></a>
 </nav>
+
+<!-- 1.7.4 -->
+<section class="patch" id="v1-7-4">
+  <header class="patch-head"><span class="version">1.7.4</span><h2>Everything leaves a mark</h2><span class="patch-date">Oct 21, 2026</span></header>
+  <p class="lead">An update that improves what was already there, plus one more festival. Villagers know more about your day when they talk, what they see now has consequences, and scenes, outings and events leave memories and lead to letters.</p>
+
+  <section class="feature" id="v1-7-4-contexto">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Villagers know more when they talk</h3>
+      <p class="lead">Every conversation now knows things the game already had and the AI couldn't see.</p>
+    </div>
+    <ul class="points">
+      <li>Tomorrow's weather forecast, whether you have an open quest involving the villager, how many days it's been since you two last talked, and what they were doing when you walked up (asleep, reading, sitting, behind their shop counter).</li>
+      <li>Indoors, the weather reads as “indoors; outside it's raining”, instead of rain on their heads.</li>
+      <li>Group conversations now get the same context as one-on-one talks: the mood of the day, how each villager feels about you, the gossip each one knows, what they saw and heard, your Character Sheet, the full date and what the two of them are to each other (“Sam and Sebastian are best friends”).</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-consequencias">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Seen and Heard has consequences</h3>
+      <p class="lead">What villagers feel about what they saw can now change their day, your friendship and the next conversation.</p>
+    </div>
+    <ul class="points">
+      <li><b>Feelings colour the day's mood</b> (on): from level 2, a telling-off leaves the villager irritated with you for the rest of the day, and fondness or affection leaves them pleased.</li>
+      <li><b>Feelings change friendship</b> (off): once a feeling actually reaches you (said on a walk-over, brought up in a conversation or texted), it's worth points: −10, −25 and −50 for the three levels of confrontation, +10 and +25 for fondness and affection, and +10 for a good laugh. Children never earn romance points.</li>
+      <li><b>Text when they can't reach you</b> (off): if the villager has a phone and couldn't get to you (you left the map, or the moment passed), they send what they meant to say on the Messenger. It counts toward the weekly limit of villager texts.</li>
+      <li><b>Cold shoulder after a telling-off</b> (off): for up to an hour after a telling-off at the strongest level, clicking the villager makes them turn their back, show an angry bubble and say one short line, with no AI. Once per villager per day.</li>
+    </ul>
+    <div class="option"><span class="label">In the settings</span><b>Seen and Heard</b><span>each consequence is its own setting, so if you prefer, the reactions can stay pure flavor.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-4-baloes">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Speech bubbles and nine new things they notice</h3>
+      <p class="lead">For small things, the villager doesn't need to walk over: they react with one short line in a bubble over their head.</p>
+    </div>
+    <ul class="points">
+      <li>The line depends on what they are to you (spouse, partner, friend, child or anyone) and uses no AI. The moment is still remembered and, if it builds up, they still come over to talk.</li>
+      <li>Watering someone and near misses with a tool or the slingshot now start as a bubble.</li>
+      <li>Villagers now also notice when you stare at them up close, stand in their way, kiss your spouse in public, swim near them, argue in a conversation or flirt with someone in front of your partner.</li>
+      <li>And, inside their home, when you sit on their furniture, use the TV, the lamps or the fireplace, or go through their dressers, notes and letters.</li>
+      <li>For pack creators: all of these can be fired with <code>alive_sh fire</code> and used in triggers with <code>On</code>, and the <code>Bubble</code> field lets a trigger answer with a bubble.</li>
+    </ul>
+    <div class="option"><span class="label">In the settings</span><b>Speech bubbles for small things</b><span>on by default.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-4-memoria">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Scenes and outings leave memories</h3>
+      <p class="lead">What you lived through with the villagers no longer disappears at the end of the day.</p>
+    </div>
+    <ul class="points">
+      <li>When you witness a scene, or a villager comes over to you in the middle of one, each villager in it keeps a memory of it. The night's diary and gossip know you were there, and the neighbors may talk about it for a while. Of the 151 scenes that come with the mod, 88 leave a memory.</li>
+      <li>The villager's first and last lines on an outing go into their conversation history, so the next talk remembers the outing the way it remembers any chat.</li>
+      <li>The memory of the outing (the place, the weather, the tone and the line that stood out most) now comes from what really happened in the scene, not from the summary written when they accepted the invite. The village gossip does too.</li>
+      <li>Finishing an outing now earns friendship points.</li>
+    </ul>
+    <div class="option"><span class="label">In the settings</span><b>Villagers Remember Scenes</b><span>on by default.</span></div>
+    <div class="option"><span class="label">In the settings</span><b>Hang Out Completion Friendship</b><span>10 points by default; 0 turns it off.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-4-diarios">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Diaries that know what happened</h3>
+      <p class="lead">Your diary stops making up or forgetting what happened, and the villagers' diaries show their own lives.</p>
+    </div>
+    <ul class="points">
+      <li>The night's entry gets the facts of the day: the date, the weather, the festival, birthdays, the letters you got, the gifts you gave and the outings.</li>
+      <li>Entries also keep the day's weather and mood, and the page shows the weather next to the date.</li>
+      <li>Each villager's diary gets three chapters when there's something to show: <b>Among villagers</b> (who they're close to or at odds with, and their recent moments together), <b>How they've changed</b> (the personality traits that shifted) and <b>What they believe</b> (the rumors they heard and their strongest opinions about the others).</li>
+      <li>Children never get romantic content in these pages.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-cartas">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Letters after what you lived through</h3>
+      <p class="lead">Villagers now write to you because of what happened between you.</p>
+    </div>
+    <ul class="points">
+      <li>A villager writes to you when an arc you lived through ends, two days after a festival where you talked, when you give them a loved gift on their birthday and after an outing together.</li>
+      <li>Each event leads to just one letter, from one villager, and the time between letters and the daily limit still apply.</li>
+      <li>Letters also know the date, the villager's mood, how they've changed, open favors and who they've been spending time with.</li>
+      <li>The heart milestones that trigger letters (3, 6, 8 and 10) and the days before a “miss you” letter (7) are now settings.</li>
+    </ul>
+    <div class="option"><span class="label">In the settings</span><b>Event letters</b><span>on by default. Next to it are <b>Heart milestone letters</b> and <b>Days before a “miss you” letter</b>.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-4-favores">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Favors carry more weight</h3>
+      <p class="lead">Forgetting a favor now matters, and giving what was asked for always counts.</p>
+    </div>
+    <ul class="points">
+      <li>When a favor expires, the villager is cooler with you for three days, even on a good-mood day. They bring it up once, don't ask again and aren't cruel about it. After that the favor is just a memory, until it's gone for good after two weeks.</li>
+      <li>Giving the villager the item they asked for as a gift fulfills the favor, just like the <b>Hand over</b> option on the interaction wheel, and you get the same friendship.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-estrela">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>The Feast of the Winter Star with AI</h3>
+    </div>
+    <ul class="points">
+      <li>The Winter 25 festival joins the seven that already had AI dialogue.</li>
+      <li>Villagers talk about the tree, Gus's feast and the secret gift exchange without giving away who drew whom, and the town keeps talking about the festival for two days.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-idiomas">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>The mod understands what you type in any language</h3>
+    </div>
+    <ul class="points">
+      <li>Several word lists were only in English and Portuguese, right in the code: apologies, conversation topics, drama signals, flirting and insults, place and time names in invites (“beach at 6”) and the backup diary for when the AI doesn't answer. They now live in the translations of all eight languages and all count together, so what you type is understood in any of them, whatever the game's language.</li>
+      <li>I finished the missing translations in German, Spanish, French, Italian, Chinese and Vietnamese, including the whole birthday feature, which showed up in English in those languages.</li>
+      <li>The Weekly News header and twenty texts that only existed in English (AI diagnostics, quick settings and the hub notice) are now translated.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-gemini">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Gemini 3.5 Flash-Lite as the default model</h3>
+    </div>
+    <ul class="points">
+      <li>The default model is now <code>gemini-3.5-flash-lite</code> (it used to be 3.1).</li>
+      <li>This applies to new installs and to anyone who never touched the <b>Gemini Model</b> field. If you typed a model there, it stays.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-addons">
+    <div class="feature-head">
+      <span class="tag fix">Fixes</span>
+      <h3>Addons work again</h3>
+      <p class="lead">Two changes I made inside AliveNpcs had broken addons that depend on it.</p>
+    </div>
+    <ul class="points">
+      <li><b>Multiplayer mod:</b> since 1.7.3, the <a href="https://www.nexusmods.com/stardewvalley/mods/50946">AliveNpcs multiplayer mod</a> showed “Ambiguous match found” on load, and the farmhand got no social network, no letters and no villager opinions about them.</li>
+      <li><b>AliveNpcs Economy:</b> since 1.7.2, the addon switched its transactions off with the warning “Economy layer DISABLED”.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-correcoes">
+    <div class="feature-head">
+      <span class="tag fix">Fixes</span>
+      <h3>Fixes</h3>
+    </div>
+    <ul class="points">
+      <li><b>Switching saves no longer mixes data:</b> what the AI finished generating after you went back to the title screen or loaded another save is no longer written into the wrong save. Birthday texts and an invite's counter-offer no longer carry over from one save to another either.</li>
+      <li><b>Villagers who were stuck in place now come over:</b> your spouse indoors, Robin while she's building, people at the movie theater and anyone just back from a festival or the wedding never came over to talk about what they saw in Seen and Heard. Now they do, and then they go back to where they were.</li>
+      <li><b>No empty dialogue box:</b> when the AI answers in a slightly different format than expected, the line shows up normally. An answer with no line at all no longer opens an empty box or stays in the history as if the villager had been cold to you.</li>
+      <li><b>Gossip turns on and off right away:</b> changing gossip in the quick settings works with the game open. Before, turning it off had no effect and turning it on needed a restart.</li>
+      <li><b>Slow providers:</b> with a local LLM or another slow provider, the nightly analysis is no longer thrown away halfway. The time limit now follows the <b>Custom LLM Timeout</b>.</li>
+      <li><b>The right dates in conversations:</b> villagers no longer call everything “earlier today”. Only what happened in the last 7 days goes in, with how many days ago it really was.</li>
+      <li><b>One save error doesn't take the rest down:</b> if one part of the mod fails to save, the others still save.</li>
+      <li><b>No duplicated reply:</b> cancelling a reply right as the AI was finishing no longer leaves an extra entry in the history when you send it again.</li>
+      <li><b>Arcs only ask for conversations:</b> the AI no longer suggests objectives to bring an item, which the game threw away and which could get the whole arc rejected. When the story involves an object, it becomes something to talk about, and every objective comes with a topic.</li>
+      <li><b>Scenes at any friendship level:</b> eleven scenes that only showed up at 0 hearts now show up at any friendship level. For pack creators: <code>maxHearts: 0</code> now means “no limit”, like <code>maxTriggersPerSave: 0</code>.</li>
+      <li><b>Line length:</b> the short lines and the ones that follow up a heart event respect <b>Max Dialogue Length</b>, instead of a fixed 200-character limit.</li>
+      <li><b>Drama limit:</b> the limit of drama moments per day (<code>MaxDramaBeatsPerDay</code> in config.json) is now respected.</li>
+    </ul>
+  </section>
+</section>
 
 <!-- 1.7.3 -->
 <section class="patch" id="v1-7-3">

@@ -1,16 +1,191 @@
 <header class="top">
-  <div class="eyebrow"><span class="version">1.7</span><span>“Seen and Heard”</span><span>1.7.0 – 1.7.3</span><span>del 6 al 13 oct 2026</span></div>
+  <div class="eyebrow"><span class="version">1.7</span><span>“Seen and Heard”</span><span>1.7.0 – 1.7.4</span><span>del 6 al 21 oct 2026</span></div>
   <h1>Los vecinos ahora ven lo que haces</h1>
-  <p class="lead">La 1.7.0 trajo Seen and Heard y fue la actualización más grande de AliveNpcs hasta ahora. La 1.7.1 te puso un móvil en el bolsillo, con fotos en el Mensajero y más apps en la computadora. La 1.7.2, “Keep in Touch”, llenó el móvil de apps, le dio vida al Mensajero y convirtió el diario en un scrapbook. La 1.7.3 trajo tu cumpleaños y conversaciones más cortas y rápidas.</p>
+  <p class="lead">La 1.7.0 trajo Seen and Heard y fue la actualización más grande de AliveNpcs hasta ahora. La 1.7.1 te puso un móvil en el bolsillo, con fotos en el Mensajero y más apps en la computadora. La 1.7.2, “Keep in Touch”, llenó el móvil de apps, le dio vida al Mensajero y convirtió el diario en un scrapbook. La 1.7.3 trajo tu cumpleaños y conversaciones más cortas y rápidas. La 1.7.4, “Todo deja huella”, le dio consecuencias a lo que ven los vecinos e hizo que las escenas, las salidas y los eventos dejen recuerdos.</p>
   <p class="credit"><b>Agradecimiento especial:</b> esta actualización y el sistema Seen and Heard recibieron muchísima ayuda de mi amigo <b>Xniffer</b>. Xniffer tuvo la idea de los disparadores, que dan a los vecinos más autonomía en el mundo, y desarrolló el primer prototipo de percepción de los NPC en el que me basé para construir esta versión.</p>
 </header>
 
 <nav class="summary" aria-label="Versiones de la línea 1.7">
+  <a class="tile" href="#v1-7-4"><strong>1.7.4 · Todo deja huella</strong><span>Consecuencias en Seen and Heard, bocadillos, escenas y salidas que dejan recuerdos, cartas después de eventos y la Fiesta de la estrella de invierno con IA.</span></a>
   <a class="tile" href="#v1-7-3"><strong>1.7.3 · Tu cumpleaños</strong><span>Tu cumpleaños en el juego, conversación en grupo desde el menú radial, una IA más corta y rápida y correcciones.</span></a>
   <a class="tile" href="#v1-7-2"><strong>1.7.2 · Keep in Touch</strong><span>Más apps en el móvil, un Mensajero más vivo, el diario con fan arts y Gemini reintentando solo.</span></a>
   <a class="tile" href="#v1-7-1"><strong>1.7.1 · El móvil</strong><span>El móvil de AliveNpcs, fotos en el Mensajero, cuatro apps nuevas en la computadora y correcciones.</span></a>
   <a class="tile" href="#v1-7-0"><strong>1.7.0 · Seen and Heard</strong><span>Los vecinos ven lo que haces, la computadora se vuelve un PC, pantallas nuevas y 7 festivales con IA.</span></a>
 </nav>
+
+<!-- 1.7.4 -->
+<section class="patch" id="v1-7-4">
+  <header class="patch-head"><span class="version">1.7.4</span><h2>Todo deja huella</h2><span class="patch-date">21 oct 2026</span></header>
+  <p class="lead">Una actualización que mejora lo que ya existía, y trae un festival más. Los vecinos saben más de tu día cuando hablan, lo que ven ahora tiene consecuencias, y las escenas, las salidas y los eventos dejan recuerdos y traen cartas.</p>
+
+  <section class="feature" id="v1-7-4-contexto">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Los vecinos saben más cuando hablan</h3>
+      <p class="lead">Cada conversación ahora sabe cosas que el juego ya tenía y la IA no veía.</p>
+    </div>
+    <ul class="points">
+      <li>El pronóstico del tiempo de mañana, si tienes una misión abierta que tiene que ver con el vecino, cuántos días hace que no hablan y qué estaba haciendo cuando llegaste (durmiendo, leyendo, sentado, detrás del mostrador).</li>
+      <li>Dentro de casa, el clima se lee como “dentro de casa; afuera está lloviendo”, en vez de lluvia sobre sus cabezas.</li>
+      <li>La conversación en grupo ahora tiene el mismo contexto que la conversación a solas: el humor del día, lo que cada uno siente por ti, los chismes que sabe cada uno, lo que vieron y oyeron, tu Ficha de Personaje, la fecha completa y lo que son los dos el uno para el otro (“Sam y Sebastian son mejores amigos”).</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-consequencias">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Seen and Heard tiene consecuencias</h3>
+      <p class="lead">Lo que los vecinos sienten por lo que vieron ahora puede cambiar su día, la amistad y la próxima conversación.</p>
+    </div>
+    <ul class="points">
+      <li><b>Los sentimientos tiñen el humor del día</b> (activado): desde el nivel 2, una bronca deja al vecino molesto contigo el resto del día, y el cariño o el afecto lo dejan contento.</li>
+      <li><b>Los sentimientos cambian la amistad</b> (desactivado): cuando el sentimiento llega hasta ti (dicho al acercarse, sacado en una conversación o mandado por mensaje), vale puntos: −10, −25 y −50 en los tres niveles de confrontación, +10 y +25 para el cariño y el afecto, y +10 para una buena risa. Los niños nunca dan puntos de romance.</li>
+      <li><b>Mensaje cuando no pueden alcanzarte</b> (desactivado): si el vecino tiene móvil y no pudo llegar hasta ti (saliste del mapa, o el momento pasó), te manda por el Mensajero lo que iba a decirte. Cuenta en el límite semanal de mensajes de los vecinos.</li>
+      <li><b>Cara larga tras una bronca</b> (desactivado): hasta una hora después de una bronca en el nivel más fuerte, al hacer clic en el vecino se da la vuelta, muestra un globo de enfado y suelta una frase corta, sin IA. Una vez por vecino al día.</li>
+    </ul>
+    <div class="option"><span class="label">En los ajustes</span><b>Seen and Heard</b><span>cada consecuencia es una opción aparte, así que si prefieres, las reacciones pueden quedarse como simple adorno.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-4-baloes">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Bocadillos y nueve cosas nuevas que notan</h3>
+      <p class="lead">Para cosas pequeñas, el vecino no necesita acercarse: reacciona con una frase corta en un bocadillo sobre su cabeza.</p>
+    </div>
+    <ul class="points">
+      <li>La frase depende de lo que es para ti (cónyuge, pareja, amigo, niño o cualquiera) y no usa la IA. El momento se sigue recordando y, si se acumula, igual viene a hablarte.</li>
+      <li>Mojar a alguien con la regadera y casi darle a alguien con una herramienta o el tirachinas ahora empiezan como bocadillo.</li>
+      <li>Los vecinos ahora también notan cuando los miras fijamente de cerca, te pones en su camino, besas a tu cónyuge en público, nadas cerca de ellos, discutes en una conversación o coqueteas con alguien delante de tu pareja.</li>
+      <li>Y, dentro de su casa, cuando te sientas en sus muebles, usas la tele, las lámparas o la chimenea, o revuelves sus cómodas, sus notas y sus cartas.</li>
+      <li>Para creadores de packs: todas estas situaciones se pueden disparar con <code>alive_sh fire</code> y usar en disparadores con <code>On</code>, y el campo <code>Bubble</code> deja que un disparador responda con un bocadillo.</li>
+    </ul>
+    <div class="option"><span class="label">En los ajustes</span><b>Bocadillos para cosas pequeñas</b><span>activado por defecto.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-4-memoria">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Las escenas y las salidas dejan recuerdos</h3>
+      <p class="lead">Lo que viviste con los vecinos ya no desaparece al final del día.</p>
+    </div>
+    <ul class="points">
+      <li>Cuando presencias una escena, o un vecino se te acerca en medio de una, cada vecino de la escena guarda un recuerdo de ella. El diario y el chisme de la noche saben que estabas allí, y el vecindario puede comentarlo por un tiempo. De las 151 escenas que vienen con el mod, 88 dejan recuerdo.</li>
+      <li>La primera y la última frase del vecino en la salida entran en su historial de conversación, así que la próxima charla recuerda la salida como recuerda cualquier conversación.</li>
+      <li>El recuerdo de la salida (el lugar, el clima, el tono y la frase que más marcó) ahora sale de lo que pasó de verdad en la escena, y no del resumen escrito cuando aceptó la invitación. El chisme del pueblo también.</li>
+      <li>Terminar una salida ahora da puntos de amistad.</li>
+    </ul>
+    <div class="option"><span class="label">En los ajustes</span><b>Los aldeanos recuerdan las escenas</b><span>activado por defecto.</span></div>
+    <div class="option"><span class="label">En los ajustes</span><b>Amistad al completar la invitación</b><span>10 puntos por defecto; 0 lo desactiva.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-4-diarios">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Diarios que saben lo que pasó</h3>
+      <p class="lead">Tu diario deja de inventar u olvidar lo que pasó, y el diario de los vecinos muestra su propia vida.</p>
+    </div>
+    <ul class="points">
+      <li>La entrada de la noche recibe los hechos del día: la fecha, el clima, el festival, los cumpleaños, las cartas que recibiste, los regalos que diste y las salidas.</li>
+      <li>Las entradas también guardan el clima y el humor del día, y la página muestra el clima junto a la fecha.</li>
+      <li>El diario de cada vecino tiene tres capítulos nuevos cuando hay algo que mostrar: <b>Entre aldeanos</b> (con quién es cercano o con quién no se lleva, y los momentos recientes juntos), <b>Cómo ha cambiado</b> (los rasgos de personalidad que cambiaron) y <b>En qué cree</b> (los rumores que escuchó y sus opiniones más fuertes sobre los demás).</li>
+      <li>Los niños nunca reciben contenido romántico en estas páginas.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-cartas">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>Cartas por lo que vivieron juntos</h3>
+      <p class="lead">Los vecinos ahora te escriben por lo que pasó entre ustedes.</p>
+    </div>
+    <ul class="points">
+      <li>Un vecino te escribe cuando termina un arco que viviste, dos días después de un festival en el que hablaron, cuando le das un regalo que le encanta en su cumpleaños y después de una salida juntos.</li>
+      <li>Cada evento trae una sola carta, de un vecino, y el intervalo entre cartas y el límite diario siguen valiendo.</li>
+      <li>Las cartas también saben la fecha, el humor del vecino, cómo ha cambiado, los favores pendientes y con quién ha pasado el tiempo.</li>
+      <li>Los hitos de corazones que generan carta (3, 6, 8 y 10) y los días hasta la carta de “te echo de menos” (7) ahora son opciones.</li>
+    </ul>
+    <div class="option"><span class="label">En los ajustes</span><b>Cartas de eventos</b><span>activado por defecto. Al lado están <b>Cartas por hitos de corazones</b> y <b>Días hasta la carta de “te echo de menos”</b>.</span></div>
+  </section>
+
+  <section class="feature" id="v1-7-4-favores">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Los favores pesan más</h3>
+      <p class="lead">Olvidar un favor ahora importa, y dar lo que te pidieron siempre cuenta.</p>
+    </div>
+    <ul class="points">
+      <li>Cuando un favor vence, el vecino está más frío contigo durante tres días, aunque sea un día de buen humor. Lo comenta una vez, no te lo vuelve a pedir y no es cruel. Después el favor queda solo como un recuerdo, hasta desaparecer del todo a las dos semanas.</li>
+      <li>Regalarle al vecino el objeto que te pidió cumple el favor, igual que la opción <b>Entregar</b> del menú radial, y ganas la misma amistad.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-estrela">
+    <div class="feature-head">
+      <span class="tag">Nuevo</span>
+      <h3>La Fiesta de la estrella de invierno con IA</h3>
+    </div>
+    <ul class="points">
+      <li>El festival del 25 de invierno se suma a los siete que ya tenían diálogo con IA.</li>
+      <li>Los vecinos hablan del árbol, del banquete de Gus y del amigo invisible, sin revelar a quién le tocó quién, y el pueblo sigue comentando el festival durante dos días.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-idiomas">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>El mod entiende lo que escribes en cualquier idioma</h3>
+    </div>
+    <ul class="points">
+      <li>Varias listas de palabras estaban solo en inglés y portugués, directo en el código: disculpas, temas de conversación, señales de drama, coqueteo e insultos, nombres de lugares y horas en las invitaciones (“playa a las 6”) y el diario de respaldo para cuando la IA no responde. Ahora están en las traducciones de los ocho idiomas y valen todas juntas, así que lo que escribes se entiende en cualquiera de ellos, sea cual sea el idioma del juego.</li>
+      <li>Completé las traducciones que faltaban en alemán, español, francés, italiano, chino y vietnamita, incluido todo el cumpleaños, que aparecía en inglés en esos idiomas.</li>
+      <li>El encabezado de las Noticias Semanales y veinte textos que solo existían en inglés (diagnóstico de la IA, ajustes rápidos y el aviso del hub) ahora están traducidos.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-gemini">
+    <div class="feature-head">
+      <span class="tag improved">Mejorado</span>
+      <h3>Gemini 3.5 Flash-Lite como modelo por defecto</h3>
+    </div>
+    <ul class="points">
+      <li>El modelo por defecto ahora es <code>gemini-3.5-flash-lite</code> (antes era el 3.1).</li>
+      <li>Vale para instalaciones nuevas y para quien nunca tocó el campo <b>Modelo Gemini</b>. Si escribiste un modelo ahí, se queda.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-addons">
+    <div class="feature-head">
+      <span class="tag fix">Correcciones</span>
+      <h3>Los addons vuelven a funcionar</h3>
+      <p class="lead">Dos cambios que hice por dentro de AliveNpcs habían roto addons que dependen de él.</p>
+    </div>
+    <ul class="points">
+      <li><b>Mod de multijugador:</b> desde la 1.7.3, el <a href="https://www.nexusmods.com/stardewvalley/mods/50946">mod de multijugador de AliveNpcs</a> mostraba “Ambiguous match found” al cargar, y el farmhand se quedaba sin la red social, sin cartas y sin las opiniones de los vecinos sobre él.</li>
+      <li><b>AliveNpcs Economy:</b> desde la 1.7.2, el addon desactivaba las transacciones con el aviso “Economy layer DISABLED”.</li>
+    </ul>
+  </section>
+
+  <section class="feature" id="v1-7-4-correcoes">
+    <div class="feature-head">
+      <span class="tag fix">Correcciones</span>
+      <h3>Correcciones</h3>
+    </div>
+    <ul class="points">
+      <li><b>Cambiar de partida ya no mezcla los datos:</b> lo que la IA terminaba de generar después de que volvías a la pantalla de inicio o cargabas otra partida ya no se guarda en la partida equivocada. Los mensajes de cumpleaños y la contrapropuesta de una invitación tampoco pasan de una partida a otra.</li>
+      <li><b>Quien estaba fijo en su sitio ahora viene a hablarte:</b> tu cónyuge dentro de casa, Robin mientras construye, quien está en el cine y quien acaba de pasar por un festival o por la boda nunca venían a hablarte por lo que vieron en Seen and Heard. Ahora vienen, y después vuelven a donde estaban.</li>
+      <li><b>Sin caja de diálogo vacía:</b> cuando la IA responde en un formato un poco distinto del esperado, la frase aparece normalmente. Una respuesta sin ninguna frase ya no abre una caja vacía ni queda en el historial como si el vecino hubiera sido frío contigo.</li>
+      <li><b>El chisme se activa y desactiva al momento:</b> cambiar el chisme en los ajustes rápidos funciona con el juego abierto. Antes, desactivarlo no tenía efecto y activarlo exigía reiniciar.</li>
+      <li><b>Proveedores lentos:</b> con un LLM local u otro proveedor lento, el análisis de la noche ya no se descarta a medias. El límite de tiempo ahora sigue al <b>Timeout LLM Personalizada</b>.</li>
+      <li><b>Las fechas correctas en las conversaciones:</b> los vecinos ya no llaman “hoy más temprano” a cualquier cosa. Solo entra lo que pasó en los últimos 7 días, con cuántos días hace de verdad.</li>
+      <li><b>Un error al guardar no arrastra al resto:</b> si una parte del mod falla al guardar, las demás se guardan igual.</li>
+      <li><b>Sin respuesta duplicada:</b> cancelar una respuesta justo cuando la IA terminaba ya no deja una entrada de más en el historial cuando la vuelves a enviar.</li>
+      <li><b>Los arcos solo piden conversaciones:</b> la IA ya no sugiere objetivos de entregar un objeto, que el juego descartaba y que podían hacer que se rechazara el arco entero. Cuando la historia tiene que ver con un objeto, se convierte en tema de conversación, y cada objetivo viene con un tema para hablar.</li>
+      <li><b>Escenas con cualquier nivel de amistad:</b> once escenas que solo aparecían con 0 corazones ahora aparecen con cualquier amistad. Para creadores de packs: <code>maxHearts: 0</code> ahora significa “sin límite”, como <code>maxTriggersPerSave: 0</code>.</li>
+      <li><b>Largo de las frases:</b> las frases cortas y las que continúan un evento de corazones respetan la <b>Longitud Máx. Diálogo</b>, en vez de un límite fijo de 200 caracteres.</li>
+      <li><b>Límite de drama:</b> el límite de momentos de drama por día (<code>MaxDramaBeatsPerDay</code> en config.json) ahora se respeta.</li>
+    </ul>
+  </section>
+</section>
 
 <!-- 1.7.3 -->
 <section class="patch" id="v1-7-3">

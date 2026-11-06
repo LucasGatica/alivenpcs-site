@@ -1,5 +1,17 @@
 [
   {
+    "version": "1.8",
+    "label": "1.8",
+    "name": "Save the Date",
+    "status": "in-development",
+    "summary": {
+      "pt-BR": "Com 8 corações, um morador te chama pra um projeto que termina num festival com minijogo. A vila ganha 31 bicos, jantares em família, aniversários, visitas à fazenda e dezenas de cenas, e o Hub muda de cara."
+    },
+    "patches": [
+      "1.8.0"
+    ]
+  },
+  {
     "version": "1.7.0",
     "name": "Seen and Heard",
     "date": "2026-10-21",

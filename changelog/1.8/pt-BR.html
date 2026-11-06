@@ -1,0 +1,512 @@
+<header class="top">
+  <div class="eyebrow"><span class="version">1.8</span><span>“Save the Date”</span><span>1.8.0</span><span>data a definir</span></div>
+  <h1>Os moradores te chamam pra vida deles</h1>
+  <p class="lead">A 1.8 é a maior atualização do AliveNpcs até agora. Com 8 corações, um morador pode te pedir ajuda num projeto dele, e o projeto termina num festival no calendário do jogo, no mapa de verdade, com minijogo. São oito festivais e mais três eventos avulsos, entre eles um torneio de xadrez na praça com o Demetrius. E não para aí: a vila ganhou 31 bicos, trabalhos que os moradores te oferecem conforme a amizade, e também jantares em família, festas de aniversário, visitas à sua fazenda, dezenas de cenas novas e um monte de easter eggs. O Hub mudou de cara, as conversas ganharam respostas sugeridas e o Seen and Heard ficou mais calmo. O seu save continua funcionando.</p>
+</header>
+
+<p class="notice-box"><strong>Ainda não saiu na Nexus.</strong> A 1.8 está na reta final de testes e o que você lê aqui ainda pode mudar até o lançamento.</p>
+
+<nav class="summary" aria-label="Resumo da 1.8">
+  <a class="tile" href="#v1-8-0-std"><strong>Save the Date</strong><span>Com 8 corações, um morador te chama pra um projeto que termina num festival no calendário.</span></a>
+  <a class="tile" href="#v1-8-0-festivais"><strong>Oito festivais</strong><span>Futebol, paintball, queimada, dança, garçom, carrinhos, corrida de galinhas e RPG, mais o torneio de xadrez do Demetrius e outros dois eventos.</span></a>
+  <a class="tile" href="#v1-8-0-bicos"><strong>31 bicos</strong><span>Trabalhos que vêm da amizade, com pagamento, etapas e app no celular.</span></a>
+  <a class="tile" href="#v1-8-0-jantares"><strong>Jantares e aniversários</strong><span>Domingo na casa das famílias e festas no Saloon, no quintal e no rancho.</span></a>
+  <a class="tile" href="#v1-8-0-visitas"><strong>Visitas à fazenda</strong><span>A Marnie, os Mullner, a Penny com as crianças, e quem aparece sem avisar.</span></a>
+  <a class="tile" href="#v1-8-0-cenas"><strong>Cenas e momentos</strong><span>A pescaria do Pierre, a fogueira do Linus, a volta do Kent e muito mais.</span></a>
+  <a class="tile" href="#v1-8-0-piadas"><strong>Easter eggs</strong><span>Espalhados pelo vale, como o celular que trinca quando você desmaia na mina.</span></a>
+  <a class="tile" href="#v1-8-0-hub"><strong>O Hub na escrivaninha</strong><span>Uma janela pro vale, objetos no lugar dos cartões e o bilhete do dia.</span></a>
+  <a class="tile" href="#v1-8-0-conversas"><strong>Conversas</strong><span>Contador de respostas, respostas sugeridas e Enter que envia.</span></a>
+  <a class="tile" href="#v1-8-0-seen"><strong>Seen and Heard mais calmo</strong><span>Menos acusação por coisa que você não fez.</span></a>
+  <a class="tile" href="#v1-8-0-correcoes"><strong>Correções</strong><span>Um minuto cheio no Gemini não desliga mais a IA pelo resto do dia.</span></a>
+</nav>
+
+<!-- 1.8.0 -->
+<section class="patch" id="v1-8-0">
+  <header class="patch-head"><span class="version">1.8.0</span><h2>Save the Date</h2><span class="patch-date">data a definir</span></header>
+  <p class="lead">Os moradores agora têm projetos, rotinas e convites, e te chamam pra fazer parte deles.</p>
+
+  <!-- Save the Date -->
+  <section class="feature" id="v1-8-0-std" data-flag="feature.save_the_date">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Save the Date: o projeto de cada morador</h3>
+      <p class="lead">Com 8 corações, um morador pode te pedir ajuda num projeto dele. O projeto vira um arco com missões, e o arco termina num festival no calendário do jogo.</p>
+    </div>
+    <div class="sub">
+      <h3>A proposta</h3>
+      <ul class="points">
+        <li>A partir de <span class="hearts"><svg><use href="#heart"/></svg> 8</span>, cada conversa comum com o morador tem uma chance (30% por padrão) de virar a proposta dele, numa caixa de diálogo com a cor, a faixa e a música do projeto.</li>
+        <li>Toda conversa do Save the Date é fácil de reconhecer: a caixa de resposta fica na cor do projeto, com a fita <b>Conversa especial</b>, o nome do projeto e um coração em cada canto.</li>
+        <li>Disse sim, abre um arco do coração. Cada morador propõe uma vez por save. Depois de um “não” (ou de um arco abandonado), ele toca no assunto mais uma vez numa estação seguinte, e você pode retomar pela roda de ações quando quiser. Até três arcos ficam abertos ao mesmo tempo.</li>
+      </ul>
+    </div>
+    <div class="sub">
+      <h3>As missões</h3>
+      <ul class="points">
+        <li>Na tela de Arcos, o projeto ganha uma seção própria no topo, na cor dele, com as missões obrigatórias, as bônus e quem está envolvido.</li>
+        <li>Cada missão é conversada com o morador certo pela roda de ações, uma vez por morador por dia, e a IA decide se ele topou. Conversa comum nunca conclui missão. Com a roda desligada, a mesma escolha aparece como ação bônus na caixa de resposta.</li>
+        <li>Missão bônus nunca trava o evento, mas muda alguma coisa no dia: uma barraca de comida, um juiz, uma jukebox, uma pizza na mesa.</li>
+      </ul>
+    </div>
+    <div class="sub">
+      <h3>No calendário</h3>
+      <ul class="points">
+        <li>Com as obrigatórias feitas, <b>Marcar</b> oferece até três dos dias livres mais próximos, de 2 a 15 dias pra frente. Nunca num festival (do jogo, de outro mod ou de outro Save the Date), nunca no dia da chuva verde, e aniversário só quando não sobra outro dia.</li>
+        <li>O convite chega pelo correio na manhã seguinte, o Jornal da Semana anuncia, o calendário mostra o dia com um ingresso na cor do projeto, e na véspera o anfitrião te lembra pelo Mensageiro (ou num bilhete, pra quem não tem celular).</li>
+        <li>Eventos de dia vão das 10h às 16h, os de noite das 19h à meia-noite, e o do Sam segue o horário da JojaMart.</li>
+        <li>Até a véspera, <b>Adiar</b> na roda do anfitrião passa o evento uma vez pro próximo dia livre, com convite novo.</li>
+      </ul>
+    </div>
+    <div class="sub">
+      <h3>O dia</h3>
+      <ul class="points">
+        <li>O festival acontece no mapa de verdade, com o elenco no lugar e uma fala de IA pra cada um com quem você conversar. Fale duas vezes com o anfitrião pra começar, e escolha a dificuldade e os controles.</li>
+        <li>Perder ainda conta como realizado. Sair no meio pergunta antes e conta como derrota. Não tem segunda chance no mesmo dia.</li>
+        <li>Depois de uma cerimônia de encerramento curta, o dia continua: o relógio vai pra duas horas depois da sua chegada, você fica na entrada do mapa, os moradores voltam pra rotina e as lojas estão abertas. O seu cônjuge está acordado em casa, e as máquinas da fazenda só andam o tempo que você passou no festival.</li>
+        <li>Sair do mapa antes de começar (o <i>Sair do festival?</i> do jogo) só te leva pra casa: o relógio não anda e o evento continua aberto até fechar.</li>
+        <li>Faltou? O anfitrião passa o evento pro próximo dia livre. Dormir antes de um evento de noite também só adia.</li>
+      </ul>
+    </div>
+    <div class="sub">
+      <h3>O que fica</h3>
+      <ul class="points">
+        <li>Por uma semana, a primeira conversa com o anfitrião e com até quatro do elenco é sobre o evento: o resultado, quem se destacou e o que significou pra eles.</li>
+        <li>Os moradores lembram, o diário e a fofoca da noite falam do evento, e o Jornal da Semana e a Retrospectiva do Ano também.</li>
+        <li>A aba <b>💌 Save the Date</b> do Hub (F9) é um mural de festival: um quadro de cortiça embaixo de um varal de bandeirinhas, com um cartaz pra cada morador. O cartaz tem a foto, o título e um adesivo que diz onde o projeto está (<b>2/3 missões</b>, <b>Hoje!</b>, <b>Amanhã</b>, a data, <b>Realizado</b>). Quem você ainda não alcançou é uma folha em branco com a silhueta.</li>
+        <li>O cartaz de um evento realizado abre o cartão-postal dele: o retrato do anfitrião numa polaroide (sorrindo depois de uma vitória), o placar da última edição, quem se destacou e uma medalha por edição: ouro pra vitória, prata pro empate, bronze pra derrota.</li>
+      </ul>
+    </div>
+    <div class="sub">
+      <h3>Festival anual</h3>
+      <ul class="points">
+        <li>Pelo cartão-postal, o evento pode virar festival anual na mesma data. Volta só o festival com o minijogo, sem o arco.</li>
+        <li>Cada edição fica guardada (“3 edições: 2 vitórias, 1 derrota”), os moradores e a cerimônia lembram das anteriores, e depois de uma vitória os rivais querem revanche: a edição seguinte sugere uma dificuldade acima.</li>
+        <li>Se alguma coisa de que o evento precisa deixa de existir (a JojaMart fechando de vez), ele acontece uma última vez, e o cartão-postal se despede em vez de oferecer o festival anual.</li>
+      </ul>
+    </div>
+    <div class="option"><span class="label">Nas configurações</span><b>Save the Date</b><span>ligado por padrão, com um interruptor pra cada evento.</span></div>
+    <div class="option"><span class="label">Nas configurações</span><b>Chance de propor</b><span>30% por padrão.</span></div>
+    <div class="option"><span class="label">Nas configurações</span><b>Se você faltar ao evento</b><span><i>Reagendar</i> por padrão. Com <i>Morador fica chateado</i>, ele cancela e oferece de novo na outra estação.</span></div>
+    <div class="option"><span class="label">Nas configurações</span><b>Fim de festival do jogo base</b><span>desligado por padrão. Ligado, você vai pra casa já tarde, como nos festivais do jogo.</span></div>
+  </section>
+
+  <!-- Os oito festivais -->
+  <section class="feature" id="v1-8-0-festivais">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Oito festivais</h3>
+      <p class="lead">Cada projeto termina num festival com o seu próprio minijogo, jogado no mapa onde ele aconteceria.</p>
+    </div>
+    <div class="notice">
+      <article data-flag="event.alex_clearing_cup"><a class="card-shot" href="assets/prints/1.8/fest-copa.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-copa.webp?r=3" width="1440" height="900" loading="lazy" alt="A Copa da Clareira na floresta: o campo de futebol com as traves, a mesa de comida, as mesinhas e a vila reunida na beira do rio."></a><h4>A Copa da Clareira <span class="pill walk">Alex</span></h4><p>Futebol de quatro contra quatro na clareira da Dança das Flores, os Pelicanos (o seu time) contra o Saloon do Alex, na frente de 28 moradores. O Kent fica no gol a partir do ano 2; antes dele, o Clint. Uma missão bônus abre um treino com o Alex, e treino terminado deixa você um pouco mais rápido no dia. Eu trouxe a partida do Beach Episode.</p></article>
+      <article data-flag="event.abigail_jungle_splat"><a class="card-shot" href="assets/prints/1.8/fest-respingo.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-respingo.webp?r=3" width="1100" height="687" loading="lazy" alt="O Respingo na Selva na Ilha Gengibre: a arena de paintball no meio da mata, com fardos de feno de cobertura, a área do time marcada e a Abigail, o Sam e o Willy esperando."></a><h4>O Respingo na Selva <span class="pill walk">Abigail</span></h4><p>Paintball de quatro contra quatro na selva da Ilha Gengibre, em rodadas de eliminação com um tiro só, melhor de cinco. A parte do Willy no arco espera o barco e o caminho da selva, e o arco, a roda e o álbum dizem o que falta. Também veio do Beach Episode. Terminar o circuito de treino da Robin te dá um balão de tinta extra por rodada.</p></article>
+      <article data-flag="event.vincent_field_day"><a class="card-shot" href="assets/prints/1.8/fest-gincana.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-gincana.webp?r=3" width="1500" height="937" loading="lazy" alt="A Gincana do Vincent na praça da vila: a quadra de queimada riscada no chão, os times em quadra e a torcida em volta do poço, debaixo de chuva."></a><h4>A Gincana <span class="pill walk">Vincent e Jas</span></h4><p>Queimada em melhor de três na praça, com a Penny de juíza. Qualquer uma das duas crianças pode propor, e toda missão passa por um adulto. As crianças tiram os times no par ou ímpar, e os adultos jogam de leve com elas: nada de super arremesso numa criança, que só fica “queimada”.</p></article>
+      <article data-flag="event.emily_dance_night"><a class="card-shot" href="assets/prints/1.8/fest-danca.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-danca.webp?r=3" width="1500" height="937" loading="lazy" alt="A Noite de Dança no Saloon: o varal de luzinhas, a Emily no tapete da pista e os pares enfileirados esperando a música, com o Gus no balcão."></a><h4>Noite de Dança no Saloon <span class="pill walk">Emily</span></h4><p>Um duelo de dança na pista do Saloon, à noite: a Emily dança uma sequência e você repete, em três rodadas, com a barra da plateia decidindo cada uma. O Clint pode ser o jurado e a Pam pode cuidar da jukebox.</p></article>
+      <article data-flag="event.gus_saloon_anniversary"><a class="card-shot" href="assets/prints/1.8/fest-aniversario.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-aniversario.webp?r=3" width="1600" height="1000" loading="lazy" alt="O Aniversário do Saloon: a vila inteira em volta das mesas e do balcão, a Emily servindo e o Gus no meio da festa."></a><h4>O Aniversário do Saloon <span class="pill walk">Gus</span></h4><p>Uma noite de garçom no Saloon de verdade: o Gus cozinha e você leva cada prato pra mesa certa antes que a paciência do cliente acabe, em três rodadas cada vez mais cheias. Pam, Shane, Lewis, Linus e Clint têm cada um a sua mania, e quem desiste de esperar diz isso do seu jeito.</p></article>
+      <article data-flag="event.sam_cart_championship"><a class="card-shot" href="assets/prints/1.8/fest-carrinhos.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-carrinhos.webp?r=3" width="1600" height="1000" loading="lazy" alt="O Campeonato de Carrinhos na JojaMart: o Sam de uniforme entre os corredores, a pilha de carrinhos azuis, o Morris de ronda, a Pam no caixa e o Shane no balcão."></a><h4>O Campeonato de Carrinhos da JojaMart <span class="pill walk">Sam</span></h4><p>O último turno do Sam na JojaMart, jogado como jogo da cobrinha no chão da loja: você e o Sam empurram filas de carrinhos cada vez maiores pelos corredores, enquanto o Morris faz a ronda. O Shane arruma o turno pro Sam, e o Vincent (ajudante de carrinho) e a Pam (distraindo o Morris) podem ajudar.</p></article>
+      <article data-flag="event.shane_chicken_race"><a class="card-shot" href="assets/prints/1.8/fest-galinhas.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-galinhas.webp?r=3" width="1600" height="1000" loading="lazy" alt="A Corrida de Galinhas no rancho da Marnie, no outono: as galinhas alinhadas na largada xadrez, a Charlie entre elas, e a vila torcendo na cerca."></a><h4>A Corrida de Galinhas <span class="pill walk">Shane</span></h4><p>Três voltas em volta do rancho da Marnie, no mapa normal da Floresta. O Shane corre com a Charlie, a galinha azul dele. Você inscreve um bicho do seu galinheiro, avaliado por amizade, felicidade e idade, ou a Marnie te empresta uma galinha. Avestruz, dinossauro, coelho e pato também correm, e a plateia tem o que dizer de cada um.</p></article>
+      <article data-flag="event.sebastian_rpg_campaign"><a class="card-shot" href="assets/prints/1.8/fest-rpg.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-rpg.webp?r=3" width="840" height="790" loading="lazy" alt="A Campanha de RPG no quarto do Sebastian: a mesa com o mapa da campanha, o Sebastian, o Sam e a Abigail sentados, e o fazendeiro chegando pela porta."></a><h4>A Campanha de RPG <span class="pill walk">Sebastian</span></h4><p>Uma noite de Solarion Chronicles no quarto dele, com o Sam e a Abigail: três salas e um chefe numa partida curta do Stardew Vanguard, o meu jogo de mina no estilo survivors, com o Sebastian narrando como mestre entre as salas e os amigos reagindo. Sair da fazenda à noite te leva direto pro quarto dele.</p></article>
+    </div>
+    <div class="sub">
+      <h3>Cada um com a sua tela</h3>
+      <div class="apps with-shots">
+        <div><b>A Copa da Clareira</b><span>Placar de estádio em madeira, o cartão do jogador que você controla com o rosto e o fôlego, o radar num quadro tático, e um quadro próprio pros pênaltis.</span></div>
+        <div><b>O Respingo na Selva</b><span>Placa de camuflagem em moldura de bambu, o rosto de cada jogador num ladrilho, e quem é eliminado ganha um respingo da tinta do outro time.</span></div>
+        <div><b>A Gincana</b><span>Uma placa de compensado pintada à mão com bandeirinhas, uma lápide pequena em cima de quem está no cemitério, e o par ou ímpar no pátio da escola.</span></div>
+        <div><b>Noite de Dança no Saloon</b><span>Uma pista neon, as setas de cada dançarino num painel com a cor dele, um letreiro de lâmpadas que piscam no ritmo e um aplausômetro.</span></div>
+        <div><b>O Aniversário do Saloon</b><span>Um cardápio de lousa, os pedidos do Gus pendurados como comandas, uma bandeja de prata e, no fim da noite, a conta.</span></div>
+        <div><b>O Campeonato de Carrinhos</b><span>Um painel de partidas azul da Joja, como o de uma estação, com os números em plaquinhas que viram.</span></div>
+        <div><b>A Corrida de Galinhas</b><span>Um placar vermelho de celeiro e rosetas de feira pra cada colocação, com a sua galinha em dourado.</span></div>
+        <div><b>A Campanha de RPG</b><span>As cenas entre as salas são jogadas no feltro da mesa, com o Sebastian atrás do escudo do mestre e o Sam e a Abigail falando das fichas de personagem.</span></div>
+        <div data-flag="event.demetrius_chess_open"><b>O torneio de xadrez</b><span>Um tabuleiro de madeira com as peças em pixel art no estilo do jogo, o retrato do adversário com a fala dele, a lista de lances com o desenho de cada peça e o último lance marcado.</span></div>
+      </div>
+    </div>
+    <div class="sub">
+      <h3>Computador ou Celular</h3>
+      <ul class="points">
+        <li>Todo minijogo tem a escolha de <b>Controles</b>. <b>Computador</b> mantém o teclado, o mouse e o controle completos. <b>Celular</b> (o padrão no Android) usa botões grandes pro dedo, mira e corre por você onde ajuda, nunca pune um toque sem querer e desenha um HUD maior. Escolher Celular pela primeira vez sugere a dificuldade Tranquila.</li>
+        <li>Três dificuldades: Tranquila, Padrão e Desafiadora.</li>
+      </ul>
+      <div class="option"><span class="label">Nas configurações</span><b>Controles dos minijogos</b><span><i>Sempre perguntar</i> por padrão, ou sempre Computador, ou sempre Celular.</span></div>
+      <div class="option"><span class="label">Nas configurações</span><b>Dificuldade padrão</b><span>e os detalhes de cada festival: a duração do tempo na Copa da Clareira, o turno do campeonato de carrinhos, o atraso de áudio da noite de dança (pra fone Bluetooth) e as teclas da campanha de RPG.</span></div>
+    </div>
+    <div class="sub">
+      <h3>E mais três eventos avulsos</h3>
+      <p>Eventos do Save the Date que não vêm de um arco: o morador te convida, o dia entra no calendário com carta e lembrete, e no fim tem foto do grupo, álbum e Pelicangram.</p>
+      <div class="notice">
+        <article data-flag="event.sam_open_rehearsal"><a class="card-shot" href="assets/prints/1.8/fest-ensaio.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-ensaio.webp?r=3" width="700" height="540" loading="lazy" alt="O ensaio aberto na cozinha da Jodi: o Sam, a Abigail e o Sebastian tocando e a plateia na mesa, com a Haley, a Penny e a Jas."></a><h4>O ensaio aberto da banda <span class="pill walk">Sam · 7 corações</span></h4><p>Uma vez por estação, numa quinta, o Sam avisa que a garagem está aberta no sábado e que a mãe deixou. Dez minutos depois, a Jodi avisa que deixou até as 16h. A banda toca no quarto do Sam pra Jodi, o Vincent, a Jas, a Penny, a Haley e, a partir do ano 2, o Kent, e tudo termina numa foto. Por enquanto, sem minijogo.</p></article>
+        <article data-flag="event.demetrius_chess_open"><a class="card-shot" href="assets/prints/1.8/fest-xadrez.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-xadrez.webp?r=3" width="1300" height="812" loading="lazy" alt="O torneio de xadrez na praça: a faixa do torneio na frente da clínica e do armazém, as mesas de madeira com tabuleiro e o George, o Sebastian, a Penny, a Robin e os outros jogadores esperando."></a><h4>O torneio de xadrez <span class="pill walk">Demetrius · 4 corações</span></h4><p>Com 4 corações, uma vez por estação, numa quarta, o Demetrius manda mensagem avisando que vai ter torneio na praça no sábado, das 10h às 16h, e que já te inscreveu. No sábado, a praça ganha quatro mesas de madeira com tabuleiro e a faixa do torneio. A Penny, a Maru, o Harvey, o George, o Sebastian, o Elliott e o Demetrius estão nas mesas, e a Robin, a Evelyn e o Lewis assistem.</p><p>Fale com o Demetrius pra começar: você senta na primeira mesa e o tabuleiro abre na tela. É mata-mata de oito: nas quartas você pega a Penny, depois vêm a semifinal e a final. Você joga de brancas nas quartas e na final e de pretas na semi, e empate classifica as pretas. As outras mesas se resolvem enquanto você joga e vão preenchendo a chave.</p><p>Escolha a peça e depois a casa, com mouse, toque ou controle. Dá pra propor empate, desistir ou sair pela pausa (sair conta como derrota). São três dificuldades, os moradores jogam mais forte a cada rodada, e a Maru, o Sebastian e o Demetrius levam um pouco mais a sério. Valem todas as regras, inclusive roque, en passant e promoção.</p><p>No fim tem foto do grupo, álbum e Pelicangram, amizade (+20 com o Demetrius, +30 se você for campeão e +10 com cada morador que você enfrentou) e nota no diário. O Weekly News e o Year in Review guardam o primeiro torneio e o primeiro título. Se você faltar, o Demetrius manda mensagem dizendo que a Penny passou por W.O., e te convida de novo na estação seguinte.</p></article>
+        <article data-flag="event.sisters_island_crossing"><a class="card-shot" href="assets/prints/1.8/fest-ilha.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-ilha.webp?r=3" width="1600" height="1000" loading="lazy" alt="Um Dia na Ilha Gengibre: a praia com guarda-sóis e toalhas, a Emily e a Haley na areia e o Willy no píer onde o barco atracou."></a><h4>Um Dia na Ilha Gengibre <span class="pill walk">Emily · 6 corações</span></h4><p>Com o barco do Willy consertado, a Emily propõe um dia na ilha com a irmã e o Willy, que pilota porque alguém tem que pilotar. A Emily espera no poleiro dos papagaios, a Haley toma sol numa toalha e o Willy pesca no píer. Quando você falou com os três, todo mundo se junta pra uma foto, que vira post da Haley no Pelicangram. Sem minijogo e sem placar.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bicos -->
+  <section class="feature" id="v1-8-0-bicos">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>31 bicos: trabalho que vem da amizade</h3>
+      <p class="lead">Conforme a amizade cresce, um morador pode te oferecer um trabalho. Cada bico tem pagamento, regras próprias e etapas que se abrem com mais corações.</p>
+    </div>
+    <ul class="points">
+      <li>A oferta vem numa conversa comum, numa caixa com a cor do bico e resposta livre, como uma proposta do Save the Date (com a mesma <b>Chance de propor</b>). Disse não? O morador pergunta de novo na estação seguinte, ou você puxa o assunto pela roda de ações dele.</li>
+      <li>Vários bicos trazem um app pro celular e pra pasta Apps do computador, com o histórico e as contas.</li>
+      <li>Tudo deixa marca: os moradores lembram, o diário e a fofoca da noite comentam, o Jornal da Semana anuncia as primeiras vezes e as marcas grandes, e a Retrospectiva do Ano guarda o dia em que você começou.</li>
+      <li>Os bichos, aquários e prateleiras são desenhados pelo mod, sem mexer nos mapas nem no save do jogo. No multiplayer, só o anfitrião tem os bicos.</li>
+    </ul>
+    <div class="sub">
+      <h3>Entregas e encomendas</h3>
+      <div class="apps with-shots">
+        <div data-flag="sidejob.pierrego"><a class="card-shot" href="assets/prints/1.8/pierrego.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/pierrego.webp" width="854" height="720" loading="lazy" alt="O app PierreGo no celular com um pedido novo da Haley: 2 açúcares, 30g mais gorjeta, com os botões Recusar e Aceitar."></a><b>PierreGo</b><span class="ai">Pierre · 2 corações</span><span>O app de entregas do Pierre. Até 5 pedidos por dia chegam no celular entre 9h e 16h; pegue a sacola no balcãozinho na porta do armazém e entregue pela roda do cliente. 30g na vila, 50g fora, e gorjeta se chegar cedo. Com 4 corações, dois pedidos de uma vez e clientes da montanha, da floresta e da praia. O app tem cara de app de entrega: abas de Pedidos, Entregas e Perfil, o cartão do pedido com o retrato do cliente, os itens e uma barra até o pedido expirar, o rastreio de cada entrega e a sua nota com os totais.</span></div>
+        <div data-flag="sidejob.farm_shelf"><a class="card-shot" href="assets/prints/1.8/prateleira.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/prateleira.webp?r=3" width="1000" height="625" loading="lazy" alt="A prateleira com o nome da fazenda no armazém do Pierre, abastecida com produtos da fazenda, e o fazendeiro chegando com mais chirívias."></a><b>A prateleira da fazenda</b><span class="ai">Pierre · 4 corações</span><span>Uma prateleira com o nome da sua fazenda dentro do armazém. Abasteça com o que você produziu, e cada morador que entra pode comprar uma unidade do que mais gosta. O Pierre fica com 20% e paga no sábado, com uma carta dizendo quem comprou o quê.</span></div>
+        <div data-flag="sidejob.gus_kitchen"><a class="card-shot" href="assets/prints/1.8/cozinha-gus.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/cozinha-gus.webp?r=3" width="1400" height="760" loading="lazy" alt="Entrega no balcão do Saloon: o fazendeiro leva os mirtilos e o ovo da lista do Gus, e o aviso confirma “Lista completa: +200g. Prato de hoje: Torta de Mirtilo!”."></a><b>A cozinha do Gus</b><span class="ai">Gus · 3 corações</span><span>Na sexta de manhã o Gus manda a lista do prato do dia com coisas da sua fazenda. Entregue até as 17h e ele paga o preço de venda mais um quarto; à noite o prato aparece num quadro atrás do balcão, e os clientes comentam. Com 7 corações, ele te ensina receitas.</span></div>
+        <div data-flag="sidejob.emily_atelier"><a class="card-shot" href="assets/prints/1.8/atelie.webp?r=4" target="_blank" rel="noopener"><img src="assets/prints/1.8/atelie.webp?r=4" width="1056" height="900" loading="lazy" alt="O app Ateliê no celular como o caderno de croquis da Emily: o macacão branco da Robin pronto pra buscar, o vestido vermelho da Haley com o tecido e a papoula já na mochila e 50g na etiqueta, e o manequim pra encomendar uma peça sua na cor que você escolher."></a><b>O ateliê da Emily</b><span class="ai">Emily · 3 corações</span><span>Toda quarta um morador encomenda uma peça numa de nove cores. Você leva o tecido e o que tinge (tulipa pro vermelho, carvão pro preto), a Emily costura em dois dias e você entrega. Com 5 corações, uma peça pra você; com 7, um desfile no Saloon no fim da estação.</span></div>
+        <div data-flag="sidejob.jodi_casserole"><a class="card-shot" href="assets/prints/1.8/cacarola.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/cacarola.webp?r=3" width="1100" height="687" loading="lazy" alt="O veredito da caçarola na cozinha da Jodi: o Sam diz “Comi cereal depois. Sem ofensa.” e o Vincent responde “Eu comi TUDO.”."></a><b>A caçarola da Jodi</b><span class="ai">Jodi · 3 corações</span><span>Toda segunda a Jodi diz qual ingrediente da fazenda a caçarola da semana precisa. Entregue, ganhe 40g e um prato, e no dia seguinte a família dá a nota em colheres no app Caçarola. Com 7 corações, descubra do que o Kent gosta.</span></div>
+        <div data-flag="sidejob.willy_aquarium"><a class="card-shot" href="assets/prints/1.8/willy-aquario.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/willy-aquario.webp?r=3" width="760" height="475" loading="lazy" alt="O aquário pequeno na parede da peixaria do Willy, ao lado da porta do túnel, com os peixes que o fazendeiro trouxe e a plaquinha com o nome dele. Clicar abre o aquário grande."></a><b>O aquário do Willy</b><span class="ai">Willy · 2 corações</span><span>Um aquário na parede da peixaria, com os peixes que você leva nadando nele. Toda segunda o Willy pede de um a três peixes. Com 4 corações, decoração e 12 peixes; com 6, um segundo aquário no píer; com 8, um lendário por ano; com 10, uma placa com o seu nome.</span></div>
+        <div data-flag="sidejob.sandy_courier"><a class="card-shot" href="assets/prints/1.8/correio-deserto.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/correio-deserto.webp?r=3" width="1500" height="937" loading="lazy" alt="A Emily abre na sala dela a caixa que o fazendeiro trouxe do deserto, e o bilhete da Sandy diz: “Uma caixa inteira. Não diz que eu nunca te mimo. As sandálias são piada. Ou não.”"></a><b>O correio do deserto</b><span class="ai">Sandy · 3 corações</span><span>Com o ônibus funcionando, leve as encomendas entre a Sandy e a Emily: na segunda a da Sandy, no dia seguinte a resposta da Emily, 40g por viagem. Com 5 corações, os presentes de aniversário viajam com você.</span></div>
+        <div data-flag="sidejob.krobus_barter"><a class="card-shot" href="assets/prints/1.8/trocas-krobus.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/trocas-krobus.webp?r=3" width="900" height="560" loading="lazy" alt="O quadro de trocas do Krobus na parede do esgoto, com os pedidos da semana escritos a giz, ao lado da barraca dele."></a><b>As trocas do Krobus</b><span class="ai">Krobus · 3 corações</span><span>Um quadro ao lado dele lista três desejos por semana, coisas lá de cima: um girassol, um ovo de verdade, pão, um livro. Ele paga em essência, ovos e maionese do vazio. Uma vez por save, ele pede o sol.</span></div>
+        <div data-flag="sidejob.linus_barter"><a class="card-shot" href="assets/prints/1.8/linus-escambo.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/linus-escambo.webp" width="960" height="600" loading="lazy" alt="A barraca do Linus na montanha, na chuva: ele perto da fogueira e o quadro de trocas da semana ao lado do fazendeiro."></a><b>O escambo do Linus</b><span class="ai">Linus · 2 corações</span><span>O Linus troca em vez de vender. Toda segunda um quadro na barraca lista o que ele precisa (fibra, seiva, argila, uma geleia sua) e o que dá em troca (sementes silvestres, isca, coleta de ouro).</span></div>
+        <div data-flag="sidejob.leo_parrots"><a class="card-shot" href="assets/prints/1.8/papagaios.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/papagaios.webp?r=3" width="1100" height="687" loading="lazy" alt="O poleiro na fazenda, do lado da caixa de correio: um papagaio verde pousou com um bilhete do Leo e um “!” em cima, esperando o fazendeiro ler."></a><b>O correio dos papagaios</b><span class="ai">Leo · 4 corações</span><span>Um poleiro ao lado da sua caixa de correio. Segunda e quinta um papagaio traz um recado do Leo; responda ou mande de volta o item na mão, como presente. Com 6 corações, pistas de nozes douradas.</span></div>
+      </div>
+    </div>
+    <div class="sub">
+      <h3>Ajudando a vila</h3>
+      <div class="apps with-shots">
+        <div data-flag="sidejob.lewis_mediator"><a class="card-shot" href="assets/prints/1.8/mediador.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/mediador.webp?r=3" width="1220" height="762" loading="lazy" alt="Uma mediação na praça: a Jodi reclama que a Caroline levou a fama pela receita de caçarola dela e a Caroline responde que não precisa fazer tempestade em copo d’água."></a><b>O mediador da Prefeitura</b><span class="ai">Lewis · 4 corações</span><span>Quando dois moradores estão brigados há três dias, o caso chega no app Prefeitura. Sente os dois pra conversar e fale com as suas palavras; a IA decide se fizeram as pazes. 200g por caso resolvido. Com 8 corações, uma decisão da vila por estação.</span></div>
+        <div data-flag="sidejob.lewis_suggestions"><a class="card-shot" href="assets/prints/1.8/caixa-sugestoes.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/caixa-sugestoes.webp?r=3" width="1100" height="687" loading="lazy" alt="A caixa de sugestões do Lewis num poste na frente da casa dele, ao lado da lixeira, com o fazendeiro chegando pra deixar o bilhete da semana."></a><b>A caixa de sugestões</b><span class="ai">Lewis · 2 corações</span><span>Uma caixa na porta do prefeito. Escreva um bilhete por semana e ele responde por carta dois dias depois, escrita pela IA a partir do que você escreveu. Às vezes vira notícia no jornal.</span></div>
+        <div data-flag="sidejob.elliott_column"><a class="card-shot" href="assets/prints/1.8/cronica.webp?r=4" target="_blank" rel="noopener"><img src="assets/prints/1.8/cronica.webp?r=4" width="1056" height="900" loading="lazy" alt="O app Crônica no celular como uma página de jornal: o rascunho de quinta do Elliott, “O prefeito e o olhar demorado”, com capitular e assinatura, carimbado Publicar num celular e Segurar no outro, com os botões Publicar e Segurar embaixo."></a><b>A crônica do Elliott</b><span class="ai">Elliott · 3 corações</span><span>Você vira colunista convidado: na segunda escolhe o assunto da semana no app Crônica, na quinta o Elliott escreve, na sexta sai no Jornal da Semana, e o Lewis paga 40g.</span></div>
+        <div data-flag="sidejob.harvey_rounds"><a class="card-shot" href="assets/prints/1.8/visitas-harvey.webp?r=4" target="_blank" rel="noopener"><img src="assets/prints/1.8/visitas-harvey.webp?r=4" width="1056" height="900" loading="lazy" alt="O app Clínica no celular como a prancheta do Harvey: a foto da Evelyn presa por um clipe, as caixas Bem, Cansado e Preocupado e uma frase escrita a caneta; no segundo celular, o relatório enviado com o carimbo Anotado, o bilhete amarelo do kit pra Pam e as fichas."></a><b>As visitas do Harvey</b><span class="ai">Harvey · 4 corações</span><span>Toda terça o Harvey te passa o nome de um morador que nunca vai à clínica. Converse com ele e conte pro Harvey como ele está, pela roda ou no app Clínica. Se você disser que está preocupado, ele manda um kit pra você entregar.</span></div>
+        <div data-flag="sidejob.sebastian_support"><a class="card-shot" href="assets/prints/1.8/suporte.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/suporte.webp?r=3" width="960" height="580" loading="lazy" alt="A chamada grande do Saloon: o Sebastian veio junto e espera ao lado do computador do Gus, com a tela azul piscando, enquanto o fazendeiro olha a máquina."></a><b>O suporte técnico</b><span class="ai">Sebastian · 5 corações</span><span>O trabalho de freelancer do Sebastian virou o suporte técnico da vila, e quem atende é você. Ele manda o chamado com o que fazer; na casa do cliente tem um computador de tela azul e três opções. Quem leu a mensagem acerta de primeira.</span></div>
+        <div data-flag="sidejob.frog_census"><a class="card-shot" href="assets/prints/1.8/censo-sapos.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/censo-sapos.webp" width="1440" height="900" loading="lazy" alt="Dia de chuva no lago da montanha: o fazendeiro na margem, com sapos do censo do Demetrius sentados na beira da água."></a><b>O censo dos sapos</b><span class="ai">Demetrius e Sebastian · 4 corações</span><span>Em dia de chuva, conte os sapos na beira do lago da montanha e do lago da fazenda. O sapo dourado vale três, e o Sebastian sabe onde ele está (não pergunte como). 15g por sapo.</span></div>
+        <div data-flag="sidejob.pam_lost_found"><a class="card-shot" href="assets/prints/1.8/achados-perdidos.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/achados-perdidos.webp?r=3" width="1000" height="625" loading="lazy" alt="A caixa de achados e perdidos da Pam na calçada do ponto de ônibus, com um embrulho achado dentro, a Pam ao lado e o ônibus parado."></a><b>Os achados e perdidos do ônibus</b><span class="ai">Pam · 3 corações</span><span>Um achado por semana numa caixa no ponto de ônibus. A descrição é a pista de quem é o dono; devolva pela roda de qualquer morador. Errou, ganha outra pista.</span></div>
+        <div data-flag="sidejob.penny_class"><a class="card-shot" href="assets/prints/1.8/aula-penny.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/aula-penny.webp?r=3" width="1500" height="937" loading="lazy" alt="A aula da Penny na biblioteca: depois de mostrar a ametista pra Jas, ela pergunta se a pedra fica pra biblioteca (doar por 40g ou levar de volta)."></a><b>O material de aula da Penny</b><span class="ai">Penny · 3 corações</span><span>Leve à biblioteca um item de verdade sobre o tema da semana (minerais, peixes, plantas, coisas antigas, bichos da fazenda). A Jas e o Vincent comentam, e você doa ou recebe de volta.</span></div>
+        <div data-flag="sidejob.jas_show_and_tell"><a class="card-shot" href="assets/prints/1.8/mostra-e-conta.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/mostra-e-conta.webp?r=3" width="1100" height="687" loading="lazy" alt="O desenho de giz de cera que a Jas fez depois do mostra e conta: uma galinha enorme ao lado da casinha e dela mesma, sob o sol."></a><b>O mostra e conta da Jas</b><span class="ai">Jas · 3 corações</span><span>Toda terça a Jas manda uma carta com o tema do mostra e conta da Penny (“uma coisa que uma vaca fez”, “uma pedra que brilha”). Sem pagamento: é um favor pra Jas, que às vezes te dá um desenho de giz de cera.</span></div>
+        <div data-flag="sidejob.marnie_rescue"><a class="card-shot" href="assets/prints/1.8/fugitivos.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fugitivos.webp?r=3" width="1400" height="875" loading="lazy" alt="Uma fujona na floresta: a Charlie, a galinha azul do Shane, perdida na beira do lago com um “?” em cima, e o fazendeiro chegando pra levar ela de volta ao rancho."></a><b>Os fugitivos da Marnie</b><span class="ai">Marnie · 3 corações</span><span>Às vezes, às 9h, a Marnie avisa que um bicho dela fugiu pra floresta. Ache, clique e ele te segue até a porta do rancho: 60g por cabeça. Com 7 corações, às vezes quem fugiu foi um bicho seu.</span></div>
+        <div data-flag="sidejob.wizard_runes"><a class="card-shot" href="assets/prints/1.8/runas.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/runas.webp?r=3" width="1000" height="625" loading="lazy" alt="A runa da semana plantada no cemitério da vila, entre as lápides, com o fazendeiro ao lado esperando ela carregar."></a><b>As runas do Mago</b><span class="ai">Mago · 4 corações</span><span>Toda segunda uma carta diz onde e quando plantar a runa da semana: a praia à noite, o cemitério, o topo da montanha. Deixe uma noite, colete e leve de volta, e ele lê a runa em voz alta.</span></div>
+      </div>
+    </div>
+    <div class="sub">
+      <h3>Fazendo companhia</h3>
+      <div class="apps with-shots">
+        <div data-flag="sidejob.leah_gallery"><a class="card-shot" href="assets/prints/1.8/exposicao.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/exposicao.webp" width="1104" height="690" loading="lazy" alt="Leah puxa o assunto do bico na caixa de conversa especial: “lucas! Pensou na exposição? O Gus ainda tem aquela parede esperando seus quadros.”"></a><b>A exposição da Leah</b><span class="ai">Leah · 4 corações</span><span>Seus desenhos do SVpaint numa parede do Saloon. A Leah pendura na sexta às 18h, os moradores comentam à noite, no domingo ela manda a crítica com uma nota de 1 a 5 pincéis, e alguém pode comprar o quadro.</span></div>
+        <div data-flag="sidejob.caroline_aerobics"><a class="card-shot" href="assets/prints/1.8/aerobica.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/aerobica.webp?r=3" width="1800" height="1000" loading="lazy" alt="Fim da aula de aeróbica no armazém com a Jodi, a Marnie e a Robin: a Caroline diz “Boa aula. Você segurou a prancha mais que a Jodi, e ela faz isso há um ano” e o Pierre anuncia as sementes do verão."></a><b>A aeróbica das terças</b><span class="ai">Caroline · 3 corações</span><span>Aula de aeróbica no fundo do armazém, com a Jodi, a Marnie, a Robin, a Emily e alguém escondido atrás da prateleira. Uma hora passa e você sai alongado, com velocidade +1 até dormir.</span></div>
+        <div data-flag="sidejob.shane_round"><a class="card-shot" href="assets/prints/1.8/ronda-shane.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/ronda-shane.webp" width="1104" height="690" loading="lazy" alt="Shane puxa o assunto do bico na caixa de conversa especial: “lucas. A ronda. As galinhas da Marnie, nos dias que entro cedo na Joja. Ainda preciso de alguém.”"></a><b>A ronda do Shane</b><span class="ai">Shane · 3 corações</span><span>Cuide das galinhas do rancho nos dias em que o Shane entra cedo na Joja, sem a Marnie saber que não é ele. Com 7 corações, ele volta a fazer a ronda e te chama pra ir junto aos sábados.</span></div>
+        <div data-flag="sidejob.sam_roadie"><a class="card-shot" href="assets/prints/1.8/roadie.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/roadie.webp?r=3" width="860" height="537" loading="lazy" alt="O ensaio na cozinha da Jodi: o Sam, o Sebastian e a Abigail tocam, com uma nota musical sobre o Sam, e o fazendeiro de roadie assistindo."></a><b>O roadie da banda</b><span class="ai">Sam · 3 corações</span><span>Toda sexta o Sam pede uma coisa pro ensaio de sábado (uma pizza, cinco madeiras pro amplificador parar de balançar). Entregue e assista ao ensaio. Sem dinheiro, só glória, e o app Roadie pra votar no setlist.</span></div>
+        <div data-flag="sidejob.kent_garden"><a class="card-shot" href="assets/prints/1.8/canteiro-kent.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/canteiro-kent.webp?r=3" width="1200" height="750" loading="lazy" alt="Os dois canteiros do Kent na porta da casa da Jodi, com tomate e pimenta crescendo, num dia de chuva."></a><b>O canteiro do Kent</b><span class="ai">Kent · 3 corações · ano 2</span><span>O Kent quer plantar alguma coisa ao lado de casa. Dê uma semente da estação: ela cresce no ritmo de verdade, o Vincent rega em voz alta e a colheita é meio a meio.</span></div>
+        <div data-flag="sidejob.george_walk"><a class="card-shot" href="assets/prints/1.8/george-passeio.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/george-passeio.webp" width="1450" height="906" loading="lazy" alt="O George na cadeira de rodas ao lado do fazendeiro, dizendo “Tá. Mas não chego perto daquele saloon.”, com o aviso de que ele está te seguindo até as 18h."></a><b>Os passeios do George</b><span class="ai">George · 3 corações</span><span>A Evelyn pede pra você levar o George pra passear. Ele te segue na cadeira de rodas, com um resmungo por lugar. A praia com 5 corações, uma noite no Saloon com 7, o lago da montanha com 9.</span></div>
+        <div data-flag="sidejob.dusty_walk"><a class="card-shot" href="assets/prints/1.8/dusty-passeio.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/dusty-passeio.webp" width="1280" height="800" loading="lazy" alt="O Dusty solto na vila, seguindo o fazendeiro na frente da casa dos Mullner."></a><b>Os passeios do Dusty</b><span class="ai">depois do evento de 4 corações do Alex</span><span>Clique no cercado do Dusty e o cachorro te segue pela vila, pela floresta e pela montanha. Uma vez por passeio ele desenterra alguma coisa. Devolva até as 18h, ou o Alex vai ficar sabendo.</span></div>
+        <div data-flag="sidejob.alex_training"><a class="card-shot" href="assets/prints/1.8/alex-treino.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/alex-treino.webp?r=3" width="1300" height="812" loading="lazy" alt="O treino da manhã na frente da casa dos Mullner: depois dos exercícios, o Alex diz “Nada mal. Mesma hora quinta.”, ao lado do canil do Dusty."></a><b>O treino do Alex</b><span class="ai">Alex · 2 corações</span><span>Terça, quinta e sábado de manhã ele te espera na frente de casa pro treino de futebol. Cada sessão vai pro app Caderno de treino, e o George assiste da janela.</span></div>
+      </div>
+    </div>
+    <div class="sub">
+      <h3>Pra quem é casado</h3>
+      <div class="apps with-shots">
+        <div data-flag="sidejob.spouse_dinner"><a class="card-shot" href="assets/prints/1.8/cozinhar-juntos.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/cozinhar-juntos.webp" width="1104" height="690" loading="lazy" alt="Haley puxa o assunto do bico na caixa de conversa especial: “Sobre cozinhar juntos uma vez por semana... eu ainda quero. Só nós dois, aos sábados, a partir das 18:00.”"></a><b>Cozinhar juntos</b><span class="ai">cônjuge</span><span>Uma noite por semana vocês cozinham juntos em casa. No sábado o cônjuge diz o que está com vontade, e a partir das 18h, com os ingredientes na mochila, a mágica acontece. O Krobus propõe um lanche da meia-noite (ele não cozinha, ele assiste).</span></div>
+        <div data-flag="sidejob.island_break"><a class="card-shot" href="assets/prints/1.8/folga-ilha.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/folga-ilha.webp?r=3" width="1400" height="875" loading="lazy" alt="O dia de folga na Ilha Gengibre: a Haley espera na ponta do píer com o Leo, que veio dar oi, e o barco do Willy atracado."></a><b>Folga na ilha</b><span class="ai">cônjuge · casa da Ilha Gengibre</span><span>Uma vez por estação, um dia na ilha com o cônjuge: a praia durante o dia, a casa da ilha à noite e amizade a mais se vocês dormirem por lá.</span></div>
+      </div>
+    </div>
+    <div class="option"><span class="label">Nas configurações</span><b>Bicos</b><span>uma página nova, com o interruptor, os corações mínimos e o pagamento de cada bico.</span></div>
+  </section>
+
+  <!-- Jantares -->
+  <section class="feature" id="v1-8-0-jantares">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Jantares em família</h3>
+      <p class="lead">Quando você fica próximo de uma família inteira, ela te chama pra jantar. Você responde com as suas palavras numa conversa com todo mundo da mesa ao mesmo tempo, e volta pra casa com um prato.</p>
+    </div>
+    <ul class="points">
+      <li>A conversa em grupo agora senta até quatro moradores.</li>
+      <li>Cada jantar acontece no máximo uma vez por estação, nunca cai num dia de Save the Date, e faltar não custa nada além de uma mensagem.</li>
+    </ul>
+    <div class="notice">
+      <article data-flag="event.pierre_family_dinner"><h4>Domingo no Pierre <span class="pill walk">Pierre, Caroline e Abigail</span></h4><p>A Caroline te chama pro domingo às 19h, com a loja fechada. O Pierre volta sempre pro assunto da loja, a Abigail quer falar das minas e a Caroline muda de assunto. Ela ainda manda um prato pra casa.</p></article>
+      <article data-flag="event.sisters_dinner"><h4>O jantar das irmãs <span class="pill walk">Emily e Haley</span></h4><p>Leve alguma coisa que você cozinhou. A Emily está no fogão, e a Haley julga o seu prato pelo gosto dela: bolo rosa ganha, peixe leva grito. Às vezes o Clint aparece na porta pra devolver uma panela.</p></article>
+      <article data-flag="event.mountain_family_dinner"><h4>A casa da montanha <span class="pill walk">Robin</span></h4><p>A única regra da Robin é não falar do porão pro Demetrius. Os quatro na mesa da cozinha (o Sebastian SUBIU), e na porta ela te conta que foi o jantar mais longo que o Seb aguentou no ano.</p></article>
+      <article data-flag="event.jodi_family_dinner"><h4>O jantar da Jodi <span class="pill walk">Jodi</span></h4><p>Sábado às 19h, leve um peixe. Todo mundo julga o peixe, o Vincent faz uma das perguntas dele e o Sam sai cedo pro ensaio. No ano 1 tem um prato a mais na mesa. A partir do ano 2, o Kent senta com eles.</p></article>
+      <article data-flag="event.ranch_family_dinner"><h4>Domingo no rancho <span class="pill walk">Marnie</span></h4><p>Jantar na cozinha do rancho com a Marnie, o Shane e a Jas. De vez em quando o Lewis aparece trazendo um “documento”.</p></article>
+      <article data-flag="event.mullner_family_dinner"><h4>Domingo nos Mullner <span class="pill walk">Evelyn, George e Alex</span></h4><p>No primeiro fim de semana da estação, a Evelyn manda um convite escrito à mão. Leve um prato ou nada: alho-poró arranca uma palavra do George, e biscoito faz a Evelyn perguntar da receita.</p></article>
+      <article data-flag="event.pam_newhouse_dinner"><h4>A casa nova da Pam <span class="pill walk">Pam e Penny</span></h4><p>Uma semana depois da casa nova ficar pronta, a Penny cozinha pra você. A noite muda se você pagou a casa às claras, no anonimato ou se não pagou.</p></article>
+      <article data-flag="event.outsiders_rotation_dinner"><h4>Os quatro de fora <span class="pill walk">Harvey, Elliott, Leah e Linus</span></h4><p>Os quatro que vieram de fora e moram sozinhos jantam juntos uma vez por estação, cada vez na casa de um: a clínica, a cabana do Elliott, a casa da Leah e a fogueira do Linus. E conversam sobre o que trouxe cada um pro vale.</p></article>
+      <article data-flag="event.elliott_soiree"><h4>Um sarau na praia <span class="pill walk">Elliott</span></h4><p>Sexta à noite, na areia perto da cabana, com lanternas e piano. O Elliott lê um trecho novo do romance dele, a Leah mostra uma escultura e o Harvey tenta não falar de pressão arterial.</p></article>
+      <article data-flag="event.outsiders_dinner"><h4>A ceia dos que não vão à festa <span class="pill walk">Mago</span></h4><p>Depois do Festival da Estrela Invernal, às 22h, o Mago e mais alguns de fora (o Krobus, o Anão ou a Sandy) aparecem na sua mesa. Não cozinhe. Cada um deixa uma coisa.</p></article>
+      <article data-flag="event.spouse_family_dinner"><h4>Jantar com a família do cônjuge <span class="pill walk">casados</span></h4><p>O seu cônjuge chama a família pra jantar na sua casa, no domingo às 19h. Vale pra todos os casáveis (e pro Krobus, que chama o Mago), e os seus filhos entram na conversa.</p></article>
+      <article data-flag="event.lewis_citizen_dinner"><h4>Cidadão do ano <span class="pill walk">Lewis · 8 corações</span></h4><p>No fim do inverno, um jantar em sua homenagem no Saloon, com um discurso que a IA escreve a partir do seu ano, brindes, um prato com o nome da sua fazenda e uma faixa de Cidadão do Ano.</p></article>
+    </div>
+    <div class="option"><span class="label">Nas configurações</span><b>Jantares em família</b><span>com os corações mínimos de cada família.</span></div>
+  </section>
+
+  <!-- Aniversários -->
+  <section class="feature" id="v1-8-0-aniversarios">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Festas de aniversário</h3>
+      <p class="lead">No aniversário de alguns moradores, os amigos se juntam, e você está convidado. O presente que você trouxe faz diferença.</p>
+    </div>
+    <div class="notice">
+      <article data-flag="event.abigail_birthday_saloon"><h4>A Abigail no Saloon <span class="pill walk">Outono 13</span></h4><p>Com o Sam e o Sebastian, sem os pais dela. Presentes, uma rodada de Journey of the Prairie King pra cada (ela ganha todo ano, a não ser que você tenha zerado o jogo) e, às 20h, o Pierre e a Caroline chegando sem convite com um bolo.</p></article>
+      <article data-flag="event.vincent_birthday_yard"><h4>O Vincent no quintal <span class="pill walk">Primavera 10</span></h4><p>Ele pediu bolo rosa. A Penny traz um livro, o Sam toca exatamente um riff, e a partir do ano 2 o Kent acende a vela.</p></article>
+      <article data-flag="event.jas_birthday_ranch"><h4>A Jas no rancho <span class="pill walk">Verão 4</span></h4><p>Bolo na cozinha do rancho, com a Marnie, o Shane, o Vincent, a Penny e a Jodi. Todo mundo canta (o Shane, um pouco). Se ela amar o seu presente, quem corta o bolo é você.</p></article>
+      <article data-flag="event.george_birthday_party"><h4>A festa surpresa do George <span class="pill walk">Outono 24</span></h4><p>A Evelyn te pede ajuda pra fazer a festa que o George diz que não quer. O Gus traz o bolo, o Harvey libera uma fatia, e o Lewis tenta um discurso e ganha bolo no lugar.</p></article>
+      <article data-flag="event.demetrius_birthday_lab"><h4>A cadeira vazia <span class="pill walk">Verão 19</span></h4><p>O aniversário do Demetrius, com uma cadeira a mais na mesa. Se você convencer o Sebastian a subir, ele senta nela. Se não, a família comenta.</p></article>
+    </div>
+    <div class="option"><span class="label">Nas configurações</span><b>Aniversários com os amigos</b></div>
+  </section>
+
+  <!-- Visitas à fazenda -->
+  <section class="feature" id="v1-8-0-visitas">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Visitas à fazenda</h3>
+      <p class="lead">Agora quem vem é a vila: moradores próximos pedem pra conhecer a sua fazenda, passeiam por ela com você e dizem o que acham do que você construiu.</p>
+    </div>
+    <div class="notice">
+      <article data-flag="event.ranch_farm_visit"><h4>A Marnie e a Jas <span class="pill walk">Marnie · 5 corações</span></h4><p>Domingo às 13h. A Marnie passa pelo galinheiro, pelo celeiro, pelo silo e pelas plantações, e fala dos seus bichos pelo nome: qual parece menos feliz, qual gosta mais de você. A Jas faz carinho em alguém, e o Shane vem a partir de 6 corações.</p></article>
+      <article data-flag="event.mullner_farm_visit"><h4>Os Mullner <span class="pill walk">Evelyn e Alex · 6 corações</span></h4><p>A avó quer ver a fazenda (e o avô perdeu a discussão). A Evelyn vai na frente, o Alex empurra o George, e cada parada ganha um comentário, gentil ou seco.</p></article>
+      <article data-flag="event.penny_field_trip"><h4>A excursão da Penny <span class="pill walk">Penny · 6 corações</span></h4><p>Sábado às 10h, com a Jas e o Vincent. As crianças perguntam, a Penny responde, e no dia seguinte chega um desenho da fazenda feito pelo Vincent.</p></article>
+      <article data-flag="event.leah_tree_visit"><h4>A Leah escolhe uma árvore <span class="pill walk">Leah · 5 corações</span></h4><p>Uma vez por ano ela vem escolher uma árvore pra uma escultura. Você derruba, e uma semana depois a peça está na casa dela, com uma plaquinha com o nome da fazenda.</p></article>
+      <article data-flag="event.maru_farm_sensor"><h4>A Maru instala “uma coisa” <span class="pill walk">Maru · 6 corações</span></h4><p>Uma mini estação meteorológica ao lado da sua casa, com a previsão de amanhã, uma temperatura inventada e “umidade: sim”. Uma vez por estação ela detecta alguma coisa e a Maru te avisa.</p></article>
+      <article data-flag="event.kent_farm_visit"><h4>O Kent dá uma volta <span class="pill walk">Kent · ano 2</span></h4><p>Num domingo de manhã, sem avisar, o Kent bate na sua porta e dá uma volta pela fazenda com você. No fim, pergunta se pode passar de vez em quando.</p></article>
+      <article data-flag="event.demetrius_farm_cave"><h4>O Demetrius inspeciona a caverna <span class="pill walk">Demetrius · 3 corações</span></h4><p>Ele espera na boca da caverna (“Não entro sem você. Protocolo.”) e conta em voz alta as suas caixas de cogumelo, ou chama os morcegos de “uma escolha válida”.</p></article>
+      <article data-flag="event.sebastian_farm_visit"><h4>O Sebastian foge de casa <span class="pill walk">Sebastian · 7 corações</span></h4><p>Às vezes ele chega de moto à uma da tarde, sem avisar: “Tô na sua fazenda. Não faz disso um evento.” Fica até as quatro, ou até as seis se você der um café.</p></article>
+      <article data-flag="event.junimo_visit"><h4>Os Junimos <span class="pill walk">Centro Comunitário restaurado</span></h4><p>Às vezes eles aparecem na porta da sua casa pro dia. Quantos vêm, e se deixam presente, depende do humor do seu Junimogotchi.</p></article>
+    </div>
+    <div class="option"><span class="label">Nas configurações</span><b>Visitas à fazenda</b></div>
+  </section>
+
+  <!-- Cenas e momentos -->
+  <section class="feature" id="v1-8-0-cenas">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Cenas e momentos</h3>
+      <p class="lead">Coisas que acontecem quando você está por perto, sem missão nem placar. Cada uma deixa memória em quem estava lá.</p>
+    </div>
+    <div class="sub">
+      <h3>De dia</h3>
+      <div class="notice">
+        <article data-flag="event.pierre_wednesday_fishing"><a class="card-shot" href="assets/prints/1.8/quarta-pierre.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/quarta-pierre.webp" width="1400" height="875" loading="lazy" alt="Na praia, no fim da pescaria, o Pierre conta: “Na maioria das quartas eu vou até o Centro Comunitário e fico olhando pela janela. Não conta pro Lewis.”"></a><h4>A quarta-feira do Pierre <span class="pill walk">Pierre · 6 corações</span></h4><p>A Caroline te pede pra levar o Pierre pra pescar na quarta, quando a loja fecha. Ele comenta cada peixe (sem nenhuma ajuda, ele nunca segurou uma vara) e no fim compra o maior.</p></article>
+        <article data-flag="event.gus_fishing_monday"><a class="card-shot" href="assets/prints/1.8/pescaria-gus.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/pescaria-gus.webp?r=3" width="1200" height="750" loading="lazy" alt="Na chuva, o Gus pesca no píer da peixaria do Willy: “Peguei! ...É uma sardinha. É sempre uma sardinha.”"></a><h4>A pescaria de segunda do Gus <span class="pill walk">Gus · 7 corações</span></h4><p>O Gus fecha o Saloon de manhã pra pescar com você no píer. O seu melhor peixe vira o prato especial da noite.</p></article>
+        <article data-flag="event.pancake_sunday"><a class="card-shot" href="assets/prints/1.8/panqueca.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/panqueca.webp?r=3" width="1500" height="937" loading="lazy" alt="Domingo de panqueca na casa da Jodi: ela diz na cozinha “Senta. A manteiga tá do seu lado. Você é da manteiga.” e o Vincent canta na sala “Lá lá lá PANQUECA, lá lá CALDA, lá lá…”."></a><h4>Domingo de panqueca <span class="pill walk">Jodi · 4 corações</span></h4><p>Domingo de manhã na casa da Jodi. O Vincent canta a música da panqueca, o Sam desce de pijama perguntando que horas são, e você fica encarregado da manteiga.</p></article>
+        <article data-flag="event.jas_doll_tea"><a class="card-shot" href="assets/prints/1.8/cha-bonecas.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/cha-bonecas.webp?r=3" width="1500" height="937" loading="lazy" alt="O chá de bonecas no quarto da Jas: ela serve à mesinha roxa e o Shane chega reclamando: “Me disseram que ia ter chá de verdade. Essa xícara é do tamanho do meu dedão.”"></a><h4>Chá de bonecas <span class="pill walk">Jas · 5 corações</span></h4><p>A Jas serve chá pra três bonecas, o tio Shane chega com uma xícara do tamanho de um dedo, e a sua resposta muda a última fala dela.</p></article>
+        <article data-flag="event.ranch_hay_inspection"><a class="card-shot" href="assets/prints/1.8/inspecao-feno.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/inspecao-feno.webp?r=3" width="1500" height="937" loading="lazy" alt="No jantar à mesa da cozinha do rancho, a Jas pergunta por que o prefeito sempre janta ali, e o Lewis, ao lado da Marnie, responde: “Inspeção de feno. Oficial. Feno muito regular, este. Hm.”"></a><h4>Por que o prefeito vem tanto? <span class="pill walk">Marnie · 6 corações</span></h4><p>A Jas pergunta na frente de todo mundo por que o Lewis sempre janta no rancho. “Inspeção de feno”, ele responde, rápido demais.</p></article>
+        <article data-flag="event.ranch_gate_confession"><a class="card-shot" href="assets/prints/1.8/porteira.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/porteira.webp" width="1400" height="875" loading="lazy" alt="No rancho, a Marnie cobra o Shane de novo: “Shane. A porteira. Três vezes nesta estação. Três.”."></a><h4>Quem deixou a porteira aberta <span class="pill walk">Jas · 4 corações</span></h4><p>A Marnie culpa o Shane pela porteira de novo, e dessa vez alguém confessa.</p></article>
+        <article data-flag="event.jas_family_drawing"><a class="card-shot" href="assets/prints/1.8/desenho-jas.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/desenho-jas.webp" width="768" height="510" loading="lazy" alt="O desenho de giz de cera da Jas: Marnie, Shane, ela, a Charlie e o fazendeiro de chapéu, com a legenda “minha família (e você), por JAS”."></a><h4>O desenho da família <span class="pill walk">Jas, Shane e Marnie · 6 corações</span></h4><p>A Jas te manda o desenho da família que fez pra escola. A partir de 8 corações com a Marnie, você está nele, de chapéu.</p></article>
+        <article data-flag="event.leah_rainy_cabin"><a class="card-shot" href="assets/prints/1.8/tarde-chuva.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/tarde-chuva.webp" width="1200" height="750" loading="lazy" alt="A conversa a três na cabana do Elliott: a Leah diz que o cheiro de madeira molhada e papel velho está ótimo, e o Elliott pergunta como estão as coisas com esse clima."></a><h4>Tardes de chuva <span class="pill walk">Leah e Elliott · 4 corações</span></h4><p>Em dia de chuva, a Leah esculpe na mesa do Elliott enquanto ele escreve. Sente com eles um pouco. A Haley, claro, tem uma teoria.</p></article>
+        <article data-flag="event.harvey_linus_checkup"><a class="card-shot" href="assets/prints/1.8/exame-linus.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/exame-linus.webp?r=3" width="1480" height="925" loading="lazy" alt="A consulta do Linus na clínica, conversa a três: o Linus acha as cadeiras mais macias do que lembrava e reclama do estetoscópio gelado do Harvey."></a><h4>O Harvey quer examinar o Linus <span class="pill walk">Harvey · 4 corações</span></h4><p>O Linus nunca pisou na clínica. Convença ele com as suas palavras, ou suba a montanha com o Harvey.</p></article>
+        <article data-flag="event.charlie_training"><a class="card-shot" href="assets/prints/1.8/treino-charlie.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/treino-charlie.webp?r=3" width="1440" height="900" loading="lazy" alt="Dia de treino na floresta: a pista armada nas cercas do rancho, com a linha de largada xadrez, e o Shane e a Jas esperando."></a><h4>O treino da Charlie <span class="pill walk">Shane · 8 corações</span></h4><p>Depois da corrida de galinhas, o Shane propõe um contra-relógio aos sábados: uma volta contra a Charlie, sem aposta e sem pódio. A Jas marca o tempo.</p></article>
+        <article data-flag="event.mullner_game_night"><a class="card-shot" href="assets/prints/1.8/noite-jogo.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/noite-jogo.webp" width="1400" height="875" loading="lazy" alt="Noite de jogo na casa dos Mullner: o George manda “Senta. Aí não. Tá na frente da tela. Ali.”."></a><h4>Noite de jogo nos Mullner <span class="pill walk">George e Alex · 4 corações</span></h4><p>Sábados de outono e inverno, o jogo dos Tunnelers na TV. O time joga uma temporada de verdade no seu save, e o humor do George no dia seguinte depende do resultado.</p></article>
+        <article data-flag="event.snail_lecture"><a class="card-shot" href="assets/prints/1.8/palestra-caracol.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/palestra-caracol.webp?r=3" width="1500" height="937" loading="lazy" alt="A palestra do Professor Snail no museu, com a plateia na frente dele: “Boa tarde. Estes ossos ficaram muito tempo debaixo da Ilha Gengibre. Até que este fazendeiro os encontrou.”"></a><h4>A palestra do Professor Caracol</h4><p>Complete o escritório de campo da ilha, e ele dá uma palestra no museu sobre os fósseis que você desenterrou, com a Penny, a Maru, o Demetrius, as crianças e o Leo nas cadeiras.</p></article>
+      </div>
+    </div>
+    <div class="sub">
+      <h3>À noite</h3>
+      <div class="notice">
+        <article data-flag="event.abigail_farm_cave"><h4>Uma noite na caverna <span class="pill walk">Abigail · 7 corações</span></h4><p>A Abigail vem ver a sua caverna à noite. Com morcegos, ela toca flauta no escuro. Com cogumelos, ela come um roxo.</p></article>
+        <article data-flag="event.maru_sebastian_pact"><h4>O pacto do porão <span class="pill walk">Maru e Sebastian · 4 corações</span></h4><p>Você ouve sem querer um segredo dos dois na escada do porão. Contar pro Demetrius ou guardar? Os dois sabem que você ouviu.</p></article>
+        <article data-flag="event.lewis_marnie_table"><a class="card-shot" href="assets/prints/1.8/mesa-pra-dois.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/mesa-pra-dois.webp" width="880" height="550" loading="lazy" alt="A mesa do canto no Saloon: o Lewis diz “Reunião. Sobre... feno.” e a Marnie responde “Ele não sabe mentir, coitado.”."></a><h4>Mesa pra dois <span class="pill walk">Lewis e Marnie</span></h4><p>Numa noite em que os dois estão no Saloon, o Gus senta eles na mesa do canto. O Lewis tem uma reunião sobre feno. O Gus não viu nada.</p></article>
+        <article data-flag="event.gus_pam_tab"><a class="card-shot" href="assets/prints/1.8/conta-pam.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/conta-pam.webp" width="1800" height="1169" loading="lazy" alt="No balcão do Saloon, o Gus diz “A conta da Pam tá do tamanho de um inverno. Não conta pra ela que eu falei.”, com o aviso de que dá pra abater a conta na roda dele."></a><h4>A conta da Pam <span class="pill walk">Gus · 6 corações</span></h4><p>O Gus deixa escapar que a conta da Pam está do tamanho de um inverno. Você pode pagar, e ele guarda segredo.</p></article>
+        <article data-flag="event.pam_walk_home"><a class="card-shot" href="assets/prints/1.8/levar-pam.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/levar-pam.webp" width="1000" height="625" loading="lazy" alt="De noite, na porta da casa nova da Pam, ela agradece: “Valeu. Vai pra casa.”."></a><h4>Levar a Pam pra casa <span class="pill walk">Pam · 6 corações</span></h4><p>Depois das 22h, acompanhe a Pam até em casa, no ritmo dela. A Penny abre a porta.</p></article>
+        <article data-flag="event.sandy_valley_visit"><a class="card-shot" href="assets/prints/1.8/sandy-saloon.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/sandy-saloon.webp" width="1200" height="750" loading="lazy" alt="A Sandy fechou o Oásis e veio pro Saloon: conversa à mesa com ela e o Gus."></a><h4>A Sandy fecha o Oásis <span class="pill walk">Sandy · 7 corações</span></h4><p>Uma vez por estação, a Sandy pega o ônibus das cinco e passa a noite no Saloon com a Emily. Sente com as duas.</p></article>
+        <article data-flag="event.krobus_beach_night"><a class="card-shot" href="assets/prints/1.8/krobus-mar.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/krobus-mar.webp" width="1104" height="690" loading="lazy" alt="Krobus puxa o assunto na caixa de conversa especial: “lucas... o mar. Ainda penso nele. Você andaria comigo, uma noite?”"></a><h4>O Krobus e o mar <span class="pill walk">Krobus · 6 corações</span></h4><p>Ele te pede pra levar ele até o mar, numa noite seca, quando não tiver ninguém na praia. Uma vez por save.</p></article>
+        <article data-flag="event.linus_campfire"><a class="card-shot" href="assets/prints/1.8/fogueira-linus.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/fogueira-linus.webp" width="1400" height="875" loading="lazy" alt="À noite, sentado na fogueira do Linus ao lado da barraca: “Hoje é só o fogo. Também serve.”."></a><h4>A fogueira do Linus <span class="pill walk">Linus · 6 corações</span></h4><p>Sente na fogueira dele uma vez por semana. Ele assa o que você estiver segurando e conta uma história da montanha.</p></article>
+        <article data-flag="event.harvey_plane_watch"><a class="card-shot" href="assets/prints/1.8/avioes-harvey.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/avioes-harvey.webp" width="1400" height="875" loading="lazy" alt="Noite limpa na montanha, o Harvey com o rádio: “Então eu subo aqui e traduzo. Em noite limpa, chega perto.”."></a><h4>Aviões com o Harvey <span class="pill walk">Harvey · 6 corações</span></h4><p>Em noites limpas, o Harvey leva o rádio pra montanha e traduz a conversa dos pilotos. E finalmente conta por que nunca voou.</p></article>
+        <article data-flag="event.guild_toast"><a class="card-shot" href="assets/prints/1.8/brinde-guilda.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/brinde-guilda.webp" width="1300" height="480" loading="lazy" alt="O brinde na Guilda dos Aventureiros: o Marlon diz “Aí está você. Gil, os copos bons.”."></a><h4>O brinde da Guilda <span class="pill walk">Marlon</span></h4><p>Chegou ao andar 120 das minas, ao milésimo slime ou ao andar 100 da Caverna da Caveira? O Marlon te chama pra um brinde na Guilda dos Aventureiros.</p></article>
+      </div>
+    </div>
+    <div class="sub">
+      <h3>Histórias que andam devagar</h3>
+      <div class="notice">
+        <article data-flag="event.kent_letter_line"><a class="card-shot" href="assets/prints/1.8/carta-kent.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/carta-kent.webp" width="1104" height="690" loading="lazy" alt="A Jodi pede uma linha pra carta da família pro Kent: “Sobre a carta pro Kent... o convite tá de pé. Uma linha, qualquer coisa. Ele lê duas vezes.”"></a><h4>Uma linha na carta pro Kent <span class="pill walk">Jodi · 5 corações · ano 1</span></h4><p>A Jodi te pede pra escrever uma linha na carta que a família manda pro Kent no front. Você escreve o que quiser, e no ano 2 ele leu.</p></article>
+        <article data-flag="event.kent_return"><a class="card-shot" href="assets/prints/1.8/volta-kent.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/volta-kent.webp" width="360" height="280" loading="lazy" alt="O dia em que o Kent volta: o Sam manda no Mensageiro “meu pai chegou. é estranho. aparece aqui qualquer hora.”."></a><h4>A volta do Kent <span class="pill walk">Primavera 1, ano 2</span></h4><p>O dia em que a vila inteira ficou sabendo. Por uma semana todo mundo fala disso, e a família guarda o assunto a primavera toda. Nos anos seguintes, a família espera no ponto de ônibus no aniversário da volta.</p></article>
+        <article data-flag="event.dwarf_repatriation"><a class="card-shot" href="assets/prints/1.8/anao-museu.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/anao-museu.webp?r=3" width="1180" height="880" loading="lazy" alt="O app Museu depois da carta do Anão: o Pergaminho dos Anões ganha a plaquinha “Segundo o Anão: A lista de compras do meu tataravô. Ainda falta o sal.”, corrigida pelo museu."></a><h4>O Anão e o museu <span class="pill walk">Anão · 5 corações</span></h4><p>O museu tem as coisas do povo dele com os nomes errados. Ele escreveu um bilhete em runas, e quem leva pro Gunther é você, sem dizer de quem é.</p></article>
+        <article data-flag="event.truce_mail"><a class="card-shot" href="assets/prints/1.8/krobus-anao-correio.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/krobus-anao-correio.webp?r=3" width="1500" height="937" loading="lazy" alt="Na mina, o Anão lê em voz alta o bilhete em escrita das sombras que o Krobus mandou: “Éramos crianças quando começou. Eu não sou criança.” ...É o que diz."></a><h4>O Krobus e o Anão, por correio <span class="pill walk">ideia do Mago</span></h4><p>Leve uma pedra de um pro outro, em mãos neutras, sem nunca deixar os dois se encontrarem.</p></article>
+      </div>
+    </div>
+    <div class="sub">
+      <h3>Casamento e família</h3>
+      <div class="notice">
+        <article data-flag="event.abigail_in_laws"><h4>Os sogros da Abigail <span class="pill walk">casado com a Abigail</span></h4><p>Almoço de domingo com o Pierre e a Caroline, preço de família no PierreGo, e a Abigail ficando sabendo do que os pais disseram de você.</p></article>
+        <article data-flag="event.island_outings"><h4>Passeios na Ilha Gengibre</h4><p>Com o barco do Willy navegando, <b>Convidar pra sair</b> pode levar um morador pra ilha: um passeio na praia, o pôr do sol no píer, almoço no resort e, com o cônjuge, uma noite na casa da ilha.</p></article>
+        <article data-flag="event.child_milestones"><a class="card-shot" href="assets/prints/1.8/primeiros-passos.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/primeiros-passos.webp" width="360" height="360" loading="lazy" alt="A Haley conta pelo Mensageiro: “minerva andou! Consegui uma foto tremida. A luz estava perfeita, a criança é que não parava.”"></a><h4>Os primeiros passos</h4><p>Quando um filho começa a engatinhar, andar ou falar, o seu cônjuge te conta naquela manhã, do jeito dele. Quando a criança fala, os avós escrevem com um presente.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- A vila repara -->
+  <section class="feature" id="v1-8-0-vila">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>A vila repara em mais coisas</h3>
+      <p class="lead">Coisas que os moradores agora sabem, e trazem pra conversa sem você precisar contar.</p>
+    </div>
+    <ul class="points">
+      <li data-flag="event.spouse_household"><b>O seu cônjuge conhece a casa:</b> o pet (o nome e quantos dias você fez carinho na semana), o cavalo (se você montou hoje, se ele dormiu fora da fazenda), onde você dormiu e se desmaiou. A família próxima ouve uma versão mais curta a partir de 8 corações.</li>
+      <li data-flag="event.leo_moved"><b>A mudança do Leo:</b> na manhã em que o Leo se muda pra casa da árvore perto da barraca do Linus, ele, o Linus, o Willy, a Jas e o Vincent guardam a lembrança, o Jornal da Semana anuncia o vizinho novo, e dali em diante os cinco sabem onde ele mora.</li>
+      <li data-flag="event.island_talk"><b>A ilha na boca do povo:</b> quem está na praia ou na peixaria te vê voltando no barco do Willy, as doações do escritório de campo chegam ao Demetrius e à Penny, e o Mago fica sabendo que o Sr. Qi apareceu de novo.</li>
+      <li data-flag="event.mullner_house_gossip"><b>A casa dos Mullner:</b> o que acontece com o George ou com o Alex, os três sabem na hora e nunca passam adiante. Já uma vitória do Alex, a Evelyn conta pra seis pessoas até a manhã seguinte. E falar mal do Alex na frente do George pesa o dobro.</li>
+      <li data-flag="event.evelyn_translates_george"><b>A Evelyn traduz o George:</b> depois de uma conversa azeda com ele em casa, ela te diz o que ele quis dizer. “Ele quis dizer obrigado.”</li>
+      <li data-flag="event.mullner_birthday_thanks"><b>Presente de aniversário nos Mullner:</b> com outro da família na sala, quem não ganhou o presente agradece por quem ganhou.</li>
+      <li data-flag="event.outsiders_web"><b>Os quatro de fora se conhecem:</b> na teia social, o Harvey, o Elliott, a Leah e o Linus agora têm laços entre si, e a Leah leva uma fofoca por semana montanha acima pro Linus, que nunca passa adiante.</li>
+      <li data-flag="event.outsiders_review"><b>Os de fora na Retrospectiva do Ano:</b> um slide novo com o Mago, o Krobus, o Anão, a Sandy, o Gunther, o Marlon, o Morris e o Gil, que dormiu o ano inteiro. De novo.</li>
+    </ul>
+  </section>
+
+  <!-- Piadas escondidas -->
+  <section class="feature" id="v1-8-0-piadas">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Easter eggs</h3>
+      <p class="lead">Coisinhas espalhadas pelo vale, pra você achar sem querer.</p>
+    </div>
+    <ul class="points">
+      <li>Eles estão nos balões do Seen and Heard, nas cartas, no Mensageiro, no Jornal da Semana, no Pelicangram, nos apps do computador, nos minijogos do Save the Date e até na capa do diário.</li>
+      <li>Todos funcionam com a IA desligada e estão nos oito idiomas.</li>
+      <li>Desmaiou na mina? O vidro do celular trinca e ganha um curativo. Na manhã seguinte a Maru já consertou enquanto você dormia e deixa um bilhete sugerindo uma capinha.</li>
+      <li>De vez em quando chega no seu celular uma mensagem que era pra outra pessoa, de número desconhecido: o Alex trancado do lado de fora de novo, o Lewis reservando uma mesa pra dois.</li>
+    </ul>
+    <div class="option"><span class="label">Nas configurações</span><b>Piadas escondidas</b><span>na página Geral, liga ou desliga todos de uma vez.</span></div>
+  </section>
+
+  <!-- Liberado aos poucos -->
+  <section class="feature" id="v1-8-0-flags">
+    <div class="feature-head">
+      <span class="tag">Novo</span>
+      <h3>Cada novidade com o seu interruptor</h3>
+      <p class="lead">Cada bico, evento e easter egg desta versão tem a própria opção, e as configurações só mostram o que já foi liberado.</p>
+    </div>
+    <ul class="points">
+      <li>Algumas novidades podem chegar em teste: desligadas pra todo mundo, até você ligar na mão. No console do SMAPI, <code>alive_content list</code> mostra cada uma e em que etapa está, e <code>alive_content on &lt;id&gt;</code> liga (<code>off</code> desliga, e <code>all</code> vale pra todas).</li>
+      <li>Com o evento de um morador desligado, ele não propõe mais aquele projeto. Um arco já aberto, ou um evento já no calendário, vai até o fim.</li>
+    </ul>
+  </section>
+
+  <!-- Hub -->
+  <section class="feature" id="v1-8-0-hub">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>O Hub na escrivaninha</h3>
+      <p class="lead">O Hub (F9) mudou de cara: o pergaminho agora fica aberto numa escrivaninha de madeira, embaixo de uma janela pro vale.</p>
+    </div>
+    <ul class="points">
+      <li>A janela mostra o mesmo céu do papel de parede do computador: o sol cruzando conforme o relógio, a lua e as estrelas à noite, um tom laranja no fim da tarde, e chuva ou neve no vidro. As estações passam pela mesa também: pétalas na primavera, vaga-lumes nas noites de verão, folhas no outono e neve no parapeito no inverno.</li>
+      <li>Um bilhete amarelo, <b>Hoje</b>, fica preso na mesa quando o dia tem alguma coisa: o evento do Save the Date e com quem falar, um aniversário, as cartas que chegaram, os passeios que faltam e os favores abertos.</li>
+      <li>O cabeçalho te cumprimenta pelo nome, com a data e a hora.</li>
+      <li>Cada seção virou um ladrilho de papel com um objeto em pixel art: um caderno pro Diário, duas máscaras pros Arcos, uma xícara de café pras Fofocas, um calendário com coração pro Save the Date. As mais usadas vêm primeiro, e as teclas <b>1</b> a <b>0</b> abrem as dez primeiras. Os nomes compridos em alemão e italiano não são mais cortados.</li>
+      <li>O Hub abre como um pergaminho, com som de papel, e uma linha embaixo do cumprimento diz pra que serve o cartão embaixo do cursor.</li>
+      <li>Fechar uma seção aberta pelo Hub volta pro Hub, então ler as cartas e depois os passeios não precisa mais de dois F9.</li>
+      <li>Marcas no canto de cada cartão: quantas cartas chegaram hoje, quantos passeios faltam, e um ponto no Diário e nas Fofocas quando a entrada do dia já está lá. Uma seção desligada nas configurações aparece apagada e abre os ajustes rápidos.</li>
+      <li>O quadro da IA mostra o mesmo veredito da tela de Status da IA, com uma lanterna na cor da saúde da IA e o interruptor ao lado.</li>
+      <li>Na página <b>NPCs</b>, cada morador tem uma caixinha no canto do cartão (<b>Y</b> no controle) pra tirar ou devolver ele ao AliveNpcs, sem digitar nome interno nas configurações.</li>
+      <li>Um cartão novo, <b>📰 Changelog</b>, resume em poucas linhas o que cada atualização trouxe, com um botão que abre esta página. Depois de uma atualização ele brilha até você abrir.</li>
+    </ul>
+  </section>
+
+  <!-- Conversas -->
+  <section class="feature" id="v1-8-0-conversas">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>Conversas</h3>
+      <p class="lead">Mais fácil de saber onde a conversa está, e de responder.</p>
+    </div>
+    <ul class="points">
+      <li><b>Contador de respostas:</b> numa conversa de vários turnos, a caixa de resposta diz qual resposta é essa (“Resposta 2 de 3”) e avisa a última, então a conversa não acaba mais no meio do assunto sem aviso.</li>
+      <li><b>Respostas sugeridas:</b> a partir da segunda resposta, três respostas curtas aparecem como botões em cima do campo: uma carinhosa, uma curiosa ou brincalhona e uma direta ou provocadora. Elas vêm no mesmo pedido da reação do morador, sem gastar pedido a mais. Clicar põe a resposta no campo, e ainda dá pra mudar.</li>
+      <li><b>Enter envia:</b> Enter envia a resposta e Shift+Enter pula linha (Ctrl+Enter continua enviando).</li>
+      <li><b>O Esc não joga fora o que você escreveu:</b> com alguma coisa escrita, o primeiro Esc só avisa. O segundo, logo em seguida, encerra a conversa.</li>
+      <li><b>Falas longas (estilo 1.7.2):</b> desde a 1.7.3 os prompts pedem “1 ou 2 frases curtas, no máximo 3”, e os modelos obedecem isso mais do que o <b>Tamanho Máx. Diálogo</b>. Com essa opção, a IA é pedida do jeito da 1.7.2: o limite de caracteres é a única regra. Suba o limite (500 era o padrão da 1.7.2) pra ter as falas longas de volta.</li>
+      <li><b>Fala do jogo primeiro:</b> na primeira conversa do dia com cada morador, ele diz a fala do próprio Stardew Valley pro dia, e a conversa com IA começa quando você fala com ele de novo.</li>
+    </ul>
+    <div class="option"><span class="label">Nas configurações</span><b>Respostas sugeridas</b><span>ligado por padrão.</span></div>
+    <div class="option"><span class="label">Nas configurações</span><b>Enter Envia a Resposta</b><span>ligado por padrão. Desligado, Enter pula linha, como antes.</span></div>
+    <div class="option"><span class="label">Nas configurações</span><b>Falas longas (estilo 1.7.2)</b><span>desligado por padrão.</span></div>
+    <div class="option"><span class="label">Nas configurações</span><b>Fala do jogo primeiro</b><span>desligado por padrão.</span></div>
+  </section>
+
+  <!-- Qualidade de vida -->
+  <section class="feature" id="v1-8-0-qol">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>Qualidade de vida</h3>
+    </div>
+    <ul class="points">
+      <li><b>Assistente de configuração:</b> abrir um save com a IA ligada mas sem conseguir responder (sem chave ainda, ou com servidor próprio sem endereço) abre um assistente curto. Escolha Google Gemini, NVIDIA NIM (os dois têm chave grátis) ou Servidor próprio, abra a página da chave, cole e clique em <b>Salvar e testar</b>. <b>Não perguntar mais</b> desliga o assistente de vez.</li>
+      <li><b>Favores que você vê:</b> quando um morador te pede um item na conversa, um aviso diz qual e quantos dias você tem (“A Abigail te pediu um favor: Ametista. Você tem 5 dias”). Antes o favor era anotado sem aviso nenhum. O bilhete <b>Hoje</b> do Hub lista os favores abertos, e no último dia um lembrete chega de manhã.</li>
+      <li><b>A Confiabilidade conta a sua palavra:</b> nos apps Avaliações e Retrospectiva do Ano, a Confiabilidade agora mede principalmente se você cumpre o que promete: os favores e pedidos entregues no prazo contra os que você deixou vencer.</li>
+      <li><b>O dia do evento te lembra:</b> uma hora antes de um evento do Save the Date abrir, um lembrete diz quando, onde e com quem falar. E no dia do evento, a cama avisa que dormir agora é perder o evento.</li>
+      <li><b>Passeios dizem a hora:</b> o aviso de passeio aceito agora diz o horário além do lugar (“Encontro no Saloon entre 18:00-20:00”). Uma hora antes chega um lembrete, e chegar fora de hora diz se você está adiantado ou se é melhor voltar outro dia.</li>
+      <li><b>Gemini sobrecarregado troca de modelo:</b> nas tentativas automáticas, a 1ª e a 3ª vão pro <code>gemini-3.1-flash-lite</code> e a 2ª volta pro seu modelo, então uma sobrecarga num modelo tem uma segunda chance de verdade no outro.</li>
+      <li><b>Sled Valley foi pra Meus outros mods:</b> o meu mod de corrida de trenó saiu do app <b>Mais</b> e foi pra <b>Meus outros mods</b>, junto do Beach Episode e do Pelican Companions, onde também diz se você tem ele instalado.</li>
+      <li><b>Apoie o projeto:</b> no lugar dele, no app <b>Mais</b>, um cartão diz onde mandar uma doação se você quiser: Ko-fi, ou Pix pelo LivePix aqui no Brasil. Doação é só um obrigado: nunca libera arquivo, acesso antecipado, recurso nem suporte.</li>
+      <li><b>Fan arts novas no diário:</b> a Leah, pelo Guizin (<a href="https://www.instagram.com/the.guilherme.art/" target="_blank" rel="noopener">@the.guilherme.art</a>), e a Abigail, pela Alícia Alencar (<a href="https://www.tiktok.com/@lizbiohazard" target="_blank" rel="noopener">@lizbiohazard</a>), entram no scrapbook e no álbum, cada uma colada ao lado da primeira entrada que fala dela.</li>
+    </ul>
+  </section>
+
+  <!-- Seen and Heard -->
+  <section class="feature" id="v1-8-0-seen">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>Seen and Heard mais calmo</h3>
+      <p class="lead">O Seen and Heard foi feito pra temperar as falas dos moradores, não pra comandar. Teve gente sendo acusada de coisas que nunca fez de propósito, então revisei cada situação que dispara no jogo normal.</p>
+    </div>
+    <ul class="points">
+      <li><b>“Você vive rondando a minha casa”:</b> entrar e sair de uma loja onde alguém mora nos fundos (o armazém do Pierre, o Saloon, o ferreiro, o rancho, a carpintaria, a peixaria) contava como entrar na casa da pessoa, e cada porta era uma memória nova. Agora loja e cômodo público são só lugares, a mesma porta de novo em até 6 horas do jogo conta como uma vez só, e na conversa o morador só fica sabendo da última.</li>
+      <li><b>Flerte e briga por papo à toa:</b> as listas de palavras pegavam pedaços de outras palavras e palavras do dia a dia (“tempo feio”). Agora só contam palavras inteiras, xingamento tem que ser dirigido à pessoa, e só contam as palavras do fazendeiro. O primeiro flerte na frente do seu par é um balão seco; só o segundo traz ele até você.</li>
+      <li><b>Mexer na casa dos outros:</b> clicar numa estante ou num pôster contava como ler as cartas da pessoa e deixava ela furiosa. Agora só cômodas, cartas e bilhetes contam, e a primeira vez é um balão.</li>
+      <li><b>Trabalho na fazenda:</b> a enxada não conta mais como bater em alguém, e a foice passando perto é um susto, não um golpe. Machado e picareta chateiam em vez de enfurecer (arma continua enfurecendo), e uma arma balançada perto ganha um balão antes de alguém vir até você. Bomba na sua própria fazenda incomoda o cônjuge bem menos.</li>
+      <li><b>Seguir e encarar:</b> seguir só conta enquanto você anda na mesma direção do morador, e nunca na fazenda ou na sua casa. Encarar espera 4 segundos em vez de 3, e os 10 segundos depois de uma conversa, um menu ou uma cena não contam. Terminar um papo e ficar parado não é mais “por que você tá me encarando?”.</li>
+      <li><b>Quartos:</b> voltar pro mesmo quarto em até 6 horas do jogo continua a mesma visita, em vez de começar outra.</li>
+    </ul>
+  </section>
+
+  <!-- Compatibilidade -->
+  <section class="feature" id="v1-8-0-compat">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>Compatibilidade</h3>
+    </div>
+    <ul class="points">
+      <li>O Save the Date nunca pega uma data que o jogo ou outro mod já usa, e o dia livre mais próximo também pula os festivais passivos do calendário, como o Festival do Deserto e o Mercado Noturno.</li>
+      <li>Com uma versão antiga do Beach Episode que ainda tem a própria Copa da Clareira na primavera 6, o Beach Episode fica com o dia, e o evento do Alex vai pro próximo dia livre.</li>
+      <li>Com o Stardew Valley Expanded, os festivais ficam nos lugares certos dos mapas do Expanded, e a corrida de galinhas tem um percurso próprio na Floresta do Expanded.</li>
+      <li>O Save the Date roda no anfitrião, e os festivais só entram no calendário enquanto ele joga sozinho. Num dia com outros jogadores online, o evento passa pro próximo dia livre com carta nova, sem contar como falta, e um aviso explica. A carta de convite agora chega também em co-op.</li>
+      <li>O Save the Date precisa de um provedor de IA, como o resto do mod.</li>
+    </ul>
+  </section>
+
+  <!-- Content packs e console -->
+  <section class="feature" id="v1-8-0-criadores">
+    <div class="feature-head">
+      <span class="tag creators">Pra quem cria</span>
+      <h3>Content packs e console</h3>
+    </div>
+    <ul class="points">
+      <li>Content packs experimentais podem trazer um arco do coração pra qualquer morador com <code>saveTheDateDirectories</code>: um <code>arc.json</code> com as missões, o elenco e o festival, e os blocos de prompt da proposta, das missões, do dia e do depois. O formato e um passo a passo estão no <code>EXPERIMENTAL_CONTENT.md</code>.</li>
+      <li><code>alive_std status</code> mostra onde está cada arco do coração. <code>alive_std open</code>, <code>complete</code> e <code>schedule</code> pulam etapas de um arco, <code>alive_std play &lt;festival&gt;</code> joga um minijogo em qualquer lugar sem registrar, e <code>alive_std go &lt;morador&gt;</code> te leva pro festival do morador como no dia de verdade.</li>
+    </ul>
+  </section>
+
+  <!-- Correções -->
+  <section class="feature" id="v1-8-0-correcoes">
+    <div class="feature-head">
+      <span class="tag fix">Correções</span>
+      <h3>Correções</h3>
+    </div>
+    <ul class="points">
+      <li><b>Um minuto cheio não custa mais o dia:</b> o plano grátis do Gemini responde com o mesmo erro (429) pro limite por minuto e pra cota do dia, e eu tratava todo 429 como cota do dia acabada. Algumas conversas rápidas, ou uma manhã cheia de tarefas da vila, podiam desligar a IA até você dormir, e uma segunda chave inválida fazia o mesmo. Agora o limite por minuto só descansa aquela chave pelos segundos que o Gemini pede: o pedido passa pra sua próxima chave, ou espera até 30 segundos e tenta de novo, ou falha sozinho com um aviso pra tentar daqui a pouco. Só a cota do dia (ou um 429 que não diz qual limite é) ainda volta pro jogo base até o dia seguinte.</li>
+      <li><b>Conversas em grupo mantêm todas as falas:</b> quando a IA citava uma palavra entre aspas dentro da fala de um morador, a resposta era cortada na fala do último morador e as outras se perdiam. Agora as aspas são consertadas antes, e todas as falas do grupo aparecem.</li>
+      <li><b>Sem bronca por uns dias longe:</b> desde a 1.7.4, um morador com quem você não falava havia dois dias ou mais ficava sabendo disso em toda conversa e não largava o assunto, às vezes duas vezes no mesmo papo e em tom de cobrança. Agora só a abertura do dia fica sabendo, só depois de 25 dias sem conversar, e o morador menciona uma vez, com carinho, feliz em te ver.</li>
+    </ul>
+  </section>
+
+  <!-- Idiomas -->
+  <section class="feature" id="v1-8-0-idiomas">
+    <div class="feature-head">
+      <span class="tag improved">Melhorado</span>
+      <h3>Todos os idiomas</h3>
+    </div>
+    <ul class="points">
+      <li>Todos os textos novos estão nos oito idiomas.</li>
+      <li>Em chinês, os nomes dos moradores agora batem com os do jogo em todo lugar (o Shane, o Elliott, a Penny, a Pam, o Sam, a Marnie, a Evelyn, a Caroline, o Leo, a Leah, a Maru e o Mago tinham outra grafia em alguns textos).</li>
+    </ul>
+  </section>
+</section>

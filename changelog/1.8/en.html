@@ -1,0 +1,569 @@
+<header class="top">
+  <div class="eyebrow"><span class="version">1.8</span><span>“Save the Date”</span><span>1.8.0</span><span>date to be announced</span></div>
+  <h1>Villagers invite you into their lives</h1>
+  <p class="lead">1.8 is the biggest AliveNpcs update yet. At 8 hearts a villager can ask you to help with a project of their own, and the project ends in a festival on the game's calendar, on the real map, with a minigame. There are eight festivals and three more standalone events, among them a chess open on the town square with Demetrius. And there's more: the valley got 31 side jobs, work the villagers offer you as your friendship grows, plus family dinners, birthday parties, visits to your farm, dozens of new scenes and a pile of easter eggs. The Hub has a new look, conversations got suggested replies and Seen and Heard calmed down. Your save keeps working.</p>
+</header>
+
+<p class="notice-box"><strong>Not on Nexus yet.</strong> 1.8 is in its final round of testing, and what you read here may still change before release.</p>
+
+<nav class="summary" aria-label="1.8 summary">
+  <a class="tile" href="#v1-8-0-std"><strong>Save the Date</strong><span>At 8 hearts, a villager asks you into a project that ends in a festival on the calendar.</span></a>
+  <a class="tile" href="#v1-8-0-festivais"><strong>Eight festivals</strong><span>Football, paintball, dodgeball, dancing, waiting tables, carts, a chicken race and an RPG, plus Demetrius's chess open and two other events.</span></a>
+  <a class="tile" href="#v1-8-0-bicos"><strong>31 side jobs</strong><span>Work that comes from friendship, with pay, stages and a phone app.</span></a>
+  <a class="tile" href="#v1-8-0-vagas"><strong>Slots and the side jobs board</strong><span>Only five side jobs run at once, and each one gets a poster on the Save the Date board.</span></a>
+  <a class="tile" href="#v1-8-0-roda"><strong>New action wheel</strong><span>Badges with icons on a wooden hoop, the villager's portrait in the middle and no name cut off.</span></a>
+  <a class="tile" href="#v1-8-0-jantares"><strong>Dinners and birthdays</strong><span>Sundays at the families' homes and parties at the Saloon, in the yard and at the ranch.</span></a>
+  <a class="tile" href="#v1-8-0-visitas"><strong>Farm visits</strong><span>Marnie, the Mullners, Penny with the kids, and whoever drops by unannounced.</span></a>
+  <a class="tile" href="#v1-8-0-cenas"><strong>Scenes and moments</strong><span>Pierre's fishing trip, Linus's campfire, Kent's homecoming and much more.</span></a>
+  <a class="tile" href="#v1-8-0-piadas"><strong>Easter eggs</strong><span>Scattered around the valley, like the phone that cracks when you pass out in the mines.</span></a>
+  <a class="tile" href="#v1-8-0-hub"><strong>The Hub on your desk</strong><span>A window on the valley, objects instead of cards and the note of the day.</span></a>
+  <a class="tile" href="#v1-8-0-conversas"><strong>Conversations</strong><span>A reply counter, suggested replies, Enter to send and the base game's line whenever you want it.</span></a>
+  <a class="tile" href="#v1-8-0-seen"><strong>A calmer Seen and Heard</strong><span>Fewer accusations for things you didn't do.</span></a>
+  <a class="tile" href="#v1-8-0-correcoes"><strong>Fixes</strong><span>One busy minute on Gemini no longer switches the AI off for the rest of the day.</span></a>
+</nav>
+
+<!-- 1.8.0 -->
+<section class="patch" id="v1-8-0">
+  <header class="patch-head"><span class="version">1.8.0</span><h2>Save the Date</h2><span class="patch-date">date to be announced</span></header>
+  <p class="lead">Villagers now have projects, routines and invitations, and they ask you to be part of them.</p>
+
+  <!-- Save the Date -->
+  <section class="feature" id="v1-8-0-std" data-flag="feature.save_the_date">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Save the Date: every villager's project</h3>
+      <p class="lead">At 8 hearts, a villager can ask you to help with a project of their own. The project becomes an arc with missions, and the arc ends in a festival on the game's calendar.</p>
+    </div>
+    <div class="sub">
+      <h3>The proposal</h3>
+      <ul class="points">
+        <li>From <span class="hearts"><svg><use href="#heart"/></svg> 8</span>, every regular conversation with the villager has a chance (30% by default) of turning into their proposal, in a dialogue box with the project's colour, banner and music.</li>
+        <li>Every Save the Date conversation is easy to spot: the reply box takes the project's colour, with a <b>Special conversation</b> ribbon, the project's name and a heart in each corner.</li>
+        <li>Say yes and a heart arc opens. Each villager proposes once per save. After a “no” (or an abandoned arc), they bring it up one more time in a later season, and you can pick it back up from the action wheel whenever you like. Up to three arcs can be open at once.</li>
+      </ul>
+    </div>
+    <div class="sub">
+      <h3>The missions</h3>
+      <ul class="points">
+        <li>On the Arcs screen, the project gets its own section at the top, in its colour, with the required missions, the bonus ones and who's involved.</li>
+        <li>You talk each mission through with the right villager from the action wheel, once per villager per day, and the AI decides whether they're in. A regular conversation never completes a mission. With the wheel turned off, the same choice shows up as a bonus action in the reply box.</li>
+        <li>A bonus mission never blocks the event, but it changes something on the day: a food stall, a referee, a jukebox, a pizza on the table.</li>
+      </ul>
+    </div>
+    <div class="sub">
+      <h3>On the calendar</h3>
+      <ul class="points">
+        <li>Once the required missions are done, <b>Schedule</b> offers up to three of the nearest free days, 2 to 15 days ahead. Never on a festival (the game's, another mod's or another Save the Date event), never on the green rain day, and a birthday only when no other day is left.</li>
+        <li>The invitation arrives in the mail the next morning, the Weekly News announces it, the calendar marks the day with a ticket in the project's colour, and on the eve the host reminds you on the Messenger (or with a note, if they don't have a phone).</li>
+        <li>Daytime events run from 10 AM to 4 PM, evening ones from 7 PM to midnight, and Sam's follows the JojaMart's hours.</li>
+        <li>Up to the eve, <b>Postpone</b> on the host's wheel moves the event once to the next free day, with a new invitation.</li>
+      </ul>
+    </div>
+    <div class="sub">
+      <h3>The day</h3>
+      <ul class="points">
+        <li>The festival happens on the real map, with the cast in place and an AI line for everyone you talk to. Talk to the host twice to start, then pick the difficulty and the controls.</li>
+        <li>Losing still counts as held. Leaving in the middle asks first and counts as a loss. There's no second try the same day.</li>
+        <li>After a short closing ceremony the day goes on: the clock moves to two hours after you arrived, you're at the map's entrance, the villagers go back to their routines and the shops are open. Your spouse is awake at home, and the farm's machines only run for the time you spent at the festival.</li>
+        <li>Walking off the map before it starts (the game's <i>Leave the festival?</i>) just sends you home: the clock doesn't move and the event stays open until it closes.</li>
+        <li>Missed it? The host moves the event to the next free day. Going to bed before an evening event also just moves it.</li>
+      </ul>
+    </div>
+    <div class="sub">
+      <h3>What stays</h3>
+      <ul class="points">
+        <li>For a week, the first conversation with the host and with up to four of the cast is about the event: the result, who stood out and what it meant to them.</li>
+        <li>The villagers remember, the night's diary and gossip talk about the event, and so do the Weekly News and the Year in Review.</li>
+        <li>The Hub's <b>💌 Save the Date</b> tab (F9) is a festival notice board: a cork board under a string of bunting, with a poster for each villager. The poster has the photo, the title and a sticker that says where the project stands (<b>2/3 missions</b>, <b>Today!</b>, <b>Tomorrow</b>, the date, <b>Held</b>). Anyone you haven't reached yet is a blank sheet with a silhouette.</li>
+        <li>The poster of a held event opens its postcard: the host's portrait in a polaroid (smiling after a win), the score of the last edition, who stood out and a medal for each edition: gold for a win, silver for a draw, bronze for a loss.</li>
+      </ul>
+    </div>
+    <div class="sub">
+      <h3>Yearly festival</h3>
+      <ul class="points">
+        <li>From the postcard, the event can become a yearly festival on the same date. Only the festival with the minigame comes back, without the arc.</li>
+        <li>Every edition is kept (“3 editions: 2 won, 1 lost”), the villagers and the ceremony remember the earlier ones, and after a win the rivals want a rematch: the next edition suggests one difficulty higher.</li>
+        <li>If something the event needs stops existing (the JojaMart closing for good), it happens one last time, and the postcard says goodbye instead of offering the yearly festival.</li>
+      </ul>
+    </div>
+    <div class="option"><span class="label">In the settings</span><b>Save the Date</b><span>on by default, with a switch for each event.</span></div>
+    <div class="option"><span class="label">In the settings</span><b>Chance to propose</b><span>30% by default.</span></div>
+    <div class="option"><span class="label">In the settings</span><b>If you miss the event</b><span><i>Reschedule</i> by default. With <i>Villager gets upset</i>, they call it off and offer it again next season.</span></div>
+    <div class="option"><span class="label">In the settings</span><b>Vanilla festival ending</b><span>off by default. When it's on, you go home late, like after the game's festivals.</span></div>
+  </section>
+
+  <!-- The eight festivals -->
+  <section class="feature" id="v1-8-0-festivais">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Eight festivals</h3>
+      <p class="lead">Every project ends in a festival with its own minigame, played on the map where it would really happen.</p>
+    </div>
+    <div class="notice">
+      <article data-flag="event.alex_clearing_cup"><a class="card-shot" href="assets/prints/1.8/fest-copa.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-copa.webp?r=3" width="1440" height="900" loading="lazy" alt="The Clearing Cup in the forest: the football pitch with its goals, the food table, the little tables and the village gathered by the river."></a><h4>The Clearing Cup <span class="pill walk">Alex</span></h4><p>Four-a-side football on the Flower Dance clearing, the Pelicanos (your team) against Alex's Saloon, in front of 28 villagers. Kent keeps goal from year 2; before that, Clint does. A bonus mission opens a practice drill with Alex, and finishing the drill makes you a little faster on the day. I ported the match from Beach Episode.</p></article>
+      <article data-flag="event.abigail_jungle_splat"><a class="card-shot" href="assets/prints/1.8/fest-respingo.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-respingo.webp?r=3" width="1100" height="687" loading="lazy" alt="The Jungle Splat on Ginger Island: the paintball arena in the middle of the jungle, with hay bales for cover, the team area marked out and Abigail, Sam and Willy waiting."></a><h4>The Jungle Splat <span class="pill walk">Abigail</span></h4><p>Four-a-side paintball in the jungle of Ginger Island, in one-hit elimination rounds, best of five. Willy's part of the arc waits for his boat and the jungle path, and the arc, the wheel and the album say what's missing. Also ported from Beach Episode. Finishing Robin's training circuit gives you a spare paint balloon every round.</p></article>
+      <article data-flag="event.vincent_field_day"><a class="card-shot" href="assets/prints/1.8/fest-gincana.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-gincana.webp?r=3" width="1500" height="937" loading="lazy" alt="Vincent's Field Day on the town square: the dodgeball court marked on the ground, the teams on court and the crowd around the well, in the rain."></a><h4>The Field Day <span class="pill walk">Vincent and Jas</span></h4><p>Best-of-three dodgeball on the town square, with Penny as referee. Either kid can propose it, and every mission goes through a grown-up. The kids pick teams with odds or evens, and the grown-ups go easy on them: no super throws at a kid, who is just “out”.</p></article>
+      <article data-flag="event.emily_dance_night"><a class="card-shot" href="assets/prints/1.8/fest-danca.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-danca.webp?r=3" width="1500" height="937" loading="lazy" alt="Dance Night at the Saloon: the string of fairy lights, Emily on the dance floor rug and the couples lined up waiting for the music, with Gus behind the bar."></a><h4>Dance Night at the Saloon <span class="pill walk">Emily</span></h4><p>A dance-off on the Saloon floor at night: Emily dances a sequence and you repeat it, over three rounds, with the crowd bar deciding each one. Clint can be the judge and Pam can run the jukebox.</p></article>
+      <article data-flag="event.gus_saloon_anniversary"><a class="card-shot" href="assets/prints/1.8/fest-aniversario.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-aniversario.webp?r=3" width="1600" height="1000" loading="lazy" alt="The Saloon Anniversary: the whole village around the tables and the bar, Emily serving and Gus in the middle of the party."></a><h4>The Saloon Anniversary <span class="pill walk">Gus</span></h4><p>A night waiting tables in the real Saloon: Gus cooks and you carry each dish to the right table before the guest's patience runs out, over three busier and busier rounds. Pam, Shane, Lewis, Linus and Clint each have their own quirk, and a guest who gives up waiting says so in their own way.</p></article>
+      <article data-flag="event.sam_cart_championship"><a class="card-shot" href="assets/prints/1.8/fest-carrinhos.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-carrinhos.webp?r=3" width="1600" height="1000" loading="lazy" alt="The Cart Championship at the JojaMart: Sam in uniform between the aisles, the stack of blue carts, Morris on his rounds, Pam at the register and Shane at the counter."></a><h4>The JojaMart Cart Championship <span class="pill walk">Sam</span></h4><p>Sam's last shift at the JojaMart, played as Snake on the store floor: you and Sam push ever longer lines of carts through the aisles while Morris makes his rounds. Shane gets Sam the shift, and Vincent (cart boy) and Pam (keeping Morris busy) can help.</p></article>
+      <article data-flag="event.shane_chicken_race"><a class="card-shot" href="assets/prints/1.8/fest-galinhas.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-galinhas.webp?r=3" width="1600" height="1000" loading="lazy" alt="The Chicken Race at Marnie's ranch in the fall: the chickens lined up at the checkered start, Charlie among them, and the village cheering at the fence."></a><h4>The Chicken Race <span class="pill walk">Shane</span></h4><p>Three laps around Marnie's ranch, on the regular Forest map. Shane races Charlie, his blue chicken. You enter an animal from your own coop, rated by friendship, happiness and age, or Marnie lends you a chicken. Ostriches, dinosaurs, rabbits and ducks can race too, and the crowd has something to say about each one.</p></article>
+      <article data-flag="event.sebastian_rpg_campaign"><a class="card-shot" href="assets/prints/1.8/fest-rpg.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-rpg.webp?r=3" width="840" height="790" loading="lazy" alt="The RPG Campaign in Sebastian's room: the table with the campaign map, Sebastian, Sam and Abigail sitting down, and the farmer coming in through the door."></a><h4>The RPG Campaign <span class="pill walk">Sebastian</span></h4><p>A night of Solarion Chronicles in his room, with Sam and Abigail: three rooms and a boss in a short run of Stardew Vanguard, my survivors-style mine game, with Sebastian narrating as game master between the rooms and his friends reacting. Leaving the farm in the evening takes you straight to his room.</p></article>
+    </div>
+    <div class="sub">
+      <h3>Each with its own screen</h3>
+      <div class="apps with-shots">
+        <div><b>The Clearing Cup</b><span>A wooden stadium scoreboard, a card for the player you control with their face and stamina, the radar on a tactics board, and a board of its own for penalties.</span></div>
+        <div><b>The Jungle Splat</b><span>A camo plaque in a bamboo frame, each player's face on a tile, and whoever is tagged out gets a splat of the other team's paint.</span></div>
+        <div><b>The Field Day</b><span>A hand-painted plywood sign with bunting, a little tombstone over whoever is in the cemetery, and odds or evens in the schoolyard.</span></div>
+        <div><b>Dance Night at the Saloon</b><span>A neon floor, each dancer's arrows on a panel in their colour, a marquee sign whose bulbs flash on the beat and an applause meter.</span></div>
+        <div><b>The Saloon Anniversary</b><span>A chalkboard menu, Gus's orders hanging like tickets, a silver tray and, at the end of the night, the bill.</span></div>
+        <div><b>The Cart Championship</b><span>A Joja-blue departure board, like a station's, with the numbers on split-flap tiles.</span></div>
+        <div><b>The Chicken Race</b><span>A barn-red tote board and fair rosettes for each place, with your chicken in gold.</span></div>
+        <div><b>The RPG Campaign</b><span>The scenes between the rooms are played on the table's felt, with Sebastian behind his game master's screen and Sam and Abigail talking from their character sheets.</span></div>
+        <div data-flag="event.demetrius_chess_open"><b>The chess open</b><span>A wooden board with pixel-art pieces in the game's style, the opponent's portrait with their line, the move list with a drawing of each piece and the last move highlighted.</span></div>
+      </div>
+    </div>
+    <div class="sub">
+      <h3>Computer or Mobile</h3>
+      <ul class="points">
+        <li>Every minigame has a <b>Controls</b> choice. <b>Computer</b> keeps the full keyboard, mouse and controller scheme. <b>Mobile</b> (the default on Android) uses big buttons for your finger, aims and runs for you where it helps, never punishes a stray tap and draws a bigger HUD. Picking Mobile the first time suggests the Relaxed difficulty.</li>
+        <li>Three difficulties: Relaxed, Standard and Challenging.</li>
+      </ul>
+      <div class="option"><span class="label">In the settings</span><b>Minigame controls</b><span><i>Always ask</i> by default, or always Computer, or always Mobile.</span></div>
+      <div class="option"><span class="label">In the settings</span><b>Default difficulty</b><span>and each festival's details: the half length in the Clearing Cup, the cart championship's shift, the dance night's audio delay (for Bluetooth headphones) and the RPG campaign's keys.</span></div>
+    </div>
+    <div class="sub">
+      <h3>And three standalone events</h3>
+      <p>Save the Date events that don't come from an arc: the villager invites you, the day goes on the calendar with a letter and a reminder, and at the end there's a group photo, the album and Pelicangram.</p>
+      <div class="notice">
+        <article data-flag="event.sam_open_rehearsal"><a class="card-shot" href="assets/prints/1.8/fest-ensaio.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-ensaio.webp?r=3" width="700" height="540" loading="lazy" alt="The open rehearsal in Jodi's kitchen: Sam, Abigail and Sebastian playing and the audience at the table, with Haley, Penny and Jas."></a><h4>The band's open rehearsal <span class="pill walk">Sam · 7 hearts</span></h4><p>Once a season, on a Thursday, Sam tells you the garage is open on Saturday and his mom said it's fine. Ten minutes later, Jodi tells you it's fine until 4 PM. The band plays in Sam's room for Jodi, Vincent, Jas, Penny, Haley and, from year 2, Kent, and it all ends in a photo. No minigame for now.</p></article>
+        <article data-flag="event.demetrius_chess_open"><a class="card-shot" href="assets/prints/1.8/fest-xadrez.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-xadrez.webp?r=3" width="1300" height="812" loading="lazy" alt="The chess open on the town square: the open's banner in front of the clinic and the general store, the wooden tables with boards and George, Sebastian, Penny, Robin and the other players waiting."></a><h4>The chess open <span class="pill walk">Demetrius · 4 hearts</span></h4><p>At 4 hearts, once a season, on a Wednesday, Demetrius texts you that there's an open on the town square on Saturday, from 10 AM to 4 PM, and that he already entered you. On Saturday the square gets four wooden tables with boards and the open's banner. Penny, Maru, Harvey, George, Sebastian, Elliott and Demetrius are at the tables, and Robin, Evelyn and Lewis watch.</p><p>Talk to Demetrius to start: you sit at the first table and the board opens on screen. It's an eight-player knockout: in the quarterfinals you face Penny, then come the semifinal and the final. You play white in the quarterfinal and the final and black in the semi, and a draw sends black through. The other tables play out while you play and fill in the bracket.</p><p>Pick the piece and then the square, with the mouse, touch or a controller. You can offer a draw, resign or leave from the pause menu (leaving counts as a loss). There are three difficulties, the villagers play stronger every round, and Maru, Sebastian and Demetrius take it a bit more seriously. All the rules apply, castling, en passant and promotion included.</p><p>At the end there's a group photo, the album and Pelicangram, friendship (+20 with Demetrius, +30 if you're champion and +10 with each villager you played) and a diary entry. The Weekly News and the Year in Review keep your first open and your first title. If you miss it, Demetrius texts you that Penny went through by walkover, and invites you again next season.</p></article>
+        <article data-flag="event.sisters_island_crossing"><a class="card-shot" href="assets/prints/1.8/fest-ilha.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fest-ilha.webp?r=3" width="1600" height="1000" loading="lazy" alt="A Day on Ginger Island: the beach with umbrellas and towels, Emily and Haley on the sand and Willy at the dock where the boat is moored."></a><h4>A Day on Ginger Island <span class="pill walk">Emily · 6 hearts</span></h4><p>With Willy's boat fixed, Emily suggests a day on the island with her sister and Willy, who steers because someone has to. Emily waits at the parrots' perch, Haley sunbathes on a towel and Willy fishes from the dock. Once you've talked to all three, everyone gathers for a photo, which becomes Haley's post on Pelicangram. No minigame and no score.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Side jobs -->
+  <section class="feature" id="v1-8-0-bicos">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>31 side jobs: work that comes from friendship</h3>
+      <p class="lead">As your friendship grows, a villager may offer you a job. Each side job has pay, rules of its own and stages that open up with more hearts.</p>
+    </div>
+    <ul class="points">
+      <li>The offer comes in a regular conversation, in a box in the job's colour with a free answer, like a Save the Date proposal (with the same <b>Chance to propose</b>). Said no? The villager asks again next season, or you bring it up from their action wheel.</li>
+      <li>Many side jobs come with an app for the phone and for the computer's Apps folder, with the history and the numbers.</li>
+      <li>Everything leaves a mark: the villagers remember, the night's diary and gossip comment on it, the Weekly News announces the first times and the big milestones, and the Year in Review keeps the day you started.</li>
+      <li>The animals, aquariums and shelves are drawn by the mod, without touching the game's maps or save. In multiplayer, only the host has side jobs.</li>
+    </ul>
+    <div class="sub">
+      <h3>Deliveries and orders</h3>
+      <div class="apps with-shots">
+        <div data-flag="sidejob.pierrego"><a class="card-shot" href="assets/prints/1.8/pierrego.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/pierrego.webp" width="854" height="720" loading="lazy" alt="The PierreGo app on the phone with a new order from Haley: 2 Sugar, 30g plus tip, with the Decline and Accept buttons."></a><b>PierreGo</b><span class="ai">Pierre · 2 hearts</span><span>Pierre's delivery app. Up to 5 orders a day reach your phone between 9 AM and 4 PM; pick up the bag at the little counter by the general store's door and deliver it from the customer's wheel. 30g in town, 50g out of town, and a tip if you're early. At 4 hearts, two orders at once and customers from the mountain, the forest and the beach. The app looks like a real delivery app: Orders, Deliveries and Profile tabs, an order card with the customer's portrait, the items and a bar until the order expires, tracking for each delivery and your rating with the totals.</span></div>
+        <div data-flag="sidejob.farm_shelf"><a class="card-shot" href="assets/prints/1.8/prateleira.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/prateleira.webp?r=3" width="1000" height="625" loading="lazy" alt="The shelf with the farm's name in Pierre's General Store, stocked with farm produce, and the farmer arriving with more parsnips."></a><b>The farm's shelf</b><span class="ai">Pierre · 4 hearts</span><span>A shelf with your farm's name inside the store. Stock it with what you grew or made, and every villager who walks in may buy one unit of what they like best. Pierre keeps 20% and pays on Saturday, with a letter saying who bought what.</span></div>
+        <div data-flag="sidejob.gus_kitchen"><a class="card-shot" href="assets/prints/1.8/cozinha-gus.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/cozinha-gus.webp?r=3" width="1400" height="760" loading="lazy" alt="A delivery at the Saloon bar: the farmer brings the blueberries and the egg from Gus's list, and the notice confirms “List complete: +200g. Tonight's dish: Blueberry Tart!”."></a><b>Gus's kitchen</b><span class="ai">Gus · 3 hearts</span><span>On Friday mornings Gus sends the list for the dish of the day, with things from your farm. Deliver by 5 PM and he pays the shipping price plus a quarter; in the evening the dish goes up on a board behind the bar, and the customers talk about it. At 7 hearts, he teaches you recipes.</span></div>
+        <div data-flag="sidejob.emily_atelier"><a class="card-shot" href="assets/prints/1.8/atelie.webp?r=4" target="_blank" rel="noopener"><img src="assets/prints/1.8/atelie.webp?r=4" width="1056" height="900" loading="lazy" alt="The Atelier app on the phone as Emily's sketchbook: Robin's white overalls ready to pick up, Haley's red dress with the cloth and the poppy already in the backpack and 50g on the tag, and the mannequin for ordering a piece of your own in the colour you choose."></a><b>Emily's atelier</b><span class="ai">Emily · 3 hearts</span><span>Every Wednesday a villager orders a piece in one of nine colours. You bring the cloth and the dye (a tulip for red, coal for black), Emily sews it in two days and you deliver it. At 5 hearts, a piece for you; at 7, a fashion show at the Saloon at the end of the season.</span></div>
+        <div data-flag="sidejob.jodi_casserole"><a class="card-shot" href="assets/prints/1.8/cacarola.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/cacarola.webp?r=3" width="1100" height="687" loading="lazy" alt="The casserole verdict in Jodi's kitchen: Sam says “I had cereal after. No offence.” and Vincent answers “I ate ALL of it.”."></a><b>Jodi's casserole</b><span class="ai">Jodi · 3 hearts</span><span>Every Monday Jodi says which farm ingredient the week's casserole needs. Deliver it, get 40g and a plate, and the next day the family rates it in spoons in the Casserole app. At 7 hearts, find out what Kent likes.</span></div>
+        <div data-flag="sidejob.willy_aquarium"><a class="card-shot" href="assets/prints/1.8/willy-aquario.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/willy-aquario.webp?r=3" width="760" height="475" loading="lazy" alt="The small aquarium on the wall of Willy's fish shop, next to the tunnel door, with the fish the farmer brought and the little plaque with their name. Clicking it opens the big aquarium."></a><b>Willy's aquarium</b><span class="ai">Willy · 2 hearts</span><span>An aquarium on the fish shop wall, with the fish you bring swimming in it. Every Monday Willy asks for one to three fish. At 4 hearts, decorations and 12 fish; at 6, a second aquarium on the pier; at 8, one legendary a year; at 10, a plaque with your name.</span></div>
+        <div data-flag="sidejob.sandy_courier"><a class="card-shot" href="assets/prints/1.8/correio-deserto.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/correio-deserto.webp?r=3" width="1500" height="937" loading="lazy" alt="Emily opens the box the farmer brought from the desert in her living room, and Sandy's note says: “A whole box. Don't say I never spoil you. The sandals are a joke. Or are they.”"></a><b>The desert mail</b><span class="ai">Sandy · 3 hearts</span><span>With the bus running, carry the parcels between Sandy and Emily: Sandy's on Monday, Emily's reply the next day, 40g a trip. At 5 hearts, birthday presents travel with you.</span></div>
+        <div data-flag="sidejob.krobus_barter"><a class="card-shot" href="assets/prints/1.8/trocas-krobus.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/trocas-krobus.webp?r=3" width="900" height="560" loading="lazy" alt="Krobus's trade board on the sewer wall, with the week's wishes written in chalk, next to his stall."></a><b>Krobus's barter</b><span class="ai">Krobus · 3 hearts</span><span>A board next to him lists three wishes a week, things from up above: a sunflower, a real egg, bread, a book. He pays in void essence, void eggs and void mayonnaise. Once per save, he asks for the sun.</span></div>
+        <div data-flag="sidejob.linus_barter"><a class="card-shot" href="assets/prints/1.8/linus-escambo.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/linus-escambo.webp" width="960" height="600" loading="lazy" alt="Linus's tent on the mountain, in the rain: him by the campfire and the week's trade board next to the farmer."></a><b>Linus's barter</b><span class="ai">Linus · 2 hearts</span><span>Linus trades instead of selling. Every Monday a board at his tent lists what he needs (fiber, sap, clay, a jam you made) and what he gives back (wild seeds, wild bait, gold forage).</span></div>
+        <div data-flag="sidejob.leo_parrots"><a class="card-shot" href="assets/prints/1.8/papagaios.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/papagaios.webp?r=3" width="1100" height="687" loading="lazy" alt="The perch on the farm, next to the mailbox: a green parrot has landed with a note from Leo and a “!” over it, waiting for the farmer to read it."></a><b>Parrot mail</b><span class="ai">Leo · 4 hearts</span><span>A perch next to your mailbox. On Mondays and Thursdays a parrot brings a note from Leo; answer it, or send back the item in your hand as a gift. At 6 hearts, golden walnut hints.</span></div>
+      </div>
+    </div>
+    <div class="sub">
+      <h3>Helping the town</h3>
+      <div class="apps with-shots">
+        <div data-flag="sidejob.lewis_mediator"><a class="card-shot" href="assets/prints/1.8/mediador.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/mediador.webp?r=3" width="1220" height="762" loading="lazy" alt="A mediation on the square: Jodi complains that Caroline took the credit for her casserole recipe, and Caroline answers that there's no need to make a mountain out of a molehill."></a><b>The Mayor's mediator</b><span class="ai">Lewis · 4 hearts</span><span>When two villagers have been at odds for three days, the case reaches the Town Hall app. Sit them down to talk and speak in your own words; the AI decides whether they made up. 200g per settled case. At 8 hearts, one town decision per season.</span></div>
+        <div data-flag="sidejob.lewis_suggestions"><a class="card-shot" href="assets/prints/1.8/caixa-sugestoes.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/caixa-sugestoes.webp?r=3" width="1100" height="687" loading="lazy" alt="Lewis's suggestion box on a post in front of his house, next to the trash can, with the farmer coming to leave the week's note."></a><b>Lewis's suggestion box</b><span class="ai">Lewis · 2 hearts</span><span>A box at the mayor's door. Write one note a week and he answers by letter two days later, written by the AI from what you wrote. Sometimes it makes the news.</span></div>
+        <div data-flag="sidejob.elliott_column"><a class="card-shot" href="assets/prints/1.8/cronica.webp?r=4" target="_blank" rel="noopener"><img src="assets/prints/1.8/cronica.webp?r=4" width="1056" height="900" loading="lazy" alt="The Column app on the phone as a newspaper page: Elliott's Thursday draft, “The Mayor and the Lingering Look”, with a drop cap and a byline, stamped Publish on one phone and Hold on the other, with the Publish and Hold buttons below."></a><b>Elliott's column</b><span class="ai">Elliott · 3 hearts</span><span>You become a guest columnist: on Monday you pick the week's topic in the Column app, on Thursday Elliott writes it, on Friday it comes out in the Weekly News, and Lewis pays 40g.</span></div>
+        <div data-flag="sidejob.harvey_rounds"><a class="card-shot" href="assets/prints/1.8/visitas-harvey.webp?r=4" target="_blank" rel="noopener"><img src="assets/prints/1.8/visitas-harvey.webp?r=4" width="1056" height="900" loading="lazy" alt="The Clinic app on the phone as Harvey's clipboard: Evelyn's photo held by a clip, the Fine, Tired and Worried boxes and a sentence written in pen; on the second phone, the sent report with the Noted stamp, the yellow note about the kit for Pam and the charts."></a><b>Harvey's rounds</b><span class="ai">Harvey · 4 hearts</span><span>Every Tuesday Harvey gives you the name of a villager who never comes to the clinic. Talk to them and tell Harvey how they're doing, from the wheel or in the Clinic app. If you say you're worried, he sends a kit for you to deliver.</span></div>
+        <div data-flag="sidejob.sebastian_support"><a class="card-shot" href="assets/prints/1.8/suporte.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/suporte.webp?r=3" width="960" height="580" loading="lazy" alt="The Saloon's big call: Sebastian came along and waits next to Gus's computer, its blue screen flashing, while the farmer looks at the machine."></a><b>Sebastian's tech support</b><span class="ai">Sebastian · 5 hearts</span><span>Sebastian's freelance work turned into the town's tech support, and you're the one taking the calls. He sends you the call with what to do; at the customer's place there's a computer with a blue screen and three options. If you read the message, you get it right the first time.</span></div>
+        <div data-flag="sidejob.frog_census"><a class="card-shot" href="assets/prints/1.8/censo-sapos.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/censo-sapos.webp" width="1440" height="900" loading="lazy" alt="A rainy day at the mountain lake: the farmer on the shore, with frogs from Demetrius's census sitting at the water's edge."></a><b>The frog census</b><span class="ai">Demetrius and Sebastian · 4 hearts</span><span>On rainy days, count the frogs by the mountain lake and your farm's pond. The golden frog counts as three, and Sebastian knows where it is (don't ask how). 15g a frog.</span></div>
+        <div data-flag="sidejob.pam_lost_found"><a class="card-shot" href="assets/prints/1.8/achados-perdidos.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/achados-perdidos.webp?r=3" width="1000" height="625" loading="lazy" alt="Pam's lost and found box on the sidewalk by the bus stop, with a found parcel inside, Pam next to it and the bus parked."></a><b>Pam's bus lost and found</b><span class="ai">Pam · 3 hearts</span><span>One find a week, in a box at the bus stop. The description is the clue to who owns it; return it from any villager's wheel. Guess wrong and you get another clue.</span></div>
+        <div data-flag="sidejob.penny_class"><a class="card-shot" href="assets/prints/1.8/aula-penny.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/aula-penny.webp?r=3" width="1500" height="937" loading="lazy" alt="Penny's class at the library: after showing the amethyst to Jas, she asks whether the stone stays at the library (donate it for 40g or take it back)."></a><b>Penny's class material</b><span class="ai">Penny · 3 hearts</span><span>Bring the library a real item on the week's topic (minerals, fish, plants, old things, farm animals). Jas and Vincent comment on it, and you donate it or take it back.</span></div>
+        <div data-flag="sidejob.jas_show_and_tell"><a class="card-shot" href="assets/prints/1.8/mostra-e-conta.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/mostra-e-conta.webp?r=3" width="1100" height="687" loading="lazy" alt="The crayon drawing Jas made after show and tell: a huge chicken next to the little house and Jas herself, under the sun."></a><b>Jas's show and tell</b><span class="ai">Jas · 3 hearts</span><span>Every Tuesday Jas sends a letter with the theme of Penny's show and tell (“a thing a cow made”, “a rock that shines”). No pay: it's a favour for Jas, who sometimes gives you a crayon drawing.</span></div>
+        <div data-flag="sidejob.marnie_rescue"><a class="card-shot" href="assets/prints/1.8/fugitivos.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/fugitivos.webp?r=3" width="1400" height="875" loading="lazy" alt="A runaway in the forest: Charlie, Shane's blue chicken, lost by the lake with a “?” over her, and the farmer coming to take her back to the ranch."></a><b>Marnie's runaways</b><span class="ai">Marnie · 3 hearts</span><span>Sometimes, at 9 AM, Marnie tells you one of her animals ran off into the forest. Find it, click it and it follows you to the ranch door: 60g a head. At 7 hearts, sometimes the runaway is one of yours.</span></div>
+        <div data-flag="sidejob.wizard_runes"><a class="card-shot" href="assets/prints/1.8/runas.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/runas.webp?r=3" width="1000" height="625" loading="lazy" alt="The week's rune planted in the town graveyard, among the tombstones, with the farmer next to it waiting for it to charge."></a><b>The Wizard's runes</b><span class="ai">Wizard · 4 hearts</span><span>Every Monday a letter tells you where and when to plant the week's rune: the beach at night, the graveyard, the top of the mountain. Leave it for a night, collect it and bring it back, and he reads the rune aloud.</span></div>
+      </div>
+    </div>
+    <div class="sub">
+      <h3>Keeping someone company</h3>
+      <div class="apps with-shots">
+        <div data-flag="sidejob.leah_gallery"><a class="card-shot" href="assets/prints/1.8/exposicao.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/exposicao.webp" width="1104" height="690" loading="lazy" alt="Leah brings up the side job in the special conversation box: “lucas! Have you thought about the exhibition? Gus still has that wall waiting for your paintings.”"></a><b>Leah's exhibition</b><span class="ai">Leah · 4 hearts</span><span>Your SVpaint paintings on a wall of the Saloon. Leah hangs them on Friday at 6 PM, the villagers comment in the evening, on Sunday she sends her review with a score of 1 to 5 brushes, and someone may buy the painting.</span></div>
+        <div data-flag="sidejob.caroline_aerobics"><a class="card-shot" href="assets/prints/1.8/aerobica.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/aerobica.webp?r=3" width="1800" height="1000" loading="lazy" alt="The end of the aerobics class at the general store with Jodi, Marnie and Robin: Caroline says “Good class. You held the plank longer than Jodi, and she's been at it for a year” and Pierre announces the summer seeds."></a><b>Tuesday aerobics</b><span class="ai">Caroline · 3 hearts</span><span>An aerobics class at the back of the general store, with Jodi, Marnie, Robin, Emily and someone hiding behind the shelf. An hour goes by and you come out stretched, with +1 speed until you sleep.</span></div>
+        <div data-flag="sidejob.shane_round"><a class="card-shot" href="assets/prints/1.8/ronda-shane.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/ronda-shane.webp" width="1104" height="690" loading="lazy" alt="Shane brings up the side job in the special conversation box: “lucas. The round. Marnie's chickens, early Joja days. Still need someone.”"></a><b>Shane's round</b><span class="ai">Shane · 3 hearts</span><span>Look after the ranch's chickens on the days Shane starts early at Joja, without Marnie finding out it isn't him. At 7 hearts, he takes the round back and asks you along on Saturdays.</span></div>
+        <div data-flag="sidejob.sam_roadie"><a class="card-shot" href="assets/prints/1.8/roadie.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/roadie.webp?r=3" width="860" height="537" loading="lazy" alt="The rehearsal in Jodi's kitchen: Sam, Sebastian and Abigail play, with a music note over Sam, and the farmer watching as the roadie."></a><b>Band roadie</b><span class="ai">Sam · 3 hearts</span><span>Every Friday Sam asks for one thing for Saturday's rehearsal (a pizza, five wood so the amp stops wobbling). Deliver it and watch the rehearsal. No money, only glory, and the Roadie app to vote on the setlist.</span></div>
+        <div data-flag="sidejob.kent_garden"><a class="card-shot" href="assets/prints/1.8/canteiro-kent.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/canteiro-kent.webp?r=3" width="1200" height="750" loading="lazy" alt="Kent's two garden beds at the door of Jodi's house, with tomatoes and peppers growing, on a rainy day."></a><b>Kent's bed</b><span class="ai">Kent · 3 hearts · year 2</span><span>Kent wants to grow something by the house. Give him a seed of the season: it grows at the real pace, Vincent waters it out loud and the harvest is split half and half.</span></div>
+        <div data-flag="sidejob.george_walk"><a class="card-shot" href="assets/prints/1.8/george-passeio.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/george-passeio.webp" width="1450" height="906" loading="lazy" alt="George in his wheelchair next to the farmer, saying “Fine. But I'm not going anywhere near that saloon.”, with the notice that he's following you until 6 PM."></a><b>George's walks</b><span class="ai">George · 3 hearts</span><span>Evelyn asks you to take George out. He follows you in his wheelchair, with one grumble per place. The beach at 5 hearts, a night at the Saloon at 7, the mountain lake at 9.</span></div>
+        <div data-flag="sidejob.dusty_walk"><a class="card-shot" href="assets/prints/1.8/dusty-passeio.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/dusty-passeio.webp" width="1280" height="800" loading="lazy" alt="Dusty loose in town, following the farmer in front of the Mullners' house."></a><b>Dusty's walks</b><span class="ai">after Alex's 4-heart event</span><span>Click Dusty's pen and the dog follows you around town, the forest and the mountain. Once per walk he digs something up. Bring him back by 6 PM, or Alex will hear about it.</span></div>
+        <div data-flag="sidejob.alex_training"><a class="card-shot" href="assets/prints/1.8/alex-treino.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/alex-treino.webp?r=3" width="1300" height="812" loading="lazy" alt="Morning training in front of the Mullners' house: after the drills, Alex says “Not bad. Same time Thursday.”, next to Dusty's kennel."></a><b>Alex's training</b><span class="ai">Alex · 2 hearts</span><span>On Tuesday, Thursday and Saturday mornings he waits for you in front of his house for football training. Every session goes into the Training log app, and George watches from the window.</span></div>
+      </div>
+    </div>
+    <div class="sub">
+      <h3>For married players</h3>
+      <div class="apps with-shots">
+        <div data-flag="sidejob.spouse_dinner"><a class="card-shot" href="assets/prints/1.8/cozinhar-juntos.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/cozinhar-juntos.webp" width="1104" height="690" loading="lazy" alt="Haley brings up the side job in the special conversation box: “About cooking together once a week... I still want to. Just the two of us, on Saturdays from 6:00 PM.”"></a><b>Cooking together</b><span class="ai">spouse</span><span>One night a week you cook together at home. On Saturday your spouse says what they're craving, and from 6 PM, with the ingredients in your backpack, the magic happens. Krobus suggests a midnight snack (he doesn't cook, he watches).</span></div>
+        <div data-flag="sidejob.island_break"><a class="card-shot" href="assets/prints/1.8/folga-ilha.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/folga-ilha.webp?r=3" width="1400" height="875" loading="lazy" alt="The day off on Ginger Island: Haley waits at the end of the dock with Leo, who came to say hi, and Willy's boat moored."></a><b>Island break</b><span class="ai">spouse · Ginger Island house</span><span>Once a season, a day on the island with your spouse: the beach during the day, the island house at night and extra friendship if you stay the night.</span></div>
+      </div>
+    </div>
+    <div class="option"><span class="label">In the settings</span><b>Side Jobs</b><span>a new page, with the switch, the minimum hearts and the pay for each side job.</span></div>
+  </section>
+
+  <!-- Side job slots and board -->
+  <section class="feature" id="v1-8-0-vagas">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Slots and the side jobs board</h3>
+      <p class="lead">If you work for half the valley, your phone no longer rings all day: of the side jobs you took, only five run at once, and the rest wait on pause.</p>
+    </div>
+    <ul class="points">
+      <li><b>Pausing loses nothing:</b> a paused side job keeps everything you earned in it (ratings, trust, apps, trophies) and stays quiet, with no messages, no orders and no app, until you turn it back on.</li>
+      <li><b>What takes a slot:</b> the 22 side jobs that come to you with something to do (PierreGo, Gus's kitchen, Marnie's runaways, Shane's round, the weekly ones). The 6 you start yourself are free: the walks with George and with Dusty, the trades with Linus and with Krobus, the mayor's suggestion box and Kent's bed. Cooking together, the island break with your spouse and Caroline's aerobics are commitments and stay outside the limit.</li>
+      <li><b>Changes apply tomorrow morning:</b> a side job you pause runs to the end of the day, and one you turn on starts the next morning, if there's a free slot. Pausing one and turning on another on the same day swaps them overnight, and you can undo it until you go to sleep.</li>
+      <li><b>No punishment:</b> what the side job had asked for and you hadn't done is dropped without counting as missed (Emily's open commissions, the mayor's cases, Jas's theme, Pam's find of the week, Harvey's round, Sebastian's calls). What you already earned gets paid.</li>
+      <li><b>Every slot taken:</b> the villager still offers and you can still say yes. The new side job starts on pause and a notice says so. Pause another one to make room.</li>
+      <li><b>Older saves:</b> every side job you already had keeps running, even over the limit. Nothing goes on pause unless you ask, but no new side job starts until the running ones fit the limit.</li>
+    </ul>
+    <div class="sub">
+      <h3>The side jobs board</h3>
+    </div>
+    <ul class="points">
+      <li>With any side job turned on, the Save the Date card in the Hub opens a board with two tabs: <b>Festivals</b> (the album from before) and <b>Side jobs</b>. Tab or the controller's triggers switch tabs.</li>
+      <li>Each side job has a poster. Until someone offers it to you, it's a blank sheet with a silhouette and a hint (“A dog behind a fence is dying for a walk.”). The ones you turned down say <b>They asked you</b>, and the ones you took say <b>Running</b>, <b>On pause</b>, <b>Pauses tomorrow</b> or <b>Back tomorrow</b>, with the job's rhythm (every day, a few days a week, once a week, whenever you want). The ones that don't count toward the limit get a <b>Free</b> or <b>Commitment</b> stamp.</li>
+      <li>Pick the poster of one of your side jobs to pause it or turn it on from tomorrow morning, and pick it again to undo. The pennants at the top are the slots: coloured when a side job is running, red when over the limit, and the line below counts them (“Slots: 3 of 5 today, 4 tomorrow”).</li>
+      <li><b>New on the board:</b> when a villager opens a Save the Date project or offers you a side job, the Save the Date card in the Hub shines with a “!”, like the Changelog card, until you open the board. It opens on the side with the news, the other tab gets a little dot and the poster comes with a <b>New</b> sticker.</li>
+      <li><b>Side jobs today:</b> the Hub's <b>Today</b> note gets a line with the side jobs that have a task for you (“Side jobs today: PierreGo, Gus's kitchen.”), the Save the Date card counts them, and on the board the poster says <b>Task open</b>. A paused side job never shows up there.</li>
+    </ul>
+    <div class="option"><span class="label">In the settings</span><b>Side jobs at once</b><span>5 by default, from 1 to 10 or no limit, at the top of the side jobs page.</span></div>
+  </section>
+
+  <!-- Action wheel -->
+  <section class="feature" id="v1-8-0-roda">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>A new look for the action wheel</h3>
+      <p class="lead">The wheel that opens when you click a villager got bigger and got a design of its own.</p>
+    </div>
+    <ul class="points">
+      <li><b>Badges on a wooden hoop:</b> every action is now a badge with an icon, on a wooden hoop with brass rivets: a speech bubble to talk, a gift box, a coin for the shop, a heart for kisses and hugs, a parcel for deliveries and favours, a calendar, a letter, or the face of the villager the action brings along. <b>Give gift</b> shows the item in your hand, and a delivery shows what you're about to hand over.</li>
+      <li><b>Whole names:</b> every name sits on a paper label, never cut off and never over the portrait.</li>
+      <li><b>The villager in the middle:</b> their portrait in a carved frame, their name on a red ribbon and their hearts underneath. They smile when you point at a kiss or at a Save the Date project.</li>
+      <li><b>Pointing at an action:</b> its slice of the wheel lights up and its badge glows. The panel below says what it does, or why you can't do it right now, and what you can't do is greyed out. With more than six actions, arrows show the next page and dots above the portrait tell you which one you're on.</li>
+    </ul>
+  </section>
+
+  <!-- Dinners -->
+  <section class="feature" id="v1-8-0-jantares">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Family dinners</h3>
+      <p class="lead">When you get close to a whole family, they invite you to dinner. You answer in your own words in a conversation with everyone at the table at once, and you go home with a plate.</p>
+    </div>
+    <ul class="points">
+      <li>Group conversations now seat up to four villagers.</li>
+      <li>Each dinner happens at most once a season, never lands on a Save the Date day, and missing it costs nothing more than a text.</li>
+    </ul>
+    <div class="notice">
+      <article data-flag="event.pierre_family_dinner"><h4>Sunday at Pierre's <span class="pill walk">Pierre, Caroline and Abigail</span></h4><p>Caroline invites you for Sunday at 7 PM, with the shop closed. Pierre keeps coming back to the shop, Abigail wants to talk about the mines and Caroline changes the subject. She even sends a plate home with you.</p></article>
+      <article data-flag="event.sisters_dinner"><h4>Dinner at the sisters' <span class="pill walk">Emily and Haley</span></h4><p>Bring something you cooked. Emily is at the stove, and Haley judges your dish by her own taste: pink cake wins, fish gets a scream. Sometimes Clint shows up at the door to return a pan.</p></article>
+      <article data-flag="event.mountain_family_dinner"><h4>The mountain house <span class="pill walk">Robin</span></h4><p>Robin's only rule is not to mention the basement to Demetrius. All four at the kitchen table (Sebastian CAME UP), and at the door she tells you it was the longest dinner Seb sat through all year.</p></article>
+      <article data-flag="event.jodi_family_dinner"><h4>Dinner at Jodi's <span class="pill walk">Jodi</span></h4><p>Saturday at 7 PM, bring a fish. Everyone judges the fish, Vincent asks one of his questions and Sam leaves early for rehearsal. In year 1 there's an extra plate on the table. From year 2, Kent sits with them.</p></article>
+      <article data-flag="event.ranch_family_dinner"><h4>Sunday at the ranch <span class="pill walk">Marnie</span></h4><p>Dinner in the ranch kitchen with Marnie, Shane and Jas. Every now and then Lewis turns up with a “document”.</p></article>
+      <article data-flag="event.mullner_family_dinner"><h4>Sunday at the Mullners' <span class="pill walk">Evelyn, George and Alex</span></h4><p>On the first weekend of the season, Evelyn sends a handwritten invitation. Bring a dish or nothing: leek gets a word out of George, and cookies make Evelyn ask for the recipe.</p></article>
+      <article data-flag="event.pam_newhouse_dinner"><h4>Pam's new house <span class="pill walk">Pam and Penny</span></h4><p>A week after the new house is ready, Penny cooks for you. The evening changes depending on whether you paid for the house openly, anonymously or not at all.</p></article>
+      <article data-flag="event.outsiders_rotation_dinner"><h4>The four from away <span class="pill walk">Harvey, Elliott, Leah and Linus</span></h4><p>The four who came from somewhere else and live alone have dinner together once a season, each time at a different one's place: the clinic, Elliott's cabin, Leah's cottage and Linus's campfire. And they talk about what brought each of them to the valley.</p></article>
+      <article data-flag="event.elliott_soiree"><h4>A soirée on the beach <span class="pill walk">Elliott</span></h4><p>Friday night, on the sand near his cabin, with lanterns and a piano. Elliott reads a new passage from his novel, Leah shows a sculpture and Harvey tries not to talk about blood pressure.</p></article>
+      <article data-flag="event.outsiders_dinner"><h4>The outsiders' dinner <span class="pill walk">Wizard</span></h4><p>After the Feast of the Winter Star, at 10 PM, the Wizard and a few other outsiders (Krobus, the Dwarf or Sandy) turn up at your table. Don't cook. Each of them leaves something.</p></article>
+      <article data-flag="event.spouse_family_dinner"><h4>Dinner with your spouse's family <span class="pill walk">married</span></h4><p>Your spouse invites their family to dinner at your house, on Sunday at 7 PM. It works for every marriage candidate (and for Krobus, who invites the Wizard), and your children join the conversation.</p></article>
+      <article data-flag="event.lewis_citizen_dinner"><h4>Citizen of the year <span class="pill walk">Lewis · 8 hearts</span></h4><p>At the end of winter, a dinner in your honour at the Saloon, with a speech the AI writes from your year, toasts, a dish named after your farm and a Citizen of the Year sash.</p></article>
+    </div>
+    <div class="option"><span class="label">In the settings</span><b>Family dinners</b><span>with the minimum hearts for each family.</span></div>
+  </section>
+
+  <!-- Birthdays -->
+  <section class="feature" id="v1-8-0-aniversarios">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Birthday parties</h3>
+      <p class="lead">On some villagers' birthdays, their friends get together, and you're invited. The gift you bring makes a difference.</p>
+    </div>
+    <div class="notice">
+      <article data-flag="event.abigail_birthday_saloon"><h4>Abigail at the Saloon <span class="pill walk">Fall 13</span></h4><p>With Sam and Sebastian, without her parents. Presents, a round of Journey of the Prairie King each (she wins every year, unless you've beaten the game) and, at 8 PM, Pierre and Caroline turning up uninvited with a cake.</p></article>
+      <article data-flag="event.vincent_birthday_yard"><h4>Vincent in the yard <span class="pill walk">Spring 10</span></h4><p>He asked for pink cake. Penny brings a book, Sam plays exactly one riff, and from year 2 Kent lights the candle.</p></article>
+      <article data-flag="event.jas_birthday_ranch"><h4>Jas at the ranch <span class="pill walk">Summer 4</span></h4><p>Cake in the ranch kitchen, with Marnie, Shane, Vincent, Penny and Jodi. Everyone sings (Shane, a little). If she loves your gift, you get to cut the cake.</p></article>
+      <article data-flag="event.george_birthday_party"><h4>George's surprise party <span class="pill walk">Fall 24</span></h4><p>Evelyn asks you to help throw the party George says he doesn't want. Gus brings the cake, Harvey allows one slice, and Lewis tries a speech and gets cake instead.</p></article>
+      <article data-flag="event.demetrius_birthday_lab"><h4>The empty chair <span class="pill walk">Summer 19</span></h4><p>Demetrius's birthday, with an extra chair at the table. If you talk Sebastian into coming up, he sits in it. If not, the family notices.</p></article>
+    </div>
+    <div class="option"><span class="label">In the settings</span><b>Birthday parties with friends</b></div>
+  </section>
+
+  <!-- Farm visits -->
+  <section class="feature" id="v1-8-0-visitas">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Farm visits</h3>
+      <p class="lead">Now the town comes to you: villagers you're close to ask to see your farm, walk around it with you and tell you what they think of what you built.</p>
+    </div>
+    <div class="notice">
+      <article data-flag="event.ranch_farm_visit"><h4>Marnie and Jas <span class="pill walk">Marnie · 5 hearts</span></h4><p>Sunday at 1 PM. Marnie stops by the coop, the barn, the silo and the crops, and talks about your animals by name: which one looks less happy, which one likes you best. Jas pets one of them, and Shane comes along from 6 hearts.</p></article>
+      <article data-flag="event.mullner_farm_visit"><h4>The Mullners <span class="pill walk">Evelyn and Alex · 6 hearts</span></h4><p>Grandma wants to see the farm (and Grandpa lost the argument). Evelyn leads the way, Alex pushes George, and every stop gets a comment, kind or dry.</p></article>
+      <article data-flag="event.penny_field_trip"><h4>Penny's field trip <span class="pill walk">Penny · 6 hearts</span></h4><p>Saturday at 10 AM, with Jas and Vincent. The kids ask, Penny answers, and the next day a drawing of the farm by Vincent arrives.</p></article>
+      <article data-flag="event.leah_tree_visit"><h4>Leah picks a tree <span class="pill walk">Leah · 5 hearts</span></h4><p>Once a year she comes to choose a tree for a sculpture. You cut it down, and a week later the piece is at her place, with a little plaque bearing your farm's name.</p></article>
+      <article data-flag="event.maru_farm_sensor"><h4>Maru installs “a thing” <span class="pill walk">Maru · 6 hearts</span></h4><p>A mini weather station next to your house, with tomorrow's forecast, a made-up temperature and “humidity: yes”. Once a season it detects something and Maru lets you know.</p></article>
+      <article data-flag="event.kent_farm_visit"><h4>Kent walks around <span class="pill walk">Kent · year 2</span></h4><p>On a Sunday morning, unannounced, Kent knocks on your door and walks around the farm with you. At the end, he asks if he can drop by now and then.</p></article>
+      <article data-flag="event.demetrius_farm_cave"><h4>Demetrius inspects the cave <span class="pill walk">Demetrius · 3 hearts</span></h4><p>He waits at the mouth of the cave (“I won't go in without you. Protocol.”) and counts your mushroom boxes out loud, or calls the bats “a valid choice”.</p></article>
+      <article data-flag="event.sebastian_farm_visit"><h4>Sebastian's escape <span class="pill walk">Sebastian · 7 hearts</span></h4><p>Sometimes he rides up on his bike at 1 PM, unannounced: “I'm at your farm. Don't make it weird.” He stays until four, or until six if you give him a coffee.</p></article>
+      <article data-flag="event.junimo_visit"><h4>The Junimos <span class="pill walk">Community Center restored</span></h4><p>Sometimes they show up at your door for the day. How many come, and whether they leave a gift, depends on your Junimogotchi's mood.</p></article>
+    </div>
+    <div class="option"><span class="label">In the settings</span><b>Farm visits</b></div>
+  </section>
+
+  <!-- Scenes and moments -->
+  <section class="feature" id="v1-8-0-cenas">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Scenes and moments</h3>
+      <p class="lead">Things that happen when you're around, with no mission and no score. Each one leaves a memory in whoever was there.</p>
+    </div>
+    <div class="sub">
+      <h3>By day</h3>
+      <div class="notice">
+        <article data-flag="event.pierre_wednesday_fishing"><a class="card-shot" href="assets/prints/1.8/quarta-pierre.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/quarta-pierre.webp" width="1400" height="875" loading="lazy" alt="On the beach, at the end of the fishing trip, Pierre says: “Most Wednesdays I walk to the Community Center and look at it through the window. Don't tell Lewis.”"></a><h4>Pierre's Wednesday <span class="pill walk">Pierre · 6 hearts</span></h4><p>Caroline asks you to take Pierre fishing on Wednesday, when the shop is closed. He comments on every fish (without any help: he's never held a rod) and at the end he buys the biggest one.</p></article>
+        <article data-flag="event.gus_fishing_monday"><a class="card-shot" href="assets/prints/1.8/pescaria-gus.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/pescaria-gus.webp?r=3" width="1200" height="750" loading="lazy" alt="In the rain, Gus fishes from the pier by Willy's fish shop: “Got one! ...It's a sardine. It's always a sardine.”"></a><h4>Gus's Monday fishing <span class="pill walk">Gus · 7 hearts</span></h4><p>Gus closes the Saloon in the morning to fish with you on the pier. Your best fish becomes the evening's special.</p></article>
+        <article data-flag="event.pancake_sunday"><a class="card-shot" href="assets/prints/1.8/panqueca.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/panqueca.webp?r=3" width="1500" height="937" loading="lazy" alt="Pancake Sunday at Jodi's: she says in the kitchen “Sit. Butter's by you. You're on butter duty.” and Vincent sings in the living room “La la la PANCAKE, la la SYRUP, la la…”."></a><h4>Pancake Sunday <span class="pill walk">Jodi · 4 hearts</span></h4><p>Sunday morning at Jodi's. Vincent sings the pancake song, Sam comes down in his pyjamas asking what time it is, and you're on butter duty.</p></article>
+        <article data-flag="event.jas_doll_tea"><a class="card-shot" href="assets/prints/1.8/cha-bonecas.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/cha-bonecas.webp?r=3" width="1500" height="937" loading="lazy" alt="Doll tea in Jas's room: she pours at the little purple table and Shane walks in complaining: “I was told there'd be real tea. This cup is the size of my thumb.”"></a><h4>Doll tea <span class="pill walk">Jas · 5 hearts</span></h4><p>Jas serves tea to three dolls, Uncle Shane arrives with a thumb-sized cup, and your answer changes her last line.</p></article>
+        <article data-flag="event.ranch_hay_inspection"><a class="card-shot" href="assets/prints/1.8/inspecao-feno.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/inspecao-feno.webp?r=3" width="1500" height="937" loading="lazy" alt="At dinner around the ranch's kitchen table, Jas asks why the mayor always has dinner there, and Lewis, next to Marnie, answers: “Hay inspection. Official. Very regular hay, this. Mm.”"></a><h4>Why does the mayor come so often? <span class="pill walk">Marnie · 6 hearts</span></h4><p>In front of everyone, Jas asks why Lewis always has dinner at the ranch. “Hay inspection”, he answers, a little too fast.</p></article>
+        <article data-flag="event.ranch_gate_confession"><a class="card-shot" href="assets/prints/1.8/porteira.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/porteira.webp" width="1400" height="875" loading="lazy" alt="At the ranch, Marnie is on at Shane again: “Shane. The gate. Three times this season. Three.”."></a><h4>Who left the gate open <span class="pill walk">Jas · 4 hearts</span></h4><p>Marnie blames Shane for the gate again, and this time someone confesses.</p></article>
+        <article data-flag="event.jas_family_drawing"><a class="card-shot" href="assets/prints/1.8/desenho-jas.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/desenho-jas.webp" width="768" height="510" loading="lazy" alt="Jas's crayon drawing: Marnie, Shane, herself, Charlie and the farmer in a hat, with the caption “my family (and you), by JAS”."></a><h4>The family drawing <span class="pill walk">Jas, Shane and Marnie · 6 hearts</span></h4><p>Jas sends you the family drawing she made for school. From 8 hearts with Marnie, you're in it, wearing a hat.</p></article>
+        <article data-flag="event.leah_rainy_cabin"><a class="card-shot" href="assets/prints/1.8/tarde-chuva.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/tarde-chuva.webp" width="1200" height="750" loading="lazy" alt="The three-way conversation in Elliott's cabin: Leah says the smell of wet wood and old paper is lovely, and Elliott asks how things are going in this weather."></a><h4>Rainy afternoons <span class="pill walk">Leah and Elliott · 4 hearts</span></h4><p>On rainy days, Leah carves at Elliott's table while he writes. Sit with them for a while. Haley, of course, has a theory.</p></article>
+        <article data-flag="event.harvey_linus_checkup"><a class="card-shot" href="assets/prints/1.8/exame-linus.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/exame-linus.webp?r=3" width="1480" height="925" loading="lazy" alt="Linus's check-up at the clinic, a three-way conversation: Linus finds the chairs softer than he remembered and complains about Harvey's cold stethoscope."></a><h4>Harvey wants to examine Linus <span class="pill walk">Harvey · 4 hearts</span></h4><p>Linus has never set foot in the clinic. Talk him into it in your own words, or go up the mountain with Harvey.</p></article>
+        <article data-flag="event.charlie_training"><a class="card-shot" href="assets/prints/1.8/treino-charlie.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/treino-charlie.webp?r=3" width="1440" height="900" loading="lazy" alt="Training day in the forest: the course set up along the ranch fences, with the checkered start line, and Shane and Jas waiting."></a><h4>Charlie's training <span class="pill walk">Shane · 8 hearts</span></h4><p>After the chicken race, Shane suggests a time trial on Saturdays: one lap against Charlie, no bets and no podium. Jas keeps the time.</p></article>
+        <article data-flag="event.mullner_game_night"><a class="card-shot" href="assets/prints/1.8/noite-jogo.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/noite-jogo.webp" width="1400" height="875" loading="lazy" alt="Game night at the Mullners' house: George orders “Sit. Not there. You're in front of the screen. There.”."></a><h4>Game night at the Mullners' <span class="pill walk">George and Alex · 4 hearts</span></h4><p>Fall and winter Saturdays, the Tunnelers game on TV. The team plays a real season in your save, and George's mood the next day depends on the result.</p></article>
+        <article data-flag="event.snail_lecture"><a class="card-shot" href="assets/prints/1.8/palestra-caracol.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/palestra-caracol.webp?r=3" width="1500" height="937" loading="lazy" alt="Professor Snail's talk at the museum, with the audience in front of him: “Good afternoon. These bones were under Ginger Island for a very long time. Then this farmer found them.”"></a><h4>Professor Snail's talk</h4><p>Complete the island's field office, and he gives a talk at the museum about the fossils you dug up, with Penny, Maru, Demetrius, the kids and Leo in the chairs.</p></article>
+      </div>
+    </div>
+    <div class="sub">
+      <h3>At night</h3>
+      <div class="notice">
+        <article data-flag="event.abigail_farm_cave"><h4>A night in the cave <span class="pill walk">Abigail · 7 hearts</span></h4><p>Abigail comes to see your cave at night. With bats, she plays her flute in the dark. With mushrooms, she eats a purple one.</p></article>
+        <article data-flag="event.maru_sebastian_pact"><h4>The basement pact <span class="pill walk">Maru and Sebastian · 4 hearts</span></h4><p>You overhear a secret of theirs on the basement stairs. Tell Demetrius or keep it? They both know you heard.</p></article>
+        <article data-flag="event.lewis_marnie_table"><a class="card-shot" href="assets/prints/1.8/mesa-pra-dois.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/mesa-pra-dois.webp" width="880" height="550" loading="lazy" alt="The corner table at the Saloon: Lewis says “A meeting. About... hay.” and Marnie answers “He can't lie to save his life, poor man.”."></a><h4>Table for two <span class="pill walk">Lewis and Marnie</span></h4><p>On a night when both of them are at the Saloon, Gus seats them at the corner table. Lewis has a meeting about hay. Gus saw nothing.</p></article>
+        <article data-flag="event.gus_pam_tab"><a class="card-shot" href="assets/prints/1.8/conta-pam.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/conta-pam.webp" width="1800" height="1169" loading="lazy" alt="At the Saloon bar, Gus says “Pam's tab is the size of a winter. Don't tell her I said that.”, with the notice that you can pay down the tab from his wheel."></a><h4>Pam's tab <span class="pill walk">Gus · 6 hearts</span></h4><p>Gus lets slip that Pam's tab is the size of a winter. You can pay it, and he keeps it a secret.</p></article>
+        <article data-flag="event.pam_walk_home"><a class="card-shot" href="assets/prints/1.8/levar-pam.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/levar-pam.webp" width="1000" height="625" loading="lazy" alt="At night, at the door of Pam's new house, she thanks you: “Thanks. Go home.”."></a><h4>Walking Pam home <span class="pill walk">Pam · 6 hearts</span></h4><p>After 10 PM, walk Pam home at her own pace. Penny opens the door.</p></article>
+        <article data-flag="event.sandy_valley_visit"><a class="card-shot" href="assets/prints/1.8/sandy-saloon.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/sandy-saloon.webp" width="1200" height="750" loading="lazy" alt="Sandy closed the Oasis and came to the Saloon: a conversation at the table with her and Gus."></a><h4>Sandy closes the Oasis <span class="pill walk">Sandy · 7 hearts</span></h4><p>Once a season, Sandy takes the five o'clock bus and spends the night at the Saloon with Emily. Sit with the two of them.</p></article>
+        <article data-flag="event.krobus_beach_night"><a class="card-shot" href="assets/prints/1.8/krobus-mar.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/krobus-mar.webp" width="1104" height="690" loading="lazy" alt="Krobus brings it up in the special conversation box: “lucas... the sea. I still think about it. Would you walk with me, one night?”"></a><h4>Krobus and the sea <span class="pill walk">Krobus · 6 hearts</span></h4><p>He asks you to take him to the sea, on a dry night, when nobody is on the beach. Once per save.</p></article>
+        <article data-flag="event.linus_campfire"><a class="card-shot" href="assets/prints/1.8/fogueira-linus.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/fogueira-linus.webp" width="1400" height="875" loading="lazy" alt="At night, sitting at Linus's campfire next to his tent: “Just the fire tonight. That works too.”."></a><h4>Linus's campfire <span class="pill walk">Linus · 6 hearts</span></h4><p>Sit at his campfire once a week. He roasts whatever you're holding and tells a story about the mountain.</p></article>
+        <article data-flag="event.harvey_plane_watch"><a class="card-shot" href="assets/prints/1.8/avioes-harvey.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/avioes-harvey.webp" width="1400" height="875" loading="lazy" alt="A clear night on the mountain, Harvey with his radio: “So I come up here and translate. It's close enough on a clear night.”."></a><h4>Plane watching with Harvey <span class="pill walk">Harvey · 6 hearts</span></h4><p>On clear nights, Harvey takes his radio up the mountain and translates the pilots' chatter. And he finally tells you why he never flew.</p></article>
+        <article data-flag="event.guild_toast"><a class="card-shot" href="assets/prints/1.8/brinde-guilda.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/brinde-guilda.webp" width="1300" height="480" loading="lazy" alt="The toast at the Adventurer's Guild: Marlon says “There you are. Gil, the good glasses.”."></a><h4>The Guild's toast <span class="pill walk">Marlon</span></h4><p>Reached floor 120 of the mines, your thousandth slime or floor 100 of the Skull Cavern? Marlon invites you to a toast at the Adventurer's Guild.</p></article>
+      </div>
+    </div>
+    <div class="sub">
+      <h3>Slow-moving stories</h3>
+      <div class="notice">
+        <article data-flag="event.kent_letter_line"><a class="card-shot" href="assets/prints/1.8/carta-kent.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/carta-kent.webp" width="1104" height="690" loading="lazy" alt="Jodi asks for a line for the family's letter to Kent: “About the letter to Kent... the offer stands. One line, anything. He reads them twice.”"></a><h4>A line in the letter to Kent <span class="pill walk">Jodi · 5 hearts · year 1</span></h4><p>Jodi asks you to write a line in the letter the family sends to Kent at the front. You write whatever you like, and in year 2 he has read it.</p></article>
+        <article data-flag="event.kent_return"><a class="card-shot" href="assets/prints/1.8/volta-kent.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/volta-kent.webp" width="360" height="280" loading="lazy" alt="The day Kent comes home: Sam texts on the Messenger “my dad got home. it's weird. come by whenever.”."></a><h4>Kent's homecoming <span class="pill walk">Spring 1, year 2</span></h4><p>The day the whole town found out. For a week everyone talks about it, and the family keeps it close all spring. In the following years, the family waits at the bus stop on the anniversary of his return.</p></article>
+        <article data-flag="event.dwarf_repatriation"><a class="card-shot" href="assets/prints/1.8/anao-museu.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/anao-museu.webp?r=3" width="1180" height="880" loading="lazy" alt="The Museum app after the Dwarf's letter: the Dwarf Scroll gets the label “According to the Dwarf: My great-great-grandfather's shopping list. Still missing the salt.”, corrected by the museum."></a><h4>The Dwarf and the museum <span class="pill walk">Dwarf · 5 hearts</span></h4><p>The museum has his people's things under the wrong names. He wrote a note in runes, and you're the one who takes it to Gunther, without saying who it's from.</p></article>
+        <article data-flag="event.truce_mail"><a class="card-shot" href="assets/prints/1.8/krobus-anao-correio.webp?r=3" target="_blank" rel="noopener"><img src="assets/prints/1.8/krobus-anao-correio.webp?r=3" width="1500" height="937" loading="lazy" alt="In the mine, the Dwarf reads aloud the note in shadow script that Krobus sent: “We were children when it started. I am not a child.” ...That is what it says."></a><h4>Krobus and the Dwarf, by mail <span class="pill walk">the Wizard's idea</span></h4><p>Carry a stone from one to the other, in neutral hands, without ever letting the two of them meet.</p></article>
+      </div>
+    </div>
+    <div class="sub">
+      <h3>Marriage and family</h3>
+      <div class="notice">
+        <article data-flag="event.abigail_in_laws"><h4>Abigail's in-laws <span class="pill walk">married to Abigail</span></h4><p>Sunday lunch with Pierre and Caroline, a family rate on PierreGo, and Abigail hearing what her parents said about you.</p></article>
+        <article data-flag="event.island_outings"><h4>Ginger Island outings</h4><p>With Willy's boat sailing, <b>Invite out</b> can take a villager to the island: a stroll on the beach, the sunset on the dock, lunch at the resort and, with your spouse, a night at the island house.</p></article>
+        <article data-flag="event.child_milestones"><a class="card-shot" href="assets/prints/1.8/primeiros-passos.webp" target="_blank" rel="noopener"><img src="assets/prints/1.8/primeiros-passos.webp" width="360" height="360" loading="lazy" alt="Haley tells you on the Messenger: “minerva walked! I got one blurry picture. The light was perfect, the kid was not standing still.”"></a><h4>The first steps</h4><p>When a child starts crawling, walking or talking, your spouse tells you that morning, in their own way. When the child talks, the grandparents write with a gift.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- The valley notices -->
+  <section class="feature" id="v1-8-0-vila">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>The town notices more</h3>
+      <p class="lead">Things villagers now know, and bring into the conversation without you having to tell them.</p>
+    </div>
+    <ul class="points">
+      <li data-flag="event.spouse_household"><b>Your spouse knows the house:</b> the pet (its name and how many days you petted it this week), the horse (whether you rode today, whether it slept off the farm), where you slept and whether you passed out. Close family hears a shorter version from 8 hearts.</li>
+      <li data-flag="event.leo_moved"><b>Leo's move:</b> on the morning Leo moves into the treehouse near Linus's tent, he, Linus, Willy, Jas and Vincent keep the memory, the Weekly News announces the new neighbour, and from then on the five of them know where he lives.</li>
+      <li data-flag="event.island_talk"><b>The valley hears about the island:</b> whoever is on the beach or at the fish shop sees you come back on Willy's boat, the field office donations reach Demetrius and Penny, and the Wizard finds out that Mr. Qi showed up again.</li>
+      <li data-flag="event.mullner_house_gossip"><b>The Mullners' house:</b> whatever happens to George or Alex, the three of them know at once and never pass it on. A win for Alex, though, Evelyn tells six people by the next morning. And speaking ill of Alex in front of George weighs double.</li>
+      <li data-flag="event.evelyn_translates_george"><b>Evelyn translates George:</b> after a sour conversation with him at home, she tells you what he meant. “He meant thank you.”</li>
+      <li data-flag="event.mullner_birthday_thanks"><b>The Mullners' birthday thanks:</b> with another family member in the room, the one who didn't get the gift says thank you for the one who did.</li>
+      <li data-flag="event.outsiders_web"><b>The outsiders' web:</b> in the social web, Harvey, Elliott, Leah and Linus now have ties to one another, and once a week Leah carries a piece of gossip up the mountain to Linus, who never passes it on.</li>
+      <li data-flag="event.outsiders_review"><b>The ones from outside in the Year in Review:</b> a new slide with the Wizard, Krobus, the Dwarf, Sandy, Gunther, Marlon, Morris and Gil, who slept through the whole year. Again.</li>
+    </ul>
+  </section>
+
+  <!-- Hidden jokes -->
+  <section class="feature" id="v1-8-0-piadas">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>Easter eggs</h3>
+      <p class="lead">Little things scattered around the valley, for you to stumble on.</p>
+    </div>
+    <ul class="points">
+      <li>They're in the Seen and Heard bubbles, the letters, the Messenger, the Weekly News, Pelicangram, the computer apps, the Save the Date minigames and even on the diary's cover.</li>
+      <li>All of them work with the AI off and are in all eight languages.</li>
+      <li>Passed out in the mines? The phone's glass cracks and gets a band-aid. The next morning Maru has already fixed it while you slept and leaves a note suggesting a case.</li>
+      <li>Every now and then a text meant for someone else lands on your phone, from an unknown number: Alex locked out again, Lewis booking a table for two.</li>
+    </ul>
+    <div class="option"><span class="label">In the settings</span><b>Hidden jokes</b><span>on the General page, turns all of them on or off at once.</span></div>
+  </section>
+
+  <!-- Released step by step -->
+  <section class="feature" id="v1-8-0-flags">
+    <div class="feature-head">
+      <span class="tag">New</span>
+      <h3>A switch for every new thing</h3>
+      <p class="lead">Every side job, event and easter egg in this version has its own option, and the settings only show what has already been released.</p>
+    </div>
+    <ul class="points">
+      <li>Some new content may arrive in testing: off for everyone, until you turn it on by hand. In the SMAPI console, <code>alive_content list</code> shows each one and what stage it's in, and <code>alive_content on &lt;id&gt;</code> turns it on (<code>off</code> turns it off, and <code>all</code> applies to all of them).</li>
+      <li>With a villager's event turned off, they no longer propose that project. An arc that's already open, or an event already on the calendar, goes on to the end.</li>
+    </ul>
+  </section>
+
+  <!-- Hub -->
+  <section class="feature" id="v1-8-0-hub">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>The Hub on your desk</h3>
+      <p class="lead">The Hub (F9) has a new look: the parchment now lies open on a wooden desk, under a window that looks out on the valley.</p>
+    </div>
+    <ul class="points">
+      <li>The window shows the same sky as the computer's wallpaper: the sun crossing it with the clock, the moon and stars at night, an orange tint at dusk, and rain or snow on the glass. The seasons pass over the desk too: petals in spring, fireflies on summer nights, leaves in fall and snow on the windowsill in winter.</li>
+      <li>A yellow note, <b>Today</b>, is pinned to the desk when the day has something on: the Save the Date event and who to talk to, a birthday, the letters that arrived, the outings still to happen and the open favours.</li>
+      <li>The header greets you by name, with the date and the time.</li>
+      <li>Every section is now a paper tile with a pixel-art object: a notebook for the Diary, two masks for the Arcs, a cup of coffee for the Gossip, a calendar with a heart for Save the Date. The ones you use most come first, and the keys <b>1</b> to <b>0</b> open the first ten. The long names in German and Italian are no longer cut off.</li>
+      <li>The Hub opens like a scroll, with the sound of paper, and a line under the greeting says what the card under the cursor is for.</li>
+      <li>Closing a section you opened from the Hub brings you back to the Hub, so reading the letters and then the outings no longer takes two F9s.</li>
+      <li>Marks in the corner of each card: how many letters arrived today, how many outings are left, and a dot on the Diary and the Gossip when today's entry is already there. A section turned off in the settings shows greyed out and opens the quick settings.</li>
+      <li>The AI board shows the same verdict as the AI Status screen, with a lantern in the colour of the AI's health and the switch next to it.</li>
+      <li>On the <b>NPCs</b> page, every villager has a little box in the corner of their card (<b>Y</b> on a controller) to leave them out of AliveNpcs or bring them back, without typing an internal name in the settings.</li>
+      <li>A new card, <b>📰 Changelog</b>, sums up in a few lines what each update brought, with a button that opens this page. After an update it shines until you open it.</li>
+    </ul>
+  </section>
+
+  <!-- Conversations -->
+  <section class="feature" id="v1-8-0-conversas">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Conversations</h3>
+      <p class="lead">Easier to tell where a conversation is, and easier to reply.</p>
+    </div>
+    <ul class="points">
+      <li><b>Reply counter:</b> in a conversation of several turns, the reply box says which reply this is (“Reply 2 of 3”) and flags the last one, so a conversation no longer ends in the middle of a subject without warning.</li>
+      <li><b>Suggested replies:</b> from the second reply on, three short replies show up as buttons above the field: a warm one, a curious or playful one and a blunt or teasing one. They come in the same request as the villager's reaction, with no extra request. Clicking one puts it in the field, and you can still change it.</li>
+      <li><b>Enter sends:</b> Enter sends your reply and Shift+Enter starts a new line (Ctrl+Enter still sends).</li>
+      <li><b>Esc no longer throws away what you typed:</b> with something written, the first Esc only warns you. A second one right after ends the conversation.</li>
+      <li><b>Long lines (1.7.2 style):</b> since 1.7.3 the prompts ask for “1 or 2 short sentences, 3 at most”, and the models follow that more than <b>Max Dialogue Length</b>. With this option, the AI is asked the way 1.7.2 did: the character limit is the only rule. Raise the limit (500 was the 1.7.2 default) to get the long lines back.</li>
+      <li><b>Base-game line first:</b> the first time you talk to each villager in a day, they say Stardew Valley's own line for that day, and the AI conversation starts when you talk to them again.</li>
+      <li><b>The game's line whenever you want it:</b> with <b>Base-game talks</b> on, every villager you've met gets <b>Game's line</b> on the action wheel, right after <b>Talk</b>: what Stardew Valley has for them to say today, without AI, even after an AI conversation. The <b>V</b> key shows the line of the villager in front of you without opening the wheel. The first time each day gives the usual friendship for a conversation, and after that they just repeat the line.</li>
+      <li>A villager you haven't met yet keeps the game's introduction, and at festivals the wheel doesn't show the option and the key does nothing. The line shows up on its own, never through the game's click, so it doesn't hand over what's in your hand or kiss your spouse.</li>
+    </ul>
+    <div class="option"><span class="label">In the settings</span><b>Suggested Replies</b><span>on by default.</span></div>
+    <div class="option"><span class="label">In the settings</span><b>Enter Sends the Reply</b><span>on by default. When it's off, Enter starts a new line, like before.</span></div>
+    <div class="option"><span class="label">In the settings</span><b>Long lines (1.7.2 style)</b><span>off by default.</span></div>
+    <div class="option"><span class="label">In the settings</span><b>Base-game line first</b><span>off by default.</span></div>
+    <div class="option"><span class="label">In the Hub and the settings</span><b>Base-game talks</b><span>under AI features, off by default. The <b>Game's line</b> key is on the Shortcuts page (leave it empty to turn it off).</span></div>
+  </section>
+
+  <!-- Quality of life -->
+  <section class="feature" id="v1-8-0-qol">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Quality of life</h3>
+    </div>
+    <ul class="points">
+      <li><b>Save the Date has its own settings page:</b> right after <b>Story Arcs</b>, everywhere the settings open (GMCM, the Hub and the Settings app on the computer and the phone). It holds the switch, the chance to propose, the minigame controls and difficulty, what happens if you miss an event and a <b>Minigames</b> section with each one's options. Before, all of this was at the bottom of the Arcs page.</li>
+      <li><b>Setup assistant:</b> loading a save with the AI on but unable to answer (no key yet, or an own server with no address) opens a short assistant. Pick Google Gemini, NVIDIA NIM (both have free keys) or Own server, open the key's page, paste it and click <b>Save and test</b>. <b>Don't ask again</b> turns the assistant off for good.</li>
+      <li><b>Favours you can see:</b> when a villager asks you for an item in conversation, a notice says which one and how many days you have (“Abigail asked you for a favor: Amethyst. You have 5 days”). Before, the favour was recorded without any notice. The Hub's <b>Today</b> note lists the open favours, and on the last day a reminder arrives in the morning.</li>
+      <li><b>Reliability counts your word:</b> in the Reviews and Year in Review apps, Reliability now mostly measures whether you keep your promises: favours and requests delivered on time against the ones you let expire.</li>
+      <li><b>The event day reminds you:</b> an hour before a Save the Date event opens, a reminder says when, where and who to talk to. And on the event day, the bed warns you that sleeping now means missing the event.</li>
+      <li><b>Outings tell you the time:</b> the notice for an accepted outing now gives the hours as well as the place (“Meet at the Saloon between 18:00-20:00”). A reminder arrives an hour before, and showing up at the wrong time tells you whether you're early or should come back another day.</li>
+      <li><b>An overloaded Gemini switches models:</b> in the automatic retries, the 1st and 3rd go to <code>gemini-3.1-flash-lite</code> and the 2nd goes back to your model, so an overload on one model gets a real second chance on the other.</li>
+      <li><b>Sled Valley moved to My other mods:</b> my sled racing mod left the <b>More</b> app and moved to <b>My other mods</b>, next to Beach Episode and Pelican Companions, where it also says whether you have it installed.</li>
+      <li><b>Support the project:</b> in its place in the <b>More</b> app, a card says where to send a donation if you want to: Ko-fi, or Pix through LivePix in Brazil. A donation is just a thank-you: it never unlocks files, early access, features or support.</li>
+      <li><b>New fan art in the diary:</b> Leah, by Guizin (<a href="https://www.instagram.com/the.guilherme.art/" target="_blank" rel="noopener">@the.guilherme.art</a>), and Abigail, by Alícia Alencar (<a href="https://www.tiktok.com/@lizbiohazard" target="_blank" rel="noopener">@lizbiohazard</a>), join the scrapbook and the album, each pasted next to the first entry that mentions her.</li>
+    </ul>
+  </section>
+
+  <!-- Seen and Heard -->
+  <section class="feature" id="v1-8-0-seen">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>A calmer Seen and Heard</h3>
+      <p class="lead">Seen and Heard was made to season the villagers' lines, not to run them. Some players were being accused of things they never did on purpose, so I reviewed every situation that fires in ordinary play.</p>
+    </div>
+    <ul class="points">
+      <li><b>“You keep hanging around my house”:</b> walking in and out of a shop where someone lives in the back (Pierre's General Store, the Saloon, the Blacksmith, the ranch, the Carpenter's Shop, the Fish Shop) counted as going into their home, and every door was a new memory. Now shops and public rooms are just places, the same door again within 6 in-game hours counts as one visit, and in a conversation the villager only hears about the last one.</li>
+      <li><b>Flirting and arguing over small talk:</b> the word lists matched pieces of other words and everyday words (“ugly weather”). Now only whole words count, insults have to be aimed at the person, and only the farmer's own words count. The first flirt in front of your partner is a dry speech bubble; only the second brings them over to you.</li>
+      <li><b>Going through other people's houses:</b> clicking a bookshelf or a poster counted as reading the owner's letters and made them furious. Now only dressers, letters and notes count, and the first time is a speech bubble.</li>
+      <li><b>Farm work:</b> the hoe no longer counts as hitting someone, and a scythe passing close is a scare, not a blow. An axe or pickaxe upsets instead of infuriating (a weapon still infuriates), and a weapon swung nearby gets a speech bubble before anyone walks over. A bomb on your own farm bothers your spouse much less.</li>
+      <li><b>Following and staring:</b> following only counts while you walk the same way as the villager, and never on the farm or in your house. Staring waits 4 seconds instead of 3, and the 10 seconds after a conversation, a menu or a cutscene don't count. Finishing a chat and standing still is no longer “Why are you staring at me?”.</li>
+      <li><b>Bedrooms:</b> going back into the same bedroom within 6 in-game hours carries on the same visit, instead of starting a new one.</li>
+    </ul>
+  </section>
+
+  <!-- Compatibility -->
+  <section class="feature" id="v1-8-0-compat">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Compatibility</h3>
+    </div>
+    <ul class="points">
+      <li>Save the Date never takes a date the game or another mod already uses, and the nearest free day also skips the calendar's passive festivals, like the Desert Festival and the Night Market.</li>
+      <li>With an older Beach Episode that still has its own Clearing Cup on spring 6, Beach Episode keeps the day, and Alex's event moves to the next free one.</li>
+      <li>With Stardew Valley Expanded, the festivals stay in the right places on Expanded's maps, and the chicken race has a course of its own on Expanded's Forest.</li>
+      <li>Save the Date runs on the host, and the festivals only go on the calendar while the host plays alone. On a day with other players online, the event moves to the next free day with a new letter, without counting as missed, and a notice explains why. The invitation letter now arrives in co-op too.</li>
+      <li>Save the Date needs an AI provider, like the rest of the mod.</li>
+    </ul>
+  </section>
+
+  <!-- Content packs and console -->
+  <section class="feature" id="v1-8-0-criadores">
+    <div class="feature-head">
+      <span class="tag creators">For pack creators</span>
+      <h3>Content packs and console</h3>
+    </div>
+    <ul class="points">
+      <li>Experimental content packs can bring a heart arc for any villager with <code>saveTheDateDirectories</code>: an <code>arc.json</code> with the missions, the cast and the festival, and the prompt blocks for the proposal, the missions, the day and the aftermath. The format and a step-by-step guide are in <code>EXPERIMENTAL_CONTENT.md</code>.</li>
+      <li><code>alive_std status</code> shows where every heart arc stands. <code>alive_std open</code>, <code>complete</code> and <code>schedule</code> skip through an arc's stages, <code>alive_std play &lt;festival&gt;</code> plays a minigame anywhere without recording it, and <code>alive_std go &lt;villager&gt;</code> takes you to the villager's festival as on the real day.</li>
+    </ul>
+  </section>
+
+  <!-- Fixes -->
+  <section class="feature" id="v1-8-0-correcoes">
+    <div class="feature-head">
+      <span class="tag fix">Fixes</span>
+      <h3>Fixes</h3>
+    </div>
+    <ul class="points">
+      <li><b>A busy minute no longer costs the whole day:</b> Gemini's free tier answers with the same error (429) for its per-minute limit and for its daily quota, and I treated every 429 as the daily quota running out. A few quick conversations, or a morning full of village tasks, could switch the AI off until you slept, and a second key that was invalid did the same. Now the per-minute limit only rests that key for the seconds Gemini asks for: the request moves to your next key, or waits up to 30 seconds and tries again, or fails on its own with a notice to try again shortly. Only the daily quota (or a 429 that doesn't say which limit it is) still falls back to the base game until the next day.</li>
+      <li><b>Group conversations keep every line:</b> when the AI quoted a word inside a villager's line, the reply was cut down to the last villager's line and the others were lost. Now the quotes are repaired first, and every line of the group shows up.</li>
+      <li><b>No more scolding for a few days away:</b> since 1.7.4, a villager you hadn't talked to for two days or more was told so in every conversation and wouldn't drop it, sometimes twice in the same chat and in a reproachful tone. Now only the day's opening line hears about it, only after 25 days without talking, and the villager mentions it once, warmly, glad to see you.</li>
+      <li><b>A table of four lets you reply:</b> at a family dinner or another sit-down talk with four villagers, the AI's opening often took longer than the 20 seconds the table waited, and then the ready-made lines played with no turn for you: everyone spoke and the conversation ended. Now the table waits 10 seconds more for each villager past two, and when the opening is still late, the ready-made lines take your replies and the AI picks it up from there.</li>
+      <li><b>Long lines at the table:</b> in a sit-down talk with three or four villagers, a long line ran past the bottom of its box and was hidden under the reply panel, so it looked cut off. Now it carries on in the box, page by page.</li>
+      <li><b>Villagers stay in the room and in sight:</b> in the mod's scenes (dinners, outings, visits, birthday parties), a villager placed on a tile taken by furniture, an object or a wall was moved to the first free tile in a square around it, which could be on the other side of a wall: they showed up in the next room, off screen or inside the furniture. Now they move to the free tile right next to theirs or to the nearest free floor of your room, never through a wall.</li>
+      <li><b>Sam's open rehearsal:</b> Sam stood where you couldn't get close, so you couldn't talk to him or start the rehearsal. On a Save the Date day you walk around in, every villager out of reach now moves to the nearest floor you can reach, facing them or beside them, with nobody in the way.</li>
+      <li><b>The chicken race with Stardew Valley Expanded:</b> you started on the other side of Marnie, where you couldn't talk to Shane and start the race. Now you start next to him.</li>
+      <li><b>Birthday parties and the citizen of the year dinner that didn't start:</b> walking into the Saloon for Abigail's party or the citizen of the year dinner, or into the lab for Demetrius's party, sometimes played nothing. Now, when the game doesn't start the scene right after you walk in, the mod starts it.</li>
+      <li><b>Square brackets in the AI's text:</b> when Lewis's speech at the citizen of the year dinner, or a line at a birthday party or an outing, came back from the AI with square brackets (a “[laughs]”, or an empty “[]”), the game couldn't build the scene and it never played. Now square brackets become parentheses.</li>
+      <li><b>The farm's shelf at Pierre's:</b> with no room near the counter, it went into the family's rooms behind the shop and nobody could find it. Now it goes on the wall nearest the front door, on the shop floor.</li>
+    </ul>
+  </section>
+
+  <!-- Languages -->
+  <section class="feature" id="v1-8-0-idiomas">
+    <div class="feature-head">
+      <span class="tag improved">Improved</span>
+      <h3>Every language</h3>
+    </div>
+    <ul class="points">
+      <li>All the new texts are in all eight languages.</li>
+      <li>In Chinese, the villagers' names now match the game's everywhere (Shane, Elliott, Penny, Pam, Sam, Marnie, Evelyn, Caroline, Leo, Leah, Maru and the Wizard were spelled differently in some texts).</li>
+    </ul>
+  </section>
+</section>

@@ -5,7 +5,9 @@
     "name": "Save the Date",
     "status": "in-development",
     "summary": {
-      "pt-BR": "Com 8 corações, um morador te chama pra um projeto que termina num festival com minijogo. A vila ganha 31 bicos, jantares em família, aniversários, visitas à fazenda e dezenas de cenas, e o Hub muda de cara."
+      "pt-BR": "Com 8 corações, um morador te chama pra um projeto que termina num festival com minijogo. A vila ganha 31 bicos, jantares em família, aniversários, visitas à fazenda e dezenas de cenas, e o Hub muda de cara.",
+      "en": "At 8 hearts a villager calls you into a project that ends in a festival with a minigame. The valley gets 31 side jobs, family dinners, birthday parties, farm visits and dozens of scenes, and the Hub gets a new look.",
+      "es": "Con 8 corazones, un vecino te invita a un proyecto que termina en un festival con minijuego. El valle gana 31 trabajillos, cenas en familia, cumpleaños, visitas a la granja y decenas de escenas, y el Hub cambia de cara."
     },
     "patches": [
       "1.8.0"
